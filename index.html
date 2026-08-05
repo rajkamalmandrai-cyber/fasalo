@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KrishiMitra - Smarter Farming. Better Profits."
+    />
+    <meta name="theme-color" content="#173826" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>KrishiMitra - Smarter Farming. Better Profits.</title>
+  </head>
+  <body class="is-loading">
+    <a class="skip-link" href="#app">Skip to content</a>
+
+    <!-- 1. Premium Navbar -->
+    <header class="navbar" aria-label="KrishiMitra Main Navigation">
+      <div class="container navbar__container">
+        <a class="brand" href="#app" aria-label="KrishiMitra home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" role="img">
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+              <path d="M16 8a6 6 0 0 1-12 0c0-4.42 3.58-8 8-8s8 3.58 8 8c0 2.21-1.79 4-4 4" />
+            </svg>
+          </span>
+          <span class="brand-name">KrishiMitra</span>
+        </a>
+
+        <button class="navbar__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar__toggle-icon"></span>
+        </button>
+
+        <div class="navbar__menu">
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav__list">
+              <li><a href="#app" class="nav__link" data-translate-key="navHome">Home</a></li>
+              <li><a href="#market-preview" class="nav__link" data-translate-key="navFindMarket">Find Market</a></li>
+              <li><a href="#" class="nav__link" data-translate-key="navAbout">About</a></li>
+              <li><a href="#footer" class="nav__link" data-translate-key="navContact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="navbar__actions">
+            <div class="language-selector">
+              <details>
+                <summary class="language-selector__toggle">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                  <span data-translate-key="langEnglish">English</span>
+                </summary>
+                <ul class="language-selector__menu">
+                  <li><button type="button" class="language-selector__option" data-lang="en">English</button></li>
+                  <li><button type="button" class="language-selector__option" data-lang="hi">हिन्दी</button></li>
+                  <li><button type="button" class="language-selector__option" data-lang="mr">मराठी</button></li>
+                  <li><button type="button" class="language-selector__option" data-lang="gu">ગુજરાતી<span class="coming-soon">(Coming Soon)</span></button></li>
+                  <li><button type="button" class="language-selector__option" data-lang="ta">தமிழ்<span class="coming-soon">(Coming Soon)</span></button></li>
+                  <li><button type="button" class="language-selector__option" data-lang="te">తెలుగు<span class="coming-soon">(Coming Soon)</span></button></li>
+                  <li><button type="button" class="language-selector__option" data-lang="kn">ಕನ್ನಡ<span class="coming-soon">(Coming Soon)</span></button></li>
+                  <li><button type="button" class="language-selector__option" data-lang="bn">বাংলা<span class="coming-soon">(Coming Soon)</span></button></li>
+                  <li><button type="button" class="language-selector__option" data-lang="pa">ਪੰਜਾਬੀ<span class="coming-soon">(Coming Soon)</span></button></li>
+                </ul>
+              </details>
+            </div>
+            <a href="#market-preview" class="button button--primary"><span data-translate-key="findBestMarketBtn">Find Best Market</span></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <!-- 2. Hero Section -->
+      <section class="hero-section" aria-labelledby="hero-heading">
+        <div class="hero-bg-shape hero-bg-shape--1"></div>
+        <div class="hero-bg-shape hero-bg-shape--2"></div>
+        <div class="container hero-layout">
+          <div class="hero-content" data-animate>
+            <p class="hero-badge" data-translate-key="heroBadge"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg> Powered by Government Market Data</p>
+            <h1 id="hero-heading" class="display" data-translate-key="heroTitle">
+              Sell Your Crops At The <span class="highlight">Best Market.</span>
+            </h1>
+            <p class="body-large" data-translate-key="heroSubtitle">
+              Compare nearby mandis, estimate transport cost, and discover where you can earn the highest profit.
+            </p>
+            <div class="trust-row">
+              <span class="trust-item" data-translate-key="trustGov"><svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Government Mandi Data</span>
+              <span class="trust-item" data-translate-key="trustAI"><svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> AI Recommendation</span>
+              <span class="trust-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Location Based</span>
+              <span class="trust-item" data-translate-key="trustLang"><svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Multiple Languages</span>
+            </div>
+            <div class="cluster">
+              <a href="#action-card" class="button button--primary button--arrow"><span data-translate-key="findBestMarketBtn">Find Best Market</span></a>
+              <a href="#why-better" class="button button--outline"><span data-translate-key="howItWorksBtn">How It Works</span></a>
+            </div>
+          </div>
+
+          <div class="hero-form-container" data-animate>
+            <!-- Visual background elements -->
+            <div class="hero-artwork" aria-hidden="true">
+              <div class="hero-artwork__sun"></div>
+              <div class="hero-artwork__farm"></div>
+              <div class="hero-artwork__map">INDIA</div>
+            </div>
+            <div class="hero-leaf hero-leaf--1"></div>
+            <div class="hero-leaf hero-leaf--2"></div>
+            <div class="hero-leaf hero-leaf--3"></div>
+            <div class="hero-particle hero-particle--1"></div>
+            <div class="hero-particle hero-particle--2"></div>
+            <div class="hero-particle hero-particle--3"></div>
+            
+            <!-- The Form Card -->
+            <div id="action-card" class="action-card">
+              <h2 class="heading-3" data-translate-key="cardTitle">Find Best Market</h2>
+              <form class="action-card__form">
+                <label class="field">
+                  <span class="field__label" data-translate-key="cardLocationLabel">Your Location</span>
+                  <button type="button" class="button button--outline location-button" id="detect-location-btn">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+                    <span data-translate-key="detectLocationBtn">Detect My Location</span>
+                  </button>
+                </label>
+                <label class="field">
+                  <span class="field__label" data-translate-key="cardCropLabel">Select Crop</span>
+                  <span class="select-wrap">
+                    <select class="select">
+                      <option>Tomato</option>
+                      <option>Onion</option>
+                      <option>Potato</option>
+                      <option>Cotton</option>
+                      <option>Soybean</option>
+                      <option>Rice</option>
+                      <option>Wheat</option>
+                      <option>Sugarcane</option>
+                    </select>
+                  </span>
+                </label>
+                <label class="field">
+                  <span class="field__label" data-translate-key="cardQuantityLabel">Quantity (KG)</span>
+                  <input class="input" type="number" placeholder="e.g., 500" />
+                </label>
+                <label class="field">
+                  <span class="field__label" data-translate-key="cardDateLabel">Selling Date</span>
+                  <input class="date-input" type="date" />
+                </label>
+                <button class="button button--primary button--arrow" type="submit">
+                  <span class="button__text" data-translate-key="checkMarketBtn">Find Best Market</span>
+                  <span class="button__loader"></span>
+                </button>
+              </form>
+              <p class="hero-form-status" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Quick Actions -->
+      <section class="quick-actions-section" aria-labelledby="quick-actions-heading">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="quick-actions-heading" class="heading-2" data-translate-key="quickActionsTitle">How can KrishiMitra help you today?</h2>
+          </div>
+          <div class="auto-grid" data-stagger-children>
+            <a href="#action-card" class="card card--interactive quick-action-card" data-animate>
+              <span class="icon-tile" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M7 12H2M17 12h5"/></svg></span>
+              <h3 class="heading-3" data-translate-key="quickAction1Title">Find Best Market</h3>
+              <p class="body-copy" data-translate-key="quickAction1Desc">Compare nearby mandi prices and maximize profit.</p>
+            </a>
+            <a href="#market-preview" class="card card--interactive quick-action-card" data-animate>
+              <span class="icon-tile" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span>
+              <h3 class="heading-3" data-translate-key="quickAction2Title">Compare Prices</h3>
+              <p class="body-copy" data-translate-key="quickAction2Desc">Compare multiple markets for your selected crop.</p>
+            </a>
+            <a href="#" class="card card--interactive quick-action-card" data-animate>
+              <span class="icon-tile" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg></span>
+              <h3 class="heading-3" data-translate-key="quickAction3Title">Nearby Mandis</h3>
+              <p class="body-copy" data-translate-key="quickAction3Desc">Discover markets around your current location.</p>
+            </a>
+            <a href="#" class="card card--interactive quick-action-card is-disabled" data-animate>
+              <span class="icon-tile icon-tile--gold" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></svg></span>
+              <h3 class="heading-3" data-translate-key="quickAction4Title">Weather Forecast</h3>
+              <p class="body-copy" data-translate-key="quickAction4Desc">Future integration.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Why KrishiMitra Gives Better Results -->
+      <section id="why-better" class="section" aria-labelledby="why-better-heading">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow" data-translate-key="whyBetterEyebrow">Why KrishiMitra</p>
+            <h2 id="why-better-heading" class="heading-1" data-translate-key="whyBetterTitle">Why KrishiMitra Gives Better Results</h2>
+            <p class="body-large" data-translate-key="whyBetterSubtitle">Every recommendation is based on verified government market prices, intelligent analysis and transport optimization.</p>
+          </div>
+          <div class="auto-grid" data-stagger-children>
+            <div class="card" data-animate>
+              <span class="icon-tile" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </span>
+              <h3 class="heading-3" data-translate-key="whyBetterCard1Title">Government Mandi Data</h3>
+              <p class="body-copy" data-translate-key="whyBetterCard1Desc">Uses official mandi prices.</p>
+            </div>
+            <div class="card" data-animate>
+              <span class="icon-tile" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /><path d="M12 12v.01"/></svg>
+              </span>
+              <h3 class="heading-3" data-translate-key="whyBetterCard2Title">AI Market Analysis</h3>
+              <p class="body-copy" data-translate-key="whyBetterCard2Desc">Analyzes historical and current trends.</p>
+            </div>
+            <div class="card" data-animate>
+              <span class="icon-tile icon-tile--gold" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M10 17h4"/><path d="M14 17a2 2 0 1 0-4 0"/><path d="M14 17H4.5a2.5 2.5 0 0 1 0-5h9.84"/><path d="M18 17h.01"/><path d="M6 12 4 10"/><path d="m10 12 2-2"/><path d="M4.15 5.15 5.58 6.58"/><path d="M19.85 5.15 18.42 6.58"/><path d="M12 2v2"/></svg>
+              </span>
+              <h3 class="heading-3" data-translate-key="whyBetterCard3Title">Smart Transport Estimation</h3>
+              <p class="body-copy" data-translate-key="whyBetterCard3Desc">Estimates travel cost before recommending markets.</p>
+            </div>
+            <div class="card" data-animate>
+              <span class="icon-tile" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <h3 class="heading-3" data-translate-key="whyBetterCard4Title">Maximum Profit Recommendation</h3>
+              <p class="body-copy" data-translate-key="whyBetterCard4Desc">Suggests the market with the highest expected profit.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Live Market Intelligence Dashboard -->
+      <section id="market-preview" class="section section--muted" aria-labelledby="market-intel-heading">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow" data-translate-key="marketIntelEyebrow">Live Market Intelligence</p>
+            <h2 id="market-intel-heading" class="heading-1" data-translate-key="marketIntelTitle">Live Market Intelligence</h2>
+            <p class="body-large" data-translate-key="marketIntelSubtitle">Real-time mandi price comparison powered by Government Mandi Data and AI analysis.</p>
+          </div>
+
+          <!-- Analytics Cards -->
+          <div class="analytics-grid" data-stagger-children>
+            <div class="card">
+              <h3 class="heading-3" data-translate-key="analyticsCard1Title">Today's Highest Price</h3>
+              <p class="display" data-target-value="8120">₹8,120</p>
+              <p class="small-text">Cotton, Nagpur</p>
+            </div>
+            <div class="card">
+              <h3 class="heading-3" data-translate-key="analyticsCard2Title">Average Price</h3>
+              <p class="display" data-target-value="4668">₹4,668</p>
+              <p class="small-text">Across all crops</p>
+            </div>
+            <div class="card">
+              <h3 class="heading-3" data-translate-key="analyticsCard3Title">Markets Covered</h3>
+              <p class="display" data-target-value="1300">1,300+</p>
+              <p class="small-text">Across 15 states</p>
+            </div>
+            <div class="card">
+              <h3 class="heading-3" data-translate-key="analyticsCard4Title">AI Confidence</h3>
+              <p class="display" data-target-value="94.7">94.7%</p>
+              <p class="small-text">Prediction accuracy</p>
+            </div>
+          </div>
+
+          <!-- Dashboard Panel -->
+          <div class="panel" data-animate>
+            <div class="market-toolbar">
+              <div class="field" style="flex-grow: 1;">
+                <input type="search" class="input" placeholder="Search Crop (e.g. Wheat)" data-translate-key="toolbarSearchPlaceholder" />
+              </div>
+              <div class="select-wrap">
+                <select class="select">
+                  <option>Maharashtra</option>
+                  <option>Punjab</option>
+                  <option>Madhya Pradesh</option>
+                </select>
+              </div>
+              <div class="select-wrap">
+                <select class="select">
+                  <option>All Markets</option>
+                  <option>Pune</option>
+                  <option>Nagpur</option>
+                </select>
+              </div>
+              <button type="button" class="button button--outline button--small">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M3 6h18M7 12h10M10 18h4"/></svg>
+                <span data-translate-key="toolbarSortBtn">Sort By Price</span>
+              </button>
+              <span class="badge">Updated Today</span>
+              <button type="button" class="icon-button" aria-label="Refresh data">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.3M21 3v6h-6"/></svg>
+              </button>
+            </div>
+
+            <div class="table-wrapper">
+              <table class="intelligence-table">
+                <thead>
+                  <tr>
+                    <th data-translate-key="intelThCrop">Crop</th>
+                    <th data-translate-key="intelThVariety">Variety</th>
+                    <th data-translate-key="intelThMarket">Market</th>
+                    <th data-translate-key="intelThToday">Today's Price</th>
+                    <th data-translate-key="intelThYesterday">Yesterday</th>
+                    <th data-translate-key="intelThChange">Change</th>
+                    <th data-translate-key="intelThDemand">Demand</th>
+                    <th data-translate-key="intelThRec">Recommendation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="crop-cell"><img src="https://placehold.co/24x24/E7F3EA/123D29?text=C" alt="Cotton icon" class="crop-icon" /> Cotton</td>
+                    <td>BT Cotton</td>
+                    <td>Nagpur APMC</td>
+                    <td><strong>₹8,120</strong></td>
+                    <td class="text-muted">₹7,980</td>
+                    <td class="trend trend--up"><svg viewBox="0 0 24 24" class="icon"><path d="m5 15 7-7 7 7"/></svg> +₹140</td>
+                    <td><span class="badge badge--demand-high" data-translate-key="demandHigh">High</span></td>
+                    <td><span class="badge badge--recommend-sell" data-translate-key="recSell">Sell Now</span></td>
+                  </tr>
+                  <tr>
+                    <td class="crop-cell"><img src="https://placehold.co/24x24/E7F3EA/123D29?text=T" alt="Tomato icon" class="crop-icon" /> Tomato</td>
+                    <td>Desi</td>
+                    <td>Pune APMC</td>
+                    <td><strong>₹2,450</strong></td>
+                    <td class="text-muted">₹2,400</td>
+                    <td class="trend trend--up"><svg viewBox="0 0 24 24" class="icon"><path d="m5 15 7-7 7 7"/></svg> +₹50</td>
+                    <td><span class="badge badge--demand-medium" data-translate-key="demandMedium">Medium</span></td>
+                    <td><span class="badge badge--recommend-good" data-translate-key="recGood">Good Choice</span></td>
+                  </tr>
+                  <tr>
+                    <td class="crop-cell"><img src="https://placehold.co/24x24/E7F3EA/123D29?text=W" alt="Wheat icon" class="crop-icon" /> Wheat</td>
+                    <td>Lokwan</td>
+                    <td>Indore Mandi</td>
+                    <td><strong>₹2,250</strong></td>
+                    <td class="text-muted">₹2,310</td>
+                    <td class="trend trend--down"><svg viewBox="0 0 24 24" class="icon"><path d="m5 9 7 7 7-7"/></svg> -₹60</td>
+                    <td><span class="badge badge--demand-low" data-translate-key="demandLow">Low</span></td>
+                    <td><span class="badge badge--recommend-wait" data-translate-key="recWait">Wait</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-heading" class="heading-1">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list" data-stagger-children>
+          <details class="faq-item" data-animate>
+            <summary class="faq-item__question">
+              Is the market data accurate?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Yes, all our data is sourced directly from official Government of India APMC (mandi) portals in real-time to ensure the highest accuracy.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-animate>
+            <summary class="faq-item__question">
+              How is the 'Estimated Net Profit' calculated?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p>We calculate the total estimated value of your crop based on the live market price, and then subtract our estimated transport costs from your location to the mandi. This gives you a clear picture of your potential earnings.</p>
+            </div>
+          </details>
+          <details class="faq-item" data-animate>
+            <summary class="faq-item__question">
+              Which languages are supported?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer"><p>Currently, KrishiMitra is available in English, Hindi, and Marathi. We are actively working on adding support for more regional languages.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="#app" aria-label="KrishiMitra home">
+              <span class="brand-mark" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24" role="img">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                  <path d="M16 8a6 6 0 0 1-12 0c0-4.42 3.58-8 8-8s8 3.58 8 8c0 2.21-1.79 4-4 4" />
+                </svg>
+              </span>
+              <span>
+                <span class="brand-name">KrishiMitra</span>
+                <span class="brand-tagline" data-translate-key="footerTagline">Smarter Farming. Better Profits.</span>
+              </span>
+            </a>
+            <p class="small-text" data-translate-key="footerSlogan">Empowering farmers with technology.</p>
+          </div>
+          <div class="footer-links">
+            <h4 class="footer-heading" data-translate-key="footerHeadingProduct">Product</h4>
+            <ul>
+              <li><a href="#why-better"><span data-translate-key="footerLinkFeatures">Features</span></a></li>
+              <li><a href="#how-it-works"><span data-translate-key="footerLinkHowItWorks">How It Works</span></a></li>
+              <li><a href="#testimonials"><span data-translate-key="footerLinkTestimonials">Testimonials</span></a></li>
+              <li><a href="#faq"><span data-translate-key="footerLinkFAQ">FAQ</span></a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 class="footer-heading" data-translate-key="footerHeadingCompany">Company</h4>
+            <ul>
+              <li><a href="#"><span data-translate-key="footerLinkAbout">About Us</span></a></li>
+              <li><a href="#"><span data-translate-key="footerLinkContact">Contact</span></a></li>
+              <li><a href="#"><span data-translate-key="footerLinkCareers">Careers</span></a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 class="footer-heading" data-translate-key="footerHeadingLegal">Legal</h4>
+            <ul>
+              <li><a href="#"><span data-translate-key="footerLinkPrivacy">Privacy Policy</span></a></li>
+              <li><a href="#"><span data-translate-key="footerLinkTerms">Terms of Service</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="small-text" data-translate-key="footerCopyright">&copy; 2024 KrishiMitra. All rights reserved.</p>
+          <div class="social-links" aria-label="Social media">
+            <!-- Placeholder for social media icons -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
