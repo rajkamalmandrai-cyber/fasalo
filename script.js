@@ -195,22 +195,30 @@
       recWait: "Wait",
       recGood: "Good Choice",
 
+      // --- CTA Section ---
+      ctaTitle: "Ready to Find the Best Market?",
+      ctaSubtitle: "Get AI-powered market recommendations based on your location, crop and quantity.",
+      ctaLearnMoreBtn: "Learn More",
+
       // --- Footer ---
       footerTagline: "Smarter Farming.<br>Better Profits.",
+      footerMobileTagline: "Helping Farmers Make Smarter Selling Decisions",
       footerSlogan: "Empowering farmers with technology.",
-      footerHeadingProduct: "Product",
+      footerHeadingQuickLinks: "Quick Links",
+      footerHeadingResources: "Resources",
       footerLinkFeatures: "Features",
+      footerLinkMarketInsights: "Market Insights",
       footerLinkHowItWorks: "How It Works",
-      footerLinkTestimonials: "Testimonials",
-      footerLinkFAQ: "FAQ",
       footerHeadingCompany: "Company",
       footerLinkAbout: "About Us",
       footerLinkContact: "Contact",
-      footerLinkCareers: "Careers",
       footerHeadingLegal: "Legal",
       footerLinkPrivacy: "Privacy Policy",
       footerLinkTerms: "Terms of Service",
-      footerCopyright: "&copy; 2024 KrishiMitra. All rights reserved.",
+      footerTrustGov: "Government Mandi Data ✓",
+      footerTrustAI: "AI Recommendation ✓",
+      footerMadeIn: "Made with ❤️ in India",
+      footerCopyright: "&copy; 2026 KrishiMitra. All rights reserved.",
     },
     hi: {
       heroBadge: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg> सरकारी मंडी डेटा से संचालित',
@@ -305,22 +313,30 @@
       recWait: "प्रतीक्षा करें",
       recGood: "अच्छा विकल्प",
 
+      // --- CTA Section ---
+      ctaTitle: "सर्वोत्तम बाजार खोजने के लिए तैयार हैं?",
+      ctaSubtitle: "अपने स्थान, फसल और मात्रा के आधार पर एआई-संचालित बाजार सिफारिशें प्राप्त करें।",
+      ctaLearnMoreBtn: "और जानें",
+
       // Footer
       footerTagline: "स्मार्ट खेती। बेहतर मुनाफा।",
+      footerMobileTagline: "किसानों को बेहतर बिक्री निर्णय लेने में मदद करना",
       footerSlogan: "किसानों को प्रौद्योगिकी के साथ सशक्त बनाना।",
-      footerHeadingProduct: "उत्पाद",
+      footerHeadingQuickLinks: "क्विक लिंक्स",
+      footerHeadingResources: "संसाधन",
       footerLinkFeatures: "विशेषताएँ",
+      footerLinkMarketInsights: "बाजार अंतर्दृष्टि",
       footerLinkHowItWorks: "यह कैसे काम करता है",
-      footerLinkTestimonials: "प्रशंसापत्र",
-      footerLinkFAQ: "सामान्य प्रश्न",
       footerHeadingCompany: "कंपनी",
       footerLinkAbout: "हमारे बारे में",
       footerLinkContact: "संपर्क करें",
-      footerLinkCareers: "करियर",
       footerHeadingLegal: "कानूनी",
       footerLinkPrivacy: "गोपनीयता नीति",
       footerLinkTerms: "सेवा की शर्तें",
-      footerCopyright: "&copy; 2024 कृषि मित्र। सर्वाधिकार सुरक्षित।",
+      footerTrustGov: "सरकारी मंडी डेटा ✓",
+      footerTrustAI: "एआई सिफारिश ✓",
+      footerMadeIn: "❤️ भारत में निर्मित",
+      footerCopyright: "&copy; 2026 कृषि मित्र। सर्वाधिकार सुरक्षित।",
     },
     mr: {
       heroBadge: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg> सरकारी बाजार डेटाद्वारे समर्थित',
@@ -416,22 +432,30 @@
       recWait: "थांबा",
       recGood: "चांगली निवड",
 
+      // --- CTA Section ---
+      ctaTitle: "सर्वोत्तम बाजार शोधण्यासाठी तयार आहात?",
+      ctaSubtitle: "तुमचे स्थान, पीक आणि प्रमाण यावर आधारित एआय-समर्थित बाजार शिफारसी मिळवा.",
+      ctaLearnMoreBtn: "अधिक जाणून घ्या",
+
       // Footer
       footerTagline: "स्मार्ट शेती. उत्तम नफा.",
+      footerMobileTagline: "शेतकऱ्यांना हुशार विक्री निर्णय घेण्यास मदत करणे",
       footerSlogan: "तंत्रज्ञानाने शेतकऱ्यांना सक्षम करणे.",
-      footerHeadingProduct: "उत्पादन",
+      footerHeadingQuickLinks: "क्विक लिंक्स",
+      footerHeadingResources: "संसाधने",
       footerLinkFeatures: "वैशिष्ट्ये",
+      footerLinkMarketInsights: "बाजार अंतर्दृष्टी",
       footerLinkHowItWorks: "हे कसे कार्य करते",
-      footerLinkTestimonials: "अभिप्राय",
-      footerLinkFAQ: "FAQ",
       footerHeadingCompany: "कंपनी",
       footerLinkAbout: "आमच्याबद्दल",
       footerLinkContact: "संपर्क",
-      footerLinkCareers: "करिअर",
       footerHeadingLegal: "कायदेशीर",
       footerLinkPrivacy: "गोपनीयता धोरण",
       footerLinkTerms: "सेवा अटी",
-      footerCopyright: "&copy; 2024 कृषी मित्र. सर्व हक्क राखीव.",
+      footerTrustGov: "सरकारी मंडी डेटा ✓",
+      footerTrustAI: "एआय शिफारस ✓",
+      footerMadeIn: "❤️ भारतात बनवलेले",
+      footerCopyright: "&copy; 2026 कृषी मित्र. सर्व हक्क राखीव.",
     },
   };
 
@@ -672,18 +696,6 @@
 
   document.querySelectorAll("form[novalidate]").forEach((form) => {
     form.addEventListener("submit", (event) => event.preventDefault());
-  });
-
-  // --- FAQ Accordion Animation ---
-  document.querySelectorAll('.faq-item').forEach(faqItem => {
-    faqItem.addEventListener('toggle', () => {
-      const answer = faqItem.querySelector('.faq-item__answer');
-      if (faqItem.open) {
-        answer.style.gridTemplateRows = '1fr'; // Expand
-      } else {
-        answer.style.gridTemplateRows = '0fr'; // Collapse
-      }
-    });
   });
 
   // --- Ripple Effect for Buttons ---

@@ -283,14 +283,16 @@
                   <option>Nagpur</option>
                 </select>
               </div>
-              <button type="button" class="button button--outline button--small">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M3 6h18M7 12h10M10 18h4"/></svg>
-                <span data-translate-key="toolbarSortBtn">Sort By Price</span>
-              </button>
-              <span class="badge">Updated Today</span>
-              <button type="button" class="icon-button" aria-label="Refresh data">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.3M21 3v6h-6"/></svg>
-              </button>
+              <div class="market-toolbar__actions">
+                <button type="button" class="button button--outline button--small">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M3 6h18M7 12h10M10 18h4"/></svg>
+                  <span data-translate-key="toolbarSortBtn">Sort By Price</span>
+                </button>
+                <span class="badge">Updated Today</span>
+                <button type="button" class="icon-button" aria-label="Refresh data">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.3M21 3v6h-6"/></svg>
+                </button>
+              </div>
             </div>
 
             <div class="table-wrapper">
@@ -309,34 +311,127 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="crop-cell"><img src="https://placehold.co/24x24/E7F3EA/123D29?text=C" alt="Cotton icon" class="crop-icon" /> Cotton</td>
-                    <td>BT Cotton</td>
-                    <td>Nagpur APMC</td>
-                    <td><strong>₹8,120</strong></td>
-                    <td class="text-muted">₹7,980</td>
-                    <td class="trend trend--up"><svg viewBox="0 0 24 24" class="icon"><path d="m5 15 7-7 7 7"/></svg> +₹140</td>
-                    <td><span class="badge badge--demand-high" data-translate-key="demandHigh">High</span></td>
-                    <td><span class="badge badge--recommend-sell" data-translate-key="recSell">Sell Now</span></td>
+                    <td class="crop-cell desktop-cell" data-label="Crop">
+                      <img src="https://placehold.co/24x24/E7F3EA/123D29?text=C" alt="Cotton icon" class="crop-icon" />
+                      <div class="crop-info">
+                        <span class="crop-info__name">Cotton</span>
+                        <span class="crop-info__subtitle">BT Cotton &bull; Nagpur APMC</span>
+                      </div>
+                    </td>
+                    <td class="desktop-cell" data-label="Variety">BT Cotton</td>
+                    <td class="desktop-cell" data-label="Market">Nagpur APMC</td>
+                    <td class="desktop-cell" data-label="Today's Price"><strong>₹8,120</strong></td>
+                    <td class="desktop-cell" data-label="Yesterday" class="text-muted">₹7,980</td>
+                    <td class="desktop-cell" data-label="Change" class="trend trend--up"><svg viewBox="0 0 24 24" class="icon"><path d="m5 15 7-7 7 7"/></svg> +₹140</td>
+                    <td class="desktop-cell" data-label="Demand"><span class="badge badge--demand-high" data-translate-key="demandHigh">High</span></td>
+                    <td class="desktop-cell" data-label="Recommendation"><a href="#" class="button button--primary button--small-table" data-translate-key="recSell">Sell Now</a></td>
+                    <td class="mobile-cell" colspan="8">
+                      <div class="mobile-card" data-animate>
+                        <div class="mobile-card__header">
+                            <div class="crop-info">
+                                <div class="crop-info__identity">
+                                    <img src="https://placehold.co/24x24/E7F3EA/123D29?text=C" alt="Cotton icon" class="crop-icon" />
+                                    <span class="crop-info__name">Cotton</span>
+                                </div>
+                                <span class="crop-info__subtitle">BT Cotton &bull; Nagpur APMC</span>
+                            </div>
+                            <div class="price-info">
+                                <strong class="price-info__value">₹8,120</strong>
+                            </div>
+                        </div>
+                        <div class="mobile-card__details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label" data-translate-key="intelThYesterday">Yesterday</span>
+                                <span class="detail-value">₹7,980</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-translate-key="intelThChange">Change</span>
+                                <span class="detail-value trend trend--up"><svg viewBox="0 0 24 24" class="icon"><path d="m5 15 7-7 7 7"/></svg> +₹140</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-translate-key="intelThDemand">Demand</span>
+                                <span class="detail-value"><span class="badge badge--demand-high" data-translate-key="demandHigh">High</span></span>
+                            </div>
+                        </div>
+                        <a href="#" class="button button--primary button--small-table" data-translate-key="recSell">Sell Now</a>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
-                    <td class="crop-cell"><img src="https://placehold.co/24x24/E7F3EA/123D29?text=T" alt="Tomato icon" class="crop-icon" /> Tomato</td>
-                    <td>Desi</td>
-                    <td>Pune APMC</td>
-                    <td><strong>₹2,450</strong></td>
-                    <td class="text-muted">₹2,400</td>
-                    <td class="trend trend--up"><svg viewBox="0 0 24 24" class="icon"><path d="m5 15 7-7 7 7"/></svg> +₹50</td>
-                    <td><span class="badge badge--demand-medium" data-translate-key="demandMedium">Medium</span></td>
-                    <td><span class="badge badge--recommend-good" data-translate-key="recGood">Good Choice</span></td>
+                    <td class="crop-cell desktop-cell" data-label="Crop">
+                      <img src="https://placehold.co/24x24/E7F3EA/123D29?text=T" alt="Tomato icon" class="crop-icon" />
+                      <div class="crop-info">
+                        <span class="crop-info__name">Tomato</span>
+                        <span class="crop-info__subtitle">Desi &bull; Pune APMC</span>
+                      </div>
+                    </td>
+                    <td class="desktop-cell" data-label="Variety">Desi</td>
+                    <td class="desktop-cell" data-label="Market">Pune APMC</td>
+                    <td class="desktop-cell" data-label="Today's Price"><strong>₹2,450</strong></td>
+                    <td class="desktop-cell" data-label="Yesterday" class="text-muted">₹2,400</td>
+                    <td class="desktop-cell" data-label="Change" class="trend trend--up"><svg viewBox="0 0 24 24" class="icon"><path d="m5 15 7-7 7 7"/></svg> +₹50</td>
+                    <td class="desktop-cell" data-label="Demand"><span class="badge badge--demand-medium" data-translate-key="demandMedium">Medium</span></td>
+                    <td class="desktop-cell" data-label="Recommendation"><a href="#" class="button button--secondary button--small-table" data-translate-key="recGood">Good Choice</a></td>
+                    <td class="mobile-cell" colspan="8">
+                      <div class="mobile-card" data-animate>
+                        <div class="mobile-card__header">
+                            <div class="crop-info">
+                                <div class="crop-info__identity">
+                                    <img src="https://placehold.co/24x24/E7F3EA/123D29?text=T" alt="Tomato icon" class="crop-icon" />
+                                    <span class="crop-info__name">Tomato</span>
+                                </div>
+                                <span class="crop-info__subtitle">Desi &bull; Pune APMC</span>
+                            </div>
+                            <div class="price-info">
+                                <strong class="price-info__value">₹2,450</strong>
+                            </div>
+                        </div>
+                        <div class="mobile-card__details-grid">
+                            <div class="detail-item"><span class="detail-label" data-translate-key="intelThYesterday">Yesterday</span><span class="detail-value">₹2,400</span></div>
+                            <div class="detail-item"><span class="detail-label" data-translate-key="intelThChange">Change</span><span class="detail-value trend trend--up"><svg viewBox="0 0 24 24" class="icon"><path d="m5 15 7-7 7 7"/></svg> +₹50</span></div>
+                            <div class="detail-item"><span class="detail-label" data-translate-key="intelThDemand">Demand</span><span class="detail-value"><span class="badge badge--demand-medium" data-translate-key="demandMedium">Medium</span></span></div>
+                        </div>
+                        <a href="#" class="button button--secondary button--small-table" data-translate-key="recGood">Good Choice</a>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
-                    <td class="crop-cell"><img src="https://placehold.co/24x24/E7F3EA/123D29?text=W" alt="Wheat icon" class="crop-icon" /> Wheat</td>
-                    <td>Lokwan</td>
-                    <td>Indore Mandi</td>
-                    <td><strong>₹2,250</strong></td>
-                    <td class="text-muted">₹2,310</td>
-                    <td class="trend trend--down"><svg viewBox="0 0 24 24" class="icon"><path d="m5 9 7 7 7-7"/></svg> -₹60</td>
-                    <td><span class="badge badge--demand-low" data-translate-key="demandLow">Low</span></td>
-                    <td><span class="badge badge--recommend-wait" data-translate-key="recWait">Wait</span></td>
+                    <td class="crop-cell desktop-cell" data-label="Crop">
+                      <img src="https://placehold.co/24x24/E7F3EA/123D29?text=W" alt="Wheat icon" class="crop-icon" />
+                      <div class="crop-info">
+                        <span class="crop-info__name">Wheat</span>
+                        <span class="crop-info__subtitle">Lokwan &bull; Indore Mandi</span>
+                      </div>
+                    </td>
+                    <td class="desktop-cell" data-label="Variety">Lokwan</td>
+                    <td class="desktop-cell" data-label="Market">Indore Mandi</td>
+                    <td class="desktop-cell" data-label="Today's Price"><strong>₹2,250</strong></td>
+                    <td class="desktop-cell" data-label="Yesterday" class="text-muted">₹2,310</td>
+                    <td class="desktop-cell" data-label="Change" class="trend trend--down"><svg viewBox="0 0 24 24" class="icon"><path d="m5 9 7 7 7-7"/></svg> -₹60</td>
+                    <td class="desktop-cell" data-label="Demand"><span class="badge badge--demand-low" data-translate-key="demandLow">Low</span></td>
+                    <td class="desktop-cell" data-label="Recommendation"><a href="#" class="button button--outline button--small-table" data-translate-key="recWait">Wait</a></td>
+                    <td class="mobile-cell" colspan="8">
+                      <div class="mobile-card" data-animate>
+                        <div class="mobile-card__header">
+                            <div class="crop-info">
+                                <div class="crop-info__identity">
+                                    <img src="https://placehold.co/24x24/E7F3EA/123D29?text=W" alt="Wheat icon" class="crop-icon" />
+                                    <span class="crop-info__name">Wheat</span>
+                                </div>
+                                <span class="crop-info__subtitle">Lokwan &bull; Indore Mandi</span>
+                            </div>
+                            <div class="price-info">
+                                <strong class="price-info__value">₹2,250</strong>
+                            </div>
+                        </div>
+                        <div class="mobile-card__details-grid">
+                            <div class="detail-item"><span class="detail-label" data-translate-key="intelThYesterday">Yesterday</span><span class="detail-value">₹2,310</span></div>
+                            <div class="detail-item"><span class="detail-label" data-translate-key="intelThChange">Change</span><span class="detail-value trend trend--down"><svg viewBox="0 0 24 24" class="icon"><path d="m5 9 7 7 7-7"/></svg> -₹60</span></div>
+                            <div class="detail-item"><span class="detail-label" data-translate-key="intelThDemand">Demand</span><span class="detail-value"><span class="badge badge--demand-low" data-translate-key="demandLow">Low</span></span></div>
+                        </div>
+                        <a href="#" class="button button--outline button--small-table" data-translate-key="recWait">Wait</a>
+                      </div>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -347,39 +442,16 @@
 
     </main>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="section" aria-labelledby="faq-heading">
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta-section" aria-labelledby="cta-heading">
       <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">FAQ</p>
-          <h2 id="faq-heading" class="heading-1">Frequently Asked Questions</h2>
-        </div>
-        <div class="faq-list" data-stagger-children>
-          <details class="faq-item" data-animate>
-            <summary class="faq-item__question">
-              Is the market data accurate?
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p>Yes, all our data is sourced directly from official Government of India APMC (mandi) portals in real-time to ensure the highest accuracy.</p>
-            </div>
-          </details>
-          <details class="faq-item" data-animate>
-            <summary class="faq-item__question">
-              How is the 'Estimated Net Profit' calculated?
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p>We calculate the total estimated value of your crop based on the live market price, and then subtract our estimated transport costs from your location to the mandi. This gives you a clear picture of your potential earnings.</p>
-            </div>
-          </details>
-          <details class="faq-item" data-animate>
-            <summary class="faq-item__question">
-              Which languages are supported?
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer"><p>Currently, KrishiMitra is available in English, Hindi, and Marathi. We are actively working on adding support for more regional languages.</p></div>
-          </details>
+        <div class="cta-content" data-animate>
+          <h2 id="cta-heading" class="heading-1" data-translate-key="ctaTitle">Ready to Find the Best Market?</h2>
+          <p class="body-large" data-translate-key="ctaSubtitle">Get AI-powered market recommendations based on your location, crop and quantity.</p>
+          <div class="cluster">
+            <a href="#action-card" class="button button--primary button--arrow"><span data-translate-key="findBestMarketBtn">Find Best Market</span></a>
+            <a href="#why-better" class="button button--outline"><span data-translate-key="ctaLearnMoreBtn">Learn More</span></a>
+          </div>
         </div>
       </div>
     </section>
@@ -401,35 +473,65 @@
                 <span class="brand-tagline" data-translate-key="footerTagline">Smarter Farming. Better Profits.</span>
               </span>
             </a>
-            <p class="small-text" data-translate-key="footerSlogan">Empowering farmers with technology.</p>
+            <p class="small-text footer-desktop-tagline" data-translate-key="footerSlogan">Empowering farmers with technology.</p>
+            <p class="footer-mobile-tagline" data-translate-key="footerMobileTagline">Helping farmers find the best market with AI.</p>
           </div>
-          <div class="footer-links">
-            <h4 class="footer-heading" data-translate-key="footerHeadingProduct">Product</h4>
-            <ul>
-              <li><a href="#why-better"><span data-translate-key="footerLinkFeatures">Features</span></a></li>
-              <li><a href="#how-it-works"><span data-translate-key="footerLinkHowItWorks">How It Works</span></a></li>
-              <li><a href="#testimonials"><span data-translate-key="footerLinkTestimonials">Testimonials</span></a></li>
-              <li><a href="#faq"><span data-translate-key="footerLinkFAQ">FAQ</span></a></li>
-            </ul>
+          <div class="footer-links-desktop">
+            <div class="footer-links">
+              <h4 class="footer-heading" data-translate-key="footerHeadingQuickLinks">Quick Links</h4>
+              <ul>
+                <li><a href="#app"><span data-translate-key="navHome">Home</span></a></li>
+                <li><a href="#market-preview"><span data-translate-key="navFindMarket">Find Market</span></a></li>
+                <li><a href="#"><span data-translate-key="navAbout">About</span></a></li>
+                <li><a href="#footer"><span data-translate-key="navContact">Contact</span></a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h4 class="footer-heading" data-translate-key="footerHeadingResources">Resources</h4>
+              <ul>
+                <li><a href="#why-better"><span data-translate-key="footerLinkFeatures">Features</span></a></li>
+                <li><a href="#market-preview"><span data-translate-key="footerLinkMarketInsights">Market Insights</span></a></li>
+                <li><a href="#"><span data-translate-key="footerLinkHowItWorks">How It Works</span></a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h4 class="footer-heading" data-translate-key="footerHeadingLegal">Legal</h4>
+              <ul>
+                <li><a href="#"><span data-translate-key="footerLinkPrivacy">Privacy Policy</span></a></li>
+                <li><a href="#"><span data-translate-key="footerLinkTerms">Terms of Service</span></a></li>
+              </ul>
+            </div>
           </div>
-          <div class="footer-links">
-            <h4 class="footer-heading" data-translate-key="footerHeadingCompany">Company</h4>
-            <ul>
-              <li><a href="#"><span data-translate-key="footerLinkAbout">About Us</span></a></li>
-              <li><a href="#"><span data-translate-key="footerLinkContact">Contact</span></a></li>
-              <li><a href="#"><span data-translate-key="footerLinkCareers">Careers</span></a></li>
-            </ul>
-          </div>
-          <div class="footer-links">
-            <h4 class="footer-heading" data-translate-key="footerHeadingLegal">Legal</h4>
-            <ul>
-              <li><a href="#"><span data-translate-key="footerLinkPrivacy">Privacy Policy</span></a></li>
-              <li><a href="#"><span data-translate-key="footerLinkTerms">Terms of Service</span></a></li>
-            </ul>
+          <div class="footer-links-mobile">
+              <div class="footer-links">
+                  <h4 class="footer-heading" data-translate-key="footerHeadingProduct">Product</h4>
+                  <ul>
+                      <li><a href="#why-better"><span data-translate-key="footerLinkFeatures">Features</span></a></li>
+                      <li><a href="#market-preview"><span data-translate-key="footerLinkLiveMarket">Live Market</span></a></li>
+                  </ul>
+              </div>
+              <div class="footer-links">
+                  <h4 class="footer-heading" data-translate-key="footerHeadingCompany">Company</h4>
+                  <ul>
+                      <li><a href="#"><span data-translate-key="navAbout">About</span></a></li>
+                      <li><a href="#footer"><span data-translate-key="navContact">Contact</span></a></li>
+                  </ul>
+              </div>
+              <div class="footer-links">
+                  <h4 class="footer-heading" data-translate-key="footerHeadingLegal">Legal</h4>
+                  <ul>
+                      <li><a href="#"><span data-translate-key="footerLinkPrivacy">Privacy Policy</span></a></li>
+                      <li><a href="#"><span data-translate-key="footerLinkTerms">Terms of Service</span></a></li>
+                  </ul>
+              </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <p class="small-text" data-translate-key="footerCopyright">&copy; 2024 KrishiMitra. All rights reserved.</p>
+          <div class="footer-bottom-mobile">
+            <p class="footer-copyright-mobile" data-translate-key="footerCopyrightMobile">&copy; 2025 KisanSetu</p>
+            <p class="footer-made-in" data-translate-key="footerMadeIn">Made with ❤️ in India 🇮🇳</p>
+          </div>
+          <p class="small-text footer-copyright" data-translate-key="footerCopyright">&copy; 2025 KisanSetu. All rights reserved.</p>
           <div class="social-links" aria-label="Social media">
             <!-- Placeholder for social media icons -->
           </div>

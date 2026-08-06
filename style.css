@@ -120,9 +120,11 @@
 html {
   background: var(--color-page);
   scroll-behavior: smooth;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  width: 100%;
 }
 
 /* --- Custom Scrollbar --- */
@@ -144,9 +146,11 @@ body {
   position: relative;
   isolation: isolate;
   min-width: 20rem;
+  max-width: 100%;
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
+  width: 100%;
   background:
     radial-gradient(circle at 14% 10%, rgb(58 148 96 / 0.18), transparent 30rem),
     radial-gradient(circle at 88% 14%, rgb(216 162 54 / 0.2), transparent 28rem),
@@ -186,6 +190,11 @@ body::after {
   filter: blur(56px);
 }
 
+main {
+  display: block; /* For older browsers */
+  overflow: hidden; /* Clip any overflowing section content */
+}
+
 button,
 input,
 select,
@@ -206,9 +215,12 @@ textarea:disabled {
 }
 
 img,
-svg {
+svg,
+video,
+canvas {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -263,7 +275,7 @@ a:hover {
 .display {
   max-width: 14ch;
   color: var(--forest-950);
-  font-size: var(--text-display);
+  font-size: clamp(3.2rem, 0.9rem + 9.81vw, 5.75rem);
   font-weight: 800;
   line-height: 0.98;
 }
@@ -271,14 +283,14 @@ a:hover {
 .heading-1 {
   max-width: 18ch;
   color: var(--forest-950);
-  font-size: var(--text-3xl);
+  font-size: clamp(2.35rem, 0.83rem + 6.49vw, 3.5rem);
   font-weight: 800;
   line-height: var(--leading-tight);
 }
 
 .heading-2 {
   color: var(--forest-950);
-  font-size: var(--text-2xl);
+  font-size: clamp(1.6rem, 1.19rem + 1.71vw, 2rem);
   font-weight: 800;
   line-height: var(--leading-tight);
 }
@@ -1191,6 +1203,7 @@ a:hover {
 .section {
   position: relative;
   padding-block: var(--space-16);
+  overflow: hidden; /* Prevent content from breaking out */
 }
 
 .section--muted {
@@ -1356,10 +1369,10 @@ noscript [data-animate] {
 .hero-section {
   position: relative;
   min-height: calc(100svh - 4.5rem);
-  padding-block: clamp(5.75rem, 9vw, 8.75rem) clamp(7.5rem, 10vw, 9rem); /* Keep padding */
+  padding-block: clamp(5.75rem, 9vw, 8.75rem);
   background:
     radial-gradient(circle at 76% 16%, rgb(255 255 255 / 0.46), transparent 25rem), /* Reduced opacity */
-    radial-gradient(circle at 82% 34%, rgb(216 162 54 / 0.038), transparent 27rem), /* Reduced opacity */
+    radial-gradient(circle at 82% 34%, rgb(216 162 54 / 0.038), transparent 27rem),
     radial-gradient(circle at 12% 18%, rgb(58 148 96 / 0.056), transparent 28rem); /* Reduced opacity */
   overflow: hidden;
 }
@@ -2242,6 +2255,7 @@ noscript [data-animate] {
 .table-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }
 
 .intelligence-table {
@@ -2342,6 +2356,15 @@ noscript [data-animate] {
   color: var(--danger-600);
 }
 
+.button--small-table {
+  width: 100%;
+  min-height: 44px !important;
+  padding-inline: var(--space-4);
+  border-radius: 16px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
 .badge--recommend-sell {
   border-color: transparent;
   background: linear-gradient(135deg, var(--forest-900), var(--forest-950));
@@ -2358,6 +2381,19 @@ noscript [data-animate] {
   border-color: rgb(216 162 54 / 0.22);
   background: var(--amber-100);
   color: var(--soil-800);
+}
+
+.footer-links-desktop {
+  display: contents;
+}
+
+.footer-links-mobile {
+  display: none;
+}
+
+.footer-mobile-tagline,
+.footer-bottom-mobile {
+  display: none;
 }
 
 .finder-section {
@@ -2475,74 +2511,33 @@ noscript [data-animate] {
   margin-top: var(--space-4);
 }
 
-.faq-list {
+.cta-section {
+  padding-block: var(--space-16);
+  background:
+    radial-gradient(circle at 50% 100%, rgb(58 148 96 / 0.12), transparent 34rem),
+    linear-gradient(180deg, rgb(255 250 240 / 0.2), rgb(255 250 240 / 0.7));
+  text-align: center;
+}
+
+.cta-content {
   display: grid;
+  justify-items: center;
+  gap: var(--space-6);
   max-width: 50rem;
   margin-inline: auto;
-  gap: var(--space-3);
 }
 
-.faq-item {
-  padding: var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: rgb(255 255 255 / 0.5);
+.cta-content .heading-1 {
+  max-width: 20ch;
 }
 
-.faq-item__question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  color: var(--forest-950);
-  font-size: var(--text-lg);
-  font-weight: 800;
-  cursor: pointer;
-  list-style: none; /* Remove marker */
-}
-.faq-item__question::-webkit-details-marker { display: none; }
-
-.faq-item__icon {
-  position: relative;
-  width: 1.25rem;
-  height: 1.25rem;
-  flex-shrink: 0;
-}
-.faq-item__icon::before, .faq-item__icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 2px;
-  background: var(--harvest-600);
-  border-radius: 2px;
-  transform: translate(-50%, -50%);
-  transition: transform 300ms var(--ease-out);
-}
-.faq-item__icon::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-.faq-item[open] .faq-item__icon::after {
-  transform: translate(-50%, -50%) rotate(180deg);
+.cta-content .body-large {
+  max-width: 60ch;
+  margin-top: calc(var(--space-6) * -0.5); /* Pull up subtitle a bit */
 }
 
-.faq-item__answer {
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 400ms var(--ease-out);
-}
-.faq-item__answer > p {
-  padding-top: var(--space-4);
-  min-height: 0;
-}
-.faq-item[open] .faq-item__answer {
-  grid-template-rows: 1fr;
-}
-.faq-item__answer > p {
-  padding-top: var(--space-4);
-  min-height: 0;
+.cta-content .cluster {
+  --cluster-space: var(--space-4);
 }
 
 @media (min-width: 48rem) {
@@ -2567,6 +2562,10 @@ noscript [data-animate] {
     gap: var(--space-16);
   }
 
+  .intelligence-table td {
+    white-space: nowrap;
+  }
+
   .foundation-layout {
     gap: var(--space-10);
   }
@@ -2582,6 +2581,22 @@ noscript [data-animate] {
   }
 }
 
+.mobile-cell {
+  display: none;
+}
+
+/* Tablet-specific table adjustments */
+@media (max-width: 64rem) and (min-width: 48.01rem) {
+  .intelligence-table th,
+  .intelligence-table td {
+    padding: var(--space-3);
+    font-size: 0.8125rem; /* Slightly smaller font */
+  }
+  .crop-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 @media (max-width: 64rem) {
   .navbar__toggle {
     display: block;
@@ -2654,7 +2669,7 @@ noscript [data-animate] {
   }
 }
 
-@media (max-width: 63.9rem) {
+@media (max-width: 48rem) { /* Breakpoint changed to 768px for card layout */
   .hero-section {
     min-height: auto;
     padding-block: var(--space-12) var(--space-12);
@@ -2662,6 +2677,150 @@ noscript [data-animate] {
   .hero-layout {
     gap: var(--space-8);
   }
+
+  .hero-content .cluster .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .intelligence-table tbody {
+    display: grid;
+    gap: 12px;
+  }
+
+  .desktop-cell,
+  .is-desktop-only { /* Keep this for other desktop-only elements */ display: none;
+  }
+
+  .mobile-cell {
+    display: block;
+    padding: 0;
+  }
+
+  .table-wrapper {
+    overflow-x: visible; /* Disable horizontal scroll on mobile */
+  }
+
+  .intelligence-table thead {
+    display: none;
+  }
+
+  .intelligence-table tr {
+    display: block;
+  }
+
+  .mobile-card {
+    /* --- MOBILE CARD REBUILD --- */
+    /* This block completely replaces the previous implementation to fix all overflow and responsiveness issues. */
+    display: grid;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .mobile-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .mobile-card__header .crop-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .crop-info {
+    display: grid;
+    gap: 2px;
+    min-width: 0; /* Prevents text from causing overflow */
+  }
+
+  .crop-info__identity {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .crop-info__name {
+    color: var(--forest-950);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .crop-info__subtitle {
+    color: var(--muted-600);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .price-info {
+    text-align: right;
+    flex-shrink: 0;
+    padding-left: var(--space-2);
+  }
+
+  .price-info__value {
+    display: block;
+    color: var(--forest-950);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .mobile-card__details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    padding: 12px 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mobile-card__details-grid .detail-item {
+    display: grid;
+    gap: 2px;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .mobile-card__details-grid .detail-label {
+    color: var(--muted-600);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .mobile-card__details-grid .detail-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--charcoal-700);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-card .button--small-table {
+    margin-top: 0;
+    border-radius: 14px;
+  }
+
   .finder-section,
   .section,
   .quick-actions-section {
@@ -2679,17 +2838,30 @@ noscript [data-animate] {
   }
 }
 
-/* Remove the old market-intelligence-panel styles as it's no longer used in the hero */
-.market-intelligence-panel, .market-intelligence-panel.is-revealed, .market-intelligence-panel .eyebrow, .market-intelligence-panel .heading-3, .market-intelligence-panel .price, .market-intelligence-panel .summary, .market-intelligence-panel .badge, .market-intelligence-panel__recommendation, .market-intelligence-panel__icon, .market-intelligence-panel__icon .icon, .market-intelligence-panel__recommendation p, .market-intelligence-panel__recommendation strong, .market-intelligence-panel__recommendation span, .market-intelligence-panel__recommendation p, .market-intelligence-panel__recommendation > div > span, .market-intelligence-panel__footer, .market-intelligence-panel__recommendation strong, .market-intelligence-panel__tag, .market-intelligence-panel__metrics, .market-intelligence-panel__metrics div, .market-intelligence-panel__metrics span, .market-intelligence-panel__metrics strong, .market-intelligence-panel__footer, .market-intelligence-panel__footer .icon {
-  display: none !important;
-}
-
 @media (max-width: 43.75rem) {
   :root {
-    --text-display: 3.2rem;
-    --text-3xl: 2.35rem;
-    --text-2xl: 1.6rem;
     --page-gutter: var(--space-4);
+  }
+
+  /* Performance Optimizations for Mobile */
+  .hero-bg-shape,
+  .hero-leaf,
+  .hero-particle,
+  .hero-section::before,
+  body::after {
+    display: none;
+  }
+  .hero-artwork__sun, .hero-artwork::after {
+    animation: none;
+  }
+
+  .surface, .panel, .card, .action-card, .language-selector__menu, .navbar__menu {
+    backdrop-filter: none;
+  }
+
+  .section, .quick-actions-section, .footer, .cta-section {
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
   }
 
   .navbar {
@@ -2758,14 +2930,21 @@ noscript [data-animate] {
     font-size: 1.45rem;
   }
 
-  .market-toolbar {
+  .market-toolbar { /* Responsive toolbar layout */
     display: grid;
+    gap: 12px;
+    width: 100%;
   }
 
-  .market-toolbar .field,
-  .market-toolbar .select-wrap,
-  .market-toolbar .button,
-  .market-toolbar .badge {
+  .market-toolbar .field { /* Search bar */
+    width: 100%;
+    min-width: 0;
+  }
+
+  .market-toolbar__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
     width: 100%;
   }
 
@@ -2778,11 +2957,107 @@ noscript [data-animate] {
     margin: var(--space-6) calc(var(--space-5) * -1) calc(var(--space-5) * -1);
   }
 
+  .footer {
+    padding: var(--space-8) var(--space-5);
+    border-top: 1px solid var(--color-border);
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
+    background: radial-gradient(circle at 50% 100%,rgb(255 250 240 / 0.5),transparent),linear-gradient(180deg, var(--white), rgb(255 250 240 / 0.7));
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    justify-items: center;
+  }
+
+  .footer-brand {
+    display: grid;
+    justify-items: center;
+    gap: var(--space-4);
+  }
+
+  .footer-desktop-tagline {
+    display: none;
+  }
+
+  .footer-mobile-tagline {
+    display: block;
+    max-width: 30ch;
+    color: var(--muted-500);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .footer-links-desktop {
+    display: none;
+  }
+
+  .footer-links-mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6) var(--space-5);
+    width: 100%;
+    max-width: 24rem;
+    margin-inline: auto;
+  }
+
+  .footer-links-mobile .footer-links:last-of-type {
+    grid-column: 1 / -1;
+  }
+
+  .footer-heading {
+    font-size: 16px;
+    margin-bottom: var(--space-3);
+  }
+
+  .footer-links ul {
+    gap: var(--space-3);
+  }
+
+  .footer-links a {
+    display: inline-block;
+    padding: var(--space-1);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .footer-links a:hover span::after {
+    transform: scaleX(0);
+  }
+
   .footer-bottom {
     display: grid;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+  }
+
+  .footer-bottom-mobile {
+    display: grid;
+    justify-items: center;
+    gap: var(--space-2);
+  }
+
+  .footer-copyright-mobile,
+  .footer-made-in {
+    margin: 0;
+    color: var(--muted-600);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+
+  .footer-bottom .social-links {
+    display: none;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
