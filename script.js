@@ -1,5 +1,5 @@
-/* KrishiMitra UI foundation: progressive enhancement only. */
-(function initialiseKrishiMitraUI() {
+/* Fasalo UI foundation: progressive enhancement only. */
+(function initialiseFasaloUI() {
   "use strict";
 
   const root = document.documentElement;
@@ -147,7 +147,7 @@
       checkMarketBtn: "Find Best Market",
 
       // --- Quick Actions ---
-      quickActionsTitle: "How can KrishiMitra help you today?",
+      quickActionsTitle: "How can Fasalo help you today?",
       quickAction1Title: "Find Best Market",
       quickAction1Desc: "Compare nearby mandi prices and maximize profit.",
       quickAction2Title: "Compare Prices",
@@ -158,8 +158,8 @@
       quickAction4Desc: "Future integration.",
 
       // --- Why KrishiMitra ---
-      whyBetterEyebrow: "Why KrishiMitra",
-      whyBetterTitle: "Why KrishiMitra Gives Better Results",
+      whyBetterEyebrow: "Why Fasalo",
+      whyBetterTitle: "Why Fasalo Gives Better Results",
       whyBetterSubtitle: "Every recommendation is based on verified government market prices, intelligent analysis and transport optimization.",
       whyBetterCard1Title: "Government Mandi Data",
       whyBetterCard1Desc: "Uses official mandi prices.",
@@ -201,8 +201,8 @@
       ctaLearnMoreBtn: "Learn More",
 
       // --- Footer ---
-      footerTagline: "Smarter Farming.<br>Better Profits.",
-      footerMobileTagline: "Helping Farmers Make Smarter Selling Decisions",
+      footerTagline: "Every Harvest Deserves the Best Market.",
+      footerMobileTagline: "Helping farmers make smarter selling decisions with AI-powered market intelligence.",
       footerSlogan: "Empowering farmers with technology.",
       footerHeadingQuickLinks: "Quick Links",
       footerHeadingResources: "Resources",
@@ -218,7 +218,8 @@
       footerTrustGov: "Government Mandi Data ✓",
       footerTrustAI: "AI Recommendation ✓",
       footerMadeIn: "Made with ❤️ in India",
-      footerCopyright: "&copy; 2026 KrishiMitra. All rights reserved.",
+      footerCopyright: "&copy; 2025 Fasalo. All Rights Reserved.",
+      footerCopyrightMobile: "&copy; 2025 Fasalo. All Rights Reserved.",
     },
     hi: {
       heroBadge: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg> सरकारी मंडी डेटा से संचालित',
@@ -248,7 +249,7 @@
       checkMarketBtn: "सर्वोत्तम बाजार जांचें",
 
       // Quick Actions
-      quickActionsTitle: "आज कृषि मित्र आपकी मदद कैसे कर सकता है?",
+      quickActionsTitle: "आज फसालो आपकी मदद कैसे कर सकता है?",
       quickAction1Title: "सर्वोत्तम बाजार खोजें",
       quickAction1Desc: "आस-पास की मंडी की कीमतों की तुलना करें और मुनाफा बढ़ाएं।",
       quickAction2Title: "कीमतों की तुलना करें",
@@ -259,8 +260,8 @@
       quickAction4Desc: "जल्द ही उपलब्ध होगा।",
 
       // Why KrishiMitra
-      whyEyebrow: "कृषि मित्र ही क्यों?",
-      whyTitle: "किसान कृषि मित्र पर भरोसा क्यों करते हैं",
+      whyEyebrow: "फसालो ही क्यों?",
+      whyTitle: "किसान फसालो पर भरोसा क्यों करते हैं",
       whyCard1Title: "आस-पास की मंडी खोजें",
       whyCard1Desc: "स्वचालित रूप से आस-पास की मंडियों को ढूंढता है।",
       whyCard2Title: "एआई से कीमतों का अनुमान",
@@ -319,8 +320,8 @@
       ctaLearnMoreBtn: "और जानें",
 
       // Footer
-      footerTagline: "स्मार्ट खेती। बेहतर मुनाफा।",
-      footerMobileTagline: "किसानों को बेहतर बिक्री निर्णय लेने में मदद करना",
+      footerTagline: "हर फसल सर्वोत्तम बाज़ार की हक़दार है।",
+      footerMobileTagline: "एआई-संचालित बाजार इंटेलिजेंस के साथ किसानों को बेहतर बिक्री निर्णय लेने में मदद करना।",
       footerSlogan: "किसानों को प्रौद्योगिकी के साथ सशक्त बनाना।",
       footerHeadingQuickLinks: "क्विक लिंक्स",
       footerHeadingResources: "संसाधन",
@@ -336,7 +337,8 @@
       footerTrustGov: "सरकारी मंडी डेटा ✓",
       footerTrustAI: "एआई सिफारिश ✓",
       footerMadeIn: "❤️ भारत में निर्मित",
-      footerCopyright: "&copy; 2026 कृषि मित्र। सर्वाधिकार सुरक्षित।",
+      footerCopyright: "&copy; 2025 फसालो। सर्वाधिकार सुरक्षित।",
+      footerCopyrightMobile: "&copy; 2025 फसालो। सर्वाधिकार सुरक्षित।",
     },
     mr: {
       heroBadge: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg> सरकारी बाजार डेटाद्वारे समर्थित',
@@ -367,7 +369,7 @@
       checkMarketBtn: "सर्वोत्तम बाजार तपासा",
 
       // Quick Actions
-      quickActionsTitle: "आज कृषी मित्र तुमची कशी मदत करू शकतो?",
+      quickActionsTitle: "आज फसालो तुमची कशी मदत करू शकतो?",
       quickAction1Title: "सर्वोत्तम बाजार शोधा",
       quickAction1Desc: "जवळच्या मंडईच्या किमतींची तुलना करा आणि नफा वाढवा.",
       quickAction2Title: "किंमतींची तुलना करा",
@@ -378,8 +380,8 @@
       quickAction4Desc: "लवकरच उपलब्ध होईल.",
 
       // Why KrishiMitra
-      whyEyebrow: "कृषी मित्र का?",
-      whyTitle: "शेतकरी कृषी मित्रावर विश्वास का ठेवतात",
+      whyEyebrow: "फसालो का?",
+      whyTitle: "शेतकरी फसालोवर विश्वास का ठेवतात",
       whyCard1Title: "जवळची मंडई शोधा",
       whyCard1Desc: "जवळच्या मंडई आपोआप शोधते.",
       whyCard2Title: "एआय द्वारे किमतीचा अंदाज",
@@ -438,8 +440,8 @@
       ctaLearnMoreBtn: "अधिक जाणून घ्या",
 
       // Footer
-      footerTagline: "स्मार्ट शेती. उत्तम नफा.",
-      footerMobileTagline: "शेतकऱ्यांना हुशार विक्री निर्णय घेण्यास मदत करणे",
+      footerTagline: "प्रत्येक पिकाला सर्वोत्तम बाजारपेठ मिळायला हवी.",
+      footerMobileTagline: "एआय-समर्थित मार्केट इंटेलिजन्ससह शेतकऱ्यांना हुशार विक्री निर्णय घेण्यास मदत करणे.",
       footerSlogan: "तंत्रज्ञानाने शेतकऱ्यांना सक्षम करणे.",
       footerHeadingQuickLinks: "क्विक लिंक्स",
       footerHeadingResources: "संसाधने",
@@ -455,7 +457,8 @@
       footerTrustGov: "सरकारी मंडी डेटा ✓",
       footerTrustAI: "एआय शिफारस ✓",
       footerMadeIn: "❤️ भारतात बनवलेले",
-      footerCopyright: "&copy; 2026 कृषी मित्र. सर्व हक्क राखीव.",
+      footerCopyright: "&copy; 2025 फसालो. सर्व हक्क राखीव.",
+      footerCopyrightMobile: "&copy; 2025 फसालो. सर्व हक्क राखीव.",
     },
   };
 
@@ -728,7 +731,7 @@
    * Shared field helpers for future forms. They keep visual state and ARIA
    * state aligned without duplicating validation code across pages.
    */
-  window.KrishiMitraUI = {
+  window.FasaloUI = {
     setFieldError(field, message = "Please review this field.") {
       const fieldElement =
         typeof field === "string" ? document.querySelector(field) : field;
