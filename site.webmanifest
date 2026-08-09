@@ -1,0 +1,9 @@
+{
+  "name": "Fasalo",
+  "short_name": "Fasalo",
+  "description": "AI Powered Mandi Intelligence for Farmers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf0",
+  "theme_color": "#173826"
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<meta charset="utf-8">
+<body><pre id="out">running</pre><iframe id="frame" src="file:///C:/Users/neera/Downloads/KRISHI MITRA V2/index.html"></iframe><script>
+const widths = [320,360,375,390,412,430,768];
+const frame = document.getElementById('frame');
+const out = document.getElementById('out');
+let i = 0;
+const results = [];
+function wait(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
+async function run(){
+  for (const width of widths) {
+    frame.style.width = width + 'px';
+    frame.style.height = '1400px';
+    await new Promise(resolve => { frame.onload = resolve; frame.src = 'file:///=' + width + '&t=' + Date.now(); });
+    await wait(700);
+    const doc = frame.contentDocument;
+    const win = frame.contentWindow;
+    const market = doc.querySelector('#market-preview');
+    const nodes = [...market.querySelectorAll('*')];
+    const offenders = nodes.map(el => ({
+      tag: el.tagName.toLowerCase(),
+      cls: el.className || '',
+      scrollWidth: el.scrollWidth,
+      clientWidth: el.clientWidth,
+      rectWidth: Math.ceil(el.getBoundingClientRect().width)
+    })).filter(x => x.scrollWidth > width || x.rectWidth > width).slice(0, 8);
+    results.push({
+      width,
+      documentScrollWidth: doc.documentElement.scrollWidth,
+      bodyScrollWidth: doc.body.scrollWidth,
+      marketScrollWidth: market.scrollWidth,
+      viewport: win.innerWidth,
+      offenders
+    });
+  }
+  out.textContent = JSON.stringify(results, null, 2);
+}
+run();
+</script></body>
