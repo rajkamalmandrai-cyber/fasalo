@@ -37,10 +37,10 @@
   // Centralized translations object
   const translations = {
     en: {
-      heroBadge: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg> Powered by Government Market Data',
+      heroBadge: 'Data-Driven Insights',
       heroTitle: 'Sell Your Crops At The <span class="highlight">Best Market.</span>',
       heroSubtitle: "Compare. Decide. Sell Better.", // Updated to match HTML content
-      trustGov: 'Government Mandi Data', // Updated to match HTML content
+      trustGov: 'Market Price Data', // Updated to match HTML content
       trustAI: 'AI Recommendation', // Updated to match HTML content
       trustLocation: 'Nearby Markets',
       langEnglish: "English",
@@ -49,9 +49,9 @@
 
       // --- Nav ---
       navHome: "Home",
-      navFindMarket: "Find Market",
-      navAbout: "About",
-      navContact: "Contact",
+      navFindMarket: "Find Best Market", // Restored
+      navAbout: "About Us", // Restored
+      navContact: "Contact Us", // Restored
 
       // --- Hero & Action Card ---
       cardTitle: "Find Best Market",
@@ -80,18 +80,18 @@
       recommendationReady: "Recommendation ready: Nashik APMC is leading today.",
       languageComingSoonPlaceholder: "(Coming Soon)", // Added for language selector
 
-      // Crop options
-      cropTomato: "Tomato",
-      cropOnion: "Onion",
-      cropPotato: "Potato",
-      cropCotton: "Cotton",
-      cropSoybean: "Soybean",
-      cropRice: "Rice",
-      cropWheat: "Wheat",
-      cropSugarcane: "Sugarcane",
+      // Crop options (used in select dropdowns)
+      cropOptionTomato: "Tomato",
+      cropOptionOnion: "Onion",
+      cropOptionPotato: "Potato",
+      cropOptionCotton: "Cotton",
+      cropOptionSoybean: "Soybean",
+      cropOptionRice: "Rice",
+      cropOptionWheat: "Wheat",
+      cropOptionSugarcane: "Sugarcane",
 
       // State options
-      stateMaharashtra: "Maharashtra",
+      stateMaharashtra: "Maharashtra", // Already correct
       statePunjab: "Punjab",
       stateMadhyaPradesh: "Madhya Pradesh",
 
@@ -102,21 +102,21 @@
 
       // --- Quick Actions ---
       quickActionsTitle: "How can Fasalo help you today?",
-      quickAction1Title: "Find Best Market",
-      quickAction1Desc: "Compare nearby mandi prices and maximize profit.",
-      quickAction2Title: "Compare Prices",
-      quickAction2Desc: "Compare multiple markets for your selected crop.",
-      quickAction3Title: "Nearby Mandis",
-      quickAction3Desc: "Discover markets around your current location.",
-      quickAction4Title: "Weather Forecast",
-      quickAction4Desc: "Future integration.",
+      quickAction1Title: "Find Best Market", // Already correct
+      quickAction1Desc: "Compare nearby mandi prices and maximize profit.", // Already correct
+      quickAction2Title: "Compare Prices", // Already correct
+      quickAction2Desc: "Compare multiple markets for your selected crop.", // Already correct
+      quickAction3Title: "Nearby Mandis", // Already correct
+      quickAction3Desc: "Discover markets around your current location.", // Already correct
+      quickAction4Title: "Weather Forecast", // Already correct
+      quickAction4Desc: "Future integration.", // Already correct
 
       // --- Why Fasalo ---
       whyBetterEyebrow: "Why Fasalo",
       whyBetterTitle: "Why Fasalo Gives Better Results",
-      whyBetterSubtitle: "Every recommendation is based on verified government market prices, intelligent analysis and transport optimization.",
-      whyBetterCard1Title: "Government Mandi Data",
-      whyBetterCard1Desc: "Uses official mandi prices.",
+      whyBetterSubtitle: "Fasalo combines market price information, intelligent analysis and transport considerations to help farmers make smarter selling decisions.",
+      whyBetterCard1Title: "Market Price Data", // Changed from "Government Mandi Data"
+      whyBetterCard1Desc: "Uses available market prices.", // Changed from "Uses official mandi prices."
       whyBetterCard2Title: "AI Market Analysis",
       whyBetterCard2Desc: "Analyzes historical and current trends.",
       whyBetterCard3Title: "Smart Transport Estimation",
@@ -125,9 +125,10 @@
       whyBetterCard4Desc: "Suggests the market with the highest expected profit.",
 
       // --- Market Preview ---
-      marketIntelEyebrow: "Live Market Intelligence",
-      marketIntelTitle: "Live Market Intelligence",
-      marketIntelSubtitle: "Real-time mandi price comparison powered by Government Mandi Data and AI analysis.",
+      marketIntelEyebrow: "Live Market Intelligence", // Restored
+      marketIntelTitle: "Live Market Intelligence", // Restored
+      marketIntelSubtitle: "Real-time mandi price comparison powered by Government Mandi Data and AI analysis.", // Restored
+      marketIntelDisclaimer: "Sample data for demonstration purposes only. Actual prices vary.",
       analyticsCard1Title: "Today's Highest Price",
       analyticsCard1Subtitle: "Cotton, Nagpur",
       analyticsCard2Title: "Average Price",
@@ -156,43 +157,46 @@
       recGood: "Good Choice",
 
       // --- CTA Section ---
-      ctaTitle: "Ready to Find the Best Market?",
-      ctaSubtitle: "Get AI-powered market recommendations based on your location, crop and quantity.",
-      ctaLearnMoreBtn: "Learn More",
-      ctaNewTitle: "Make Smarter Crop-Selling Decisions with Fasalo",
-      ctaNewDescription: "Fasalo helps farmers compare mandi prices, estimate transportation costs, and identify markets where their crops can potentially earn better returns. Using government market data and intelligent analysis, Fasalo makes it easier to compare nearby markets before selling.",
-      benefit1Title: "Compare Mandi Prices",
-      benefit1Desc: "Compare crop prices across nearby markets before deciding where to sell.",
-      benefit2Title: "Find Better Markets",
-      benefit2Desc: "Use your location and crop information to discover suitable nearby mandis.",
-      benefit3Title: "Understand Potential Profit",
-      benefit3Desc: "Consider market prices and transport costs to make a more informed selling decision.",
-      ctaExploreHowWorksBtn: "Explore How Fasalo Works",
-      ctaExploreMandiIntelBtn: "Explore Mandi Intelligence",
-
+      ctaTitle: "Ready to Find the Best Market?", // Restored
+      ctaSubtitle: "Get AI-powered market recommendations based on your location, crop and quantity.", // Restored
+      ctaLearnMoreBtn: "Learn More", // Restored
+      footerLinkFindMarket: "Find Best Market", // Restored
+      
       // --- Footer ---
       footerTagline: "Every Harvest Deserves the Best Market.",
       footerMobileTagline: "Helping farmers make smarter selling decisions with AI-powered market intelligence.",
-      footerSlogan: "Empowering farmers with technology.",
-      footerHeadingQuickLinks: "Quick Links",
+      footerSlogan: "Empowering farmers with technology.", // Restored
       footerHeadingResources: "Resources",
-      footerLinkFeatures: "Features",
-      footerLinkMarketInsights: "Market Insights",
-      footerLinkHowItWorks: "How It Works",
+      footerLinkFeatures: "Features", // This will link to /how-it-works.html
+      footerLinkMarketInsights: "Market Insights", // This will link to /mandi-prices.html
+      footerLinkHowItWorks: "How It Works", // Already correct
       footerHeadingLegal: "Legal",
-      footerLinkPrivacy: "Privacy Policy",
-      footerLinkTerms: "Terms of Service",
-      footerTrustGov: "Government Mandi Data ✓",
-      footerTrustAI: "AI Recommendation ✓",
+      footerLinkPrivacy: "Privacy Policy", // Already correct
+      footerLinkTerms: "Terms of Service", // Already correct
       footerMadeIn: "Made with ❤️ in India 🇮🇳",
-      footerCopyright: "&copy; 2025 Fasalo. All Rights Reserved.",
-      footerCopyrightMobile: "&copy; 2025 Fasalo. All Rights Reserved.",
+      footerCopyright: "&copy; 2026 Fasalo — Avishkar Project. All rights reserved.",
+      footerCopyrightMobile: "&copy; 2026 Fasalo — Avishkar Project. All rights reserved.",
+
+      // Team Section
+      teamFasaloTitle: "Team Fasalo",
+      avishkarProjectSubtitle: "Avishkar Project • 2026",
+      teamIntro: "Fasalo is a collaborative student project created as part of the Avishkar Project, focused on helping farmers make smarter crop-selling and market decisions.",
+      rajkamalName: "Rajkamal S. Mandrai",
+      rajkamalRole: "Website Design & Development",
+      gargiName: "Gargi Singh",
+      iramName: "Iram Dalvi",
+      radhikaName: "Radhika Paliwal",
+      amitName: "Amit Pal",
+      prasadName: "Prasad Devkate",
+      omName: "Om Nerkar",
+      teamMemberRole: "Team Member — Avishkar Project",
+      footerLinkTeam: "Team Fasalo",
     },
     hi: {
-      heroBadge: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg> सरकारी मंडी डेटा द्वारा संचालित',
+      heroBadge: 'डेटा-संचालित अंतर्दृष्टि',
       heroTitle: 'अपनी फसलें <span class="highlight">सर्वोत्तम बाजार</span> में बेचें।',
       heroSubtitle: "तुलना करें। निर्णय लें। बेहतर बेचें।",
-      trustGov: 'सरकारी मंडी डेटा',
+      trustGov: 'बाजार मूल्य डेटा',
       trustAI: 'एआई सिफारिश',
       trustLocation: 'आस-पास के बाजार',
       trustLang: 'कई भाषाएँ',
@@ -202,9 +206,9 @@
 
       // Nav
       navHome: "होम",
-      navFindMarket: "बाजार खोजें",
-      navAbout: "हमारे बारे में",
-      navContact: "संपर्क करें",
+      navFindMarket: "सर्वोत्तम बाजार खोजें", // Restored
+      navAbout: "हमारे बारे में", // Restored
+      navContact: "संपर्क करें", // Restored
 
       // Hero Action Card
       cardTitle: "सर्वोत्तम बाजार खोजें",
@@ -233,18 +237,18 @@
       recommendationReady: "सिफारिश तैयार है: नासिक एपीएमसी आज आगे है।",
       languageComingSoonPlaceholder: "(जल्द आ रहा है)",
 
-      // Crop options
-      cropTomato: "टमाटर",
-      cropOnion: "प्याज",
-      cropPotato: "आलू",
-      cropCotton: "कपास",
-      cropSoybean: "सोयाबीन",
-      cropRice: "चावल",
-      cropWheat: "गेहूं",
-      cropSugarcane: "गन्ना",
+      // Crop options (used in select dropdowns)
+      cropOptionTomato: "टमाटर",
+      cropOptionOnion: "प्याज",
+      cropOptionPotato: "आलू",
+      cropOptionCotton: "कपास",
+      cropOptionSoybean: "सोयाबीन",
+      cropOptionRice: "चावल",
+      cropOptionWheat: "गेहूं",
+      cropOptionSugarcane: "गन्ना",
 
       // State options
-      stateMaharashtra: "महाराष्ट्र",
+      stateMaharashtra: "महाराष्ट्र", // Already correct
       statePunjab: "पंजाब",
       stateMadhyaPradesh: "मध्य प्रदेश",
 
@@ -254,22 +258,22 @@
       marketNagpur: "नागपुर",
 
       // Quick Actions
-      quickActionsTitle: "आज फसालो आपकी मदद कैसे कर सकता है?",
-      quickAction1Title: "सर्वोत्तम बाजार खोजें",
-      quickAction1Desc: "आस-पास की मंडी की कीमतों की तुलना करें और मुनाफा बढ़ाएं।",
-      quickAction2Title: "कीमतों की तुलना करें",
-      quickAction2Desc: "अपनी चुनी हुई फसल के लिए कई बाजारों की तुलना करें।",
-      quickAction3Title: "आस-पास की मंडियां",
-      quickAction3Desc: "अपने वर्तमान स्थान के आसपास के बाजारों की खोज करें।",
-      quickAction4Title: "मौसम का पूर्वानुमान",
-      quickAction4Desc: "भविष्य में एकीकरण।",
+      quickActionsTitle: "आज फसालो आपकी मदद कैसे कर सकता है?", // Restored
+      quickAction1Title: "सर्वोत्तम बाजार खोजें", // Restored
+      quickAction1Desc: "आस-पास की मंडी की कीमतों की तुलना करें और मुनाफा बढ़ाएं।", // Restored
+      quickAction2Title: "कीमतों की तुलना करें", // Restored
+      quickAction2Desc: "अपनी चुनी हुई फसल के लिए कई बाजारों की तुलना करें।", // Restored
+      quickAction3Title: "आस-पास की मंडियां", // Restored
+      quickAction3Desc: "अपने वर्तमान स्थान के आसपास के बाजारों की खोज करें।", // Restored
+      quickAction4Title: "मौसम का पूर्वानुमान", // Restored
+      quickAction4Desc: "भविष्य में एकीकरण।", // Restored
 
       // Why Fasalo
       whyBetterEyebrow: "फसालो ही क्यों",
       whyBetterTitle: "फसालो बेहतर परिणाम क्यों देता है",
-      whyBetterSubtitle: "हर सिफारिश सत्यापित सरकारी बाजार कीमतों, बुद्धिमान विश्लेषण और परिवहन अनुकूलन पर आधारित है।",
-      whyBetterCard1Title: "सरकारी मंडी डेटा",
-      whyBetterCard1Desc: "आधिकारिक मंडी कीमतों का उपयोग करता है।",
+      whyBetterSubtitle: "हर सिफारिश सत्यापित सरकारी बाजार कीमतों, बुद्धिमान विश्लेषण और परिवहन अनुकूलन पर आधारित है।", // Restored
+      whyBetterCard1Title: "सरकारी मंडी डेटा", // Restored
+      whyBetterCard1Desc: "आधिकारिक मंडी कीमतों का उपयोग करता है।", // Restored
       whyBetterCard2Title: "एआई बाजार विश्लेषण",
       whyBetterCard2Desc: "ऐतिहासिक और वर्तमान रुझानों का विश्लेषण करता है।",
       whyBetterCard3Title: "स्मार्ट परिवहन अनुमान",
@@ -278,9 +282,10 @@
       whyBetterCard4Desc: "उच्चतम अपेक्षित लाभ वाले बाजार का सुझाव देता है।",
 
       // Market Preview
-      marketIntelEyebrow: "लाइव मार्केट इंटेलिजेंस",
-      marketIntelTitle: "लाइव मार्केट इंटेलिजेंस",
-      marketIntelSubtitle: "सरकारी मंडी डेटा और एआई विश्लेषण द्वारा संचालित वास्तविक समय की मंडी मूल्य तुलना।",
+      marketIntelEyebrow: "लाइव मार्केट इंटेलिजेंस", // Restored
+      marketIntelTitle: "लाइव मार्केट इंटेलिजेंस", // Restored
+      marketIntelSubtitle: "रियल-टाइम मंडी मूल्य तुलना सरकारी मंडी डेटा और एआई विश्लेषण द्वारा संचालित।", // Restored
+      marketIntelDisclaimer: "केवल प्रदर्शन उद्देश्यों के लिए नमूना डेटा। वास्तविक कीमतें भिन्न हो सकती हैं।",
       analyticsCard1Title: "आज की उच्चतम कीमत",
       analyticsCard1Subtitle: "कपास, नागपुर",
       analyticsCard2Title: "औसत मूल्य",
@@ -309,43 +314,46 @@
       recGood: "अच्छा विकल्प",
 
       // --- CTA Section ---
-      ctaTitle: "सर्वोत्तम बाजार खोजने के लिए तैयार हैं?",
-      ctaSubtitle: "अपने स्थान, फसल और मात्रा के आधार पर एआई-संचालित बाजार सिफारिशें प्राप्त करें।",
-      ctaLearnMoreBtn: "और जानें",
-      ctaNewTitle: "फसालो के साथ फसल बेचने के बेहतर निर्णय लें",
-      ctaNewDescription: "फसालो किसानों को मंडी की कीमतों की तुलना करने, परिवहन लागत का अनुमान लगाने और उन बाजारों की पहचान करने में मदद करता है जहां उनकी फसलों से संभावित रूप से बेहतर रिटर्न मिल सकता है। सरकारी बाजार डेटा और बुद्धिमान विश्लेषण का उपयोग करके, फसालो बेचने से पहले आस-पास के बाजारों की तुलना करना आसान बनाता है।",
-      benefit1Title: "मंडी कीमतों की तुलना करें",
-      benefit1Desc: "बेचने का निर्णय लेने से पहले आस-पास के बाजारों में फसल की कीमतों की तुलना करें।",
-      benefit2Title: "बेहतर बाजार खोजें",
-      benefit2Desc: "उपयुक्त आस-पास की मंडियों को खोजने के लिए अपने स्थान और फसल की जानकारी का उपयोग करें।",
-      benefit3Title: "संभावित लाभ को समझें",
-      benefit3Desc: "अधिक सूचित बिक्री निर्णय लेने के लिए बाजार की कीमतों और परिवहन लागत पर विचार करें।",
-      ctaExploreHowWorksBtn: "जानें फसालो कैसे काम करता है",
-      ctaExploreMandiIntelBtn: "मंडी इंटेलिजेंस एक्सप्लोर करें",
-
+      ctaTitle: "सर्वोत्तम बाजार खोजने के लिए तैयार हैं?", // Restored
+      ctaSubtitle: "अपने स्थान, फसल और मात्रा के आधार पर एआई-संचालित बाजार सिफारिशें प्राप्त करें।", // Restored
+      ctaLearnMoreBtn: "और जानें", // Restored
+      footerLinkFindMarket: "सर्वोत्तम बाजार खोजें", // Restored
+      
       // Footer
       footerTagline: "हर फसल सर्वोत्तम बाज़ार की हक़दार है।",
       footerMobileTagline: "एआई-संचालित बाजार इंटेलिजेंस के साथ किसानों को बेहतर बिक्री निर्णय लेने में मदद करना।",
-      footerSlogan: "किसानों को प्रौद्योगिकी के साथ सशक्त बनाना।",
-      footerHeadingQuickLinks: "त्वरित लिंक",
+      footerSlogan: "किसानों को प्रौद्योगिकी के साथ सशक्त बनाना।", // Restored
       footerHeadingResources: "संसाधन",
       footerLinkFeatures: "विशेषताएँ",
       footerLinkMarketInsights: "बाजार अंतर्दृष्टि",
-      footerLinkHowItWorks: "यह कैसे काम करता है",
+      footerLinkHowItWorks: "यह कैसे काम करता है", // Already correct
       footerHeadingLegal: "कानूनी",
-      footerLinkPrivacy: "गोपनीयता नीति",
-      footerLinkTerms: "सेवा की शर्तें",
-      footerTrustGov: "सरकारी मंडी डेटा ✓",
-      footerTrustAI: "एआई सिफारिश ✓",
+      footerLinkPrivacy: "गोपनीयता नीति", // Already correct
+      footerLinkTerms: "सेवा की शर्तें", // Already correct
       footerMadeIn: "❤️ भारत में निर्मित 🇮🇳",
-      footerCopyright: "&copy; 2025 फसालो। सर्वाधिकार सुरक्षित।",
-      footerCopyrightMobile: "&copy; 2025 फसालो। सर्वाधिकार सुरक्षित।",
+      footerCopyright: "&copy; 2026 फसालो — अविष्कार प्रोजेक्ट। सर्वाधिकार सुरक्षित।",
+      footerCopyrightMobile: "&copy; 2026 फसालो — अविष्कार प्रोजेक्ट। सर्वाधिकार सुरक्षित।",
+
+      // Team Section
+      teamFasaloTitle: "टीम फसालो",
+      avishkarProjectSubtitle: "अविष्कार प्रोजेक्ट • 2026",
+      teamIntro: "फसालो अविष्कार प्रोजेक्ट के हिस्से के रूप में बनाया गया एक सहयोगी छात्र प्रोजेक्ट है, जिसका उद्देश्य किसानों को फसल बेचने और बाजार के बेहतर निर्णय लेने में मदद करना है।",
+      rajkamalName: "राजकमल एस. मंदराई",
+      rajkamalRole: "वेबसाइट डिजाइन और विकास",
+      gargiName: "गार्गी सिंह",
+      iramName: "इरम दलवी",
+      radhikaName: "राधिका पालीवाल",
+      amitName: "अमित पाल",
+      prasadName: "प्रसाद देवकाते",
+      omName: "ओम नेरकर",
+      teamMemberRole: "टीम सदस्य — अविष्कार प्रोजेक्ट",
+      footerLinkTeam: "टीम फसालो",
     },
     mr: {
-      heroBadge: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg> सरकारी बाजार डेटाद्वारे समर्थित',
+      heroBadge: 'डेटा-आधारित अंतर्दृष्टी',
       heroTitle: 'तुमची पिके <span class="highlight">सर्वोत्तम बाजारात</span> विका.',
       heroSubtitle: "तुलना करा. निर्णय घ्या. चांगले विका.",
-      trustGov: 'सरकारी मंडई डेटा',
+      trustGov: 'बाजार मूल्य डेटा',
       trustAI: 'एआय शिफारस',
       trustLocation: 'जवळच्या मंडई',
       trustLang: 'अनेक भाषा',
@@ -355,9 +363,9 @@
 
       // Nav
       navHome: "होम",
-      navFindMarket: "बाजार शोधा",
-      navAbout: "आमच्याबद्दल",
-      navContact: "संपर्क",
+      navFindMarket: "सर्वोत्तम बाजार शोधा", // Restored
+      navAbout: "आमच्याबद्दल", // Restored
+      navContact: "संपर्क", // Restored
 
       // Hero Action Card
       cardTitle: "सर्वोत्तम बाजार शोधा",
@@ -386,18 +394,18 @@
       recommendationReady: "शिफारस तयार आहे: नाशिक एपीएमसी आज आघाडीवर आहे.",
       languageComingSoonPlaceholder: "(लवकरच येत आहे)",
 
-      // Crop options
-      cropTomato: "टोमॅटो",
-      cropOnion: "कांदा",
-      cropPotato: "बटाटा",
-      cropCotton: "कापूस",
-      cropSoybean: "सोयाबीन",
-      cropRice: "तांदूळ",
-      cropWheat: "गहू",
-      cropSugarcane: "ऊस",
+      // Crop options (used in select dropdowns)
+      cropOptionTomato: "टोमॅटो",
+      cropOptionOnion: "कांदा",
+      cropOptionPotato: "बटाटा",
+      cropOptionCotton: "कापूस",
+      cropOptionSoybean: "सोयाबीन",
+      cropOptionRice: "तांदूळ",
+      cropOptionWheat: "गहू",
+      cropOptionSugarcane: "ऊस",
 
       // State options
-      stateMaharashtra: "महाराष्ट्र",
+      stateMaharashtra: "महाराष्ट्र", // Already correct
       statePunjab: "पंजाब",
       stateMadhyaPradesh: "मध्य प्रदेश",
 
@@ -407,22 +415,22 @@
       marketNagpur: "नागपूर",
 
       // Quick Actions
-      quickActionsTitle: "आज फसालो तुम्हाला कशी मदत करू शकतो?",
-      quickAction1Title: "सर्वोत्तम बाजार शोधा",
-      quickAction1Desc: "जवळच्या मंडईच्या किमतींची तुलना करा आणि नफा वाढवा.",
-      quickAction2Title: "किमतींची तुलना करा",
-      quickAction2Desc: "तुमच्या निवडलेल्या पिकासाठी अनेक बाजारांची तुलना करा.",
-      quickAction3Title: "जवळच्या मंडई",
-      quickAction3Desc: "तुमच्या वर्तमान स्थानाजवळील बाजारपेठा शोधा.",
-      quickAction4Title: "हवामानाचा अंदाज",
-      quickAction4Desc: "भविष्यात एकत्रीकरण.",
+      quickActionsTitle: "आज फसालो तुम्हाला कशी मदत करू शकतो?", // Restored
+      quickAction1Title: "सर्वोत्तम बाजार शोधा", // Restored
+      quickAction1Desc: "जवळच्या मंडईच्या किमतींची तुलना करा आणि नफा वाढवा.", // Restored
+      quickAction2Title: "किमतींची तुलना करा", // Restored
+      quickAction2Desc: "तुमच्या निवडलेल्या पिकासाठी अनेक बाजारांची तुलना करा.", // Restored
+      quickAction3Title: "जवळच्या मंडई", // Restored
+      quickAction3Desc: "तुमच्या वर्तमान स्थानाजवळील बाजारपेठा शोधा.", // Restored
+      quickAction4Title: "हवामानाचा अंदाज", // Restored
+      quickAction4Desc: "भविष्यात एकत्रीकरण.", // Restored
 
       // Why Fasalo
       whyBetterEyebrow: "फसालो का",
       whyBetterTitle: "फसालो चांगले परिणाम का देतो",
-      whyBetterSubtitle: "प्रत्येक शिफारस सत्यापित सरकारी बाजार किमती, बुद्धिमान विश्लेषण आणि वाहतूक अनुकूलनावर आधारित आहे.",
-      whyBetterCard1Title: "सरकारी मंडई डेटा",
-      whyBetterCard1Desc: "अधिकृत मंडई किमती वापरतो.",
+      whyBetterSubtitle: "प्रत्येक शिफारस सत्यापित सरकारी बाजार किमती, बुद्धिमान विश्लेषण आणि वाहतूक अनुकूलनावर आधारित आहे.", // Restored
+      whyBetterCard1Title: "सरकारी मंडई डेटा", // Restored
+      whyBetterCard1Desc: "अधिकृत मंडई किमती वापरतो.", // Restored
       whyBetterCard2Title: "एआय बाजार विश्लेषण",
       whyBetterCard2Desc: "ऐतिहासिक आणि वर्तमान ट्रेंडचे विश्लेषण करतो.",
       whyBetterCard3Title: "स्मार्ट वाहतूक अंदाज",
@@ -431,9 +439,10 @@
       whyBetterCard4Desc: "सर्वाधिक अपेक्षित नफा असलेल्या बाजारपेठेची शिफारस करतो.",
 
       // Market Preview
-      marketIntelEyebrow: "थेट बाजार बुद्धिमत्ता",
-      marketIntelTitle: "थेट बाजार बुद्धिमत्ता",
-      marketIntelSubtitle: "सरकारी मंडी डेटा आणि एआय विश्लेषणाद्वारे समर्थित रिअल-टाइम मंडी किंमत तुलना.",
+      marketIntelEyebrow: "थेट बाजार बुद्धिमत्ता", // Restored
+      marketIntelTitle: "थेट बाजार बुद्धिमत्ता", // Restored
+      marketIntelSubtitle: "सरकारी मंडई डेटा आणि एआय विश्लेषणाद्वारे समर्थित रिअल-टाइम मंडई किंमत तुलना.", // Restored
+      marketIntelDisclaimer: "केवळ प्रात्यक्षिक उद्देशांसाठी नमुना डेटा. वास्तविक किमती भिन्न असू शकतात.",
       analyticsCard1Title: "आजची सर्वोच्च किंमत",
       analyticsCard1Subtitle: "कापूस, नागपूर",
       analyticsCard2Title: "सरासरी किंमत",
@@ -462,37 +471,40 @@
       recGood: "चांगली निवड",
 
       // --- CTA Section ---
-      ctaTitle: "सर्वोत्तम बाजार शोधण्यासाठी तयार आहात?",
-      ctaSubtitle: "तुमचे स्थान, पीक आणि प्रमाण यावर आधारित एआय-समर्थित बाजार शिफारसी मिळवा.",
-      ctaLearnMoreBtn: "अधिक जाणून घ्या",
-      ctaNewTitle: "फसालोसह पीक विक्रीचे अधिक स्मार्ट निर्णय घ्या",
-      ctaNewDescription: "फसालो शेतकऱ्यांना मंडईच्या किमतींची तुलना करण्यास, वाहतूक खर्चाचा अंदाज घेण्यास आणि त्यांच्या पिकांना संभाव्यतः चांगले उत्पन्न मिळू शकणाऱ्या बाजारपेठा ओळखण्यास मदत करते. सरकारी बाजार डेटा आणि बुद्धिमान विश्लेषण वापरून, फसालो विक्री करण्यापूर्वी जवळच्या बाजारपेठांची तुलना करणे सोपे करते.",
-      benefit1Title: "मंडईच्या किमतींची तुलना करा",
-      benefit1Desc: "विक्रीचा निर्णय घेण्यापूर्वी जवळच्या बाजारपेठांमधील पिकांच्या किमतींची तुलना करा.",
-      benefit2Title: "चांगल्या बाजारपेठा शोधा",
-      benefit2Desc: "जवळच्या योग्य मंडई शोधण्यासाठी तुमचे स्थान आणि पिकाची माहिती वापरा.",
-      benefit3Title: "संभाव्य नफा समजून घ्या",
-      benefit3Desc: "अधिक माहितीपूर्ण विक्री निर्णय घेण्यासाठी बाजारभाव आणि वाहतूक खर्चाचा विचार करा.",
-      ctaExploreHowWorksBtn: "फसालो कसे कार्य करते ते एक्सप्लोर करा",
-      ctaExploreMandiIntelBtn: "मंडई इंटेलिजन्स एक्सप्लोर करा",
-
+      ctaTitle: "सर्वोत्तम बाजार शोधण्यासाठी तयार आहात?", // Restored
+      ctaSubtitle: "तुमचे स्थान, पीक आणि प्रमाण यावर आधारित एआय-समर्थित बाजार शिफारसी मिळवा.", // Restored
+      ctaLearnMoreBtn: "अधिक जाणून घ्या", // Restored
+      footerLinkFindMarket: "सर्वोत्तम बाजार शोधा", // Restored
+      
       // Footer
       footerTagline: "प्रत्येक पिकाला सर्वोत्तम बाजारपेठ मिळायला हवी.",
       footerMobileTagline: "एआय-समर्थित मार्केट इंटेलिजन्ससह शेतकऱ्यांना हुशार विक्री निर्णय घेण्यास मदत करणे.",
-      footerSlogan: "तंत्रज्ञानाने शेतकऱ्यांना सक्षम करणे.",
-      footerHeadingQuickLinks: "त्वरित दुवे",
+      footerSlogan: "तंत्रज्ञानाने शेतकऱ्यांना सक्षम करणे.", // Restored
       footerHeadingResources: "संसाधने",
       footerLinkFeatures: "वैशिष्ट्ये",
       footerLinkMarketInsights: "बाजार अंतर्दृष्टी",
-      footerLinkHowItWorks: "हे कसे कार्य करते",
+      footerLinkHowItWorks: "हे कसे कार्य करते", // Already correct
       footerHeadingLegal: "कायदेशीर",
-      footerLinkPrivacy: "गोपनीयता धोरण",
-      footerLinkTerms: "सेवा अटी",
-      footerTrustGov: "सरकारी मंडई डेटा ✓",
-      footerTrustAI: "एआय शिफारस ✓",
+      footerLinkPrivacy: "गोपनीयता धोरण", // Already correct
+      footerLinkTerms: "सेवा अटी", // Already correct
       footerMadeIn: "❤️ भारतात बनवलेले 🇮🇳",
-      footerCopyright: "&copy; 2025 फसालो. सर्व हक्क राखीव.",
-      footerCopyrightMobile: "&copy; 2025 फसालो. सर्व हक्क राखीव.",
+      footerCopyright: "&copy; 2026 फसालो — अविष्कार प्रकल्प. सर्व हक्क राखीव.",
+      footerCopyrightMobile: "&copy; 2026 फसालो — अविष्कार प्रकल्प. सर्व हक्क राखीव.",
+
+      // Team Section
+      teamFasaloTitle: "टीम फसालो",
+      avishkarProjectSubtitle: "अविष्कार प्रकल्प • 2026",
+      teamIntro: "फसालो हा अविष्कार प्रकल्पाचा एक सहयोगी विद्यार्थी प्रकल्प आहे, जो शेतकऱ्यांना पीक विक्री आणि बाजाराचे अधिक स्मार्ट निर्णय घेण्यास मदत करण्यावर लक्ष केंद्रित करतो.",
+      rajkamalName: "राजकमल एस. मंदराई",
+      rajkamalRole: "वेबसाइट डिझाइन आणि विकास",
+      gargiName: "गार्गी सिंग",
+      iramName: "इरम दळवी",
+      radhikaName: "राधिका पालिवाल",
+      amitName: "अमित पाल",
+      prasadName: "प्रसाद देवकाते",
+      omName: "ओम नेरकर",
+      teamMemberRole: "टीम सदस्य — अविष्कार प्रकल्प",
+      footerLinkTeam: "टीम फसालो",
     },
   };
 
@@ -658,7 +670,7 @@
       .filter(Boolean);
     let activeSectionId = "";
     let ticking = false;
-
+  
     const setActiveNavLink = (id) => {
       if (id === activeSectionId) return;
 
@@ -861,34 +873,10 @@
 
       submitButton.disabled = true;
       submitButton.classList.add("is-loading");
-      heroPanel?.classList.remove("is-revealed");
+      heroStatus.textContent = translations[currentLang].findingMarkets; // Show initial status
 
-      steps.forEach((step, index) => {
-        window.setTimeout(() => {
-          heroStatus.textContent = step;
-        }, index * 650);
-      });
-
-      window.setTimeout(() => {
-        heroStatus.textContent = translations[currentLang].recommendationReady;
-        heroPanel?.classList.add("is-revealed");
-        submitButton.disabled = false;
-
-        // Animate result section and its cards
-        if (resultSection) {
-          resultSection.classList.add("is-visible");
-          resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
-
-          const resultCards = resultSection.querySelectorAll('.result-card > *'); // Target direct children for stagger
-          resultCards.forEach((card, index) => {
-            card.style.transitionDelay = `${index * 100}ms`; // Stagger delay for result cards
-            card.classList.add('is-visible'); // Trigger fade-in/translate-up
-          });
-        }
-
-        submitButton.classList.remove("is-loading");
-        if (buttonText) buttonText.textContent = originalText;
-      }, steps.length * 650 + 100);
+      // The form will naturally submit to formaction="/find-best-market.html"
+      // The rest of the logic for showing results will be on the new page.
     });
   }
 

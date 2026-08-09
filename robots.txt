@@ -1,4 +1,10 @@
 # Allow all user agents to crawl the site
 User-agent: *
 Allow: /
+
+# Disallow any internal API routes or admin panels
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap location
 Sitemap: https://fasalo-etv5.vercel.app/sitemap.xml

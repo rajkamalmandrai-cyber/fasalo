@@ -2,20 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Fasalo | AI Powered Mandi Intelligence for Farmers</title>
+    <title>Fasalo — Find the Best Market to Sell Your Crop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Fasalo helps farmers compare nearby mandi prices, estimate transport costs, discover profitable markets, and make smarter selling decisions using AI-powered market intelligence." />
+    <meta name="description" content="Compare nearby market prices, estimate transport cost, and get an AI-powered recommendation on where to sell your crop for maximum profit." />
     <meta name="theme-color" content="#173826" />
 
     <!-- Recommended SEO Meta Tags -->
     <link rel="canonical" href="https://fasalo-etv5.vercel.app/" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook --> 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://fasalo-etv5.vercel.app/" />
-    <meta property="og:title" content="Fasalo | AI Powered Mandi Intelligence for Farmers" />
-    <meta property="og:description" content="Fasalo helps farmers compare nearby mandi prices, estimate transport costs, discover profitable markets, and make smarter selling decisions using AI-powered market intelligence." />
+    <meta property="og:title" content="Fasalo — Find the Best Market to Sell Your Crop" />
+    <meta property="og:description" content="Compare nearby market prices, estimate transport cost, and get an AI recommendation on where to sell your crop for maximum profit." />
     <meta property="og:image" content="https://fasalo-etv5.vercel.app/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -24,8 +24,8 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://fasalo-etv5.vercel.app/" />
-    <meta property="twitter:title" content="Fasalo | AI Powered Mandi Intelligence for Farmers" />
-    <meta property="twitter:description" content="Fasalo helps farmers compare nearby mandi prices, estimate transport costs, discover profitable markets, and make smarter selling decisions using AI-powered market intelligence." />
+    <meta property="twitter:title" content="Fasalo — Find the Best Market to Sell Your Crop" />
+    <meta property="twitter:description" content="Compare nearby market prices, estimate transport cost, and get an AI recommendation on where to sell your crop for maximum profit." />
     <meta property="twitter:image" content="https://fasalo-etv5.vercel.app/og-image.png" />
 
     <!-- Schema.org Markup -->
@@ -34,21 +34,43 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@context": "https://schema.org",
           "@type": "Organization",
-          "@id": "https://fasalo-etv5.vercel.app/#organization",
           "name": "Fasalo",
           "url": "https://fasalo-etv5.vercel.app/",
+          "logo": "https://fasalo-etv5.vercel.app/logo.svg",
+          "description": "AI-powered market intelligence platform helping Indian farmers find the best market to sell their crops.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "url": "https://fasalo-etv5.vercel.app/contact.html"
+          },
           "sameAs": []
         },
         {
+          "@context": "https://schema.org",
           "@type": "WebSite",
-          "url": "https://fasalo-etv5.vercel.app/",
           "name": "Fasalo",
-          "description": "Fasalo is an AI-powered agricultural market intelligence platform that helps farmers compare mandi prices, estimate transport costs, predict profits, and choose the best market to sell their crops.",
+          "url": "https://fasalo-etv5.vercel.app/",
+          "description": "Fasalo is an AI-powered agricultural market intelligence platform that helps farmers compare market prices, estimate transport costs, predict profits, and choose the best market to sell their crops.",
           "publisher": {
-            "@id": "https://fasalo-etv5.vercel.app/#organization"
+            "@type": "Organization",
+            "name": "Fasalo"
           }
-        }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Fasalo",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "description": "AI-powered market selection tool for Indian farmers. Compare nearby market prices, estimate transport cost, and get a recommendation on where to sell your crop for maximum profit."
+          }
       ]
     }
     </script>
@@ -79,7 +101,7 @@
     <header class="navbar" aria-label="Fasalo Main Navigation" data-translate-key="navAriaMain">
       <div class="container navbar__container">
         <a class="brand" href="#app" aria-label="Fasalo home" data-translate-key="brandAriaLabel">
-          <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark" aria-hidden="true" role="img" aria-label="Fasalo logo">
             <svg class="icon" viewBox="0 0 24 24" role="img">
               <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
               <path d="M16 8a6 6 0 0 1-12 0c0-4.42 3.58-8 8-8s8 3.58 8 8c0 2.21-1.79 4-4 4" />
@@ -97,19 +119,19 @@
         <!-- Mobile Menu Content (visible only on mobile/tablet) -->
         <div class="navbar__menu">
           <div class="mobile-menu__header">
-            <a class="brand" href="#app" aria-label="Fasalo home" data-translate-key="brandAriaLabel">
+            <a class="brand" href="/" aria-label="Fasalo home" data-translate-key="brandAriaLabel">
               <span class="brand-name">Fasalo</span>
             </a>
             <button class="mobile-menu__close-btn" type="button" aria-label="Close navigation" data-translate-key="navCloseAria">
               <svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
             </button>
           </div>
-          <nav class="nav" aria-label="Main navigation" data-translate-key="navAriaNav">
+          <nav class="nav" aria-label="Main navigation" data-translate-key="navAriaNav"> 
             <ul class="nav__list">
-              <li><a href="#app" class="nav__link" data-translate-key="navHome">Home</a></li>
-              <li><a href="#market-preview" class="nav__link" data-translate-key="navFindMarket">Find Market</a></li>
-              <li><a href="#why-better" class="nav__link" data-translate-key="navAbout">About</a></li>
-              <li><a href="#footer" class="nav__link" data-translate-key="navContact">Contact</a></li>
+              <li><a href="/" class="nav__link" data-translate-key="navHome">Home</a></li>
+              <li><a href="/find-best-market.html" class="nav__link" data-translate-key="navFindMarket">Find Best Market</a></li>
+              <li><a href="/about.html" class="nav__link" data-translate-key="navAbout">About Us</a></li>
+              <li><a href="/contact.html" class="nav__link" data-translate-key="navContact">Contact Us</a></li>
             </ul>
           </nav>
           <div class="navbar__actions">
@@ -133,20 +155,20 @@
                 </ul>
               </details>
             </div>
-            <a href="#market-preview" class="button button--primary"><span data-translate-key="findBestMarketBtn">Find Best Market</span></a>
+            <a href="/find-best-market.html" class="button button--primary"><span data-translate-key="findBestMarketBtn">Find Best Market</span></a>
           </div>
         </div>
       </div>
     </header>
 
     <main id="app" tabindex="-1">
-      <!-- 2. Hero Section -->
+      <!-- 2. Hero Section --> 
       <section class="hero-section" aria-labelledby="hero-heading">
         <div class="hero-bg-shape hero-bg-shape--1"></div>
         <div class="hero-bg-shape hero-bg-shape--2"></div>
         <div class="container hero-layout">
-          <div class="hero-content" data-animate data-stagger-children="true">
-            <p class="hero-badge" data-translate-key="heroBadge" data-stagger-item="true">Government Market Data</p>
+          <div class="hero-content" data-animate data-stagger-children="true"> 
+            <p class="hero-badge" data-translate-key="heroBadge" data-stagger-item="true">Data-Driven Insights</p>
             <h1 id="hero-heading" class="display" data-translate-key="heroTitle" data-stagger-item="true">
               Sell Your Crops At The <span class="highlight">Best Market.</span>
             </h1>
@@ -160,7 +182,7 @@
             </ul>
             <div class="cluster">
               <a href="#action-card" class="button button--primary button--arrow"><span data-translate-key="findBestMarketBtn">Find Best Market</span></a>
-              <a href="#why-better" class="button button--outline"><span data-translate-key="howItWorksBtn">How It Works</span></a>
+              <a href="/how-it-works.html" class="button button--outline"><span data-translate-key="howItWorksBtn">How It Works</span></a>
             </div>
           </div>
 
@@ -212,7 +234,7 @@
                   <span class="field__label" data-translate-key="cardDateLabel">Selling Date</span>
                   <input class="date-input" type="date" />
                 </label>
-                <button class="button button--primary button--arrow" type="submit">
+                <button class="button button--primary button--arrow" type="submit" formaction="/find-best-market.html">
                   <span class="button__text" data-translate-key="checkMarketBtn">Find Best Market</span>
                   <span class="button__loader"></span>
                 </button>
@@ -230,19 +252,19 @@
             <h2 id="quick-actions-heading" class="heading-2" data-translate-key="quickActionsTitle">How can Fasalo help you today?</h2>
           </div>
           <div class="auto-grid" data-stagger-children="true" data-animate>
-            <a href="#action-card" class="card card--interactive quick-action-card" data-stagger-item="true">
+            <a href="/find-best-market.html" class="card card--interactive quick-action-card" data-stagger-item="true">
               <span class="icon-tile" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M7 12H2M17 12h5"/></svg></span>
               <h3 class="heading-3" data-translate-key="quickAction1Title">Find Best Market</h3>
               <p class="body-copy" data-translate-key="quickAction1Desc">Compare nearby mandi prices and maximize profit.</p>
             </a>
-            <a href="#market-preview" class="card card--interactive quick-action-card" data-stagger-item="true">
+            <a href="/mandi-prices.html" class="card card--interactive quick-action-card" data-stagger-item="true">
               <span class="icon-tile" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span>
               <h3 class="heading-3" data-translate-key="quickAction2Title">Compare Prices</h3>
               <p class="body-copy" data-translate-key="quickAction2Desc">Compare multiple markets for your selected crop.</p>
             </a>
-            <a href="#" class="card card--interactive quick-action-card" data-stagger-item="true">
+            <a href="/maharashtra.html" class="card card--interactive quick-action-card" data-stagger-item="true">
               <span class="icon-tile" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg></span>
-              <h3 class="heading-3" data-translate-key="quickAction3Title">Nearby Mandis</h3>
+              <h3 class="heading-3" data-translate-key="quickAction3Title">Nearby Markets</h3>
               <p class="body-copy" data-translate-key="quickAction3Desc">Discover markets around your current location.</p>
             </a>
             <a href="#" class="card card--interactive quick-action-card is-disabled" data-stagger-item="true">
@@ -302,6 +324,7 @@
             <p class="eyebrow" data-translate-key="marketIntelEyebrow">Live Market Intelligence</p>
             <h2 id="market-intel-heading" class="heading-1" data-translate-key="marketIntelTitle">Live Market Intelligence</h2>
             <p class="body-large" data-translate-key="marketIntelSubtitle">Real-time mandi price comparison powered by Government Mandi Data and AI analysis.</p>
+            <p class="small-text" data-translate-key="marketIntelDisclaimer">Sample data for demonstration purposes only. Actual prices vary.</p>
           </div>
 
           <!-- Analytics Cards -->
@@ -505,8 +528,8 @@
           <h2 id="cta-heading" class="heading-1" data-translate-key="ctaTitle">Ready to Find the Best Market?</h2>
           <p class="body-large" data-translate-key="ctaSubtitle">Get AI-powered market recommendations based on your location, crop and quantity.</p>
           <div class="cluster">
-            <a href="#action-card" class="button button--primary button--arrow"><span data-translate-key="findBestMarketBtn">Find Best Market</span></a>
-            <a href="#why-better" class="button button--outline"><span data-translate-key="ctaLearnMoreBtn">Learn More</span></a>
+            <a href="/find-best-market.html" class="button button--primary button--arrow"><span data-translate-key="findBestMarketBtn">Find Best Market</span></a>
+            <a href="/how-it-works.html" class="button button--outline"><span data-translate-key="ctaLearnMoreBtn">Learn More</span></a>
           </div>
         </div>
       </div>
@@ -519,7 +542,7 @@
           <div class="footer-brand">
             <a class="brand" href="#app" aria-label="Fasalo home" data-translate-key="brandAriaLabel">
               <span class="brand-mark" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24" role="img">
+                <svg class="icon" viewBox="0 0 24 24" role="img" aria-label="Fasalo logo">
                   <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
                   <path d="M16 8a6 6 0 0 1-12 0c0-4.42 3.58-8 8-8s8 3.58 8 8c0 2.21-1.79 4-4 4" />
                 </svg>
@@ -537,17 +560,18 @@
             <div class="footer-links">
               <h4 class="footer-heading" data-translate-key="footerHeadingResources">Resources</h4>
               <ul>
-                <li><a href="#why-better"><span data-translate-key="footerLinkFeatures">Features</span></a></li>
-                <li><a href="#market-preview"><span data-translate-key="footerLinkMarketInsights">Market Insights</span></a></li>
-                <li><a href="#"><span data-translate-key="footerLinkHowItWorks">How It Works</span></a></li>
+                <li><a href="/how-it-works.html"><span data-translate-key="footerLinkFeatures">Features</span></a></li>
+                <li><a href="/mandi-prices.html"><span data-translate-key="footerLinkMarketInsights">Market Insights</span></a></li>
+                <li><a href="/how-it-works.html"><span data-translate-key="footerLinkHowItWorks">How It Works</span></a></li>
+                <li><a href="/about.html#team"><span data-translate-key="footerLinkTeam">Team Fasalo</span></a></li>
               </ul>
             </div>
             <!-- Legal (below both columns) -->
             <div class="footer-links">
               <h4 class="footer-heading" data-translate-key="footerHeadingLegal">Legal</h4>
               <ul>
-                <li><a href="#"><span data-translate-key="footerLinkPrivacy">Privacy Policy</span></a></li>
-                <li><a href="#"><span data-translate-key="footerLinkTerms">Terms of Service</span></a></li>
+                <li><a href="/privacy-policy.html"><span data-translate-key="footerLinkPrivacy">Privacy Policy</span></a></li>
+                <li><a href="/terms.html"><span data-translate-key="footerLinkTerms">Terms of Service</span></a></li>
               </ul>
             </div>
           </div>
@@ -555,26 +579,27 @@
             <div class="footer-links">
               <h4 class="footer-heading" data-translate-key="footerHeadingResources">Resources</h4>
               <ul>
-                <li><a href="#why-better"><span data-translate-key="footerLinkFeatures">Features</span></a></li>
-                <li><a href="#market-preview"><span data-translate-key="footerLinkMarketInsights">Market Insights</span></a></li>
-                <li><a href="#"><span data-translate-key="footerLinkHowItWorks">How It Works</span></a></li>
+                <li><a href="/how-it-works.html"><span data-translate-key="footerLinkFeatures">Features</span></a></li>
+                <li><a href="/mandi-prices.html"><span data-translate-key="footerLinkMarketInsights">Market Insights</span></a></li>
+                <li><a href="/how-it-works.html"><span data-translate-key="footerLinkHowItWorks">How It Works</span></a></li>
+                <li><a href="/about.html#team"><span data-translate-key="footerLinkTeam">Team Fasalo</span></a></li>
               </ul>
             </div>
             <div class="footer-links">
               <h4 class="footer-heading" data-translate-key="footerHeadingLegal">Legal</h4>
               <ul>
-                <li><a href="#"><span data-translate-key="footerLinkPrivacy">Privacy Policy</span></a></li>
-                <li><a href="#"><span data-translate-key="footerLinkTerms">Terms of Service</span></a></li>
+                <li><a href="/privacy-policy.html"><span data-translate-key="footerLinkPrivacy">Privacy Policy</span></a></li>
+                <li><a href="/terms.html"><span data-translate-key="footerLinkTerms">Terms of Service</span></a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
           <div class="footer-bottom-mobile">
-            <p class="footer-copyright-mobile" data-translate-key="footerCopyrightMobile">&copy; 2025 Fasalo. All Rights Reserved.</p>
+            <p class="footer-copyright-mobile" data-translate-key="footerCopyrightMobile">&copy; 2026 Fasalo — Avishkar Project. All rights reserved.</p>
             <p class="footer-made-in" data-translate-key="footerMadeIn">Made with ❤️ in India 🇮🇳</p>
           </div>
-          <p class="small-text footer-copyright" data-translate-key="footerCopyright">&copy; 2025 Fasalo. All Rights Reserved.</p>
+          <p class="small-text footer-copyright" data-translate-key="footerCopyright">&copy; 2026 Fasalo — Avishkar Project. All rights reserved.</p>
           <div class="social-links" aria-label="Social media" data-translate-key="socialAria">
             <!-- Placeholder for social media icons -->
           </div>

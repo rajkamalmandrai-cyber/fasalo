@@ -3114,6 +3114,10 @@ body.is-menu-open main#app {
     padding: var(--space-5);
     border-radius: var(--radius-lg);
   }
+  .footer-links a span::after {
+    /* Hide underline on mobile for cleaner look */
+    display: none;
+  }
 
   .hero-artwork__map {
     top: 22%;
