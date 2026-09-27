@@ -2043,6 +2043,8 @@ noscript [data-animate] {
   background-repeat: no-repeat;
   opacity: 0;
   animation: heroSlideshow 21s infinite ease-in-out;
+  /* Add a slight grayscale to keep it minimalistic and not too vibrant */
+  filter: grayscale(30%) contrast(90%);
 }
 
 .hero-bg-slide:nth-child(1) { animation-delay: 0s; }
@@ -2051,8 +2053,8 @@ noscript [data-animate] {
 
 @keyframes heroSlideshow {
   0% { opacity: 0; }
-  10% { opacity: 0.18; }
-  33% { opacity: 0.18; }
+  10% { opacity: 0.8; }
+  33% { opacity: 0.8; }
   43% { opacity: 0; }
   100% { opacity: 0; }
 }
@@ -2063,7 +2065,7 @@ noscript [data-animate] {
     opacity: 0 !important;
   }
   .hero-bg-slide:nth-child(1) {
-    opacity: 0.18 !important;
+    opacity: 0.8 !important;
   }
 }
 
@@ -2073,8 +2075,9 @@ noscript [data-animate] {
   background: linear-gradient(
     to right,
     var(--color-page) 0%,
-    rgba(255, 252, 245, 0.4) 50%,
-    rgba(255, 252, 245, 0) 100%
+    var(--color-page) 35%,
+    rgba(255, 252, 245, 0.6) 65%,
+    rgba(255, 252, 245, 0.1) 100%
   );
   z-index: 1;
 }
@@ -2084,8 +2087,9 @@ noscript [data-animate] {
     background: linear-gradient(
       to bottom,
       var(--color-page) 0%,
-      rgba(255, 252, 245, 0.6) 40%,
-      rgba(255, 252, 245, 0) 100%
+      var(--color-page) 30%,
+      rgba(255, 252, 245, 0.6) 60%,
+      rgba(255, 252, 245, 0.1) 100%
     );
   }
 }
