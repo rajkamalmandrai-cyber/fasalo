@@ -1608,30 +1608,72 @@
     { id: "sug-pandharpur", name: "Pandharpur Sugar Mills", location: "Solapur, Maharashtra", lat: 17.6749, lon: 75.3262, crop: "Sugarcane", basePrice: 324, baseDistance: 60, demand: "Medium", confidence: 91.8, reason: "Dependable harvest reception with computerized weighing slips." }
   ];
 
-  function normalizeCropName(cropSelect) {
-    if (!cropSelect) return "Tomato";
-    const selectedOpt = cropSelect.options[cropSelect.selectedIndex];
-    if (!selectedOpt) return "Tomato";
+  function normalizeCropName(cropSelect, form) {
+    // 1. Check hidden input or form dataset
+    if (form) {
+      const hiddenInput = form.querySelector('input[name="crop"]');
+      const val = (hiddenInput?.value || form.dataset?.crop || "").trim().toLowerCase();
+      if (val) {
+        if (val.includes("tomato") || val.includes("टमाटर") || val.includes("टोमॅटो")) return "Tomato";
+        if (val.includes("onion") || val.includes("प्याज") || val.includes("कांदा")) return "Onion";
+        if (val.includes("potato") || val.includes("आलू") || val.includes("बटाटा")) return "Potato";
+        if (val.includes("cotton") || val.includes("कपास") || val.includes("कापूस")) return "Cotton";
+        if (val.includes("soybean") || val.includes("सोयाबीन")) return "Soybean";
+        if (val.includes("rice") || val.includes("paddy") || val.includes("चावल") || val.includes("धान") || val.includes("तांदूळ") || val.includes("भात")) return "Rice";
+        if (val.includes("wheat") || val.includes("गेहूं") || val.includes("गहू")) return "Wheat";
+        if (val.includes("sugarcane") || val.includes("गन्ना") || val.includes("ऊस")) return "Sugarcane";
+      }
+    }
 
-    const translateKey = selectedOpt.getAttribute("data-translate-key") || "";
-    if (translateKey.includes("Tomato")) return "Tomato";
-    if (translateKey.includes("Onion")) return "Onion";
-    if (translateKey.includes("Potato")) return "Potato";
-    if (translateKey.includes("Cotton")) return "Cotton";
-    if (translateKey.includes("Soybean")) return "Soybean";
-    if (translateKey.includes("Rice")) return "Rice";
-    if (translateKey.includes("Wheat")) return "Wheat";
-    if (translateKey.includes("Sugarcane")) return "Sugarcane";
+    // 2. Check URL search param ?crop=
+    const urlCrop = (new URLSearchParams(window.location.search).get("crop") || "").trim().toLowerCase();
+    if (urlCrop) {
+      if (urlCrop.includes("tomato")) return "Tomato";
+      if (urlCrop.includes("onion")) return "Onion";
+      if (urlCrop.includes("potato")) return "Potato";
+      if (urlCrop.includes("cotton")) return "Cotton";
+      if (urlCrop.includes("soybean")) return "Soybean";
+      if (urlCrop.includes("rice") || urlCrop.includes("paddy")) return "Rice";
+      if (urlCrop.includes("wheat")) return "Wheat";
+      if (urlCrop.includes("sugarcane")) return "Sugarcane";
+    }
 
-    const text = (selectedOpt.textContent || "").trim().toLowerCase();
-    if (text.includes("tomato") || text.includes("टमाटर") || text.includes("टोमॅटो")) return "Tomato";
-    if (text.includes("onion") || text.includes("प्याज") || text.includes("कांदा")) return "Onion";
-    if (text.includes("potato") || text.includes("आलू") || text.includes("बटाटा")) return "Potato";
-    if (text.includes("cotton") || text.includes("कपास") || text.includes("कापूस")) return "Cotton";
-    if (text.includes("soybean") || text.includes("सोयाबीन")) return "Soybean";
-    if (text.includes("rice") || text.includes("paddy") || text.includes("चावल") || text.includes("धान") || text.includes("तांदूळ") || text.includes("भात")) return "Rice";
-    if (text.includes("wheat") || text.includes("गेहूं") || text.includes("गहू")) return "Wheat";
-    if (text.includes("sugarcane") || text.includes("गन्ना") || text.includes("ऊस")) return "Sugarcane";
+    // 3. Check page pathname
+    const path = (window.location.pathname || "").toLowerCase();
+    if (path.includes("tomato")) return "Tomato";
+    if (path.includes("onion")) return "Onion";
+    if (path.includes("potato")) return "Potato";
+    if (path.includes("cotton")) return "Cotton";
+    if (path.includes("soybean")) return "Soybean";
+    if (path.includes("rice") || path.includes("paddy")) return "Rice";
+    if (path.includes("wheat")) return "Wheat";
+    if (path.includes("sugarcane")) return "Sugarcane";
+
+    // 4. Check cropSelect dropdown
+    if (cropSelect && cropSelect.selectedIndex >= 0) {
+      const selectedOpt = cropSelect.options[cropSelect.selectedIndex];
+      if (selectedOpt) {
+        const translateKey = selectedOpt.getAttribute("data-translate-key") || "";
+        if (translateKey.includes("Tomato")) return "Tomato";
+        if (translateKey.includes("Onion")) return "Onion";
+        if (translateKey.includes("Potato")) return "Potato";
+        if (translateKey.includes("Cotton")) return "Cotton";
+        if (translateKey.includes("Soybean")) return "Soybean";
+        if (translateKey.includes("Rice")) return "Rice";
+        if (translateKey.includes("Wheat")) return "Wheat";
+        if (translateKey.includes("Sugarcane")) return "Sugarcane";
+
+        const text = (selectedOpt.textContent || "").trim().toLowerCase();
+        if (text.includes("tomato") || text.includes("टमाटर") || text.includes("टोमॅटो")) return "Tomato";
+        if (text.includes("onion") || text.includes("प्याज") || text.includes("कांदा")) return "Onion";
+        if (text.includes("potato") || text.includes("आलू") || text.includes("बटाटा")) return "Potato";
+        if (text.includes("cotton") || text.includes("कपास") || text.includes("कापूस")) return "Cotton";
+        if (text.includes("soybean") || text.includes("सोयाबीन")) return "Soybean";
+        if (text.includes("rice") || text.includes("paddy") || text.includes("चावल") || text.includes("धान") || text.includes("तांदूळ") || text.includes("भात")) return "Rice";
+        if (text.includes("wheat") || text.includes("गेहूं") || text.includes("गहू")) return "Wheat";
+        if (text.includes("sugarcane") || text.includes("गन्ना") || text.includes("ऊस")) return "Sugarcane";
+      }
+    }
 
     return "Tomato";
   }
@@ -2004,7 +2046,7 @@
     const statusEl = form.parentElement.querySelector(".hero-form-status");
 
     const cropSelect = form.querySelector("select");
-    const crop = normalizeCropName(cropSelect);
+    const crop = normalizeCropName(cropSelect, form);
 
     const qtyInput = form.querySelector('input[type="number"]');
     const rawQty = qtyInput ? qtyInput.value.trim() : "";
@@ -2082,17 +2124,31 @@
 
   // Query parameter pre-population
   const urlSearch = new URLSearchParams(window.location.search);
-  const queryCropParam = urlSearch.get("crop");
+  const queryCropParam = (urlSearch.get("crop") || "").trim().toLowerCase();
   const queryQtyParam = urlSearch.get("quantity");
+  const queryLocParam = urlSearch.get("location");
+
   if (queryCropParam) {
     document.querySelectorAll(".action-card__form").forEach((form) => {
       const select = form.querySelector("select");
       if (select) {
         for (let i = 0; i < select.options.length; i++) {
           const opt = select.options[i];
-          const key = opt.getAttribute("data-translate-key") || "";
-          const txt = opt.textContent.toLowerCase();
-          if (key.toLowerCase().includes(queryCropParam.toLowerCase()) || txt.includes(queryCropParam.toLowerCase())) {
+          const key = (opt.getAttribute("data-translate-key") || "").toLowerCase();
+          const txt = (opt.textContent || "").toLowerCase();
+
+          let match = false;
+          if (queryCropParam.includes("tomato") && (key.includes("tomato") || txt.includes("tomato") || txt.includes("टमाटर") || txt.includes("टोमॅटो"))) match = true;
+          else if (queryCropParam.includes("onion") && (key.includes("onion") || txt.includes("onion") || txt.includes("प्याज") || txt.includes("कांदा"))) match = true;
+          else if (queryCropParam.includes("potato") && (key.includes("potato") || txt.includes("potato") || txt.includes("आलू") || txt.includes("बटाटा"))) match = true;
+          else if (queryCropParam.includes("cotton") && (key.includes("cotton") || txt.includes("cotton") || txt.includes("कपास") || txt.includes("कापूस"))) match = true;
+          else if (queryCropParam.includes("soybean") && (key.includes("soybean") || txt.includes("soybean") || txt.includes("सोयाबीन"))) match = true;
+          else if ((queryCropParam.includes("rice") || queryCropParam.includes("paddy")) && (key.includes("rice") || txt.includes("rice") || txt.includes("paddy") || txt.includes("चावल") || txt.includes("तांदूळ") || txt.includes("भात") || txt.includes("धान"))) match = true;
+          else if (queryCropParam.includes("wheat") && (key.includes("wheat") || txt.includes("wheat") || txt.includes("गेहूं") || txt.includes("गहू"))) match = true;
+          else if (queryCropParam.includes("sugarcane") && (key.includes("sugarcane") || txt.includes("sugarcane") || txt.includes("गन्ना") || txt.includes("ऊस"))) match = true;
+          else if (key.includes(queryCropParam) || txt.includes(queryCropParam)) match = true;
+
+          if (match) {
             select.selectedIndex = i;
             break;
           }
@@ -2102,11 +2158,16 @@
         const qtyInput = form.querySelector('input[type="number"]');
         if (qtyInput) qtyInput.value = queryQtyParam;
       }
+      if (queryLocParam) {
+        const locInput = form.querySelector('input[name="location"], input[placeholder*="Location"], input[placeholder*="स्थान"]');
+        if (locInput) locInput.value = queryLocParam;
+      }
     });
 
     if (window.location.pathname.includes("find-best-market")) {
       const targetForm = document.querySelector(".action-card__form");
-      if (targetForm) {
+      // Only auto-run if location and quantity are both supplied in the URL
+      if (targetForm && queryLocParam && queryQtyParam) {
         window.setTimeout(() => runMarketSearch(targetForm), 100);
       }
     }
