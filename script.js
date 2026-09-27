@@ -55,8 +55,12 @@
 
       // --- Hero & Action Card ---
       cardTitle: "Find Best Market",
-      cardLocationLabel: "Your Location",
+      cardLocationLabel: "Location",
       detectLocationBtn: "Detect My Location",
+      useMyLocationBtn: "Use My Location",
+      enterLocationPlaceholder: "Enter city, village or area",
+      locationNotAllowed: "Location access was not allowed.",
+      emptyLocationMsg: "Please enter your location.",
       cardCropLabel: "Select Crop",
       cardQuantityLabel: "Quantity (KG)",
       cardQuantityPlaceholder: "e.g., 500", // Added for placeholder
@@ -280,8 +284,12 @@
 
       // Hero Action Card
       cardTitle: "सर्वोत्तम बाजार खोजें",
-      cardLocationLabel: "आपका स्थान",
+      cardLocationLabel: "स्थान",
       detectLocationBtn: "मेरा स्थान पता करें",
+      useMyLocationBtn: "मेरी लोकेशन इस्तेमाल करें",
+      enterLocationPlaceholder: "शहर, गांव या इलाका लिखें",
+      locationNotAllowed: "लोकेशन की अनुमति नहीं मिली।",
+      emptyLocationMsg: "कृपया अपनी लोकेशन दर्ज करें।",
       cardCropLabel: "फसल चुनें",
       cardQuantityLabel: "मात्रा (किलो)",
       cardQuantityPlaceholder: "उदाहरण के लिए, 500",
@@ -505,8 +513,12 @@
 
       // Hero Action Card
       cardTitle: "सर्वोत्तम बाजार शोधा",
-      cardLocationLabel: "तुमचे स्थान",
+      cardLocationLabel: "स्थान",
       detectLocationBtn: "माझे स्थान शोधा",
+      useMyLocationBtn: "माझे स्थान वापरा",
+      enterLocationPlaceholder: "शहर, गाव किंवा परिसर लिहा",
+      locationNotAllowed: "स्थान वापरण्याची परवानगी मिळाली नाही.",
+      emptyLocationMsg: "कृपया तुमचे स्थान लिहा.",
       cardCropLabel: "पीक निवडा",
       cardQuantityLabel: "प्रमाण (किलो)",
       cardQuantityPlaceholder: "उदा. 500",
@@ -1044,7 +1056,7 @@
 
       const handleError = (error) => {
         if (error.code === error.PERMISSION_DENIED) {
-          buttonSpan.textContent = translations[currentLang]?.locationPermissionDenied || "Location permission denied. Please enter manually.";
+          buttonSpan.textContent = translations[currentLang]?.locationNotAllowed || "Location access was not allowed.";
         } else {
           buttonSpan.textContent = translations[currentLang]?.unableToDetectLocation || "Unable to detect location";
         }
@@ -1604,15 +1616,15 @@
   }
 
   function extractUserLocation(form) {
-    const locBtn = form.querySelector(".location-button") || document.getElementById("detect-location-btn");
-    const btnSpan = locBtn?.querySelector("span");
-    const text = btnSpan?.textContent || "";
-    if (text && !text.includes("Detect") && !text.includes("पता") && !text.includes("शोध")) {
-      return text.replace("📍", "").trim();
-    }
     const locInput = form.querySelector('input[name="location"], input[placeholder*="Location"], input[placeholder*="स्थान"]');
     if (locInput && locInput.value.trim()) {
       return locInput.value.trim();
+    }
+    const locBtn = form.querySelector(".location-button") || document.getElementById("detect-location-btn");
+    const btnSpan = locBtn?.querySelector("span");
+    const text = btnSpan?.textContent || "";
+    if (text && !text.includes("Detect") && !text.includes("पता") && !text.includes("शोध") && !text.includes("Use My") && !text.includes("मेरी लोकेशन") && !text.includes("माझे स्थान") && !text.includes("Location access") && !text.includes("अनुमति") && !text.includes("परवानगी")) {
+      return text.replace("📍", "").trim();
     }
     const urlParams = new URLSearchParams(window.location.search);
     const urlLoc = urlParams.get("location");
@@ -1925,6 +1937,13 @@
     const sellingDateStr = dateInput?.value || "";
 
     const userLocationStr = extractUserLocation(form);
+
+    if (!userLocationStr) {
+      if (statusEl) {
+        statusEl.textContent = translations[currentLang]?.emptyLocationMsg || "Please enter your location.";
+      }
+      return;
+    }
 
     lastSearchForm = form;
 

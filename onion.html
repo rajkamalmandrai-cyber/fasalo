@@ -181,12 +181,14 @@
           <div class="card action-card" style="margin-top: var(--space-8);" data-animate>
             <h2 class="heading-3">Find Best Market for Your Onions</h2>
             <form class="action-card__form">
-              <label class="field">
-                <span class="field__label">Your Location</span>
-                <button type="button" class="button button--outline location-button" id="detect-location-btn">
+              <label class="field" style="margin-bottom: var(--space-4);">
+                <span class="field__label">Location</span>
+                <button type="button" class="button button--outline location-button" id="detect-location-btn" style="margin-bottom: var(--space-3); width: 100%;">
                   <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
-                  <span>Detect My Location</span>
+                  <span>Use My Location</span>
                 </button>
+                <div style="text-align: center; margin-bottom: var(--space-3); font-size: var(--font-size-sm); color: var(--text-muted); font-weight: 600;">OR</div>
+                <input class="input" type="text" name="location" placeholder="Enter city, village or area" style="width: 100%;" />
               </label>
               <label class="field">
                 <span class="field__label">Quantity (KG)</span>
