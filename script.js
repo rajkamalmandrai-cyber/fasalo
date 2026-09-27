@@ -95,9 +95,12 @@
       modalBestOptionBadge: "⭐ Best Option",
       modalGoodOptionBadge: "🟢 Good Choice",
       modalAlternativeBadge: "Alternative Option",
+      modalBreakEvenBadge: "🟡 Break-Even",
+      modalNotProfitableBadge: "🔴 Not Profitable",
       modalTodaysPrice: "Today's Price",
+      modalCropValue: "Your Crop Value",
       modalTravelCost: "Travel Cost",
-      modalYouGet: "You Can Get About",
+      modalYouGet: "Estimated Amount After Travel",
       modalApprox: "Approx.",
       modalPerQtl: " / Quintal",
       modalPerKg: " / kg",
@@ -105,8 +108,12 @@
       modalOtherMarkets: "Other Good Markets",
       modalGoodChoiceTag: "🟢 Good choice for your harvest",
       modalAlternativeTag: "🟢 Viable alternative market",
+      modalBreakEvenTag: "🟡 Break-even / No gain after travel",
+      modalNotProfitableTag: "🔴 Not profitable after travel",
       modalEmptyTitle: "No Suitable Markets Found",
       modalEmpty: "No suitable markets found for this search. Try changing the location, crop, quantity, or selling date.",
+      invalidQuantityMsg: "Please enter a valid crop quantity (greater than 0 kg).",
+      emptyLocationMsg: "Please enter or detect your location.",
       estRevenueLabel: "Est. Revenue",
       estTransportLabel: "Est. Transport",
       estNetProfitLabel: "Est. Net Profit",
@@ -324,18 +331,25 @@
       modalBestOptionBadge: "⭐ सबसे अच्छा विकल्प",
       modalGoodOptionBadge: "🟢 अच्छा विकल्प",
       modalAlternativeBadge: "दूसरा विकल्प",
+      modalBreakEvenBadge: "🟡 लागत बराबर",
+      modalNotProfitableBadge: "🔴 फायदेमंद नहीं",
       modalTodaysPrice: "आज का भाव",
+      modalCropValue: "आपकी फसल की कीमत",
       modalTravelCost: "ले जाने का खर्च",
-      modalYouGet: "आपको लगभग मिलेंगे",
+      modalYouGet: "ले जाने के खर्च निकालने के बाद अनुमानित रकम",
       modalApprox: "लगभग",
       modalPerQtl: " / क्विंटल",
       modalPerKg: " / किलो",
       modalAway: "दूर",
       modalOtherMarkets: "अन्य अच्छे बाजार",
-      modalGoodChoiceTag: "🟢 आपके लिए अच्छा विकल्प",
+      modalGoodChoiceTag: "🟢 आपकी फसल के लिए अच्छा विकल्प",
       modalAlternativeTag: "🟢 बेचने के लिए दूसरा अच्छा बाजार",
+      modalBreakEvenTag: "🟡 लागत बराबर / ले जाने के बाद कोई बचत नहीं",
+      modalNotProfitableTag: "🔴 ले जाने के खर्च के बाद फायदे का विकल्प नहीं",
       modalEmptyTitle: "कोई उपयुक्त बाजार नहीं मिला",
       modalEmpty: "इस खोज के लिए कोई उपयुक्त बाजार नहीं मिला। स्थान, फसल, मात्रा या बिक्री की तारीख बदलने का प्रयास करें।",
+      invalidQuantityMsg: "कृपया फसल की सही मात्रा दर्ज करें (0 किलो से अधिक)।",
+      emptyLocationMsg: "कृपया अपना स्थान दर्ज करें या चुनें।",
       estRevenueLabel: "अनुमानित आय",
       estTransportLabel: "परिवहन खर्च",
       estNetProfitLabel: "अनुमानित शुद्ध लाभ",
@@ -553,18 +567,25 @@
       modalBestOptionBadge: "⭐ सर्वोत्तम पर्याय",
       modalGoodOptionBadge: "🟢 चांगला पर्याय",
       modalAlternativeBadge: "दुसरा पर्याय",
+      modalBreakEvenBadge: "🟡 समतोल",
+      modalNotProfitableBadge: "🔴 फायदेशीर नाही",
       modalTodaysPrice: "आजचा भाव",
+      modalCropValue: "तुमच्या पिकाची किंमत",
       modalTravelCost: "वाहतूक खर्च",
-      modalYouGet: "तुम्हाला साधारण मिळतील",
+      modalYouGet: "वाहतूक खर्च वजा केल्यानंतर अंदाजे रक्कम",
       modalApprox: "साधारण",
       modalPerQtl: " / क्विंटल",
       modalPerKg: " / किलो",
       modalAway: "लांब",
       modalOtherMarkets: "इतर चांगले बाजार",
-      modalGoodChoiceTag: "🟢 तुमच्यासाठी चांगला पर्याय",
+      modalGoodChoiceTag: "🟢 तुमच्या पिकासाठी चांगला पर्याय",
       modalAlternativeTag: "🟢 विक्रीसाठी दुसरा पर्याय",
+      modalBreakEvenTag: "🟡 समतोल / वाहतूक खर्चानंतर फायदा नाही",
+      modalNotProfitableTag: "🔴 वाहतूक खर्चानंतर फायदेशीर पर्याय नाही",
       modalEmptyTitle: "कोणतीही योग्य बाजारपेठ आढळली नाही",
       modalEmpty: "या शोधासाठी कोणतीही योग्य बाजारपेठ आढळली नाही. कृपया स्थान, पीक, प्रमाण किंवा विक्रीची तारीख बदलून पहा.",
+      invalidQuantityMsg: "कृपया पिकाचे योग्य प्रमाण टाका (0 किलो पेक्षा जास्त).",
+      emptyLocationMsg: "कृपया आपले स्थान टाका किंवा निवडा.",
       estRevenueLabel: "अंदाजे उत्पन्न",
       estTransportLabel: "वाहतूक खर्च",
       estNetProfitLabel: "अंदाजे निव्वळ नफा",
@@ -1661,8 +1682,19 @@
     return Math.max(12, Math.round(crowFly * 1.25));
   }
 
+  const TRANSPORT_RATE_PER_KM = 3.5;
+
+  function formatRupees(amount) {
+    if (amount < 0) {
+      return `-₹${Math.abs(amount).toLocaleString('en-IN')}`;
+    }
+    return `₹${amount.toLocaleString('en-IN')}`;
+  }
+
   function calculateMarketEconomics(market, quantityKg, userLocationStr, sellingDateStr) {
-    const qty = Math.max(10, quantityKg || 500);
+    const qty = (typeof quantityKg === 'number' && !isNaN(quantityKg) && isFinite(quantityKg) && quantityKg > 0)
+      ? quantityKg
+      : 500;
     const distanceKm = getMarketDistanceKm(userLocationStr, market);
 
     let dateMultiplier = 1;
@@ -1674,18 +1706,24 @@
       }
     }
 
+    // 1. Market Price per quintal (1 quintal = 100 kg)
     const pricePerQtl = Math.round(market.basePrice * dateMultiplier);
+    // 2. Market Price per kg
     const pricePerKg = pricePerQtl / 100;
-    const estRevenue = Math.round(qty * pricePerKg);
-    const estTransport = Math.round(Math.max(120, distanceKm * 3.2 + distanceKm * 0.0032 * qty));
-    const estNet = Math.max(0, estRevenue - estTransport);
+    // 3. Gross Crop Value = PricePerQtl * (QuantityKg / 100)
+    const grossCropValue = Math.round((pricePerQtl * qty) / 100);
+    // 4. Transport Cost = DistanceKm * RatePerKm
+    const estTransport = Math.round(distanceKm * TRANSPORT_RATE_PER_KM);
+    // 5. Estimated Net Amount = Gross Crop Value - Transport Cost (never clamped to 0)
+    const estNet = grossCropValue - estTransport;
 
     return {
       ...market,
       distanceKm,
       pricePerQtl,
       pricePerKg,
-      estRevenue,
+      grossCropValue,
+      estRevenue: grossCropValue, // Backward compatibility alias
       estTransport,
       estNet,
       quantityKg: qty
@@ -1777,11 +1815,35 @@
     const remainingMarkets = markets.slice(1);
     const locBest = getLocalizedMarket(bestMarket, lang);
 
+    // Dynamic state styling and badges for positive / neutral / loss outcomes
+    let bestBadgeText = t.modalBestOptionBadge || "⭐ Best Option";
+    let bestBadgeClass = "farmer-best-badge";
+    let bestBoxClass = "farmer-metric-box--highlight";
+    let bestNetValClass = "farmer-metric-value--profit";
+    let bestTagText = t.modalGoodChoiceTag || "🟢 Good choice for your harvest";
+    let bestTagClass = "farmer-recommendation-tag";
+
+    if (bestMarket.estNet < 0) {
+      bestBadgeText = t.modalNotProfitableBadge || "🔴 Not Profitable";
+      bestBadgeClass = "farmer-best-badge farmer-best-badge--loss";
+      bestBoxClass = "farmer-metric-box--loss";
+      bestNetValClass = "farmer-metric-value--loss";
+      bestTagText = t.modalNotProfitableTag || "🔴 Not profitable after travel";
+      bestTagClass = "farmer-recommendation-tag farmer-recommendation-tag--loss";
+    } else if (bestMarket.estNet === 0) {
+      bestBadgeText = t.modalBreakEvenBadge || "🟡 Break-Even";
+      bestBadgeClass = "farmer-best-badge farmer-best-badge--neutral";
+      bestBoxClass = "";
+      bestNetValClass = "";
+      bestTagText = t.modalBreakEvenTag || "🟡 Break-even / No gain after travel";
+      bestTagClass = "farmer-recommendation-tag farmer-recommendation-tag--neutral";
+    }
+
     const bestOptionHtml = `
       <article class="farmer-best-card">
         <div class="farmer-best-card__header">
           <div>
-            <span class="farmer-best-badge">${t.modalBestOptionBadge || "⭐ Best Option"}</span>
+            <span class="${bestBadgeClass}">${bestBadgeText}</span>
             <h3 class="farmer-best-card__title">${locBest.name}</h3>
             <p class="farmer-best-card__meta">
               <span>📍 ${locBest.location}</span>
@@ -1800,19 +1862,19 @@
 
           <div class="farmer-metric-box">
             <span class="farmer-metric-label">${t.modalTravelCost || "Travel Cost"}</span>
-            <p class="farmer-metric-value">${t.modalApprox || "Approx."} ₹${bestMarket.estTransport.toLocaleString('en-IN')}</p>
+            <p class="farmer-metric-value">₹${bestMarket.estTransport.toLocaleString('en-IN')}</p>
             <span class="farmer-metric-subtext">${bestMarket.distanceKm} km</span>
           </div>
 
-          <div class="farmer-metric-box farmer-metric-box--highlight">
-            <span class="farmer-metric-label">${t.modalYouGet || "You Can Get About"}</span>
-            <p class="farmer-metric-value farmer-metric-value--profit">₹${bestMarket.estNet.toLocaleString('en-IN')}</p>
-            <span class="farmer-metric-subtext">${bestMarket.quantityKg} kg</span>
+          <div class="farmer-metric-box ${bestBoxClass}">
+            <span class="farmer-metric-label">${t.modalYouGet || "Estimated Net Amount"}</span>
+            <p class="farmer-metric-value ${bestNetValClass}">${formatRupees(bestMarket.estNet)}</p>
+            <span class="farmer-metric-subtext">${t.modalCropValue || "Crop Value"}: ₹${bestMarket.grossCropValue.toLocaleString('en-IN')} (${bestMarket.quantityKg} kg)</span>
           </div>
         </div>
 
-        <div class="farmer-recommendation-tag">
-          <span>${t.modalGoodChoiceTag || "🟢 Good choice for your harvest"}</span>
+        <div class="${bestTagClass}">
+          <span>${bestTagText}</span>
         </div>
       </article>
     `;
@@ -1825,6 +1887,20 @@
           <div class="other-markets-list">
             ${remainingMarkets.map((m, idx) => {
               const locM = getLocalizedMarket(m, lang);
+              let tagText = idx === 0 ? (t.modalGoodOptionBadge || "🟢 Good Choice") : (t.modalAlternativeBadge || "Alternative Option");
+              let tagClass = "farmer-compact-tag";
+              let netValClass = "farmer-compact-metric-val farmer-compact-metric-val--net";
+
+              if (m.estNet < 0) {
+                tagText = t.modalNotProfitableBadge || "🔴 Not Profitable";
+                tagClass = "farmer-compact-tag farmer-compact-tag--loss";
+                netValClass = "farmer-compact-metric-val farmer-compact-metric-val--loss";
+              } else if (m.estNet === 0) {
+                tagText = t.modalBreakEvenBadge || "🟡 Break-Even";
+                tagClass = "farmer-compact-tag farmer-compact-tag--neutral";
+                netValClass = "farmer-compact-metric-val";
+              }
+
               return `
               <article class="farmer-compact-card">
                 <div class="farmer-compact-card__header">
@@ -1832,7 +1908,7 @@
                     <h5 class="farmer-compact-card__title">${locM.name}</h5>
                     <p class="farmer-compact-card__meta">📍 ${locM.location} &bull; 📏 ${m.distanceKm} km ${t.modalAway || "away"}</p>
                   </div>
-                  <span class="farmer-compact-tag">${idx === 0 ? (t.modalGoodOptionBadge || "🟢 Good Choice") : (t.modalAlternativeBadge || "Alternative Option")}</span>
+                  <span class="${tagClass}">${tagText}</span>
                 </div>
                 <div class="farmer-compact-metrics">
                   <div class="farmer-compact-metric-item">
@@ -1841,11 +1917,11 @@
                   </div>
                   <div class="farmer-compact-metric-item">
                     <span class="farmer-compact-metric-label">${t.modalTravelCost || "Travel Cost"}</span>
-                    <span class="farmer-compact-metric-val">${t.modalApprox || "~"}₹${m.estTransport.toLocaleString('en-IN')}</span>
+                    <span class="farmer-compact-metric-val">₹${m.estTransport.toLocaleString('en-IN')}</span>
                   </div>
                   <div class="farmer-compact-metric-item">
-                    <span class="farmer-compact-metric-label">${t.modalYouGet || "You Can Get"}</span>
-                    <span class="farmer-compact-metric-val farmer-compact-metric-val--net">₹${m.estNet.toLocaleString('en-IN')}</span>
+                    <span class="farmer-compact-metric-label">${t.modalYouGet || "Estimated Net"}</span>
+                    <span class="${netValClass}">${formatRupees(m.estNet)}</span>
                   </div>
                 </div>
               </article>
@@ -1931,17 +2007,31 @@
     const crop = normalizeCropName(cropSelect);
 
     const qtyInput = form.querySelector('input[type="number"]');
-    const quantityKg = qtyInput && parseFloat(qtyInput.value) > 0 ? parseFloat(qtyInput.value) : 500;
+    const rawQty = qtyInput ? qtyInput.value.trim() : "";
+    const parsedQty = parseFloat(rawQty);
+
+    // Strict validation: Reject empty, non-numeric, 0, negative, NaN or Infinity
+    if (!rawQty || isNaN(parsedQty) || !isFinite(parsedQty) || parsedQty <= 0) {
+      if (statusEl) {
+        statusEl.textContent = translations[currentLang]?.invalidQuantityMsg || "Please enter a valid crop quantity (greater than 0 kg).";
+      }
+      if (qtyInput) qtyInput.focus();
+      return;
+    }
+    const quantityKg = parsedQty;
 
     const dateInput = form.querySelector('input[type="date"]');
     const sellingDateStr = dateInput?.value || "";
 
     const userLocationStr = extractUserLocation(form);
 
+    // Strict validation: Reject empty location
     if (!userLocationStr) {
       if (statusEl) {
         statusEl.textContent = translations[currentLang]?.emptyLocationMsg || "Please enter your location.";
       }
+      const locInput = form.querySelector('input[name="location"], input[placeholder*="Location"], input[placeholder*="स्थान"]');
+      if (locInput) locInput.focus();
       return;
     }
 

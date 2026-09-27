@@ -4163,3 +4163,53 @@ body.modal-open {
 .temp-min {
   color: var(--color-text-light);
 }
+
+/* Modal Negative & Neutral State Badges & Indicators */
+.farmer-metric-box--loss {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.farmer-best-badge--loss {
+  background: #dc2626;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.25);
+}
+
+.farmer-best-badge--neutral {
+  background: #d97706;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.25);
+}
+
+.farmer-metric-value--loss {
+  font-size: 1.35rem;
+  color: #dc2626;
+  font-weight: 800;
+}
+
+.farmer-recommendation-tag--loss {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #991b1b;
+}
+
+.farmer-recommendation-tag--neutral {
+  background: rgba(234, 179, 8, 0.12);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  color: #854d0e;
+}
+
+.farmer-compact-tag--loss {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.farmer-compact-tag--neutral {
+  background: #fefce8;
+  color: #854d0e;
+  border: 1px solid #fef08a;
+}
+
+.farmer-compact-metric-val--loss {
+  color: #dc2626;
+}
