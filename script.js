@@ -227,6 +227,34 @@
       omName: "Om Nerkar",
       teamMemberRole: "Team Member — Avishkar Project",
       footerLinkTeam: "Team Fasalo",
+
+      // Live Table Rows
+      tableCottonSub: "High trade volume in Vidarbha",
+      tableCottonVariety: "Long Staple",
+      tableNagpurMarket: "Nagpur APMC",
+      tableTomatoSub: "Strong local retail demand",
+      tableTomatoVariety: "Hybrid",
+      tablePuneMarket: "Pune APMC",
+      tableWheatSub: "Steady grain auction demand",
+      tableWheatVariety: "Lokwan",
+      tableIndoreMarket: "Indore Mandi",
+
+      // Find Best Market Page
+      fbmHeaderTitle: "Find Best Market",
+      fbmHeaderSubtitle: "Find the most profitable market for your harvest based on price, transport cost, and distance.",
+      fbmActionCardTitle: "Find Best Market",
+      fbmHowTitle: "How Fasalo Finds Your Best Market",
+      fbmHowSubtitle: "Our intelligent algorithm calculates net profit after transport costs so you take home more money.",
+      fbmCard1Title: "Mandi Prices",
+      fbmCard1Desc: "Real-time wholesale prices across major agricultural markets in Maharashtra and nearby states.",
+      fbmCard2Title: "Transport Costs",
+      fbmCard2Desc: "Estimated travel and vehicle freight calculated specifically for your crop volume and location.",
+      fbmCard3Title: "Net In-Hand Profit",
+      fbmCard3Desc: "Transparent comparison showing which market leaves you with the highest payout after all expenses.",
+      fbmExploreTitle: "Explore Crops & Mandis",
+      fbmExploreSubtitle: "Select your crop above or browse live market intelligence on the home page.",
+      fbmViewAllCrops: "View Live Market Intelligence",
+      searchErrorMsg: "Error calculating recommendations. Please try again.",
     },
     hi: {
       heroBadge: 'डेटा-संचालित अंतर्दृष्टि',
@@ -373,8 +401,8 @@
       intelThCrop: "फसल",
       intelThVariety: "किस्म",
       intelThMarket: "बाजार",
-      intelThToday: "आज का मूल्य",
-      intelThYesterday: "कल का मूल्य",
+      intelThToday: "आज का भाव",
+      intelThYesterday: "कल का भाव",
       intelThChange: "बदलाव",
       intelThDemand: "मांग",
       intelThRec: "सिफारिश",
@@ -420,6 +448,34 @@
       omName: "ओम नेरकर",
       teamMemberRole: "टीम सदस्य — अविष्कार प्रोजेक्ट",
       footerLinkTeam: "टीम फसालो",
+
+      // Live Table Rows
+      tableCottonSub: "विदर्भ में उच्च व्यापार मात्रा",
+      tableCottonVariety: "लंबा रेशा",
+      tableNagpurMarket: "नागपुर APMC",
+      tableTomatoSub: "मजबूत स्थानीय खुदरा मांग",
+      tableTomatoVariety: "हाइब्रिड",
+      tablePuneMarket: "पुणे APMC",
+      tableWheatSub: "स्थिर अनाज नीलामी मांग",
+      tableWheatVariety: "लोकवन",
+      tableIndoreMarket: "इंदौर मंडी",
+
+      // Find Best Market Page
+      fbmHeaderTitle: "सर्वोत्तम बाजार खोजें",
+      fbmHeaderSubtitle: "मूल्य, परिवहन खर्च और दूरी के आधार पर अपनी फसल के लिए सबसे अधिक लाभदायक बाजार खोजें।",
+      fbmActionCardTitle: "सर्वोत्तम बाजार खोजें",
+      fbmHowTitle: "फसालो आपके लिए सर्वोत्तम बाजार कैसे खोजता है",
+      fbmHowSubtitle: "हमारा एल्गोरिदम परिवहन खर्च के बाद शुद्ध लाभ की गणना करता है ताकि आप अधिक मुनाफा कमा सकें।",
+      fbmCard1Title: "मंडी भाव",
+      fbmCard1Desc: "महाराष्ट्र और पड़ोसी राज्यों के प्रमुख कृषि बाजारों में वास्तविक समय के थोक भाव।",
+      fbmCard2Title: "परिवहन खर्च",
+      fbmCard2Desc: "आपकी फसल की मात्रा और स्थान के अनुसार अनुमानित यात्रा और वाहन भाड़ा।",
+      fbmCard3Title: "हाथ में शुद्ध मुनाफा",
+      fbmCard3Desc: "पारदर्शी तुलना जो बताती है कि सभी खर्चों के बाद कौन सा बाजार आपको सबसे अधिक मुनाफा देता है।",
+      fbmExploreTitle: "फसलें और मंडियां देखें",
+      fbmExploreSubtitle: "ऊपर अपनी फसल चुनें या मुख्य पृष्ठ पर लाइव बाजार भाव देखें।",
+      fbmViewAllCrops: "लाइव बाजार भाव देखें",
+      searchErrorMsg: "सिफारिशों की गणना करने में त्रुटि। कृपया पुनः प्रयास करें।",
     },
     mr: {
       heroBadge: 'डेटा-आधारित अंतर्दृष्टी',
@@ -531,7 +587,7 @@
       quickAction3Title: "जवळच्या मंडई", // Restored
       quickAction3Desc: "तुमच्या वर्तमान स्थानाजवळील बाजारपेठा शोधा.", // Restored
       quickAction4Title: "हवामानाचा अंदाज", // Restored
-      quickAction4Desc: "भविष्यात एकत्रीकरण.", // Restored
+      quickAction4Desc: "भविष्य में एकीकरण.", // Restored
 
       // Why Fasalo
       whyBetterEyebrow: "फसालो का",
@@ -566,8 +622,8 @@
       intelThCrop: "पीक",
       intelThVariety: "प्रकार",
       intelThMarket: "बाजारपेठ",
-      intelThToday: "आजची किंमत",
-      intelThYesterday: "कालची किंमत",
+      intelThToday: "आजचा भाव",
+      intelThYesterday: "कालचा भाव",
       intelThChange: "बदल",
       intelThDemand: "मागणी",
       intelThRec: "शिफारस",
@@ -613,6 +669,34 @@
       omName: "ओम नेरकर",
       teamMemberRole: "टीम सदस्य — अविष्कार प्रकल्प",
       footerLinkTeam: "टीम फसालो",
+
+      // Live Table Rows
+      tableCottonSub: "विदर्भात उच्च व्यापार प्रमाण",
+      tableCottonVariety: "लांब धागा",
+      tableNagpurMarket: "नागपूर APMC",
+      tableTomatoSub: "मजबूत स्थानिक किरकोळ मागणी",
+      tableTomatoVariety: "हायब्रिड",
+      tablePuneMarket: "पुणे APMC",
+      tableWheatSub: "स्थिर धान्य लिलाव मागणी",
+      tableWheatVariety: "लोकवन",
+      tableIndoreMarket: "इंदूर बाजार",
+
+      // Find Best Market Page
+      fbmHeaderTitle: "सर्वोत्तम बाजार शोधा",
+      fbmHeaderSubtitle: "किंमत, वाहतूक खर्च आणि अंतराच्या आधारे तुमच्या पिकासाठी सर्वाधिक नफा देणारा बाजार शोधा.",
+      fbmActionCardTitle: "सर्वोत्तम बाजार शोधा",
+      fbmHowTitle: "फसालो तुमच्यासाठी सर्वोत्तम बाजार कसा शोधतो",
+      fbmHowSubtitle: "आमचा अल्गोरिदम वाहतूक खर्चानंतर निव्वळ नफ्याची गणना करतो जेणेकरून तुम्हाला जास्तीत जास्त फायदा मिळेल.",
+      fbmCard1Title: "बाजारभाव",
+      fbmCard1Desc: "महाराष्ट्र आणि शेजारील राज्यांमधील प्रमुख कृषी बाजारांमधील ताजे घाऊक भाव.",
+      fbmCard2Title: "वाहतूक खर्च",
+      fbmCard2Desc: "तुमच्या पिकाचे प्रमाण आणि स्थानानुसार अंदाजे प्रवास व वाहन वाहतूक खर्च.",
+      fbmCard3Title: "हातात येणारा निव्वळ नफा",
+      fbmCard3Desc: "सर्व खर्चानंतर कोणता बाजार तुम्हाला सर्वाधिक पैसे मिळवून देईल याची स्पष्ट तुलना.",
+      fbmExploreTitle: "पिके आणि बाजारपेठा पहा",
+      fbmExploreSubtitle: "वर तुमचे पीक निवडा किंवा मुख्य पृष्ठावर थेट बाजारभाव तपासा.",
+      fbmViewAllCrops: "थेट बाजारभाव पहा",
+      searchErrorMsg: "शिफारशींची गणना करताना त्रुटी आली. कृपया पुन्हा प्रयत्न करा.",
     },
   };
 
@@ -651,6 +735,9 @@
       refreshActiveSearchResults();
     }
   };
+
+  // Run initial translations immediately so stored language is applied seamlessly
+  applyTranslations(currentLang);
 
   // --- Number Counting Animation Function ---
   const animateNumber = (element, targetValue, duration = 1500) => {
@@ -900,12 +987,12 @@
   if (detectLocationBtn) {
     detectLocationBtn.addEventListener("click", () => {
       if (!navigator.geolocation) {
-        detectLocationBtn.querySelector("span").textContent = "Geolocation is not supported by your browser";
+        detectLocationBtn.querySelector("span").textContent = translations[currentLang]?.geoNotSupported || "Geolocation is not supported by your browser";
         return;
       }
 
       const buttonSpan = detectLocationBtn.querySelector("span");
-      buttonSpan.textContent = "Detecting...";
+      buttonSpan.textContent = translations[currentLang]?.detectingLocation || "Detecting...";
       detectLocationBtn.disabled = true;
 
       const handleSuccess = async (position) => {
@@ -936,7 +1023,7 @@
           }
         } catch (error) {
           console.error("Reverse geocoding failed:", error);
-          buttonSpan.textContent = "Unable to detect location";
+          buttonSpan.textContent = translations[currentLang]?.unableToDetectLocation || "Unable to detect location";
           detectLocationBtn.classList.add("is-denied");
         } finally {
           detectLocationBtn.disabled = false;
@@ -945,9 +1032,9 @@
 
       const handleError = (error) => {
         if (error.code === error.PERMISSION_DENIED) {
-          buttonSpan.textContent = "Location permission denied. Please enter manually.";
+          buttonSpan.textContent = translations[currentLang]?.locationPermissionDenied || "Location permission denied. Please enter manually.";
         } else {
-          buttonSpan.textContent = "Unable to detect location";
+          buttonSpan.textContent = translations[currentLang]?.unableToDetectLocation || "Unable to detect location";
         }
         detectLocationBtn.classList.add("is-denied");
         detectLocationBtn.disabled = false;
@@ -996,6 +1083,381 @@
     bhandara: { lat: 21.1667, lon: 79.65 },
     indore: { lat: 22.7196, lon: 75.8577 }
   };
+
+  const MARKET_LOCALIZATION = {
+    // Tomato
+    "tom-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+    "tom-nashik": {
+      hi: { name: "नासिक APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नाशिक APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "tom-narayangaon": {
+      hi: { name: "नारायणगांव APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "नारायणगाव APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "tom-vashi": {
+      hi: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" },
+      mr: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" }
+    },
+    "tom-khed": {
+      hi: { name: "खेड APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "खेड APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "tom-junnar": {
+      hi: { name: "जुन्नर APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "जुन्नर APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "tom-sangamner": {
+      hi: { name: "संगमनेर APMC", location: "अहमदनगर, महाराष्ट्र" },
+      mr: { name: "संगमनेर APMC", location: "अहमदनगर, महाराष्ट्र" }
+    },
+    "tom-ahmednagar": {
+      hi: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" },
+      mr: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" }
+    },
+    "tom-satara": {
+      hi: { name: "सातारा APMC", location: "सातारा, महाराष्ट्र" },
+      mr: { name: "सातारा APMC", location: "सातारा, महाराष्ट्र" }
+    },
+    "tom-kolhapur": {
+      hi: { name: "कोल्हापुर APMC", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर APMC", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+    "tom-solapur": {
+      hi: { name: "सोलापुर APMC", location: "सोलापुर, महाराष्ट्र" },
+      mr: { name: "सोलापूर APMC", location: "सोलापूर, महाराष्ट्र" }
+    },
+    "tom-baramati": {
+      hi: { name: "बारामती APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "बारामती APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+
+    // Onion
+    "oni-lasalgaon": {
+      hi: { name: "लासलगांव APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "लासलगाव APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "oni-pimpalgaon": {
+      hi: { name: "पिंपलगांव APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "पिंपळगाव APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "oni-nashik": {
+      hi: { name: "नासिक APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नाशिक APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "oni-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+    "oni-yeola": {
+      hi: { name: "येवला APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "येवला APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "oni-nandgaon": {
+      hi: { name: "नांदगांव APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नांदगाव APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "oni-manmad": {
+      hi: { name: "मनमाड APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "मनमाड APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "oni-kalwan": {
+      hi: { name: "कलवण APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "कळवण APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "oni-dindori": {
+      hi: { name: "दिंडोरी APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "दिंडोरी APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "oni-ahmednagar": {
+      hi: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" },
+      mr: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" }
+    },
+    "oni-solapur": {
+      hi: { name: "सोलापुर APMC", location: "सोलापुर, महाराष्ट्र" },
+      mr: { name: "सोलापूर APMC", location: "सोलापूर, महाराष्ट्र" }
+    },
+    "oni-malegaon": {
+      hi: { name: "मालेगांव APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "मालेगाव APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+
+    // Potato
+    "pot-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+    "pot-vashi": {
+      hi: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" },
+      mr: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" }
+    },
+    "pot-nashik": {
+      hi: { name: "नासिक APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नाशिक APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "pot-manchar": {
+      hi: { name: "मंचर APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "मंचर APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "pot-khed": {
+      hi: { name: "खेड APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "खेड APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "pot-satara": {
+      hi: { name: "सातारा APMC", location: "सातारा, महाराष्ट्र" },
+      mr: { name: "सातारा APMC", location: "सातारा, महाराष्ट्र" }
+    },
+    "pot-kolhapur": {
+      hi: { name: "कोल्हापुर APMC", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर APMC", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+    "pot-sangli": {
+      hi: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" },
+      mr: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" }
+    },
+    "pot-karad": {
+      hi: { name: "कराड APMC", location: "सातारा जिला, महाराष्ट्र" },
+      mr: { name: "कराड APMC", location: "सातारा जिल्हा, महाराष्ट्र" }
+    },
+    "pot-solapur": {
+      hi: { name: "सोलापुर APMC", location: "सोलापुर, महाराष्ट्र" },
+      mr: { name: "सोलापूर APMC", location: "सोलापूर, महाराष्ट्र" }
+    },
+    "pot-indore": {
+      hi: { name: "इंदौर मंडी", location: "इंदौर, मध्य प्रदेश" },
+      mr: { name: "इंदूर बाजार", location: "इंदूर, मध्य प्रदेश" }
+    },
+
+    // Cotton
+    "cot-nagpur": {
+      hi: { name: "नागपुर APMC", location: "नागपुर, महाराष्ट्र" },
+      mr: { name: "नागपूर APMC", location: "नागपूर, महाराष्ट्र" }
+    },
+    "cot-yavatmal": {
+      hi: { name: "यवतमाल APMC", location: "यवतमाल, महाराष्ट्र" },
+      mr: { name: "यवतमाळ APMC", location: "यवतमाळ, महाराष्ट्र" }
+    },
+    "cot-akola": {
+      hi: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" },
+      mr: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" }
+    },
+    "cot-amravati": {
+      hi: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" },
+      mr: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" }
+    },
+    "cot-hinganghat": {
+      hi: { name: "हिंगणघाट APMC", location: "वर्धा, महाराष्ट्र" },
+      mr: { name: "हिंगणघाट APMC", location: "वर्धा, महाराष्ट्र" }
+    },
+    "cot-wardha": {
+      hi: { name: "वर्धा APMC", location: "वर्धा, महाराष्ट्र" },
+      mr: { name: "वर्धा APMC", location: "वर्धा, महाराष्ट्र" }
+    },
+    "cot-jalgaon": {
+      hi: { name: "जलगांव APMC", location: "जलगांव, महाराष्ट्र" },
+      mr: { name: "जळगाव APMC", location: "जळगाव, महाराष्ट्र" }
+    },
+    "cot-dhule": {
+      hi: { name: "धुले APMC", location: "धुले, महाराष्ट्र" },
+      mr: { name: "धुळे APMC", location: "धुळे, महाराष्ट्र" }
+    },
+    "cot-aurangabad": {
+      hi: { name: "औरंगाबाद APMC", location: "छ. संभाजीनगर, महाराष्ट्र" },
+      mr: { name: "औरंगाबाद APMC", location: "छ. संभाजीनगर, महाराष्ट्र" }
+    },
+    "cot-nanded": {
+      hi: { name: "नांदेड़ APMC", location: "नांदेड़, महाराष्ट्र" },
+      mr: { name: "नांदेड APMC", location: "नांदेड, महाराष्ट्र" }
+    },
+    "cot-chandrapur": {
+      hi: { name: "चंद्रपुर APMC", location: "चंद्रपुर, महाराष्ट्र" },
+      mr: { name: "चंद्रपूर APMC", location: "चंद्रपूर, महाराष्ट्र" }
+    },
+
+    // Soybean
+    "soy-latur": {
+      hi: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" },
+      mr: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" }
+    },
+    "soy-nanded": {
+      hi: { name: "नांदेड़ APMC", location: "नांदेड़, महाराष्ट्र" },
+      mr: { name: "नांदेड APMC", location: "नांदेड, महाराष्ट्र" }
+    },
+    "soy-akola": {
+      hi: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" },
+      mr: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" }
+    },
+    "soy-amravati": {
+      hi: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" },
+      mr: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" }
+    },
+    "soy-washim": {
+      hi: { name: "वाशिम APMC", location: "वाशिम, महाराष्ट्र" },
+      mr: { name: "वाशीम APMC", location: "वाशीम, महाराष्ट्र" }
+    },
+    "soy-yavatmal": {
+      hi: { name: "यवतमाल APMC", location: "यवतमाल, महाराष्ट्र" },
+      mr: { name: "यवतमाळ APMC", location: "यवतमाळ, महाराष्ट्र" }
+    },
+    "soy-hingoli": {
+      hi: { name: "हिंगोली APMC", location: "हिंगोली, महाराष्ट्र" },
+      mr: { name: "हिंगोली APMC", location: "हिंगोली, महाराष्ट्र" }
+    },
+    "soy-jalna": {
+      hi: { name: "जालना APMC", location: "जालना, महाराष्ट्र" },
+      mr: { name: "जालना APMC", location: "जालना, महाराष्ट्र" }
+    },
+    "soy-parbhani": {
+      hi: { name: "परभणी APMC", location: "परभणी, महाराष्ट्र" },
+      mr: { name: "परभणी APMC", location: "परभणी, महाराष्ट्र" }
+    },
+    "soy-beed": {
+      hi: { name: "बीड APMC", location: "बीड, महाराष्ट्र" },
+      mr: { name: "बीड APMC", location: "बीड, महाराष्ट्र" }
+    },
+    "soy-indore": {
+      hi: { name: "इंदौर मंडी", location: "इंदौर, मध्य प्रदेश" },
+      mr: { name: "इंदूर बाजार", location: "इंदूर, मध्य प्रदेश" }
+    },
+
+    // Rice
+    "ric-gondia": {
+      hi: { name: "गोंदिया APMC", location: "गोंदिया, महाराष्ट्र" },
+      mr: { name: "गोंदिया APMC", location: "गोंदिया, महाराष्ट्र" }
+    },
+    "ric-bhandara": {
+      hi: { name: "भंडारा APMC", location: "भंडारा, महाराष्ट्र" },
+      mr: { name: "भंडारा APMC", location: "भंडारा, महाराष्ट्र" }
+    },
+    "ric-nagpur": {
+      hi: { name: "नागपुर APMC", location: "नागपुर, महाराष्ट्र" },
+      mr: { name: "नागपूर APMC", location: "नागपूर, महाराष्ट्र" }
+    },
+    "ric-chandrapur": {
+      hi: { name: "चंद्रपुर APMC", location: "चंद्रपुर, महाराष्ट्र" },
+      mr: { name: "चंद्रपूर APMC", location: "चंद्रपूर, महाराष्ट्र" }
+    },
+    "ric-gadchiroli": {
+      hi: { name: "गडचिरोली APMC", location: "गडचिरोली, महाराष्ट्र" },
+      mr: { name: "गडचिरोली APMC", location: "गडचिरोली, महाराष्ट्र" }
+    },
+    "ric-wardha": {
+      hi: { name: "वर्धा APMC", location: "वर्धा, महाराष्ट्र" },
+      mr: { name: "वर्धा APMC", location: "वर्धा, महाराष्ट्र" }
+    },
+    "ric-panvel": {
+      hi: { name: "रायगढ़ (पनवेल) APMC", location: "रायगढ़, महाराष्ट्र" },
+      mr: { name: "रायगड (पनवेल) APMC", location: "रायगड, महाराष्ट्र" }
+    },
+    "ric-thane": {
+      hi: { name: "ठाणे APMC", location: "ठाणे, महाराष्ट्र" },
+      mr: { name: "ठाणे APMC", location: "ठाणे, महाराष्ट्र" }
+    },
+    "ric-palghar": {
+      hi: { name: "पालघर APMC", location: "पालघर, महाराष्ट्र" },
+      mr: { name: "पालघर APMC", location: "पालघर, महाराष्ट्र" }
+    },
+    "ric-kolhapur": {
+      hi: { name: "कोल्हापुर APMC", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर APMC", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+
+    // Wheat
+    "whe-latur": {
+      hi: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" },
+      mr: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" }
+    },
+    "whe-nanded": {
+      hi: { name: "नांदेड़ APMC", location: "नांदेड़, महाराष्ट्र" },
+      mr: { name: "नांदेड APMC", location: "नांदेड, महाराष्ट्र" }
+    },
+    "whe-aurangabad": {
+      hi: { name: "औरंगाबाद APMC", location: "छ. संभाजीनगर, महाराष्ट्र" },
+      mr: { name: "औरंगाबाद APMC", location: "छ. संभाजीनगर, महाराष्ट्र" }
+    },
+    "whe-jalna": {
+      hi: { name: "जालना APMC", location: "जालना, महाराष्ट्र" },
+      mr: { name: "जालना APMC", location: "जालना, महाराष्ट्र" }
+    },
+    "whe-amravati": {
+      hi: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" },
+      mr: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" }
+    },
+    "whe-akola": {
+      hi: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" },
+      mr: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" }
+    },
+    "whe-nagpur": {
+      hi: { name: "नागपुर APMC", location: "नागपुर, महाराष्ट्र" },
+      mr: { name: "नागपूर APMC", location: "नागपूर, महाराष्ट्र" }
+    },
+    "whe-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+    "whe-nashik": {
+      hi: { name: "नासिक APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नाशिक APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "whe-indore": {
+      hi: { name: "इंदौर मंडी", location: "इंदौर, मध्य प्रदेश" },
+      mr: { name: "इंदूर बाजार", location: "इंदूर, मध्य प्रदेश" }
+    },
+
+    // Sugarcane
+    "sug-kolhapur": {
+      hi: { name: "कोल्हापुर शुगर मिल क्लस्टर", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर साखर कारखाना गट", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+    "sug-sangli": {
+      hi: { name: "सांगली शुगर मिल क्लस्टर", location: "सांगली, महाराष्ट्र" },
+      mr: { name: "सांगली साखर कारखाना गट", location: "सांगली, महाराष्ट्र" }
+    },
+    "sug-satara": {
+      hi: { name: "सातारा शुगर मिल क्लस्टर", location: "सातारा, महाराष्ट्र" },
+      mr: { name: "सातारा साखर कारखाना गट", location: "सातारा, महाराष्ट्र" }
+    },
+    "sug-pune": {
+      hi: { name: "पुणे (बारामती) शुगर मिल्स", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "पुणे (बारामती) साखर कारखाने", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "sug-solapur": {
+      hi: { name: "सोलापुर शुगर मिल क्लस्टर", location: "सोलापुर, महाराष्ट्र" },
+      mr: { name: "सोलापूर साखर कारखाना गट", location: "सोलापूर, महाराष्ट्र" }
+    },
+    "sug-ahmednagar": {
+      hi: { name: "अहमदनगर शुगर मिल्स", location: "अहमदनगर, महाराष्ट्र" },
+      mr: { name: "अहमदनगर साखर कारखाने", location: "अहमदनगर, महाराष्ट्र" }
+    },
+    "sug-malegaon": {
+      hi: { name: "मालेगांव सहकारी शुगर मिल", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "मालेगाव सहकारी साखर कारखाना", location: "नाशिक, महाराष्ट्र" }
+    },
+    "sug-karad": {
+      hi: { name: "कराड शुगर मिल कॉम्प्लेक्स", location: "सातारा जिला, महाराष्ट्र" },
+      mr: { name: "कराड साखर कारखाना संकुल", location: "सातारा जिल्हा, महाराष्ट्र" }
+    },
+    "sug-pandharpur": {
+      hi: { name: "पंढरपुर शुगर मिल्स", location: "सोलापुर, महाराष्ट्र" },
+      mr: { name: "पंढरपूर साखर कारखाने", location: "सोलापूर, महाराष्ट्र" }
+    }
+  };
+
+  function getLocalizedMarket(market, lang) {
+    if (!market) return { name: "", location: "" };
+    if (lang === 'en') return { name: market.name, location: market.location };
+    const loc = MARKET_LOCALIZATION[market.id];
+    if (loc && loc[lang]) {
+      return {
+        name: loc[lang].name || market.name,
+        location: loc[lang].location || market.location
+      };
+    }
+    return { name: market.name, location: market.location };
+  }
 
   const MARKET_DATA = [
     // Tomato
@@ -1289,15 +1751,16 @@
 
     const bestMarket = markets[0];
     const remainingMarkets = markets.slice(1);
+    const locBest = getLocalizedMarket(bestMarket, lang);
 
     const bestOptionHtml = `
       <article class="farmer-best-card">
         <div class="farmer-best-card__header">
           <div>
             <span class="farmer-best-badge">${t.modalBestOptionBadge || "⭐ Best Option"}</span>
-            <h3 class="farmer-best-card__title">${bestMarket.name}</h3>
+            <h3 class="farmer-best-card__title">${locBest.name}</h3>
             <p class="farmer-best-card__meta">
-              <span>📍 ${bestMarket.location}</span>
+              <span>📍 ${locBest.location}</span>
               <span>&bull;</span>
               <span>📏 ${bestMarket.distanceKm} km ${t.modalAway || "away"}</span>
             </p>
@@ -1336,12 +1799,14 @@
         <div class="other-markets-container">
           <h4 class="other-markets-heading">${t.modalOtherMarkets || "Other Good Markets"}</h4>
           <div class="other-markets-list">
-            ${remainingMarkets.map((m, idx) => `
+            ${remainingMarkets.map((m, idx) => {
+              const locM = getLocalizedMarket(m, lang);
+              return `
               <article class="farmer-compact-card">
                 <div class="farmer-compact-card__header">
                   <div>
-                    <h5 class="farmer-compact-card__title">${m.name}</h5>
-                    <p class="farmer-compact-card__meta">📍 ${m.location} &bull; 📏 ${m.distanceKm} km ${t.modalAway || "away"}</p>
+                    <h5 class="farmer-compact-card__title">${locM.name}</h5>
+                    <p class="farmer-compact-card__meta">📍 ${locM.location} &bull; 📏 ${m.distanceKm} km ${t.modalAway || "away"}</p>
                   </div>
                   <span class="farmer-compact-tag">${idx === 0 ? (t.modalGoodOptionBadge || "🟢 Good Choice") : (t.modalAlternativeBadge || "Alternative Option")}</span>
                 </div>
@@ -1360,7 +1825,7 @@
                   </div>
                 </div>
               </article>
-            `).join("")}
+            `;}).join("")}
           </div>
         </div>
       `;
@@ -1369,9 +1834,9 @@
     return bestOptionHtml + otherMarketsHtml;
   }
 
-  let lastSearchResults = null;
-  let lastSearchQuantity = 500;
-  let lastSearchForm = null;
+  var lastSearchResults = null;
+  var lastSearchQuantity = 500;
+  var lastSearchForm = null;
 
   function openMarketModal(markets, quantityKg) {
     const modal = document.getElementById("market-result-modal");
@@ -1475,7 +1940,7 @@
       } catch (err) {
         console.error("Fasalo market search error:", err);
         if (statusEl) {
-          statusEl.textContent = "Error calculating recommendations. Please try again.";
+          statusEl.textContent = translations[currentLang]?.searchErrorMsg || "Error calculating recommendations. Please try again.";
         }
       } finally {
         if (submitButton) {
