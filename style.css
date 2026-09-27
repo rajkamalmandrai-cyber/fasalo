@@ -4210,6 +4210,61 @@ body.modal-open {
   border: 1px solid #fef08a;
 }
 
+
 .farmer-compact-metric-val--loss {
   color: #dc2626;
 }
+
+/* =========================================
+   CONTENT PAGE IMAGE SECTION RESPONSIVE
+   ========================================= */
+.content-img-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.content-img-split--photo-first {
+  grid-template-columns: 1fr 1.4fr;
+}
+
+.content-img-split__image {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+}
+
+.content-img-split__image img {
+  width: 100%;
+  height: clamp(200px, 32vw, 380px);
+  object-fit: cover;
+  display: block;
+}
+
+.content-img-hero {
+  border-radius: 16px;
+  overflow: hidden;
+  margin: var(--space-6) 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.content-img-hero img {
+  width: 100%;
+  height: clamp(200px, 40vw, 420px);
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+@media (max-width: 680px) {
+  .content-img-split,
+  .content-img-split--photo-first {
+    grid-template-columns: 1fr;
+  }
+
+  .content-img-split__image {
+    order: -1;  /* image first on mobile */
+  }
+}
+

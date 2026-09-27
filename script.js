@@ -1681,7 +1681,7 @@
     const crowFly = R * c;
     return Math.max(12, Math.round(crowFly * 1.25));
   }
-
+ 
   const TRANSPORT_RATE_PER_KM = 3.5;
 
   function formatRupees(amount) {

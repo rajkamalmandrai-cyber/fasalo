@@ -147,6 +147,18 @@
           <h1 class="heading-1">Mandi Prices in India: What Farmers Need to Know</h1>
           <p class="body-large">Understanding mandi prices is crucial for maximizing your crop's value. Fasalo helps you navigate the complexities of agricultural markets across India.</p>
 
+          <!-- Mandi scene image — full width, contextual -->
+          <div style="border-radius: 16px; overflow: hidden; margin: var(--space-6) 0; box-shadow: 0 8px 32px rgba(0,0,0,0.18);">
+            <img
+              src="/assets/mandi_auction_scene.jpg"
+              alt="Farmers and traders gathered at an Indian mandi marketplace, with sacks of grain and vegetables spread across the auction floor"
+              style="width: 100%; height: clamp(200px, 40vw, 420px); object-fit: cover; object-position: center 30%; display: block;"
+              loading="lazy"
+              width="1400"
+              height="788"
+            />
+          </div>
+
           <h2 class="heading-2">How Mandi Prices Are Determined</h2>
           <p class="body-copy">Mandi (Agricultural Produce Market Committee or APMC) markets are central to agricultural trade in India. Prices are typically determined through an open auction system, influenced by several factors:</p>
           <ul>
@@ -158,8 +170,28 @@
           </ul>
 
           <h2 class="heading-2">Why Mandi Prices Vary Across Locations</h2>
-          <p class="body-copy">It's common for the price of the same crop to differ between mandis, even those relatively close to each other. This variation is due to localized supply-demand imbalances, transport infrastructure, and the presence of different buyers or processors.</p>
-          <p class="body-copy">Fasalo's tool is designed to help you account for these variations, allowing you to compare potential earnings after considering transport costs.</p>
+          <!-- Two-column layout: text left, aerial market photo right -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; margin-top: var(--space-4);">
+            <div>
+              <p class="body-copy">It's common for the price of the same crop to differ between mandis, even those relatively close to each other. This variation is due to localized supply-demand imbalances, transport infrastructure, and the presence of different buyers or processors.</p>
+              <p class="body-copy" style="margin-top: var(--space-4);">Fasalo's tool is designed to help you account for these variations, allowing you to compare potential earnings after considering transport costs.</p>
+            </div>
+            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.15);">
+              <img
+                src="/assets/crop_bags_aerial.jpg"
+                alt="Aerial view of a rural Indian market with colourful bags of wheat, onion, cotton and other crops arranged in the open ground"
+                style="width: 100%; height: 260px; object-fit: cover; display: block;"
+                loading="lazy"
+                width="1400"
+                height="788"
+              />
+            </div>
+          </div>
+          <style>
+            @media (max-width: 640px) {
+              .mandi-split-grid { grid-template-columns: 1fr !important; }
+            }
+          </style>
 
           <h2 class="heading-2">Frequently Asked Questions</h2>
           <div class="flow">
