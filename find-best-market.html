@@ -173,19 +173,6 @@
             <p class="hero-form-status" aria-live="polite"></p>
           </div>
 
-          <!-- Market Recommendations Result Section -->
-          <section id="result-section" class="result-section" aria-labelledby="results-heading" style="margin-top: var(--space-10); border-radius: var(--radius-lg); border: 1px solid var(--color-border); padding: var(--space-8);">
-            <div class="container" style="padding-inline: 0; max-width: 100%;">
-              <div class="section-header">
-                <p class="eyebrow" data-translate-key="resultsEyebrow">Market Recommendations</p>
-                <h2 id="results-heading" class="heading-1" data-translate-key="resultsTitle">Recommended Markets for Your Crop</h2>
-                <p class="body-large" id="results-subtitle" data-translate-key="resultsSubtitle">Multiple relevant markets ranked by estimated net profit after transport.</p>
-              </div>
-              <div id="market-results-list" class="auto-grid" style="--grid-gap: var(--space-6); margin-top: var(--space-8);">
-                <!-- Market recommendation cards are injected here dynamically -->
-              </div>
-            </div>
-          </section>
 
           <div class="section-header" style="margin-top: var(--space-10);">
             <h2 class="heading-2">How Fasalo Helps You Sell Better</h2>
@@ -283,5 +270,35 @@
         </div>
       </div>
     </footer>
+
+    <!-- Market Recommendations Result Modal Overlay -->
+    <div id="market-result-modal" class="market-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-results-title">
+      <div class="market-modal-backdrop" id="modal-backdrop"></div>
+      <div class="market-modal-container">
+        <div class="market-modal-dialog">
+          <header class="market-modal-header">
+            <div class="market-modal-header-text">
+              <span class="modal-eyebrow" data-translate-key="modalEyebrow">🌾 Best Markets For You</span>
+              <h2 id="modal-results-title" class="modal-title" data-translate-key="modalTitle">Recommended Markets for Your Crop</h2>
+              <p class="modal-subtitle" data-translate-key="modalSubtitle">Based on your crop, location and quantity</p>
+            </div>
+            <button type="button" class="modal-close-button" id="modal-close-btn" aria-label="Close recommendations">
+              <svg class="icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </header>
+
+          <div class="market-modal-body" id="market-modal-body">
+            <!-- Farmer-friendly recommendation cards are injected here dynamically -->
+          </div>
+
+          <footer class="market-modal-footer">
+            <button type="button" class="button button--secondary modal-search-again-btn" id="modal-search-again-btn">
+              <svg class="icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span data-translate-key="modalSearchAgain">Search Again</span>
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

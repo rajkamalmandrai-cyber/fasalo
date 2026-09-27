@@ -83,6 +83,26 @@
       resultsSubtitle: "Multiple relevant markets ranked by estimated net profit after transport.",
       resultsEmptyTitle: "No Suitable Markets Found",
       resultsEmpty: "No suitable markets found for this search. Try changing the location, crop, quantity, or selling date.",
+      modalEyebrow: "🌾 Best Markets For You",
+      modalTitle: "Recommended Markets for Your Crop",
+      modalSubtitle: "Based on your crop, location and quantity",
+      modalClose: "Close",
+      modalSearchAgain: "Search Again",
+      modalBestOptionBadge: "⭐ Best Option",
+      modalGoodOptionBadge: "🟢 Good Choice",
+      modalAlternativeBadge: "Alternative Option",
+      modalTodaysPrice: "Today's Price",
+      modalTravelCost: "Travel Cost",
+      modalYouGet: "You Can Get About",
+      modalApprox: "Approx.",
+      modalPerQtl: " / Quintal",
+      modalPerKg: " / kg",
+      modalAway: "away",
+      modalOtherMarkets: "Other Good Markets",
+      modalGoodChoiceTag: "🟢 Good choice for your harvest",
+      modalAlternativeTag: "🟢 Viable alternative market",
+      modalEmptyTitle: "No Suitable Markets Found",
+      modalEmpty: "No suitable markets found for this search. Try changing the location, crop, quantity, or selling date.",
       estRevenueLabel: "Est. Revenue",
       estTransportLabel: "Est. Transport",
       estNetProfitLabel: "Est. Net Profit",
@@ -256,6 +276,26 @@
       resultsSubtitle: "परिवहन लागत के बाद अनुमानित शुद्ध लाभ के आधार पर क्रमबद्ध बाजार।",
       resultsEmptyTitle: "कोई उपयुक्त बाजार नहीं मिला",
       resultsEmpty: "इस खोज के लिए कोई उपयुक्त बाजार नहीं मिला। स्थान, फसल, मात्रा या बिक्री की तारीख बदलने का प्रयास करें।",
+      modalEyebrow: "🌾 आपके लिए सबसे अच्छे बाजार",
+      modalTitle: "आपकी फसल के लिए सर्वोत्तम बाजार",
+      modalSubtitle: "आपकी फसल, स्थान और मात्रा के आधार पर",
+      modalClose: "बंद करें",
+      modalSearchAgain: "फिर से खोजें",
+      modalBestOptionBadge: "⭐ सबसे अच्छा विकल्प",
+      modalGoodOptionBadge: "🟢 अच्छा विकल्प",
+      modalAlternativeBadge: "दूसरा विकल्प",
+      modalTodaysPrice: "आज का भाव",
+      modalTravelCost: "ले जाने का खर्च",
+      modalYouGet: "आपको लगभग मिलेंगे",
+      modalApprox: "लगभग",
+      modalPerQtl: " / क्विंटल",
+      modalPerKg: " / किलो",
+      modalAway: "दूर",
+      modalOtherMarkets: "अन्य अच्छे बाजार",
+      modalGoodChoiceTag: "🟢 आपके लिए अच्छा विकल्प",
+      modalAlternativeTag: "🟢 बेचने के लिए दूसरा अच्छा बाजार",
+      modalEmptyTitle: "कोई उपयुक्त बाजार नहीं मिला",
+      modalEmpty: "इस खोज के लिए कोई उपयुक्त बाजार नहीं मिला। स्थान, फसल, मात्रा या बिक्री की तारीख बदलने का प्रयास करें।",
       estRevenueLabel: "अनुमानित आय",
       estTransportLabel: "परिवहन खर्च",
       estNetProfitLabel: "अनुमानित शुद्ध लाभ",
@@ -429,6 +469,26 @@
       resultsSubtitle: "वाहतूक खर्चानंतर अंदाजे निव्वळ नफ्यानुसार क्रमवारी लावलेल्या बाजारपेठा.",
       resultsEmptyTitle: "कोणतीही योग्य बाजारपेठ आढळली नाही",
       resultsEmpty: "या शोधासाठी कोणतीही योग्य बाजारपेठ आढळली नाही. कृपया स्थान, पीक, प्रमाण किंवा विक्रीची तारीख बदलून पहा.",
+      modalEyebrow: "🌾 तुमच्यासाठी सर्वोत्तम बाजार",
+      modalTitle: "तुमच्या पिकासाठी सर्वोत्तम बाजारपेठा",
+      modalSubtitle: "तुमचे पीक, ठिकाण आणि प्रमाणानुसार",
+      modalClose: "बंद करा",
+      modalSearchAgain: "पुन्हा शोधा",
+      modalBestOptionBadge: "⭐ सर्वोत्तम पर्याय",
+      modalGoodOptionBadge: "🟢 चांगला पर्याय",
+      modalAlternativeBadge: "दुसरा पर्याय",
+      modalTodaysPrice: "आजचा भाव",
+      modalTravelCost: "वाहतूक खर्च",
+      modalYouGet: "तुम्हाला साधारण मिळतील",
+      modalApprox: "साधारण",
+      modalPerQtl: " / क्विंटल",
+      modalPerKg: " / किलो",
+      modalAway: "लांब",
+      modalOtherMarkets: "इतर चांगले बाजार",
+      modalGoodChoiceTag: "🟢 तुमच्यासाठी चांगला पर्याय",
+      modalAlternativeTag: "🟢 विक्रीसाठी दुसरा पर्याय",
+      modalEmptyTitle: "कोणतीही योग्य बाजारपेठ आढळली नाही",
+      modalEmpty: "या शोधासाठी कोणतीही योग्य बाजारपेठ आढळली नाही. कृपया स्थान, पीक, प्रमाण किंवा विक्रीची तारीख बदलून पहा.",
       estRevenueLabel: "अंदाजे उत्पन्न",
       estTransportLabel: "वाहतूक खर्च",
       estNetProfitLabel: "अंदाजे निव्वळ नफा",
@@ -1211,95 +1271,166 @@
     return uniqueResults;
   }
 
-  function renderMarketCardsHtml(markets, lang) {
+  function renderFarmerFriendlyModalHtml(markets, lang) {
     const t = translations[lang] || translations.en;
-    if (!markets.length) {
-      const emptyTitle = t.resultsEmptyTitle || "No Suitable Markets Found";
-      const emptyDesc = t.resultsEmpty || "No suitable markets found for this search. Try changing the location, crop, quantity, or selling date.";
+    if (!markets || !markets.length) {
+      const emptyTitle = t.modalEmptyTitle || t.resultsEmptyTitle || "No Suitable Markets Found";
+      const emptyDesc = t.modalEmpty || t.resultsEmpty || "No suitable markets found for this search. Try changing the location, crop, quantity, or selling date.";
       return `
-        <div class="card" style="grid-column: 1 / -1; padding: var(--space-8); text-align: center;">
+        <div style="padding: var(--space-8) var(--space-4); text-align: center;">
           <span class="icon-tile" style="margin-inline: auto; margin-bottom: var(--space-4);" aria-hidden="true">
-            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           </span>
-          <h3 class="heading-3" style="margin-bottom: var(--space-2);">${emptyTitle}</h3>
-          <p class="body-copy" style="max-width: 48ch; margin-inline: auto; color: var(--color-text-muted);">${emptyDesc}</p>
+          <h3 class="heading-3" style="margin-bottom: var(--space-2); color: var(--forest-950);">${emptyTitle}</h3>
+          <p class="body-copy" style="max-width: 46ch; margin-inline: auto; color: var(--color-text-muted);">${emptyDesc}</p>
         </div>
       `;
     }
 
-    return markets.map((m, index) => {
-      let badgeClass = "badge--success";
-      let badgeText = t.topRecommendation || "Top Recommendation";
+    const bestMarket = markets[0];
+    const remainingMarkets = markets.slice(1);
 
-      if (index === 1) {
-        badgeClass = "badge";
-        badgeText = t.highProfitBadge || "High Profit Potential";
-      } else if (index === 2) {
-        badgeClass = "badge badge--demand-high";
-        badgeText = t.goodAlternative || "Good Choice";
-      } else if (index >= 3) {
-        badgeClass = "badge";
-        badgeText = t.viableMarket || "Viable Market";
-      }
-
-      return `
-        <article class="card finder-card result-card is-visible" style="display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; height: 100%;">
-          <div class="is-visible">
-            <div class="result-header is-visible">
-              <div>
-                <h3 class="heading-3" style="margin-bottom: var(--space-1);">${m.name}</h3>
-                <p class="small-text text-muted" style="margin: 0;">📍 ${m.location} &bull; ${m.distanceKm} km</p>
-              </div>
-              <span class="badge ${badgeClass}">${badgeText}</span>
-            </div>
-
-            <div class="result-grid is-visible">
-              <div class="result-item">
-                <span class="small-text text-muted">${t.mandiPriceLabel || "Mandi Price"}</span>
-                <p class="result-value">₹${m.pricePerQtl.toLocaleString('en-IN')}<span class="small-text"> / Qtl</span></p>
-                <span class="small-text text-muted" style="font-size: 0.75rem;">(₹${m.pricePerKg.toFixed(2)}/kg)</span>
-              </div>
-              <div class="result-item">
-                <span class="small-text text-muted">${t.estRevenueLabel || "Est. Revenue"}</span>
-                <p class="result-value">₹${m.estRevenue.toLocaleString('en-IN')}</p>
-                <span class="small-text text-muted" style="font-size: 0.75rem;">for ${m.quantityKg} kg</span>
-              </div>
-              <div class="result-item">
-                <span class="small-text text-muted">${t.estTransportLabel || "Est. Transport"}</span>
-                <p class="result-value">₹${m.estTransport.toLocaleString('en-IN')}</p>
-                <span class="small-text text-muted" style="font-size: 0.75rem;">${m.distanceKm} km transit</span>
-              </div>
-              <div class="result-item">
-                <span class="small-text text-muted">${t.confidenceLabel || "Confidence"}</span>
-                <p class="result-value" style="color: var(--color-success);">${m.confidence}%</p>
-                <span class="small-text text-muted" style="font-size: 0.75rem;">${m.demand} Demand</span>
-              </div>
-            </div>
-
-            <p class="body-copy is-visible" style="font-size: var(--text-sm); margin-top: var(--space-4); margin-bottom: var(--space-4); color: var(--color-text-muted);">
-              ${m.reason}
+    const bestOptionHtml = `
+      <article class="farmer-best-card">
+        <div class="farmer-best-card__header">
+          <div>
+            <span class="farmer-best-badge">${t.modalBestOptionBadge || "⭐ Best Option"}</span>
+            <h3 class="farmer-best-card__title">${bestMarket.name}</h3>
+            <p class="farmer-best-card__meta">
+              <span>📍 ${bestMarket.location}</span>
+              <span>&bull;</span>
+              <span>📏 ${bestMarket.distanceKm} km ${t.modalAway || "away"}</span>
             </p>
           </div>
+        </div>
 
-          <div class="result-summary is-visible">
-            <span class="small-text text-muted">${t.estNetProfitLabel || "Est. Net Profit"}</span>
-            <p class="heading-2 profit-highlight" style="color: var(--forest-950); margin: 0;">₹${m.estNet.toLocaleString('en-IN')}</p>
-            <span class="badge badge--success" style="justify-self: center; margin-top: var(--space-3);">${t.sellNowBadge || "Recommended Market"}</span>
+        <div class="farmer-metrics-grid">
+          <div class="farmer-metric-box">
+            <span class="farmer-metric-label">${t.modalTodaysPrice || "Today's Price"}</span>
+            <p class="farmer-metric-value">₹${bestMarket.pricePerQtl.toLocaleString('en-IN')}<span class="farmer-metric-subtext">${t.modalPerQtl || " / Quintal"}</span></p>
+            <span class="farmer-metric-subtext">(₹${bestMarket.pricePerKg.toFixed(2)}${t.modalPerKg || "/kg"})</span>
           </div>
-        </article>
+
+          <div class="farmer-metric-box">
+            <span class="farmer-metric-label">${t.modalTravelCost || "Travel Cost"}</span>
+            <p class="farmer-metric-value">${t.modalApprox || "Approx."} ₹${bestMarket.estTransport.toLocaleString('en-IN')}</p>
+            <span class="farmer-metric-subtext">${bestMarket.distanceKm} km</span>
+          </div>
+
+          <div class="farmer-metric-box farmer-metric-box--highlight">
+            <span class="farmer-metric-label">${t.modalYouGet || "You Can Get About"}</span>
+            <p class="farmer-metric-value farmer-metric-value--profit">₹${bestMarket.estNet.toLocaleString('en-IN')}</p>
+            <span class="farmer-metric-subtext">${bestMarket.quantityKg} kg</span>
+          </div>
+        </div>
+
+        <div class="farmer-recommendation-tag">
+          <span>${t.modalGoodChoiceTag || "🟢 Good choice for your harvest"}</span>
+        </div>
+      </article>
+    `;
+
+    let otherMarketsHtml = "";
+    if (remainingMarkets.length > 0) {
+      otherMarketsHtml = `
+        <div class="other-markets-container">
+          <h4 class="other-markets-heading">${t.modalOtherMarkets || "Other Good Markets"}</h4>
+          <div class="other-markets-list">
+            ${remainingMarkets.map((m, idx) => `
+              <article class="farmer-compact-card">
+                <div class="farmer-compact-card__header">
+                  <div>
+                    <h5 class="farmer-compact-card__title">${m.name}</h5>
+                    <p class="farmer-compact-card__meta">📍 ${m.location} &bull; 📏 ${m.distanceKm} km ${t.modalAway || "away"}</p>
+                  </div>
+                  <span class="farmer-compact-tag">${idx === 0 ? (t.modalGoodOptionBadge || "🟢 Good Choice") : (t.modalAlternativeBadge || "Alternative Option")}</span>
+                </div>
+                <div class="farmer-compact-metrics">
+                  <div class="farmer-compact-metric-item">
+                    <span class="farmer-compact-metric-label">${t.modalTodaysPrice || "Today's Price"}</span>
+                    <span class="farmer-compact-metric-val">₹${m.pricePerQtl.toLocaleString('en-IN')}${t.modalPerQtl || "/Qtl"}</span>
+                  </div>
+                  <div class="farmer-compact-metric-item">
+                    <span class="farmer-compact-metric-label">${t.modalTravelCost || "Travel Cost"}</span>
+                    <span class="farmer-compact-metric-val">${t.modalApprox || "~"}₹${m.estTransport.toLocaleString('en-IN')}</span>
+                  </div>
+                  <div class="farmer-compact-metric-item">
+                    <span class="farmer-compact-metric-label">${t.modalYouGet || "You Can Get"}</span>
+                    <span class="farmer-compact-metric-val farmer-compact-metric-val--net">₹${m.estNet.toLocaleString('en-IN')}</span>
+                  </div>
+                </div>
+              </article>
+            `).join("")}
+          </div>
+        </div>
       `;
-    }).join("");
+    }
+
+    return bestOptionHtml + otherMarketsHtml;
   }
 
   let lastSearchResults = null;
   let lastSearchQuantity = 500;
+  let lastSearchForm = null;
+
+  function openMarketModal(markets, quantityKg) {
+    const modal = document.getElementById("market-result-modal");
+    const modalBody = document.getElementById("market-modal-body");
+    if (!modal || !modalBody) return;
+
+    modalBody.innerHTML = renderFarmerFriendlyModalHtml(markets, currentLang);
+    modal.classList.add("is-active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
+
+  function closeMarketModal() {
+    const modal = document.getElementById("market-result-modal");
+    if (!modal) return;
+
+    modal.classList.remove("is-active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
 
   function refreshActiveSearchResults() {
-    const resultsList = document.getElementById("market-results-list");
-    if (resultsList && lastSearchResults && lastSearchResults.length) {
-      resultsList.innerHTML = renderMarketCardsHtml(lastSearchResults, currentLang);
+    const modal = document.getElementById("market-result-modal");
+    const modalBody = document.getElementById("market-modal-body");
+    if (modal && modalBody && lastSearchResults && lastSearchResults.length) {
+      modalBody.innerHTML = renderFarmerFriendlyModalHtml(lastSearchResults, currentLang);
     }
   }
+
+  // Bind modal close buttons and keyboard handler
+  const modalCloseBtn = document.getElementById("modal-close-btn");
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener("click", closeMarketModal);
+  }
+
+  const modalBackdrop = document.getElementById("modal-backdrop");
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener("click", closeMarketModal);
+  }
+
+  const modalSearchAgainBtn = document.getElementById("modal-search-again-btn");
+  if (modalSearchAgainBtn) {
+    modalSearchAgainBtn.addEventListener("click", () => {
+      closeMarketModal();
+      if (lastSearchForm) {
+        const cropSelect = lastSearchForm.querySelector("select");
+        if (cropSelect) cropSelect.focus();
+      }
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const modal = document.getElementById("market-result-modal");
+      if (modal && modal.classList.contains("is-active")) {
+        closeMarketModal();
+      }
+    }
+  });
 
   function runMarketSearch(form) {
     const submitButton = form.querySelector('button[type="submit"]');
@@ -1318,6 +1449,8 @@
 
     const userLocationStr = extractUserLocation(form);
 
+    lastSearchForm = form;
+
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.classList.add("is-loading");
@@ -1333,17 +1466,8 @@
         lastSearchResults = results;
         lastSearchQuantity = quantityKg;
 
-        const resultSection = document.getElementById("result-section");
-        const resultsList = document.getElementById("market-results-list");
-
-        if (resultsList) {
-          resultsList.innerHTML = renderMarketCardsHtml(results, currentLang);
-        }
-
-        if (resultSection) {
-          resultSection.classList.add("is-visible");
-          resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+        // Open modal with farmer-friendly results (NO page auto-scroll)
+        openMarketModal(results, quantityKg);
 
         if (statusEl) {
           statusEl.textContent = translations[currentLang]?.recommendationReady || "Recommendation ready: Multiple markets compared.";
@@ -1359,7 +1483,7 @@
           submitButton.disabled = false;
         }
       }
-    }, 350);
+    }, 280);
   }
 
   // Attach search handler to all action-card forms
