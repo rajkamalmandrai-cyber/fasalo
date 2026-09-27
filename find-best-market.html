@@ -173,6 +173,20 @@
             <p class="hero-form-status" aria-live="polite"></p>
           </div>
 
+          <!-- Market Recommendations Result Section -->
+          <section id="result-section" class="result-section" aria-labelledby="results-heading" style="margin-top: var(--space-10); border-radius: var(--radius-lg); border: 1px solid var(--color-border); padding: var(--space-8);">
+            <div class="container" style="padding-inline: 0; max-width: 100%;">
+              <div class="section-header">
+                <p class="eyebrow" data-translate-key="resultsEyebrow">Market Recommendations</p>
+                <h2 id="results-heading" class="heading-1" data-translate-key="resultsTitle">Recommended Markets for Your Crop</h2>
+                <p class="body-large" id="results-subtitle" data-translate-key="resultsSubtitle">Multiple relevant markets ranked by estimated net profit after transport.</p>
+              </div>
+              <div id="market-results-list" class="auto-grid" style="--grid-gap: var(--space-6); margin-top: var(--space-8);">
+                <!-- Market recommendation cards are injected here dynamically -->
+              </div>
+            </div>
+          </section>
+
           <div class="section-header" style="margin-top: var(--space-10);">
             <h2 class="heading-2">How Fasalo Helps You Sell Better</h2>
             <p class="body-large">Our platform goes beyond simple price lookups. We provide actionable insights to maximize your net profit.</p>

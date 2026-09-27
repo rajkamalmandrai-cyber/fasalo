@@ -77,7 +77,23 @@
       comparingPrices: "Comparing prices...",
       calculatingTransport: "Calculating transport...",
       preparingRecommendation: "Preparing recommendation...",
-      recommendationReady: "Recommendation ready: Nashik APMC is leading today.",
+      recommendationReady: "Recommendation ready: Multiple markets compared.",
+      resultsEyebrow: "Market Recommendations",
+      resultsTitle: "Recommended Markets for Your Crop",
+      resultsSubtitle: "Multiple relevant markets ranked by estimated net profit after transport.",
+      resultsEmptyTitle: "No Suitable Markets Found",
+      resultsEmpty: "No suitable markets found for this search. Try changing the location, crop, quantity, or selling date.",
+      estRevenueLabel: "Est. Revenue",
+      estTransportLabel: "Est. Transport",
+      estNetProfitLabel: "Est. Net Profit",
+      mandiPriceLabel: "Mandi Price",
+      distanceLabel: "Distance",
+      confidenceLabel: "Confidence",
+      topRecommendation: "Top Recommendation",
+      highProfitBadge: "High Profit Potential",
+      goodAlternative: "Good Choice",
+      viableMarket: "Viable Market",
+      sellNowBadge: "Recommended Market",
       languageComingSoonPlaceholder: "(Coming Soon)", // Added for language selector
 
       // Crop options (used in select dropdowns)
@@ -234,7 +250,23 @@
       comparingPrices: "कीमतों की तुलना की जा रही है...",
       calculatingTransport: "परिवहन की गणना की जा रही है...",
       preparingRecommendation: "सिफारिश तैयार की जा रही है...",
-      recommendationReady: "सिफारिश तैयार है: नासिक एपीएमसी आज आगे है।",
+      recommendationReady: "सिफारिश तैयार है: विभिन्न बाजारों की तुलना की गई।",
+      resultsEyebrow: "बाजार सिफारिशें",
+      resultsTitle: "आपकी फसल के लिए सर्वोत्तम बाजार",
+      resultsSubtitle: "परिवहन लागत के बाद अनुमानित शुद्ध लाभ के आधार पर क्रमबद्ध बाजार।",
+      resultsEmptyTitle: "कोई उपयुक्त बाजार नहीं मिला",
+      resultsEmpty: "इस खोज के लिए कोई उपयुक्त बाजार नहीं मिला। स्थान, फसल, मात्रा या बिक्री की तारीख बदलने का प्रयास करें।",
+      estRevenueLabel: "अनुमानित आय",
+      estTransportLabel: "परिवहन खर्च",
+      estNetProfitLabel: "अनुमानित शुद्ध लाभ",
+      mandiPriceLabel: "मंडी भाव",
+      distanceLabel: "दूरी",
+      confidenceLabel: "विश्वसनीयता",
+      topRecommendation: "शीर्ष सिफारिश",
+      highProfitBadge: "उच्च लाभ संभावना",
+      goodAlternative: "अच्छा विकल्प",
+      viableMarket: "सक्षम बाजार",
+      sellNowBadge: "अनुशंसित बाजार",
       languageComingSoonPlaceholder: "(जल्द आ रहा है)",
 
       // Crop options (used in select dropdowns)
@@ -391,7 +423,23 @@
       comparingPrices: "किमतींची तुलना करत आहे...",
       calculatingTransport: "वाहतुकीची गणना करत आहे...",
       preparingRecommendation: "शिफारस तयार करत आहे...",
-      recommendationReady: "शिफारस तयार आहे: नाशिक एपीएमसी आज आघाडीवर आहे.",
+      recommendationReady: "शिफारस तयार आहे: विविध बाजारपेठांची तुलना केली.",
+      resultsEyebrow: "बाजार शिफारशी",
+      resultsTitle: "तुमच्या पिकासाठी सर्वोत्तम बाजारपेठा",
+      resultsSubtitle: "वाहतूक खर्चानंतर अंदाजे निव्वळ नफ्यानुसार क्रमवारी लावलेल्या बाजारपेठा.",
+      resultsEmptyTitle: "कोणतीही योग्य बाजारपेठ आढळली नाही",
+      resultsEmpty: "या शोधासाठी कोणतीही योग्य बाजारपेठ आढळली नाही. कृपया स्थान, पीक, प्रमाण किंवा विक्रीची तारीख बदलून पहा.",
+      estRevenueLabel: "अंदाजे उत्पन्न",
+      estTransportLabel: "वाहतूक खर्च",
+      estNetProfitLabel: "अंदाजे निव्वळ नफा",
+      mandiPriceLabel: "बाजारभाव",
+      distanceLabel: "अंतर",
+      confidenceLabel: "अचूकता",
+      topRecommendation: "सर्वोत्तम शिफारस",
+      highProfitBadge: "जास्त नफा क्षमता",
+      goodAlternative: "चांगला पर्याय",
+      viableMarket: "योग्य बाजार",
+      sellNowBadge: "शिफारस केलेली बाजारपेठ",
       languageComingSoonPlaceholder: "(लवकरच येत आहे)",
 
       // Crop options (used in select dropdowns)
@@ -538,6 +586,10 @@
     }
     document.documentElement.lang = lang;
     localStorage.setItem('selectedLanguage', lang); // Persist selection
+
+    if (typeof refreshActiveSearchResults === 'function') {
+      refreshActiveSearchResults();
+    }
   };
 
   // --- Number Counting Animation Function ---
@@ -853,31 +905,501 @@
   setMotionPreference(motionQuery);
   motionQuery.addEventListener?.("change", setMotionPreference);
 
-  if (heroForm && heroStatus) {
-    const submitButton = heroForm.querySelector('button[type="submit"]');
+  // --- Fasalo Market Intelligence Search Engine ---
+  const CITY_COORDINATES = {
+    mumbai: { lat: 19.076, lon: 72.8777 },
+    "navi mumbai": { lat: 19.033, lon: 73.0297 },
+    vashi: { lat: 19.0771, lon: 72.9986 },
+    thane: { lat: 19.2183, lon: 72.9781 },
+    pune: { lat: 18.5204, lon: 73.8567 },
+    nashik: { lat: 19.9975, lon: 73.7898 },
+    lasalgaon: { lat: 20.1472, lon: 74.2267 },
+    nagpur: { lat: 21.1458, lon: 79.0882 },
+    latur: { lat: 18.4088, lon: 76.5604 },
+    nanded: { lat: 19.1383, lon: 77.321 },
+    akola: { lat: 20.7002, lon: 77.0082 },
+    amravati: { lat: 20.932, lon: 77.7523 },
+    kolhapur: { lat: 16.705, lon: 74.2433 },
+    sangli: { lat: 16.8524, lon: 74.5815 },
+    satara: { lat: 17.6805, lon: 73.9935 },
+    solapur: { lat: 17.6599, lon: 75.9064 },
+    ahmednagar: { lat: 19.0952, lon: 74.7496 },
+    aurangabad: { lat: 19.8762, lon: 75.3433 },
+    sambhajinagar: { lat: 19.8762, lon: 75.3433 },
+    jalna: { lat: 19.8347, lon: 75.8816 },
+    jalgaon: { lat: 21.0077, lon: 75.5626 },
+    dhule: { lat: 20.9042, lon: 74.7749 },
+    yavatmal: { lat: 20.3888, lon: 78.1204 },
+    wardha: { lat: 20.7453, lon: 78.6022 },
+    chandrapur: { lat: 19.9615, lon: 79.2961 },
+    gondia: { lat: 21.4554, lon: 80.1961 },
+    bhandara: { lat: 21.1667, lon: 79.65 },
+    indore: { lat: 22.7196, lon: 75.8577 }
+  };
 
-    heroForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      if (!submitButton || submitButton.disabled) return;
+  const MARKET_DATA = [
+    // Tomato
+    { id: "tom-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Tomato", basePrice: 2450, baseDistance: 28, demand: "High", confidence: 95.2, reason: "Consistent high daily volume and strong wholesale buyer demand." },
+    { id: "tom-nashik", name: "Nashik APMC", location: "Nashik, Maharashtra", lat: 19.9975, lon: 73.7898, crop: "Tomato", basePrice: 2520, baseDistance: 65, demand: "High", confidence: 96.1, reason: "Major northern Maharashtra transit hub offering premium rates for fresh arrivals." },
+    { id: "tom-narayangaon", name: "Narayangaon APMC", location: "Pune District, Maharashtra", lat: 19.1232, lon: 73.9782, crop: "Tomato", basePrice: 2480, baseDistance: 45, demand: "High", confidence: 94.8, reason: "Renowned tomato trading centre with direct routes to inter-state buyers." },
+    { id: "tom-vashi", name: "Mumbai (Vashi) APMC", location: "Navi Mumbai, Maharashtra", lat: 19.0771, lon: 72.9986, crop: "Tomato", basePrice: 2600, baseDistance: 120, demand: "High", confidence: 93.7, reason: "Highest consumption demand with premium prices offsetting transport cost." },
+    { id: "tom-khed", name: "Khed APMC", location: "Pune District, Maharashtra", lat: 18.8472, lon: 73.9015, crop: "Tomato", basePrice: 2380, baseDistance: 32, demand: "Medium", confidence: 91.5, reason: "Quick turn-around and low unloading waiting time for local farmers." },
+    { id: "tom-junnar", name: "Junnar APMC", location: "Pune District, Maharashtra", lat: 19.2081, lon: 73.8763, crop: "Tomato", basePrice: 2420, baseDistance: 50, demand: "Medium", confidence: 92.0, reason: "Established vegetable market with stable auction bidding." },
+    { id: "tom-sangamner", name: "Sangamner APMC", location: "Ahmednagar, Maharashtra", lat: 19.5761, lon: 74.2096, crop: "Tomato", basePrice: 2390, baseDistance: 88, demand: "Medium", confidence: 90.8, reason: "Active regional trading with dependable cash settlements." },
+    { id: "tom-ahmednagar", name: "Ahmednagar APMC", location: "Ahmednagar, Maharashtra", lat: 19.0952, lon: 74.7496, crop: "Tomato", basePrice: 2360, baseDistance: 110, demand: "Medium", confidence: 89.9, reason: "Broad auction participation from Marathwada and Western Maharashtra." },
+    { id: "tom-satara", name: "Satara APMC", location: "Satara, Maharashtra", lat: 17.6805, lon: 73.9935, crop: "Tomato", basePrice: 2410, baseDistance: 95, demand: "Medium", confidence: 91.2, reason: "Steady local retail and semi-wholesale buyer network." },
+    { id: "tom-kolhapur", name: "Kolhapur APMC", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Tomato", basePrice: 2460, baseDistance: 180, demand: "High", confidence: 92.4, reason: "Strong border trade demand from southern Maharashtra and Karnataka." },
+    { id: "tom-solapur", name: "Solapur APMC", location: "Solapur, Maharashtra", lat: 17.6599, lon: 75.9064, crop: "Tomato", basePrice: 2340, baseDistance: 195, demand: "Medium", confidence: 88.6, reason: "Accessible eastern market with dependable commodity turnover." },
+    { id: "tom-baramati", name: "Baramati APMC", location: "Pune District, Maharashtra", lat: 18.1517, lon: 74.5772, crop: "Tomato", basePrice: 2400, baseDistance: 70, demand: "Medium", confidence: 90.5, reason: "Modern APMC infrastructure with prompt weighing and payment processing." },
 
-      const buttonText = submitButton.querySelector(".button__text");
-      // Original text should be retrieved from translations based on currentLang
-      const originalTextKey = buttonText?.getAttribute('data-translate-key') || 'checkMarketBtn';
-      const originalText = translations[currentLang][originalTextKey];
-      const steps = [
-        translations[currentLang].findingMarkets,
-        translations[currentLang].comparingPrices,
-        translations[currentLang].calculatingTransport,
-        translations[currentLang].preparingRecommendation,
-      ];
+    // Onion
+    { id: "oni-lasalgaon", name: "Lasalgaon APMC", location: "Nashik, Maharashtra", lat: 20.1472, lon: 74.2267, crop: "Onion", basePrice: 2750, baseDistance: 78, demand: "High", confidence: 96.8, reason: "Asia's largest onion market benchmark with highest trade liquidity." },
+    { id: "oni-pimpalgaon", name: "Pimpalgaon APMC", location: "Nashik, Maharashtra", lat: 20.1704, lon: 73.9858, crop: "Onion", basePrice: 2710, baseDistance: 62, demand: "High", confidence: 95.4, reason: "Premier export-quality sorting and active inter-state buyer auctions." },
+    { id: "oni-nashik", name: "Nashik APMC", location: "Nashik, Maharashtra", lat: 19.9975, lon: 73.7898, crop: "Onion", basePrice: 2680, baseDistance: 55, demand: "High", confidence: 94.9, reason: "Major district headquarters mandi with steady competitive bidding." },
+    { id: "oni-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Onion", basePrice: 2620, baseDistance: 25, demand: "High", confidence: 94.0, reason: "High metropolitan daily consumption and short local transport." },
+    { id: "oni-yeola", name: "Yeola APMC", location: "Nashik, Maharashtra", lat: 20.0422, lon: 74.4883, crop: "Onion", basePrice: 2650, baseDistance: 85, demand: "Medium", confidence: 92.8, reason: "Trusted regional hub for summer onion storage and trading." },
+    { id: "oni-nandgaon", name: "Nandgaon APMC", location: "Nashik, Maharashtra", lat: 20.3128, lon: 74.6582, crop: "Onion", basePrice: 2590, baseDistance: 92, demand: "Medium", confidence: 91.0, reason: "Fast clearance and direct highway access for bulk vehicle loading." },
+    { id: "oni-manmad", name: "Manmad APMC", location: "Nashik, Maharashtra", lat: 20.2524, lon: 74.4373, crop: "Onion", basePrice: 2610, baseDistance: 88, demand: "Medium", confidence: 91.6, reason: "Key railway junction mandi facilitating long-distance transport dispatch." },
+    { id: "oni-kalwan", name: "Kalwan APMC", location: "Nashik, Maharashtra", lat: 20.4851, lon: 73.9682, crop: "Onion", basePrice: 2580, baseDistance: 96, demand: "Medium", confidence: 90.2, reason: "Strong farmer participation and fair electronic weighbridge recording." },
+    { id: "oni-dindori", name: "Dindori APMC", location: "Nashik, Maharashtra", lat: 20.2033, lon: 73.8344, crop: "Onion", basePrice: 2600, baseDistance: 70, demand: "Medium", confidence: 91.1, reason: "Growing trading activity with active Nashik-belt commission agents." },
+    { id: "oni-ahmednagar", name: "Ahmednagar APMC", location: "Ahmednagar, Maharashtra", lat: 19.0952, lon: 74.7496, crop: "Onion", basePrice: 2560, baseDistance: 115, demand: "Medium", confidence: 90.0, reason: "Central Maharashtra distribution point connecting western and eastern traders." },
+    { id: "oni-solapur", name: "Solapur APMC", location: "Solapur, Maharashtra", lat: 17.6599, lon: 75.9064, crop: "Onion", basePrice: 2530, baseDistance: 190, demand: "Medium", confidence: 89.4, reason: "Major outlet for Red Onion varieties into southern states." },
+    { id: "oni-malegaon", name: "Malegaon APMC", location: "Nashik, Maharashtra", lat: 20.5539, lon: 74.5298, crop: "Onion", basePrice: 2630, baseDistance: 105, demand: "Medium", confidence: 91.8, reason: "High volume auctions connecting northern Maharashtra to Khandesh." },
 
+    // Potato
+    { id: "pot-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Potato", basePrice: 1950, baseDistance: 25, demand: "High", confidence: 95.0, reason: "Massive urban consumption ensuring rapid stock absorption at stable rates." },
+    { id: "pot-vashi", name: "Mumbai (Vashi) APMC", location: "Navi Mumbai, Maharashtra", lat: 19.0771, lon: 72.9986, crop: "Potato", basePrice: 2080, baseDistance: 125, demand: "High", confidence: 94.5, reason: "Premier terminal market commanding premium prices for graded produce." },
+    { id: "pot-nashik", name: "Nashik APMC", location: "Nashik, Maharashtra", lat: 19.9975, lon: 73.7898, crop: "Potato", basePrice: 1900, baseDistance: 60, demand: "Medium", confidence: 92.1, reason: "Good cold-chain connectivity and reliable processing-grade buyers." },
+    { id: "pot-manchar", name: "Manchar APMC", location: "Pune District, Maharashtra", lat: 19.0064, lon: 73.9431, crop: "Potato", basePrice: 1920, baseDistance: 40, demand: "High", confidence: 93.6, reason: "Core potato cultivation belt mandi with direct factory procurement agents." },
+    { id: "pot-khed", name: "Khed APMC", location: "Pune District, Maharashtra", lat: 18.8472, lon: 73.9015, crop: "Potato", basePrice: 1880, baseDistance: 30, demand: "Medium", confidence: 91.0, reason: "Short travel distance for local farmers and minimal handling wastage." },
+    { id: "pot-satara", name: "Satara APMC", location: "Satara, Maharashtra", lat: 17.6805, lon: 73.9935, crop: "Potato", basePrice: 1890, baseDistance: 95, demand: "Medium", confidence: 90.4, reason: "Substantial cold storage access and steady regional demand." },
+    { id: "pot-kolhapur", name: "Kolhapur APMC", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Potato", basePrice: 1960, baseDistance: 180, demand: "Medium", confidence: 91.8, reason: "Active hospitality and regional consumer trade across South Maharashtra." },
+    { id: "pot-sangli", name: "Sangli APMC", location: "Sangli, Maharashtra", lat: 16.8524, lon: 74.5815, crop: "Potato", basePrice: 1910, baseDistance: 190, demand: "Medium", confidence: 89.8, reason: "Comprehensive trading yard with efficient auction and clearance systems." },
+    { id: "pot-karad", name: "Karad APMC", location: "Satara District, Maharashtra", lat: 17.2885, lon: 74.1843, crop: "Potato", basePrice: 1870, baseDistance: 130, demand: "Medium", confidence: 89.1, reason: "Convenient NH4 highway logistics reducing turnaround time." },
+    { id: "pot-solapur", name: "Solapur APMC", location: "Solapur, Maharashtra", lat: 17.6599, lon: 75.9064, crop: "Potato", basePrice: 1850, baseDistance: 200, demand: "Low", confidence: 88.0, reason: "Steady bulk buying for regional consumer markets." },
+    { id: "pot-indore", name: "Indore Mandi", location: "Indore, Madhya Pradesh", lat: 22.7196, lon: 75.8577, crop: "Potato", basePrice: 2020, baseDistance: 320, demand: "High", confidence: 92.5, reason: "Major central India potato processing hub with chip-grade premiums." },
+
+    // Cotton
+    { id: "cot-nagpur", name: "Nagpur APMC", location: "Nagpur, Maharashtra", lat: 21.1458, lon: 79.0882, crop: "Cotton", basePrice: 8120, baseDistance: 45, demand: "High", confidence: 96.5, reason: "Vidarbha's flagship cotton market with active ginning mill buyers." },
+    { id: "cot-yavatmal", name: "Yavatmal APMC", location: "Yavatmal, Maharashtra", lat: 20.3888, lon: 78.1204, crop: "Cotton", basePrice: 8080, baseDistance: 75, demand: "High", confidence: 95.0, reason: "Core cotton heartland mandi offering competitive prices for FAQ grade." },
+    { id: "cot-akola", name: "Akola APMC", location: "Akola, Maharashtra", lat: 20.7002, lon: 77.0082, crop: "Cotton", basePrice: 8050, baseDistance: 95, demand: "High", confidence: 94.2, reason: "Major commercial hub with extensive cotton pressing and export linkages." },
+    { id: "cot-amravati", name: "Amravati APMC", location: "Amravati, Maharashtra", lat: 20.932, lon: 77.7523, crop: "Cotton", basePrice: 8020, baseDistance: 65, demand: "Medium", confidence: 93.8, reason: "Established trading network with consistent MSP compliance." },
+    { id: "cot-hinganghat", name: "Hinganghat APMC", location: "Wardha, Maharashtra", lat: 20.55, lon: 78.8333, crop: "Cotton", basePrice: 8140, baseDistance: 50, demand: "High", confidence: 95.8, reason: "Historic textile-grade cotton auction with top bidding mills." },
+    { id: "cot-wardha", name: "Wardha APMC", location: "Wardha, Maharashtra", lat: 20.7453, lon: 78.6022, crop: "Cotton", basePrice: 7980, baseDistance: 40, demand: "Medium", confidence: 92.4, reason: "Proximity to major spinning units providing low-friction unloading." },
+    { id: "cot-jalgaon", name: "Jalgaon APMC", location: "Jalgaon, Maharashtra", lat: 21.0077, lon: 75.5626, crop: "Cotton", basePrice: 8060, baseDistance: 130, demand: "High", confidence: 93.5, reason: "Khandesh trading nexus with strong demand for long-staple varieties." },
+    { id: "cot-dhule", name: "Dhule APMC", location: "Dhule, Maharashtra", lat: 20.9042, lon: 74.7749, crop: "Cotton", basePrice: 7950, baseDistance: 145, demand: "Medium", confidence: 91.2, reason: "Highway connectivity to Gujarat textile manufacturing clusters." },
+    { id: "cot-aurangabad", name: "Aurangabad APMC", location: "Chh. Sambhajinagar, Maharashtra", lat: 19.8762, lon: 75.3433, crop: "Cotton", basePrice: 7990, baseDistance: 160, demand: "Medium", confidence: 92.0, reason: "Marathwada regional market with transparent electronic auction facilities." },
+    { id: "cot-nanded", name: "Nanded APMC", location: "Nanded, Maharashtra", lat: 19.1383, lon: 77.321, crop: "Cotton", basePrice: 8010, baseDistance: 175, demand: "Medium", confidence: 91.7, reason: "Active procurement centre connecting Telangana and Maharashtra border belts." },
+    { id: "cot-chandrapur", name: "Chandrapur APMC", location: "Chandrapur, Maharashtra", lat: 19.9615, lon: 79.2961, crop: "Cotton", basePrice: 7930, baseDistance: 85, demand: "Low", confidence: 89.5, reason: "Reliable local trade support for small-holder farmers." },
+
+    // Soybean
+    { id: "soy-latur", name: "Latur APMC", location: "Latur, Maharashtra", lat: 18.4088, lon: 76.5604, crop: "Soybean", basePrice: 4680, baseDistance: 50, demand: "High", confidence: 96.2, reason: "India's premier soybean benchmark market with dense solvent extraction plants." },
+    { id: "soy-nanded", name: "Nanded APMC", location: "Nanded, Maharashtra", lat: 19.1383, lon: 77.321, crop: "Soybean", basePrice: 4590, baseDistance: 80, demand: "High", confidence: 94.6, reason: "Strong corporate oil mill procurement driving competitive spot rates." },
+    { id: "soy-akola", name: "Akola APMC", location: "Akola, Maharashtra", lat: 20.7002, lon: 77.0082, crop: "Soybean", basePrice: 4620, baseDistance: 95, demand: "High", confidence: 94.8, reason: "Established oilseed exchange with reliable grading and swift settlement." },
+    { id: "soy-amravati", name: "Amravati APMC", location: "Amravati, Maharashtra", lat: 20.932, lon: 77.7523, crop: "Soybean", basePrice: 4560, baseDistance: 65, demand: "Medium", confidence: 93.1, reason: "Regular daily arrivals with active local crushing unit representation." },
+    { id: "soy-washim", name: "Washim APMC", location: "Washim, Maharashtra", lat: 20.1112, lon: 77.1345, crop: "Soybean", basePrice: 4540, baseDistance: 110, demand: "Medium", confidence: 91.9, reason: "Prominent Vidarbha soybean belt mandi with quick electronic payments." },
+    { id: "soy-yavatmal", name: "Yavatmal APMC", location: "Yavatmal, Maharashtra", lat: 20.3888, lon: 78.1204, crop: "Soybean", basePrice: 4520, baseDistance: 75, demand: "Medium", confidence: 91.5, reason: "Steady local crusher demand and fair tare weight measurement." },
+    { id: "soy-hingoli", name: "Hingoli APMC", location: "Hingoli, Maharashtra", lat: 19.7188, lon: 77.1472, crop: "Soybean", basePrice: 4500, baseDistance: 105, demand: "Medium", confidence: 90.7, reason: "Competitive local merchant bidding for clean, dry harvest lots." },
+    { id: "soy-jalna", name: "Jalna APMC", location: "Jalna, Maharashtra", lat: 19.8347, lon: 75.8816, crop: "Soybean", basePrice: 4580, baseDistance: 140, demand: "High", confidence: 93.4, reason: "Central commercial market with direct linkages to major edible oil brands." },
+    { id: "soy-parbhani", name: "Parbhani APMC", location: "Parbhani, Maharashtra", lat: 19.2644, lon: 76.7749, crop: "Soybean", basePrice: 4510, baseDistance: 90, demand: "Medium", confidence: 91.0, reason: "Proximity to feed manufacturing and extraction plants." },
+    { id: "soy-beed", name: "Beed APMC", location: "Beed, Maharashtra", lat: 18.9891, lon: 75.7601, crop: "Soybean", basePrice: 4480, baseDistance: 120, demand: "Medium", confidence: 90.2, reason: "Consistent volume handling and prompt farmer queue clearing." },
+    { id: "soy-indore", name: "Indore Mandi", location: "Indore, Madhya Pradesh", lat: 22.7196, lon: 75.8577, crop: "Soybean", basePrice: 4720, baseDistance: 310, demand: "High", confidence: 95.5, reason: "National soybean trading headquarters with highest base procurement price." },
+
+    // Rice / Paddy
+    { id: "ric-gondia", name: "Gondia APMC", location: "Gondia, Maharashtra", lat: 21.4554, lon: 80.1961, crop: "Rice", basePrice: 2550, baseDistance: 45, demand: "High", confidence: 95.8, reason: "Rice bowl of Maharashtra with over 100 functional modern rice mills." },
+    { id: "ric-bhandara", name: "Bhandara APMC", location: "Bhandara, Maharashtra", lat: 21.1667, lon: 79.65, crop: "Rice", basePrice: 2510, baseDistance: 55, demand: "High", confidence: 94.4, reason: "Premier paddy auction center with strong government and private procurement." },
+    { id: "ric-nagpur", name: "Nagpur APMC", location: "Nagpur, Maharashtra", lat: 21.1458, lon: 79.0882, crop: "Rice", basePrice: 2580, baseDistance: 40, demand: "High", confidence: 95.0, reason: "Terminal urban demand ensuring continuous off-take for fine varieties." },
+    { id: "ric-chandrapur", name: "Chandrapur APMC", location: "Chandrapur, Maharashtra", lat: 19.9615, lon: 79.2961, crop: "Rice", basePrice: 2470, baseDistance: 85, demand: "Medium", confidence: 92.0, reason: "Reliable procurement center for coarse and medium raw paddy." },
+    { id: "ric-gadchiroli", name: "Gadchiroli APMC", location: "Gadchiroli, Maharashtra", lat: 20.1849, lon: 79.9948, crop: "Rice", basePrice: 2430, baseDistance: 110, demand: "Medium", confidence: 90.5, reason: "MSP procurement operations providing guaranteed minimum safety net." },
+    { id: "ric-wardha", name: "Wardha APMC", location: "Wardha, Maharashtra", lat: 20.7453, lon: 78.6022, crop: "Rice", basePrice: 2480, baseDistance: 60, demand: "Medium", confidence: 91.8, reason: "Fast logistics to central processing centers." },
+    { id: "ric-panvel", name: "Raigad (Panvel) APMC", location: "Raigad, Maharashtra", lat: 18.9894, lon: 73.1175, crop: "Rice", basePrice: 2620, baseDistance: 120, demand: "High", confidence: 93.9, reason: "Direct access to Mumbai metropolitan consumer retail distributors." },
+    { id: "ric-thane", name: "Thane APMC", location: "Thane, Maharashtra", lat: 19.2183, lon: 72.9781, crop: "Rice", basePrice: 2600, baseDistance: 130, demand: "High", confidence: 93.2, reason: "High value market for aromatic and local Wada Kolam paddy types." },
+    { id: "ric-palghar", name: "Palghar APMC", location: "Palghar, Maharashtra", lat: 19.6967, lon: 72.7699, crop: "Rice", basePrice: 2540, baseDistance: 145, demand: "Medium", confidence: 91.4, reason: "Established coastal rice trading network with competitive miller auctions." },
+    { id: "ric-kolhapur", name: "Kolhapur APMC", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Rice", basePrice: 2570, baseDistance: 180, demand: "Medium", confidence: 92.3, reason: "Active South Maharashtra consumer hub with steady mill off-take." },
+
+    // Wheat
+    { id: "whe-latur", name: "Latur APMC", location: "Latur, Maharashtra", lat: 18.4088, lon: 76.5604, crop: "Wheat", basePrice: 2320, baseDistance: 50, demand: "High", confidence: 94.5, reason: "Leading Marathwada grain hub with strong flour mill and consumer demand." },
+    { id: "whe-nanded", name: "Nanded APMC", location: "Nanded, Maharashtra", lat: 19.1383, lon: 77.321, crop: "Wheat", basePrice: 2280, baseDistance: 80, demand: "Medium", confidence: 92.8, reason: "Active procurement yard with good rail and road cargo links." },
+    { id: "whe-aurangabad", name: "Aurangabad APMC", location: "Chh. Sambhajinagar, Maharashtra", lat: 19.8762, lon: 75.3433, crop: "Wheat", basePrice: 2340, baseDistance: 135, demand: "High", confidence: 93.7, reason: "High urban consumption supporting premium rates for Sharbati and Lokwan." },
+    { id: "whe-jalna", name: "Jalna APMC", location: "Jalna, Maharashtra", lat: 19.8347, lon: 75.8816, crop: "Wheat", basePrice: 2290, baseDistance: 125, demand: "Medium", confidence: 91.9, reason: "Major grain depot with regular commercial auctions." },
+    { id: "whe-amravati", name: "Amravati APMC", location: "Amravati, Maharashtra", lat: 20.932, lon: 77.7523, crop: "Wheat", basePrice: 2260, baseDistance: 65, demand: "Medium", confidence: 91.2, reason: "Dependable local flour miller bidding with low moisture deductions." },
+    { id: "whe-akola", name: "Akola APMC", location: "Akola, Maharashtra", lat: 20.7002, lon: 77.0082, crop: "Wheat", basePrice: 2270, baseDistance: 95, demand: "Medium", confidence: 91.6, reason: "Well-regulated grain trade yard with standardized weighing." },
+    { id: "whe-nagpur", name: "Nagpur APMC", location: "Nagpur, Maharashtra", lat: 21.1458, lon: 79.0882, crop: "Wheat", basePrice: 2360, baseDistance: 40, demand: "High", confidence: 94.8, reason: "Central India transit hub commanding above-average retail prices." },
+    { id: "whe-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Wheat", basePrice: 2420, baseDistance: 30, demand: "High", confidence: 95.6, reason: "Top metropolitan market with premium prices for polished Lokwan wheat." },
+    { id: "whe-nashik", name: "Nashik APMC", location: "Nashik, Maharashtra", lat: 19.9975, lon: 73.7898, crop: "Wheat", basePrice: 2310, baseDistance: 60, demand: "Medium", confidence: 92.4, reason: "Steady local wholesale demand and rapid truck turnaround." },
+    { id: "whe-indore", name: "Indore Mandi", location: "Indore, Madhya Pradesh", lat: 22.7196, lon: 75.8577, crop: "Wheat", basePrice: 2450, baseDistance: 290, demand: "High", confidence: 96.0, reason: "Renowned benchmark for MP Sharbati & Lokwan wheat with highest trade interest." },
+
+    // Sugarcane
+    { id: "sug-kolhapur", name: "Kolhapur Sugar Mill Cluster", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Sugarcane", basePrice: 345, baseDistance: 35, demand: "High", confidence: 96.0, reason: "Highest sugar recovery zone in Maharashtra ensuring top FRP payouts." },
+    { id: "sug-sangli", name: "Sangli Sugar Mill Cluster", location: "Sangli, Maharashtra", lat: 16.8524, lon: 74.5815, crop: "Sugarcane", basePrice: 338, baseDistance: 45, demand: "High", confidence: 95.2, reason: "Efficient cooperative processing with reliable harvesting and cutting schedules." },
+    { id: "sug-satara", name: "Satara Sugar Mill Cluster", location: "Satara, Maharashtra", lat: 17.6805, lon: 73.9935, crop: "Sugarcane", basePrice: 335, baseDistance: 50, demand: "High", confidence: 94.6, reason: "Prompt gate weighing and structured state-backed installment payments." },
+    { id: "sug-pune", name: "Pune (Baramati) Sugar Mills", location: "Pune District, Maharashtra", lat: 18.1517, lon: 74.5772, crop: "Sugarcane", basePrice: 332, baseDistance: 40, demand: "High", confidence: 94.0, reason: "Modern co-generation plants with reduced mill yard holding delays." },
+    { id: "sug-solapur", name: "Solapur Sugar Mill Cluster", location: "Solapur, Maharashtra", lat: 17.6599, lon: 75.9064, crop: "Sugarcane", basePrice: 320, baseDistance: 65, demand: "Medium", confidence: 91.5, reason: "Extensive crushing capacity accommodating high-volume harvest transport." },
+    { id: "sug-ahmednagar", name: "Ahmednagar Sugar Mills", location: "Ahmednagar, Maharashtra", lat: 19.0952, lon: 74.7496, crop: "Sugarcane", basePrice: 325, baseDistance: 55, demand: "Medium", confidence: 92.4, reason: "Historic cooperative belt with transparent brix-sugar recovery testing." },
+    { id: "sug-malegaon", name: "Malegaon Co-op Sugar Mill", location: "Nashik, Maharashtra", lat: 20.5539, lon: 74.5298, crop: "Sugarcane", basePrice: 322, baseDistance: 70, demand: "Medium", confidence: 91.0, reason: "Organized vehicle transit passes and transparent recovery calculations." },
+    { id: "sug-karad", name: "Karad Sugar Mill Complex", location: "Satara District, Maharashtra", lat: 17.2885, lon: 74.1843, crop: "Sugarcane", basePrice: 336, baseDistance: 48, demand: "High", confidence: 94.2, reason: "High-efficiency crushing line ensuring minimal transit weight loss." },
+    { id: "sug-pandharpur", name: "Pandharpur Sugar Mills", location: "Solapur, Maharashtra", lat: 17.6749, lon: 75.3262, crop: "Sugarcane", basePrice: 324, baseDistance: 60, demand: "Medium", confidence: 91.8, reason: "Dependable harvest reception with computerized weighing slips." }
+  ];
+
+  function normalizeCropName(cropSelect) {
+    if (!cropSelect) return "Tomato";
+    const selectedOpt = cropSelect.options[cropSelect.selectedIndex];
+    if (!selectedOpt) return "Tomato";
+
+    const translateKey = selectedOpt.getAttribute("data-translate-key") || "";
+    if (translateKey.includes("Tomato")) return "Tomato";
+    if (translateKey.includes("Onion")) return "Onion";
+    if (translateKey.includes("Potato")) return "Potato";
+    if (translateKey.includes("Cotton")) return "Cotton";
+    if (translateKey.includes("Soybean")) return "Soybean";
+    if (translateKey.includes("Rice")) return "Rice";
+    if (translateKey.includes("Wheat")) return "Wheat";
+    if (translateKey.includes("Sugarcane")) return "Sugarcane";
+
+    const text = (selectedOpt.textContent || "").trim().toLowerCase();
+    if (text.includes("tomato") || text.includes("टमाटर") || text.includes("टोमॅटो")) return "Tomato";
+    if (text.includes("onion") || text.includes("प्याज") || text.includes("कांदा")) return "Onion";
+    if (text.includes("potato") || text.includes("आलू") || text.includes("बटाटा")) return "Potato";
+    if (text.includes("cotton") || text.includes("कपास") || text.includes("कापूस")) return "Cotton";
+    if (text.includes("soybean") || text.includes("सोयाबीन")) return "Soybean";
+    if (text.includes("rice") || text.includes("paddy") || text.includes("चावल") || text.includes("धान") || text.includes("तांदूळ") || text.includes("भात")) return "Rice";
+    if (text.includes("wheat") || text.includes("गेहूं") || text.includes("गहू")) return "Wheat";
+    if (text.includes("sugarcane") || text.includes("गन्ना") || text.includes("ऊस")) return "Sugarcane";
+
+    return "Tomato";
+  }
+
+  function extractUserLocation(form) {
+    const locBtn = form.querySelector(".location-button") || document.getElementById("detect-location-btn");
+    const btnSpan = locBtn?.querySelector("span");
+    const text = btnSpan?.textContent || "";
+    if (text && !text.includes("Detect") && !text.includes("पता") && !text.includes("शोध")) {
+      return text.replace("📍", "").trim();
+    }
+    const locInput = form.querySelector('input[name="location"], input[placeholder*="Location"], input[placeholder*="स्थान"]');
+    if (locInput && locInput.value.trim()) {
+      return locInput.value.trim();
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLoc = urlParams.get("location");
+    if (urlLoc) return urlLoc.trim();
+
+    return "";
+  }
+
+  function getMarketDistanceKm(userLocationStr, market) {
+    if (!userLocationStr) return market.baseDistance;
+    const lowerLoc = userLocationStr.toLowerCase();
+    let userCoords = null;
+    for (const [cityName, coords] of Object.entries(CITY_COORDINATES)) {
+      if (lowerLoc.includes(cityName)) {
+        userCoords = coords;
+        break;
+      }
+    }
+    if (!userCoords || !market.lat || !market.lon) {
+      return market.baseDistance;
+    }
+
+    const R = 6371; // Earth radius in km
+    const dLat = (market.lat - userCoords.lat) * (Math.PI / 180);
+    const dLon = (market.lon - userCoords.lon) * (Math.PI / 180);
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(userCoords.lat * (Math.PI / 180)) *
+        Math.cos(market.lat * (Math.PI / 180)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const crowFly = R * c;
+    return Math.max(12, Math.round(crowFly * 1.25));
+  }
+
+  function calculateMarketEconomics(market, quantityKg, userLocationStr, sellingDateStr) {
+    const qty = Math.max(10, quantityKg || 500);
+    const distanceKm = getMarketDistanceKm(userLocationStr, market);
+
+    let dateMultiplier = 1;
+    if (sellingDateStr) {
+      const dateObj = new Date(sellingDateStr);
+      if (!isNaN(dateObj.getTime())) {
+        const day = dateObj.getDate();
+        dateMultiplier = 1 + Math.sin(day * 0.4) * 0.015;
+      }
+    }
+
+    const pricePerQtl = Math.round(market.basePrice * dateMultiplier);
+    const pricePerKg = pricePerQtl / 100;
+    const estRevenue = Math.round(qty * pricePerKg);
+    const estTransport = Math.round(Math.max(120, distanceKm * 3.2 + distanceKm * 0.0032 * qty));
+    const estNet = Math.max(0, estRevenue - estTransport);
+
+    return {
+      ...market,
+      distanceKm,
+      pricePerQtl,
+      pricePerKg,
+      estRevenue,
+      estTransport,
+      estNet,
+      quantityKg: qty
+    };
+  }
+
+  const SHOWN_STORAGE_KEY = "fasalo_shown_markets";
+
+  function getSessionShownIds(crop) {
+    try {
+      const raw = sessionStorage.getItem(SHOWN_STORAGE_KEY);
+      if (!raw) return [];
+      const obj = JSON.parse(raw);
+      return Array.isArray(obj[crop]) ? obj[crop] : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function saveSessionShownIds(crop, ids) {
+    try {
+      const raw = sessionStorage.getItem(SHOWN_STORAGE_KEY);
+      const obj = raw ? JSON.parse(raw) : {};
+      obj[crop] = ids;
+      sessionStorage.setItem(SHOWN_STORAGE_KEY, JSON.stringify(obj));
+    } catch (e) {
+      // Ignore quota error
+    }
+  }
+
+  function selectMarketsForQuery(crop, quantityKg, userLocationStr, sellingDateStr) {
+    const cropMarkets = MARKET_DATA.filter((m) => m.crop.toLowerCase() === crop.toLowerCase());
+    if (!cropMarkets.length) return [];
+
+    const candidateMarkets = cropMarkets.map((m) =>
+      calculateMarketEconomics(m, quantityKg, userLocationStr, sellingDateStr)
+    );
+
+    candidateMarkets.sort((a, b) => b.estNet - a.estNet);
+
+    const BATCH_SIZE = Math.min(5, candidateMarkets.length);
+    const shownIds = getSessionShownIds(crop);
+    const unseen = candidateMarkets.filter((m) => !shownIds.includes(m.id));
+
+    let selected = [];
+
+    if (unseen.length >= BATCH_SIZE) {
+      selected = unseen.slice(0, BATCH_SIZE);
+      const updatedShown = [...shownIds, ...selected.map((m) => m.id)];
+      saveSessionShownIds(crop, updatedShown);
+    } else {
+      selected = [...unseen];
+      const needed = BATCH_SIZE - selected.length;
+      const selectedIds = new Set(selected.map((m) => m.id));
+      const availableToReuse = candidateMarkets.filter((m) => !selectedIds.has(m.id));
+      selected.push(...availableToReuse.slice(0, needed));
+      saveSessionShownIds(crop, selected.map((m) => m.id));
+    }
+
+    const uniqueResults = [];
+    const seenInCurrent = new Set();
+    for (const market of selected) {
+      if (!seenInCurrent.has(market.id)) {
+        seenInCurrent.add(market.id);
+        uniqueResults.push(market);
+      }
+    }
+
+    return uniqueResults;
+  }
+
+  function renderMarketCardsHtml(markets, lang) {
+    const t = translations[lang] || translations.en;
+    if (!markets.length) {
+      const emptyTitle = t.resultsEmptyTitle || "No Suitable Markets Found";
+      const emptyDesc = t.resultsEmpty || "No suitable markets found for this search. Try changing the location, crop, quantity, or selling date.";
+      return `
+        <div class="card" style="grid-column: 1 / -1; padding: var(--space-8); text-align: center;">
+          <span class="icon-tile" style="margin-inline: auto; margin-bottom: var(--space-4);" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </span>
+          <h3 class="heading-3" style="margin-bottom: var(--space-2);">${emptyTitle}</h3>
+          <p class="body-copy" style="max-width: 48ch; margin-inline: auto; color: var(--color-text-muted);">${emptyDesc}</p>
+        </div>
+      `;
+    }
+
+    return markets.map((m, index) => {
+      let badgeClass = "badge--success";
+      let badgeText = t.topRecommendation || "Top Recommendation";
+
+      if (index === 1) {
+        badgeClass = "badge";
+        badgeText = t.highProfitBadge || "High Profit Potential";
+      } else if (index === 2) {
+        badgeClass = "badge badge--demand-high";
+        badgeText = t.goodAlternative || "Good Choice";
+      } else if (index >= 3) {
+        badgeClass = "badge";
+        badgeText = t.viableMarket || "Viable Market";
+      }
+
+      return `
+        <article class="card finder-card result-card is-visible" style="display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; height: 100%;">
+          <div class="is-visible">
+            <div class="result-header is-visible">
+              <div>
+                <h3 class="heading-3" style="margin-bottom: var(--space-1);">${m.name}</h3>
+                <p class="small-text text-muted" style="margin: 0;">📍 ${m.location} &bull; ${m.distanceKm} km</p>
+              </div>
+              <span class="badge ${badgeClass}">${badgeText}</span>
+            </div>
+
+            <div class="result-grid is-visible">
+              <div class="result-item">
+                <span class="small-text text-muted">${t.mandiPriceLabel || "Mandi Price"}</span>
+                <p class="result-value">₹${m.pricePerQtl.toLocaleString('en-IN')}<span class="small-text"> / Qtl</span></p>
+                <span class="small-text text-muted" style="font-size: 0.75rem;">(₹${m.pricePerKg.toFixed(2)}/kg)</span>
+              </div>
+              <div class="result-item">
+                <span class="small-text text-muted">${t.estRevenueLabel || "Est. Revenue"}</span>
+                <p class="result-value">₹${m.estRevenue.toLocaleString('en-IN')}</p>
+                <span class="small-text text-muted" style="font-size: 0.75rem;">for ${m.quantityKg} kg</span>
+              </div>
+              <div class="result-item">
+                <span class="small-text text-muted">${t.estTransportLabel || "Est. Transport"}</span>
+                <p class="result-value">₹${m.estTransport.toLocaleString('en-IN')}</p>
+                <span class="small-text text-muted" style="font-size: 0.75rem;">${m.distanceKm} km transit</span>
+              </div>
+              <div class="result-item">
+                <span class="small-text text-muted">${t.confidenceLabel || "Confidence"}</span>
+                <p class="result-value" style="color: var(--color-success);">${m.confidence}%</p>
+                <span class="small-text text-muted" style="font-size: 0.75rem;">${m.demand} Demand</span>
+              </div>
+            </div>
+
+            <p class="body-copy is-visible" style="font-size: var(--text-sm); margin-top: var(--space-4); margin-bottom: var(--space-4); color: var(--color-text-muted);">
+              ${m.reason}
+            </p>
+          </div>
+
+          <div class="result-summary is-visible">
+            <span class="small-text text-muted">${t.estNetProfitLabel || "Est. Net Profit"}</span>
+            <p class="heading-2 profit-highlight" style="color: var(--forest-950); margin: 0;">₹${m.estNet.toLocaleString('en-IN')}</p>
+            <span class="badge badge--success" style="justify-self: center; margin-top: var(--space-3);">${t.sellNowBadge || "Recommended Market"}</span>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  let lastSearchResults = null;
+  let lastSearchQuantity = 500;
+
+  function refreshActiveSearchResults() {
+    const resultsList = document.getElementById("market-results-list");
+    if (resultsList && lastSearchResults && lastSearchResults.length) {
+      resultsList.innerHTML = renderMarketCardsHtml(lastSearchResults, currentLang);
+    }
+  }
+
+  function runMarketSearch(form) {
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton && submitButton.disabled) return;
+
+    const statusEl = form.parentElement.querySelector(".hero-form-status");
+
+    const cropSelect = form.querySelector("select");
+    const crop = normalizeCropName(cropSelect);
+
+    const qtyInput = form.querySelector('input[type="number"]');
+    const quantityKg = qtyInput && parseFloat(qtyInput.value) > 0 ? parseFloat(qtyInput.value) : 500;
+
+    const dateInput = form.querySelector('input[type="date"]');
+    const sellingDateStr = dateInput?.value || "";
+
+    const userLocationStr = extractUserLocation(form);
+
+    if (submitButton) {
       submitButton.disabled = true;
       submitButton.classList.add("is-loading");
-      heroStatus.textContent = translations[currentLang].findingMarkets; // Show initial status
+    }
 
-      // The form will naturally submit to formaction="/find-best-market.html"
-      // The rest of the logic for showing results will be on the new page.
+    if (statusEl) {
+      statusEl.textContent = translations[currentLang]?.findingMarkets || "Finding nearby markets...";
+    }
+
+    window.setTimeout(() => {
+      try {
+        const results = selectMarketsForQuery(crop, quantityKg, userLocationStr, sellingDateStr);
+        lastSearchResults = results;
+        lastSearchQuantity = quantityKg;
+
+        const resultSection = document.getElementById("result-section");
+        const resultsList = document.getElementById("market-results-list");
+
+        if (resultsList) {
+          resultsList.innerHTML = renderMarketCardsHtml(results, currentLang);
+        }
+
+        if (resultSection) {
+          resultSection.classList.add("is-visible");
+          resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        if (statusEl) {
+          statusEl.textContent = translations[currentLang]?.recommendationReady || "Recommendation ready: Multiple markets compared.";
+        }
+      } catch (err) {
+        console.error("Fasalo market search error:", err);
+        if (statusEl) {
+          statusEl.textContent = "Error calculating recommendations. Please try again.";
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.classList.remove("is-loading");
+          submitButton.disabled = false;
+        }
+      }
+    }, 350);
+  }
+
+  // Attach search handler to all action-card forms
+  document.querySelectorAll(".action-card__form").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      runMarketSearch(form);
     });
+  });
+
+  // Query parameter pre-population
+  const urlSearch = new URLSearchParams(window.location.search);
+  const queryCropParam = urlSearch.get("crop");
+  const queryQtyParam = urlSearch.get("quantity");
+  if (queryCropParam) {
+    document.querySelectorAll(".action-card__form").forEach((form) => {
+      const select = form.querySelector("select");
+      if (select) {
+        for (let i = 0; i < select.options.length; i++) {
+          const opt = select.options[i];
+          const key = opt.getAttribute("data-translate-key") || "";
+          const txt = opt.textContent.toLowerCase();
+          if (key.toLowerCase().includes(queryCropParam.toLowerCase()) || txt.includes(queryCropParam.toLowerCase())) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      if (queryQtyParam) {
+        const qtyInput = form.querySelector('input[type="number"]');
+        if (qtyInput) qtyInput.value = queryQtyParam;
+      }
+    });
+
+    if (window.location.pathname.includes("find-best-market")) {
+      const targetForm = document.querySelector(".action-card__form");
+      if (targetForm) {
+        window.setTimeout(() => runMarketSearch(targetForm), 100);
+      }
+    }
   }
 
   const animatedElements = document.querySelectorAll("[data-animate]");
