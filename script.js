@@ -145,7 +145,11 @@
       quickAction3Title: "Nearby Mandis", // Already correct
       quickAction3Desc: "Discover markets around your current location.", // Already correct
       quickAction4Title: "Weather Forecast", // Already correct
-      quickAction4Desc: "Future integration.", // Already correct
+      quickAction4Desc: "Check local conditions.", // Changed from Future integration
+      
+      // Weather Forecast
+      weatherTitle: "Local Weather Forecast",
+      weatherDesc: "Plan your farming activities based on upcoming conditions.",
 
       // --- Why Fasalo ---
       whyBetterEyebrow: "Why Fasalo",
@@ -366,7 +370,11 @@
       quickAction3Title: "आस-पास की मंडियां", // Restored
       quickAction3Desc: "अपने वर्तमान स्थान के आसपास के बाजारों की खोज करें।", // Restored
       quickAction4Title: "मौसम का पूर्वानुमान", // Restored
-      quickAction4Desc: "भविष्य में एकीकरण।", // Restored
+      quickAction4Desc: "स्थानीय मौसम की जाँच करें।",
+      
+      // Weather Forecast
+      weatherTitle: "स्थानीय मौसम का पूर्वानुमान",
+      weatherDesc: "आने वाले मौसम के आधार पर अपनी खेती की योजना बनाएं।",
 
       // Why Fasalo
       whyBetterEyebrow: "फसालो ही क्यों",
@@ -587,7 +595,11 @@
       quickAction3Title: "जवळच्या मंडई", // Restored
       quickAction3Desc: "तुमच्या वर्तमान स्थानाजवळील बाजारपेठा शोधा.", // Restored
       quickAction4Title: "हवामानाचा अंदाज", // Restored
-      quickAction4Desc: "भविष्य में एकीकरण.", // Restored
+      quickAction4Desc: "स्थानिक हवामान तपासा.",
+      
+      // Weather Forecast
+      weatherTitle: "स्थानिक हवामानाचा अंदाज",
+      weatherDesc: "येणाऱ्या हवामानानुसार तुमच्या शेतीचे नियोजन करा.",
 
       // Why Fasalo
       whyBetterEyebrow: "फसालो का",

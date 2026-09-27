@@ -3986,3 +3986,116 @@ body.modal-open {
     justify-content: center;
   }
 }
+
+/* --- Clean Weather Widget --- */
+.weather-widget-clean {
+  background: var(--color-surface);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.04);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .weather-widget-clean {
+    grid-template-columns: 1.2fr 1fr;
+    padding: 40px;
+  }
+}
+
+.weather-main-clean {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.weather-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.weather-city {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: 4px;
+}
+.weather-date {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+.weather-icon-clean {
+  width: 40px;
+  height: 40px;
+  color: var(--color-primary);
+}
+.weather-temp-block {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.weather-temp-large {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-text-dark);
+  letter-spacing: -0.04em;
+}
+.weather-cond {
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+.weather-metrics {
+  display: flex;
+  gap: 32px;
+}
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.metric-val {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+}
+.metric-lbl {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-light);
+}
+
+.weather-forecast-clean {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.forecast-day-clean {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+}
+.forecast-day-clean .icon-small {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+}
+.forecast-temps-clean {
+  display: flex;
+  gap: 16px;
+  font-weight: 500;
+  width: 80px;
+  justify-content: flex-end;
+}
+.temp-min {
+  color: var(--color-text-light);
+}
