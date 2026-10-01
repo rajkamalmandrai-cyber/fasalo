@@ -133,41 +133,177 @@
           </div>
 
           <div id="action-card" class="action-card" data-animate>
-            <h2 class="heading-3" data-translate-key="fbmActionCardTitle">Get Your Market Recommendation</h2>
-            <form class="action-card__form">
-              <label class="field" style="margin-bottom: var(--space-4);">
-                <span class="field__label" data-translate-key="cardLocationLabel">Location</span>
-                <button type="button" class="button button--outline location-button" id="detect-location-btn" style="margin-bottom: var(--space-3); width: 100%;">
-                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
-                  <span data-translate-key="useMyLocationBtn">Use My Location</span>
+            <div class="action-card__header">
+              <h2 class="heading-3 action-card__title" data-translate-key="fbmActionCardTitle">Get Your Market Recommendation</h2>
+            </div>
+            <form class="action-card__form" method="GET" action="/find-best-market.html">
+              <!-- 1. Location Step -->
+              <div class="form-step form-step--location">
+                <div class="form-step__label-row">
+                  <span class="form-step__icon" aria-hidden="true">📍</span>
+                  <label class="form-step__label" data-translate-key="cardLocationLabel">Where are you located?</label>
+                </div>
+                <div class="location-picker-group">
+                  <button type="button" class="button button--outline location-button" id="detect-location-btn">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+                    <span data-translate-key="useMyLocationBtn">Use My Location</span>
+                  </button>
+                  <div class="location-or-divider">
+                    <span class="location-or-divider__line"></span>
+                    <span class="location-or-divider__text" data-translate-key="orDividerText">OR</span>
+                    <span class="location-or-divider__line"></span>
+                  </div>
+                  <div class="input-with-icon">
+                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input class="input" type="text" name="location" placeholder="Enter city, village or area" data-translate-key="enterLocationPlaceholder" autocomplete="address-level2" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Visual Crop Selection Step -->
+              <div class="form-step form-step--crop">
+                <div class="form-step__label-row">
+                  <span class="form-step__icon" aria-hidden="true">🌱</span>
+                  <label class="form-step__label" data-translate-key="cardCropLabel">Select Crop</label>
+                </div>
+                
+                <input type="hidden" name="crop" id="selected-crop-input" value="tomato" />
+                
+                <div class="crop-grid" role="radiogroup" aria-label="Crop selection">
+                  <button type="button" class="crop-card is-selected" data-crop-id="tomato" role="radio" aria-checked="true">
+                    <span class="crop-card__icon" aria-hidden="true">🍅</span>
+                    <span class="crop-card__name" data-translate-key="cropOptionTomato">Tomato</span>
+                    <span class="crop-card__check" aria-hidden="true">✓</span>
+                  </button>
+                  <button type="button" class="crop-card" data-crop-id="onion" role="radio" aria-checked="false">
+                    <span class="crop-card__icon" aria-hidden="true">🧅</span>
+                    <span class="crop-card__name" data-translate-key="cropOptionOnion">Onion</span>
+                    <span class="crop-card__check" aria-hidden="true">✓</span>
+                  </button>
+                  <button type="button" class="crop-card" data-crop-id="potato" role="radio" aria-checked="false">
+                    <span class="crop-card__icon" aria-hidden="true">🥔</span>
+                    <span class="crop-card__name" data-translate-key="cropOptionPotato">Potato</span>
+                    <span class="crop-card__check" aria-hidden="true">✓</span>
+                  </button>
+                  <button type="button" class="crop-card" data-crop-id="wheat" role="radio" aria-checked="false">
+                    <span class="crop-card__icon" aria-hidden="true">🌾</span>
+                    <span class="crop-card__name" data-translate-key="cropOptionWheat">Wheat</span>
+                    <span class="crop-card__check" aria-hidden="true">✓</span>
+                  </button>
+                  <button type="button" class="crop-card" data-crop-id="rice" role="radio" aria-checked="false">
+                    <span class="crop-card__icon" aria-hidden="true">🍚</span>
+                    <span class="crop-card__name" data-translate-key="cropOptionRice">Rice</span>
+                    <span class="crop-card__check" aria-hidden="true">✓</span>
+                  </button>
+                  <button type="button" class="crop-card" data-crop-id="maize" role="radio" aria-checked="false">
+                    <span class="crop-card__icon" aria-hidden="true">🌽</span>
+                    <span class="crop-card__name" data-translate-key="cropOptionMaize">Maize</span>
+                    <span class="crop-card__check" aria-hidden="true">✓</span>
+                  </button>
+                  <button type="button" class="crop-card" data-crop-id="soybean" role="radio" aria-checked="false">
+                    <span class="crop-card__icon" aria-hidden="true">🌱</span>
+                    <span class="crop-card__name" data-translate-key="cropOptionSoybean">Soybean</span>
+                    <span class="crop-card__check" aria-hidden="true">✓</span>
+                  </button>
+                  <button type="button" class="crop-card" data-crop-id="cotton" role="radio" aria-checked="false">
+                    <span class="crop-card__icon" aria-hidden="true">☁️</span>
+                    <span class="crop-card__name" data-translate-key="cropOptionCotton">Cotton</span>
+                    <span class="crop-card__check" aria-hidden="true">✓</span>
+                  </button>
+                </div>
+
+                <!-- Extra crops expansion -->
+                <div class="crop-extra-container" id="extra-crops-wrapper" hidden>
+                  <div class="crop-grid crop-grid--extra">
+                    <button type="button" class="crop-card" data-crop-id="sugarcane" role="radio" aria-checked="false">
+                      <span class="crop-card__icon" aria-hidden="true">🎋</span>
+                      <span class="crop-card__name" data-translate-key="cropOptionSugarcane">Sugarcane</span>
+                      <span class="crop-card__check" aria-hidden="true">✓</span>
+                    </button>
+                    <button type="button" class="crop-card" data-crop-id="groundnut" role="radio" aria-checked="false">
+                      <span class="crop-card__icon" aria-hidden="true">🥜</span>
+                      <span class="crop-card__name" data-translate-key="cropOptionGroundnut">Groundnut</span>
+                      <span class="crop-card__check" aria-hidden="true">✓</span>
+                    </button>
+                    <button type="button" class="crop-card" data-crop-id="gram" role="radio" aria-checked="false">
+                      <span class="crop-card__icon" aria-hidden="true">🫘</span>
+                      <span class="crop-card__name" data-translate-key="cropOptionGram">Gram (Chana)</span>
+                      <span class="crop-card__check" aria-hidden="true">✓</span>
+                    </button>
+                    <button type="button" class="crop-card" data-crop-id="tur" role="radio" aria-checked="false">
+                      <span class="crop-card__icon" aria-hidden="true">🍲</span>
+                      <span class="crop-card__name" data-translate-key="cropOptionTur">Tur (Arhar)</span>
+                      <span class="crop-card__check" aria-hidden="true">✓</span>
+                    </button>
+                    <button type="button" class="crop-card" data-crop-id="chilli" role="radio" aria-checked="false">
+                      <span class="crop-card__icon" aria-hidden="true">🌶️</span>
+                      <span class="crop-card__name" data-translate-key="cropOptionChilli">Chilli</span>
+                      <span class="crop-card__check" aria-hidden="true">✓</span>
+                    </button>
+                    <button type="button" class="crop-card" data-crop-id="cabbage" role="radio" aria-checked="false">
+                      <span class="crop-card__icon" aria-hidden="true">🥬</span>
+                      <span class="crop-card__name" data-translate-key="cropOptionCabbage">Cabbage</span>
+                      <span class="crop-card__check" aria-hidden="true">✓</span>
+                    </button>
+                    <button type="button" class="crop-card" data-crop-id="cauliflower" role="radio" aria-checked="false">
+                      <span class="crop-card__icon" aria-hidden="true">🥦</span>
+                      <span class="crop-card__name" data-translate-key="cropOptionCauliflower">Cauliflower</span>
+                      <span class="crop-card__check" aria-hidden="true">✓</span>
+                    </button>
+                    <button type="button" class="crop-card" data-crop-id="okra" role="radio" aria-checked="false">
+                      <span class="crop-card__icon" aria-hidden="true">🥒</span>
+                      <span class="crop-card__name" data-translate-key="cropOptionOkra">Okra (Bhindi)</span>
+                      <span class="crop-card__check" aria-hidden="true">✓</span>
+                    </button>
+                  </div>
+                </div>
+
+                <button type="button" class="crop-toggle-btn" id="toggle-all-crops-btn" aria-expanded="false" aria-controls="extra-crops-wrapper">
+                  <span class="crop-toggle-btn__text" data-translate-key="viewAllCropsBtn">▾ View All Crops (8 more)</span>
                 </button>
-                <div style="text-align: center; margin-bottom: var(--space-3); font-size: var(--font-size-sm); color: var(--text-muted); font-weight: 600;">OR</div>
-                <input class="input" type="text" name="location" placeholder="Enter city, village or area" data-translate-key="enterLocationPlaceholder" style="width: 100%;" />
-              </label>
-              <label class="field">
-                <span class="field__label" data-translate-key="cardCropLabel">Select Crop</span>
-                <span class="select-wrap">
-                  <select class="select">
-                    <option data-translate-key="cropOptionTomato">Tomato</option>
-                    <option data-translate-key="cropOptionOnion">Onion</option>
-                    <option data-translate-key="cropOptionPotato">Potato</option>
-                    <option data-translate-key="cropOptionCotton">Cotton</option>
-                    <option data-translate-key="cropOptionSoybean">Soybean</option>
-                    <option data-translate-key="cropOptionRice">Rice</option>
-                    <option data-translate-key="cropOptionWheat">Wheat</option>
-                    <option data-translate-key="cropOptionSugarcane">Sugarcane</option>
-                  </select>
-                </span>
-              </label>
-              <label class="field">
-                <span class="field__label" data-translate-key="cardQuantityLabel">Quantity (KG)</span>
-                <input class="input" type="number" placeholder="e.g., 500" data-translate-key="cardQuantityPlaceholder" />
-              </label>
-              <label class="field">
-                <span class="field__label" data-translate-key="cardDateLabel">Selling Date</span>
-                <input class="date-input" type="date" />
-              </label>
-              <button class="button button--primary button--arrow" type="submit">
+              </div>
+
+              <!-- 3. Quantity Step -->
+              <div class="form-step form-step--quantity">
+                <div class="form-step__label-row">
+                  <span class="form-step__icon" aria-hidden="true">⚖️</span>
+                  <label class="form-step__label" data-translate-key="cardQuantityLabel">How much do you have?</label>
+                </div>
+                <div class="quantity-input-box">
+                  <input class="input quantity-input-field" type="number" name="quantity" min="1" step="any" placeholder="500" value="500" data-translate-key="cardQuantityPlaceholder" required />
+                  <span class="quantity-unit-badge">KG</span>
+                </div>
+                <div class="quantity-presets" aria-label="Quick quantity presets">
+                  <button type="button" class="preset-chip" data-qty="100">100 KG</button>
+                  <button type="button" class="preset-chip is-active" data-qty="500">500 KG</button>
+                  <button type="button" class="preset-chip" data-qty="1000">1,000 KG (1 Ton)</button>
+                  <button type="button" class="preset-chip" data-qty="2000">2,000 KG (2 Ton)</button>
+                </div>
+              </div>
+
+              <!-- 4. Selling Date Step -->
+              <div class="form-step form-step--date">
+                <div class="form-step__label-row">
+                  <span class="form-step__icon" aria-hidden="true">📅</span>
+                  <label class="form-step__label" data-translate-key="cardDateLabel">When do you want to sell?</label>
+                </div>
+                <div class="date-quick-options" role="radiogroup" aria-label="Selling Date">
+                  <button type="button" class="date-option-btn is-selected" data-date-type="today" role="radio" aria-checked="true">
+                    <span data-translate-key="dateToday">Today</span>
+                  </button>
+                  <button type="button" class="date-option-btn" data-date-type="tomorrow" role="radio" aria-checked="false">
+                    <span data-translate-key="dateTomorrow">Tomorrow</span>
+                  </button>
+                  <button type="button" class="date-option-btn" data-date-type="custom" role="radio" aria-checked="false">
+                    <span data-translate-key="dateCustom">Choose Date</span>
+                  </button>
+                </div>
+                <div class="date-custom-container" id="date-custom-wrap" hidden>
+                  <input class="input date-picker-input" type="date" name="sellingDate" id="selling-date-input" />
+                </div>
+              </div>
+
+              <button class="button button--primary button--arrow form-submit-btn" type="submit">
                 <span class="button__text" data-translate-key="checkMarketBtn">Find Best Market</span>
                 <span class="button__loader"></span>
               </button>

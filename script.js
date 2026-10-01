@@ -55,19 +55,25 @@
 
       // --- Hero & Action Card ---
       cardTitle: "Find Best Market",
-      cardLocationLabel: "Location",
+      cardLocationLabel: "Where are you located?",
       detectLocationBtn: "Detect My Location",
       useMyLocationBtn: "Use My Location",
       enterLocationPlaceholder: "Enter city, village or area",
+      orDividerText: "OR",
       locationNotAllowed: "Location access was not allowed.",
       emptyLocationMsg: "Please enter your location.",
       cardCropLabel: "Select Crop",
-      cardQuantityLabel: "Quantity (KG)",
+      cardQuantityLabel: "How much do you have?",
       cardQuantityPlaceholder: "e.g., 500", // Added for placeholder
-      cardDateLabel: "Selling Date",
+      cardDateLabel: "When do you want to sell?",
       findBestMarketBtn: "Find Best Market",
       howItWorksBtn: "How It Works",
       checkMarketBtn: "Find Best Market",
+      viewAllCropsBtn: "▾ View All Crops (8 more)",
+      showFewerCropsBtn: "▴ Show Fewer Crops",
+      dateToday: "Today",
+      dateTomorrow: "Tomorrow",
+      dateCustom: "Choose Date",
 
       // Dynamic form messages
       geoNotSupported: "Geolocation is not supported by your browser",
@@ -127,7 +133,7 @@
       sellNowBadge: "Recommended Market",
       languageComingSoonPlaceholder: "(Coming Soon)", // Added for language selector
 
-      // Crop options (used in select dropdowns)
+      // Crop options & visual chips
       cropOptionTomato: "Tomato",
       cropOptionOnion: "Onion",
       cropOptionPotato: "Potato",
@@ -136,6 +142,31 @@
       cropOptionRice: "Rice",
       cropOptionWheat: "Wheat",
       cropOptionSugarcane: "Sugarcane",
+      cropOptionMaize: "Maize",
+      cropOptionGroundnut: "Groundnut",
+      cropOptionGram: "Gram (Chana)",
+      cropOptionTur: "Tur (Arhar)",
+      cropOptionChilli: "Chilli",
+      cropOptionCabbage: "Cabbage",
+      cropOptionCauliflower: "Cauliflower",
+      cropOptionOkra: "Okra (Bhindi)",
+
+      cropTomato: "Tomato",
+      cropOnion: "Onion",
+      cropPotato: "Potato",
+      cropWheat: "Wheat",
+      cropRice: "Rice",
+      cropMaize: "Maize",
+      cropSoybean: "Soybean",
+      cropCotton: "Cotton",
+      cropSugarcane: "Sugarcane",
+      cropGroundnut: "Groundnut",
+      cropGram: "Gram / Chana",
+      cropTur: "Tur / Arhar",
+      cropChilli: "Chilli",
+      cropCabbage: "Cabbage",
+      cropCauliflower: "Cauliflower",
+      cropOkra: "Okra (Bhindi)",
 
       // State options
       stateMaharashtra: "Maharashtra", // Already correct
@@ -291,19 +322,25 @@
 
       // Hero Action Card
       cardTitle: "सर्वोत्तम बाजार खोजें",
-      cardLocationLabel: "स्थान",
+      cardLocationLabel: "आप कहाँ स्थित हैं?",
       detectLocationBtn: "मेरा स्थान पता करें",
-      useMyLocationBtn: "मेरी लोकेशन इस्तेमाल करें",
+      useMyLocationBtn: "मेरी लोकेशन का उपयोग करें",
       enterLocationPlaceholder: "शहर, गांव या इलाका लिखें",
+      orDividerText: "या",
       locationNotAllowed: "लोकेशन की अनुमति नहीं मिली।",
       emptyLocationMsg: "कृपया अपनी लोकेशन दर्ज करें।",
       cardCropLabel: "फसल चुनें",
-      cardQuantityLabel: "मात्रा (किलो)",
+      cardQuantityLabel: "आपके पास कितनी फसल है?",
       cardQuantityPlaceholder: "उदाहरण के लिए, 500",
-      cardDateLabel: "बिक्री की तारीख",
+      cardDateLabel: "कब बेचना है?",
       findBestMarketBtn: "सर्वोत्तम बाजार खोजें",
       howItWorksBtn: "यह कैसे काम करता है",
       checkMarketBtn: "सर्वोत्तम बाजार खोजें",
+      viewAllCropsBtn: "▾ सभी फसलें देखें (8 और)",
+      showFewerCropsBtn: "▴ कम फसलें देखें",
+      dateToday: "आज",
+      dateTomorrow: "कल",
+      dateCustom: "तारीख चुनें",
 
       // Dynamic form messages
       geoNotSupported: "आपके ब्राउज़र द्वारा जियोलोकेशन समर्थित नहीं है",
@@ -363,15 +400,40 @@
       sellNowBadge: "अनुशंसित बाजार",
       languageComingSoonPlaceholder: "(जल्द आ रहा है)",
 
-      // Crop options (used in select dropdowns)
+      // Crop options & visual chips
       cropOptionTomato: "टमाटर",
       cropOptionOnion: "प्याज",
       cropOptionPotato: "आलू",
       cropOptionCotton: "कपास",
       cropOptionSoybean: "सोयाबीन",
-      cropOptionRice: "चावल",
+      cropOptionRice: "धान / चावल",
       cropOptionWheat: "गेहूं",
       cropOptionSugarcane: "गन्ना",
+      cropOptionMaize: "मक्का",
+      cropOptionGroundnut: "मूंगफली",
+      cropOptionGram: "चना (हरभरा)",
+      cropOptionTur: "अरहर (तूर)",
+      cropOptionChilli: "हरी मिर्च",
+      cropOptionCabbage: "पत्तागोभी",
+      cropOptionCauliflower: "फूलगोभी",
+      cropOptionOkra: "भिंडी",
+
+      cropTomato: "टमाटर",
+      cropOnion: "प्याज",
+      cropPotato: "आलू",
+      cropWheat: "गेहूं",
+      cropRice: "धान / चावल",
+      cropMaize: "मक्का",
+      cropSoybean: "सोयाबीन",
+      cropCotton: "कपास",
+      cropSugarcane: "गन्ना",
+      cropGroundnut: "मूंगफली",
+      cropGram: "चना",
+      cropTur: "अरहर (तूर)",
+      cropChilli: "हरी मिर्च",
+      cropCabbage: "पत्तागोभी",
+      cropCauliflower: "फूलगोभी",
+      cropOkra: "भिंडी",
 
       // State options
       stateMaharashtra: "महाराष्ट्र", // Already correct
@@ -527,19 +589,25 @@
 
       // Hero Action Card
       cardTitle: "सर्वोत्तम बाजार शोधा",
-      cardLocationLabel: "स्थान",
+      cardLocationLabel: "तुम्ही कुठे आहात?",
       detectLocationBtn: "माझे स्थान शोधा",
       useMyLocationBtn: "माझे स्थान वापरा",
       enterLocationPlaceholder: "शहर, गाव किंवा परिसर लिहा",
+      orDividerText: "किंवा",
       locationNotAllowed: "स्थान वापरण्याची परवानगी मिळाली नाही.",
       emptyLocationMsg: "कृपया तुमचे स्थान लिहा.",
-      cardCropLabel: "पीक निवडा",
-      cardQuantityLabel: "प्रमाण (किलो)",
+      cardCropLabel: "कोणते पीक विकायचे आहे?",
+      cardQuantityLabel: "तुमच्याकडे किती पीक आहे?",
       cardQuantityPlaceholder: "उदा. 500",
-      cardDateLabel: "विक्रीची तारीख",
+      cardDateLabel: "कधी विकायचे आहे?",
       findBestMarketBtn: "सर्वोत्तम बाजार शोधा",
       howItWorksBtn: "हे कसे कार्य करते",
       checkMarketBtn: "सर्वोत्तम बाजार शोधा",
+      viewAllCropsBtn: "▾ सर्व पिके पहा (8 अधिक)",
+      showFewerCropsBtn: "▴ कमी पिके पहा",
+      dateToday: "आज",
+      dateTomorrow: "उद्या",
+      dateCustom: "तारीख निवडा",
 
       // Dynamic form messages
       geoNotSupported: "तुमच्या ब्राउझरद्वारे भौगोलिक स्थान समर्थित नाही",
@@ -599,15 +667,40 @@
       sellNowBadge: "शिफारस केलेली बाजारपेठ",
       languageComingSoonPlaceholder: "(लवकरच येत आहे)",
 
-      // Crop options (used in select dropdowns)
+      // Crop options & visual chips
       cropOptionTomato: "टोमॅटो",
       cropOptionOnion: "कांदा",
       cropOptionPotato: "बटाटा",
       cropOptionCotton: "कापूस",
       cropOptionSoybean: "सोयाबीन",
-      cropOptionRice: "तांदूळ",
+      cropOptionRice: "भात / तांदूळ",
       cropOptionWheat: "गहू",
       cropOptionSugarcane: "ऊस",
+      cropOptionMaize: "मका",
+      cropOptionGroundnut: "भुईमूग",
+      cropOptionGram: "हरभरा (चना)",
+      cropOptionTur: "तूर (अरहर)",
+      cropOptionChilli: "मिरची",
+      cropOptionCabbage: "कोबी",
+      cropOptionCauliflower: "फ्लॉवर",
+      cropOptionOkra: "भेंडी",
+
+      cropTomato: "टोमॅटो",
+      cropOnion: "कांदा",
+      cropPotato: "बटाटा",
+      cropWheat: "गहू",
+      cropRice: "भात / तांदूळ",
+      cropMaize: "मका",
+      cropSoybean: "सोयाबीन",
+      cropCotton: "कापूस",
+      cropSugarcane: "ऊस",
+      cropGroundnut: "भुईमूग",
+      cropGram: "हरभरा",
+      cropTur: "तूर",
+      cropChilli: "मिरची",
+      cropCabbage: "कोबी",
+      cropCauliflower: "फ्लॉवर",
+      cropOkra: "भेंडी",
 
       // State options
       stateMaharashtra: "महाराष्ट्र", // Already correct
@@ -775,6 +868,18 @@
     }
     document.documentElement.lang = lang;
     localStorage.setItem('selectedLanguage', lang); // Persist selection
+
+    // Update crop toggle button text
+    document.querySelectorAll(".crop-toggle-btn").forEach((toggleBtn) => {
+      const form = toggleBtn.closest("form");
+      const extraWrap = form ? form.querySelector(".crop-extra-container") : document.getElementById("extra-crops-wrapper");
+      const btnSpan = toggleBtn.querySelector("span") || toggleBtn;
+      if (extraWrap && !extraWrap.hidden) {
+        btnSpan.textContent = translations[lang]?.showFewerCropsBtn || "▴ Show Fewer Crops";
+      } else {
+        btnSpan.textContent = translations[lang]?.viewAllCropsBtn || "▾ View All Crops (8 more)";
+      }
+    });
 
     if (typeof refreshActiveSearchResults === 'function') {
       refreshActiveSearchResults();
@@ -1126,7 +1231,15 @@
     chandrapur: { lat: 19.9615, lon: 79.2961 },
     gondia: { lat: 21.4554, lon: 80.1961 },
     bhandara: { lat: 21.1667, lon: 79.65 },
-    indore: { lat: 22.7196, lon: 75.8577 }
+    indore: { lat: 22.7196, lon: 75.8577 },
+    washim: { lat: 20.1112, lon: 77.1345 },
+    hingoli: { lat: 19.7188, lon: 77.1472 },
+    parbhani: { lat: 19.2644, lon: 76.7749 },
+    beed: { lat: 18.9891, lon: 75.7601 },
+    nandurbar: { lat: 21.3704, lon: 74.2403 },
+    panvel: { lat: 18.9894, lon: 73.1175 },
+    palghar: { lat: 19.6967, lon: 72.7699 },
+    gadchiroli: { lat: 20.1849, lon: 79.9948 }
   };
 
   const MARKET_LOCALIZATION = {
@@ -1488,6 +1601,290 @@
     "sug-pandharpur": {
       hi: { name: "पंढरपुर शुगर मिल्स", location: "सोलापुर, महाराष्ट्र" },
       mr: { name: "पंढरपूर साखर कारखाने", location: "सोलापूर, महाराष्ट्र" }
+    },
+
+    // Maize
+    "mze-sangli": {
+      hi: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" },
+      mr: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" }
+    },
+    "mze-kolhapur": {
+      hi: { name: "कोल्हापुर APMC", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर APMC", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+    "mze-aurangabad": {
+      hi: { name: "औरंगाबाद APMC", location: "छ. संभाजीनगर, महाराष्ट्र" },
+      mr: { name: "औरंगाबाद APMC", location: "छ. संभाजीनगर, महाराष्ट्र" }
+    },
+    "mze-jalna": {
+      hi: { name: "जालना APMC", location: "जालना, महाराष्ट्र" },
+      mr: { name: "जालना APMC", location: "जालना, महाराष्ट्र" }
+    },
+    "mze-dhule": {
+      hi: { name: "धुले APMC", location: "धुले, महाराष्ट्र" },
+      mr: { name: "धुळे APMC", location: "धुळे, महाराष्ट्र" }
+    },
+    "mze-malegaon": {
+      hi: { name: "मालेगांव APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "मालेगाव APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "mze-nashik": {
+      hi: { name: "नासिक APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नाशिक APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "mze-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+    "mze-ahmednagar": {
+      hi: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" },
+      mr: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" }
+    },
+
+    // Groundnut
+    "gnd-dhule": {
+      hi: { name: "धुले APMC", location: "धुले, महाराष्ट्र" },
+      mr: { name: "धुळे APMC", location: "धुळे, महाराष्ट्र" }
+    },
+    "gnd-jalgaon": {
+      hi: { name: "जलगांव APMC", location: "जलगांव, महाराष्ट्र" },
+      mr: { name: "जळगाव APMC", location: "जळगाव, महाराष्ट्र" }
+    },
+    "gnd-latur": {
+      hi: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" },
+      mr: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" }
+    },
+    "gnd-solapur": {
+      hi: { name: "सोलापुर APMC", location: "सोलापुर, महाराष्ट्र" },
+      mr: { name: "सोलापूर APMC", location: "सोलापूर, महाराष्ट्र" }
+    },
+    "gnd-kolhapur": {
+      hi: { name: "कोल्हापुर APMC", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर APMC", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+    "gnd-sangli": {
+      hi: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" },
+      mr: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" }
+    },
+    "gnd-ahmednagar": {
+      hi: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" },
+      mr: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" }
+    },
+    "gnd-akola": {
+      hi: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" },
+      mr: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" }
+    },
+
+    // Gram / Chickpea
+    "grm-latur": {
+      hi: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" },
+      mr: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" }
+    },
+    "grm-akola": {
+      hi: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" },
+      mr: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" }
+    },
+    "grm-amravati": {
+      hi: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" },
+      mr: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" }
+    },
+    "grm-nanded": {
+      hi: { name: "नांदेड़ APMC", location: "नांदेड़, महाराष्ट्र" },
+      mr: { name: "नांदेड APMC", location: "नांदेड, महाराष्ट्र" }
+    },
+    "grm-jalna": {
+      hi: { name: "जालना APMC", location: "जालना, महाराष्ट्र" },
+      mr: { name: "जालना APMC", location: "जालना, महाराष्ट्र" }
+    },
+    "grm-washim": {
+      hi: { name: "वाशिम APMC", location: "वाशिम, महाराष्ट्र" },
+      mr: { name: "वाशीम APMC", location: "वाशीम, महाराष्ट्र" }
+    },
+    "grm-hingoli": {
+      hi: { name: "हिंगोली APMC", location: "हिंगोली, महाराष्ट्र" },
+      mr: { name: "हिंगोली APMC", location: "हिंगोली, महाराष्ट्र" }
+    },
+    "grm-nagpur": {
+      hi: { name: "नागपुर APMC", location: "नागपुर, महाराष्ट्र" },
+      mr: { name: "नागपूर APMC", location: "नागपूर, महाराष्ट्र" }
+    },
+    "grm-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+
+    // Tur / Arhar
+    "tur-latur": {
+      hi: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" },
+      mr: { name: "लातूर APMC", location: "लातूर, महाराष्ट्र" }
+    },
+    "tur-akola": {
+      hi: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" },
+      mr: { name: "अकोला APMC", location: "अकोला, महाराष्ट्र" }
+    },
+    "tur-amravati": {
+      hi: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" },
+      mr: { name: "अमरावती APMC", location: "अमरावती, महाराष्ट्र" }
+    },
+    "tur-nanded": {
+      hi: { name: "नांदेड़ APMC", location: "नांदेड़, महाराष्ट्र" },
+      mr: { name: "नांदेड APMC", location: "नांदेड, महाराष्ट्र" }
+    },
+    "tur-hingoli": {
+      hi: { name: "हिंगोली APMC", location: "हिंगोली, महाराष्ट्र" },
+      mr: { name: "हिंगोली APMC", location: "हिंगोली, महाराष्ट्र" }
+    },
+    "tur-yavatmal": {
+      hi: { name: "यवतमाल APMC", location: "यवतमाल, महाराष्ट्र" },
+      mr: { name: "यवतमाळ APMC", location: "यवतमाळ, महाराष्ट्र" }
+    },
+    "tur-nagpur": {
+      hi: { name: "नागपुर APMC", location: "नागपुर, महाराष्ट्र" },
+      mr: { name: "नागपूर APMC", location: "नागपूर, महाराष्ट्र" }
+    },
+    "tur-jalna": {
+      hi: { name: "जालना APMC", location: "जालना, महाराष्ट्र" },
+      mr: { name: "जालना APMC", location: "जालना, महाराष्ट्र" }
+    },
+    "tur-solapur": {
+      hi: { name: "सोलापुर APMC", location: "सोलापुर, महाराष्ट्र" },
+      mr: { name: "सोलापूर APMC", location: "सोलापूर, महाराष्ट्र" }
+    },
+
+    // Chilli
+    "chl-nagpur": {
+      hi: { name: "नागपुर APMC", location: "नागपुर, महाराष्ट्र" },
+      mr: { name: "नागपूर APMC", location: "नागपूर, महाराष्ट्र" }
+    },
+    "chl-kolhapur": {
+      hi: { name: "कोल्हापुर APMC", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर APMC", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+    "chl-solapur": {
+      hi: { name: "सोलापुर APMC", location: "सोलापुर, महाराष्ट्र" },
+      mr: { name: "सोलापूर APMC", location: "सोलापूर, महाराष्ट्र" }
+    },
+    "chl-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+    "chl-sangli": {
+      hi: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" },
+      mr: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" }
+    },
+    "chl-dhule": {
+      hi: { name: "धुले APMC", location: "धुले, महाराष्ट्र" },
+      mr: { name: "धुळे APMC", location: "धुळे, महाराष्ट्र" }
+    },
+    "chl-nandurbar": {
+      hi: { name: "नंदुरबार APMC", location: "नंदुरबार, महाराष्ट्र" },
+      mr: { name: "नंदुरबार APMC", location: "नंदुरबार, महाराष्ट्र" }
+    },
+    "chl-nashik": {
+      hi: { name: "नासिक APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नाशिक APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+
+    // Cabbage
+    "cab-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+    "cab-vashi": {
+      hi: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" },
+      mr: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" }
+    },
+    "cab-nashik": {
+      hi: { name: "नासिक APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नाशिक APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "cab-narayangaon": {
+      hi: { name: "नारायणगांव APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "नारायणगाव APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "cab-junnar": {
+      hi: { name: "जुन्नर APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "जुन्नर APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "cab-satara": {
+      hi: { name: "सातारा APMC", location: "सातारा, महाराष्ट्र" },
+      mr: { name: "सातारा APMC", location: "सातारा, महाराष्ट्र" }
+    },
+    "cab-kolhapur": {
+      hi: { name: "कोल्हापुर APMC", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर APMC", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+    "cab-ahmednagar": {
+      hi: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" },
+      mr: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" }
+    },
+
+    // Cauliflower
+    "cfl-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+    "cfl-vashi": {
+      hi: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" },
+      mr: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" }
+    },
+    "cfl-nashik": {
+      hi: { name: "नासिक APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नाशिक APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "cfl-narayangaon": {
+      hi: { name: "नारायणगांव APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "नारायणगाव APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "cfl-junnar": {
+      hi: { name: "जुन्नर APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "जुन्नर APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "cfl-satara": {
+      hi: { name: "सातारा APMC", location: "सातारा, महाराष्ट्र" },
+      mr: { name: "सातारा APMC", location: "सातारा, महाराष्ट्र" }
+    },
+    "cfl-kolhapur": {
+      hi: { name: "कोल्हापुर APMC", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर APMC", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+    "cfl-ahmednagar": {
+      hi: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" },
+      mr: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" }
+    },
+
+    // Okra
+    "okr-pune": {
+      hi: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" },
+      mr: { name: "पुणे APMC", location: "पुणे, महाराष्ट्र" }
+    },
+    "okr-vashi": {
+      hi: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" },
+      mr: { name: "मुंबई (वाशी) APMC", location: "नवी मुंबई, महाराष्ट्र" }
+    },
+    "okr-nashik": {
+      hi: { name: "नासिक APMC", location: "नासिक, महाराष्ट्र" },
+      mr: { name: "नाशिक APMC", location: "नाशिक, महाराष्ट्र" }
+    },
+    "okr-narayangaon": {
+      hi: { name: "नारायणगांव APMC", location: "पुणे जिला, महाराष्ट्र" },
+      mr: { name: "नारायणगाव APMC", location: "पुणे जिल्हा, महाराष्ट्र" }
+    },
+    "okr-kolhapur": {
+      hi: { name: "कोल्हापुर APMC", location: "कोल्हापुर, महाराष्ट्र" },
+      mr: { name: "कोल्हापूर APMC", location: "कोल्हापूर, महाराष्ट्र" }
+    },
+    "okr-solapur": {
+      hi: { name: "सोलापुर APMC", location: "सोलापुर, महाराष्ट्र" },
+      mr: { name: "सोलापूर APMC", location: "सोलापूर, महाराष्ट्र" }
+    },
+    "okr-sangli": {
+      hi: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" },
+      mr: { name: "सांगली APMC", location: "सांगली, महाराष्ट्र" }
+    },
+    "okr-ahmednagar": {
+      hi: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" },
+      mr: { name: "अहमदनगर APMC", location: "अहमदनगर, महाराष्ट्र" }
     }
   };
 
@@ -1605,12 +2002,116 @@
     { id: "sug-ahmednagar", name: "Ahmednagar Sugar Mills", location: "Ahmednagar, Maharashtra", lat: 19.0952, lon: 74.7496, crop: "Sugarcane", basePrice: 325, baseDistance: 55, demand: "Medium", confidence: 92.4, reason: "Historic cooperative belt with transparent brix-sugar recovery testing." },
     { id: "sug-malegaon", name: "Malegaon Co-op Sugar Mill", location: "Nashik, Maharashtra", lat: 20.5539, lon: 74.5298, crop: "Sugarcane", basePrice: 322, baseDistance: 70, demand: "Medium", confidence: 91.0, reason: "Organized vehicle transit passes and transparent recovery calculations." },
     { id: "sug-karad", name: "Karad Sugar Mill Complex", location: "Satara District, Maharashtra", lat: 17.2885, lon: 74.1843, crop: "Sugarcane", basePrice: 336, baseDistance: 48, demand: "High", confidence: 94.2, reason: "High-efficiency crushing line ensuring minimal transit weight loss." },
-    { id: "sug-pandharpur", name: "Pandharpur Sugar Mills", location: "Solapur, Maharashtra", lat: 17.6749, lon: 75.3262, crop: "Sugarcane", basePrice: 324, baseDistance: 60, demand: "Medium", confidence: 91.8, reason: "Dependable harvest reception with computerized weighing slips." }
+    { id: "sug-pandharpur", name: "Pandharpur Sugar Mills", location: "Solapur, Maharashtra", lat: 17.6749, lon: 75.3262, crop: "Sugarcane", basePrice: 324, baseDistance: 60, demand: "Medium", confidence: 91.8, reason: "Dependable harvest reception with computerized weighing slips." },
+
+    // Maize (Corn)
+    { id: "mze-sangli", name: "Sangli APMC", location: "Sangli, Maharashtra", lat: 16.8524, lon: 74.5815, crop: "Maize", basePrice: 2280, baseDistance: 45, demand: "High", confidence: 94.5, reason: "Major southern Maharashtra grain trading hub with steady poultry feed demand." },
+    { id: "mze-kolhapur", name: "Kolhapur APMC", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Maize", basePrice: 2260, baseDistance: 55, demand: "High", confidence: 93.8, reason: "Active feed mill procurement with quick cash settlement." },
+    { id: "mze-aurangabad", name: "Aurangabad APMC", location: "Chh. Sambhajinagar, Maharashtra", lat: 19.8762, lon: 75.3433, crop: "Maize", basePrice: 2220, baseDistance: 60, demand: "Medium", confidence: 92.5, reason: "Central Marathwada collection center with regular mill auctions." },
+    { id: "mze-jalna", name: "Jalna APMC", location: "Jalna, Maharashtra", lat: 19.8347, lon: 75.8816, crop: "Maize", basePrice: 2240, baseDistance: 70, demand: "Medium", confidence: 92.0, reason: "Fast unloading and steady starch manufacturing off-take." },
+    { id: "mze-dhule", name: "Dhule APMC", location: "Dhule, Maharashtra", lat: 20.9042, lon: 74.7749, crop: "Maize", basePrice: 2190, baseDistance: 85, demand: "Medium", confidence: 91.2, reason: "Key transit point connecting Khandesh and northern livestock feed belts." },
+    { id: "mze-malegaon", name: "Malegaon APMC", location: "Nashik, Maharashtra", lat: 20.5539, lon: 74.5298, crop: "Maize", basePrice: 2210, baseDistance: 65, demand: "Medium", confidence: 91.8, reason: "Direct highway link to major poultry breeding units in Nashik." },
+    { id: "mze-nashik", name: "Nashik APMC", location: "Nashik, Maharashtra", lat: 19.9975, lon: 73.7898, crop: "Maize", basePrice: 2250, baseDistance: 50, demand: "High", confidence: 93.0, reason: "High industrial off-take for animal feed and food processing." },
+    { id: "mze-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Maize", basePrice: 2320, baseDistance: 30, demand: "High", confidence: 95.0, reason: "Proximity to metropolitan consumption and animal husbandry farms." },
+    { id: "mze-ahmednagar", name: "Ahmednagar APMC", location: "Ahmednagar, Maharashtra", lat: 19.0952, lon: 74.7496, crop: "Maize", basePrice: 2200, baseDistance: 75, demand: "Medium", confidence: 90.5, reason: "Broad auction participation from local dairy and feed aggregators." },
+
+    // Groundnut
+    { id: "gnd-dhule", name: "Dhule APMC", location: "Dhule, Maharashtra", lat: 20.9042, lon: 74.7749, crop: "Groundnut", basePrice: 6550, baseDistance: 55, demand: "High", confidence: 95.2, reason: "Premier Khandesh groundnut oil extraction and seed processing center." },
+    { id: "gnd-jalgaon", name: "Jalgaon APMC", location: "Jalgaon, Maharashtra", lat: 21.0077, lon: 75.5626, crop: "Groundnut", basePrice: 6600, baseDistance: 60, demand: "High", confidence: 95.8, reason: "Major oilseed terminal market with high competitive bidding for bold pods." },
+    { id: "gnd-latur", name: "Latur APMC", location: "Latur, Maharashtra", lat: 18.4088, lon: 76.5604, crop: "Groundnut", basePrice: 6500, baseDistance: 50, demand: "High", confidence: 94.6, reason: "Extensive oil mill network and structured auction floor." },
+    { id: "gnd-solapur", name: "Solapur APMC", location: "Solapur, Maharashtra", lat: 17.6599, lon: 75.9064, crop: "Groundnut", basePrice: 6420, baseDistance: 80, demand: "Medium", confidence: 92.4, reason: "Active trade with Karnataka oil expellers and confectionery buyers." },
+    { id: "gnd-kolhapur", name: "Kolhapur APMC", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Groundnut", basePrice: 6480, baseDistance: 90, demand: "Medium", confidence: 93.1, reason: "High local edible oil demand and reliable weighbridge." },
+    { id: "gnd-sangli", name: "Sangli APMC", location: "Sangli, Maharashtra", lat: 16.8524, lon: 74.5815, crop: "Groundnut", basePrice: 6520, baseDistance: 70, demand: "High", confidence: 94.0, reason: "Specialized oilseed trading yard with minimal deductions." },
+    { id: "gnd-ahmednagar", name: "Ahmednagar APMC", location: "Ahmednagar, Maharashtra", lat: 19.0952, lon: 74.7496, crop: "Groundnut", basePrice: 6380, baseDistance: 95, demand: "Medium", confidence: 91.5, reason: "Steady local merchant participation for dry, well-cured harvest." },
+    { id: "gnd-akola", name: "Akola APMC", location: "Akola, Maharashtra", lat: 20.7002, lon: 77.0082, crop: "Groundnut", basePrice: 6450, baseDistance: 85, demand: "Medium", confidence: 92.8, reason: "Established oilseed trading center with transparent payment processing." },
+
+    // Gram / Chickpea
+    { id: "grm-latur", name: "Latur APMC", location: "Latur, Maharashtra", lat: 18.4088, lon: 76.5604, crop: "Gram", basePrice: 6150, baseDistance: 45, demand: "High", confidence: 96.5, reason: "India's largest pulses trading benchmark with massive dal mill cluster." },
+    { id: "grm-akola", name: "Akola APMC", location: "Akola, Maharashtra", lat: 20.7002, lon: 77.0082, crop: "Gram", basePrice: 6080, baseDistance: 65, demand: "High", confidence: 95.2, reason: "Vidarbha pulses exchange with direct institutional procurement." },
+    { id: "grm-amravati", name: "Amravati APMC", location: "Amravati, Maharashtra", lat: 20.932, lon: 77.7523, crop: "Gram", basePrice: 6020, baseDistance: 55, demand: "Medium", confidence: 93.8, reason: "High arrival handling capacity and consistent competitive bidding." },
+    { id: "grm-nanded", name: "Nanded APMC", location: "Nanded, Maharashtra", lat: 19.1383, lon: 77.321, crop: "Gram", basePrice: 6050, baseDistance: 75, demand: "High", confidence: 94.1, reason: "Key Marathwada trading floor with steady dal processing demand." },
+    { id: "grm-jalna", name: "Jalna APMC", location: "Jalna, Maharashtra", lat: 19.8347, lon: 75.8816, crop: "Gram", basePrice: 6000, baseDistance: 80, demand: "Medium", confidence: 92.6, reason: "Major grain and pulse yard with reliable grading standards." },
+    { id: "grm-washim", name: "Washim APMC", location: "Washim, Maharashtra", lat: 20.1112, lon: 77.1345, crop: "Gram", basePrice: 5980, baseDistance: 90, demand: "Medium", confidence: 91.8, reason: "Core chickpea cultivation belt with direct buyer-farmer auctions." },
+    { id: "grm-hingoli", name: "Hingoli APMC", location: "Hingoli, Maharashtra", lat: 19.7188, lon: 77.1472, crop: "Gram", basePrice: 5950, baseDistance: 95, demand: "Medium", confidence: 91.0, reason: "Fast weighment and dependable clearing for local produce." },
+    { id: "grm-nagpur", name: "Nagpur APMC", location: "Nagpur, Maharashtra", lat: 21.1458, lon: 79.0882, crop: "Gram", basePrice: 6120, baseDistance: 50, demand: "High", confidence: 94.8, reason: "Terminal hub connecting central and eastern Indian dal markets." },
+    { id: "grm-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Gram", basePrice: 6220, baseDistance: 35, demand: "High", confidence: 95.5, reason: "High consumer consumption and packaged food manufacturer demand." },
+
+    // Tur / Arhar
+    { id: "tur-latur", name: "Latur APMC", location: "Latur, Maharashtra", lat: 18.4088, lon: 76.5604, crop: "Tur", basePrice: 10250, baseDistance: 45, demand: "High", confidence: 97.0, reason: "National benchmark pulses market with highest red gram trade volume." },
+    { id: "tur-akola", name: "Akola APMC", location: "Akola, Maharashtra", lat: 20.7002, lon: 77.0082, crop: "Tur", basePrice: 10100, baseDistance: 70, demand: "High", confidence: 95.5, reason: "Premier Vidarbha dal processing hub with continuous buyer auctions." },
+    { id: "tur-amravati", name: "Amravati APMC", location: "Amravati, Maharashtra", lat: 20.932, lon: 77.7523, crop: "Tur", basePrice: 9980, baseDistance: 60, demand: "High", confidence: 94.5, reason: "Well-established wholesale auction yard with fair tare deduction." },
+    { id: "tur-nanded", name: "Nanded APMC", location: "Nanded, Maharashtra", lat: 19.1383, lon: 77.321, crop: "Tur", basePrice: 10050, baseDistance: 75, demand: "High", confidence: 94.8, reason: "Strong inter-state pulse trade connecting Telangana and Marathwada." },
+    { id: "tur-hingoli", name: "Hingoli APMC", location: "Hingoli, Maharashtra", lat: 19.7188, lon: 77.1472, crop: "Tur", basePrice: 9920, baseDistance: 85, demand: "Medium", confidence: 92.5, reason: "High-quality local desi tur arrivals with active mill agent bidding." },
+    { id: "tur-yavatmal", name: "Yavatmal APMC", location: "Yavatmal, Maharashtra", lat: 20.3888, lon: 78.1204, crop: "Tur", basePrice: 9950, baseDistance: 65, demand: "Medium", confidence: 93.0, reason: "Direct MSP and commercial procurement facilities with prompt pay." },
+    { id: "tur-nagpur", name: "Nagpur APMC", location: "Nagpur, Maharashtra", lat: 21.1458, lon: 79.0882, crop: "Tur", basePrice: 10180, baseDistance: 50, demand: "High", confidence: 95.8, reason: "Major transit mandi with strong urban and export procurement." },
+    { id: "tur-jalna", name: "Jalna APMC", location: "Jalna, Maharashtra", lat: 19.8347, lon: 75.8816, crop: "Tur", basePrice: 9900, baseDistance: 90, demand: "Medium", confidence: 92.0, reason: "Reliable commercial yard with computerized auction entries." },
+    { id: "tur-solapur", name: "Solapur APMC", location: "Solapur, Maharashtra", lat: 17.6599, lon: 75.9064, crop: "Tur", basePrice: 9960, baseDistance: 95, demand: "Medium", confidence: 93.2, reason: "Key southern link to Karnataka and Andhra dal consumption centers." },
+
+    // Chilli
+    { id: "chl-nagpur", name: "Nagpur APMC", location: "Nagpur, Maharashtra", lat: 21.1458, lon: 79.0882, crop: "Chilli", basePrice: 7200, baseDistance: 45, demand: "High", confidence: 95.0, reason: "Vidarbha central spice terminal with strong wholesale distribution." },
+    { id: "chl-kolhapur", name: "Kolhapur APMC", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Chilli", basePrice: 7450, baseDistance: 60, demand: "High", confidence: 95.8, reason: "Famous for Lavangi and Sankeshwari chilli varieties with premium prices." },
+    { id: "chl-solapur", name: "Solapur APMC", location: "Solapur, Maharashtra", lat: 17.6599, lon: 75.9064, crop: "Chilli", basePrice: 7100, baseDistance: 75, demand: "High", confidence: 93.5, reason: "Major spice trading yard connecting Marathwada and southern markets." },
+    { id: "chl-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Chilli", basePrice: 7500, baseDistance: 25, demand: "High", confidence: 96.2, reason: "High metropolitan consumption with premium rates for fresh arrivals." },
+    { id: "chl-sangli", name: "Sangli APMC", location: "Sangli, Maharashtra", lat: 16.8524, lon: 74.5815, crop: "Chilli", basePrice: 7300, baseDistance: 50, demand: "High", confidence: 94.5, reason: "Established turmeric and spice trading nexus with competitive bidding." },
+    { id: "chl-dhule", name: "Dhule APMC", location: "Dhule, Maharashtra", lat: 20.9042, lon: 74.7749, crop: "Chilli", basePrice: 6950, baseDistance: 80, demand: "Medium", confidence: 91.5, reason: "Gateway to Gujarat spice extractors and powder mills." },
+    { id: "chl-nandurbar", name: "Nandurbar APMC", location: "Nandurbar, Maharashtra", lat: 21.3704, lon: 74.2403, crop: "Chilli", basePrice: 7150, baseDistance: 95, demand: "High", confidence: 94.0, reason: "Red chilli heartland with direct masala company procurement." },
+    { id: "chl-nashik", name: "Nashik APMC", location: "Nashik, Maharashtra", lat: 19.9975, lon: 73.7898, crop: "Chilli", basePrice: 7250, baseDistance: 55, demand: "High", confidence: 93.8, reason: "Active semi-wholesale and retail export merchant bidding." },
+
+    // Cabbage
+    { id: "cab-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Cabbage", basePrice: 1450, baseDistance: 25, demand: "High", confidence: 95.0, reason: "Heavy urban daily demand and fast truck unloading." },
+    { id: "cab-vashi", name: "Mumbai (Vashi) APMC", location: "Navi Mumbai, Maharashtra", lat: 19.0771, lon: 72.9986, crop: "Cabbage", basePrice: 1580, baseDistance: 115, demand: "High", confidence: 94.5, reason: "Highest terminal price in the region for fresh, tightly head cabbage." },
+    { id: "cab-nashik", name: "Nashik APMC", location: "Nashik, Maharashtra", lat: 19.9975, lon: 73.7898, crop: "Cabbage", basePrice: 1400, baseDistance: 50, demand: "High", confidence: 93.5, reason: "Extensive vegetable belt market with active trade to Gujarat." },
+    { id: "cab-narayangaon", name: "Narayangaon APMC", location: "Pune District, Maharashtra", lat: 19.1232, lon: 73.9782, crop: "Cabbage", basePrice: 1380, baseDistance: 45, demand: "Medium", confidence: 92.5, reason: "Key collection point for Pune and Mumbai retail transport." },
+    { id: "cab-junnar", name: "Junnar APMC", location: "Pune District, Maharashtra", lat: 19.2081, lon: 73.8763, crop: "Cabbage", basePrice: 1350, baseDistance: 50, demand: "Medium", confidence: 91.8, reason: "Short hauling distance for local vegetable growers." },
+    { id: "cab-satara", name: "Satara APMC", location: "Satara, Maharashtra", lat: 17.6805, lon: 73.9935, crop: "Cabbage", basePrice: 1360, baseDistance: 80, demand: "Medium", confidence: 91.2, reason: "Steady local market and easy highway transit." },
+    { id: "cab-kolhapur", name: "Kolhapur APMC", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Cabbage", basePrice: 1420, baseDistance: 90, demand: "Medium", confidence: 92.0, reason: "High consumption from restaurant and hospitality sector." },
+    { id: "cab-ahmednagar", name: "Ahmednagar APMC", location: "Ahmednagar, Maharashtra", lat: 19.0952, lon: 74.7496, crop: "Cabbage", basePrice: 1320, baseDistance: 95, demand: "Medium", confidence: 90.5, reason: "Regular daily auction with fair weighing and prompt settlement." },
+
+    // Cauliflower
+    { id: "cfl-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Cauliflower", basePrice: 1680, baseDistance: 25, demand: "High", confidence: 95.5, reason: "High daily volume and premium prices for white, compact heads." },
+    { id: "cfl-vashi", name: "Mumbai (Vashi) APMC", location: "Navi Mumbai, Maharashtra", lat: 19.0771, lon: 72.9986, crop: "Cauliflower", basePrice: 1820, baseDistance: 115, demand: "High", confidence: 94.8, reason: "Metropolitan premium rates covering long distance transport." },
+    { id: "cfl-nashik", name: "Nashik APMC", location: "Nashik, Maharashtra", lat: 19.9975, lon: 73.7898, crop: "Cauliflower", basePrice: 1620, baseDistance: 50, demand: "High", confidence: 94.0, reason: "Premier vegetable trading hub with direct out-of-state dispatches." },
+    { id: "cfl-narayangaon", name: "Narayangaon APMC", location: "Pune District, Maharashtra", lat: 19.1232, lon: 73.9782, crop: "Cauliflower", basePrice: 1590, baseDistance: 45, demand: "Medium", confidence: 92.8, reason: "Active vegetable hub offering quick clearance for harvest." },
+    { id: "cfl-junnar", name: "Junnar APMC", location: "Pune District, Maharashtra", lat: 19.2081, lon: 73.8763, crop: "Cauliflower", basePrice: 1560, baseDistance: 50, demand: "Medium", confidence: 91.9, reason: "Dependable auction system with minimal grading friction." },
+    { id: "cfl-satara", name: "Satara APMC", location: "Satara, Maharashtra", lat: 17.6805, lon: 73.9935, crop: "Cauliflower", basePrice: 1570, baseDistance: 80, demand: "Medium", confidence: 91.4, reason: "Steady regional retail demand along NH4 highway." },
+    { id: "cfl-kolhapur", name: "Kolhapur APMC", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Cauliflower", basePrice: 1650, baseDistance: 90, demand: "Medium", confidence: 92.5, reason: "Strong border trade off-take into Goa and southern districts." },
+    { id: "cfl-ahmednagar", name: "Ahmednagar APMC", location: "Ahmednagar, Maharashtra", lat: 19.0952, lon: 74.7496, crop: "Cauliflower", basePrice: 1520, baseDistance: 95, demand: "Medium", confidence: 90.8, reason: "Reliable commercial trade with low loading/unloading delays." },
+
+    // Okra
+    { id: "okr-pune", name: "Pune APMC", location: "Pune, Maharashtra", lat: 18.5204, lon: 73.8567, crop: "Okra", basePrice: 3250, baseDistance: 25, demand: "High", confidence: 95.8, reason: "Continuous high daily urban demand for tender green okra." },
+    { id: "okr-vashi", name: "Mumbai (Vashi) APMC", location: "Navi Mumbai, Maharashtra", lat: 19.0771, lon: 72.9986, crop: "Okra", basePrice: 3550, baseDistance: 115, demand: "High", confidence: 95.0, reason: "Top terminal price for export and graded supermarket supplies." },
+    { id: "okr-nashik", name: "Nashik APMC", location: "Nashik, Maharashtra", lat: 19.9975, lon: 73.7898, crop: "Okra", basePrice: 3180, baseDistance: 50, demand: "High", confidence: 93.8, reason: "Strong wholesale buyer concentration and competitive morning bids." },
+    { id: "okr-narayangaon", name: "Narayangaon APMC", location: "Pune District, Maharashtra", lat: 19.1232, lon: 73.9782, crop: "Okra", basePrice: 3120, baseDistance: 45, demand: "Medium", confidence: 92.5, reason: "Established vegetable exchange with direct highway dispatches." },
+    { id: "okr-kolhapur", name: "Kolhapur APMC", location: "Kolhapur, Maharashtra", lat: 16.705, lon: 74.2433, crop: "Okra", basePrice: 3200, baseDistance: 90, demand: "Medium", confidence: 93.0, reason: "Active south Maharashtra trade and fast morning auctions." },
+    { id: "okr-solapur", name: "Solapur APMC", location: "Solapur, Maharashtra", lat: 17.6599, lon: 75.9064, crop: "Okra", basePrice: 3050, baseDistance: 95, demand: "Medium", confidence: 91.2, reason: "Steady local off-take and reasonable transport accessibility." },
+    { id: "okr-sangli", name: "Sangli APMC", location: "Sangli, Maharashtra", lat: 16.8524, lon: 74.5815, crop: "Okra", basePrice: 3140, baseDistance: 70, demand: "Medium", confidence: 92.0, reason: "Fair tare deduction and good participation by local retailers." },
+    { id: "okr-ahmednagar", name: "Ahmednagar APMC", location: "Ahmednagar, Maharashtra", lat: 19.0952, lon: 74.7496, crop: "Okra", basePrice: 3080, baseDistance: 85, demand: "Medium", confidence: 90.9, reason: "Regular electronic auctions and consistent cash flow." }
   ];
 
   function normalizeCropName(cropSelect, form) {
-    // 1. Check hidden input or form dataset
+    // 1. Check hidden input, selected crop chip, or form dataset
     if (form) {
+      const activeChip = form.querySelector('.crop-card.is-selected, .crop-chip.is-selected');
+      const chipId = (activeChip?.getAttribute('data-crop-id') || "").trim().toLowerCase();
+      if (chipId) {
+        if (chipId === "tomato") return "Tomato";
+        if (chipId === "onion") return "Onion";
+        if (chipId === "potato") return "Potato";
+        if (chipId === "cotton") return "Cotton";
+        if (chipId === "soybean") return "Soybean";
+        if (chipId === "rice" || chipId === "paddy") return "Rice";
+        if (chipId === "wheat") return "Wheat";
+        if (chipId === "sugarcane") return "Sugarcane";
+        if (chipId === "maize" || chipId === "corn") return "Maize";
+        if (chipId === "groundnut" || chipId === "peanut") return "Groundnut";
+        if (chipId === "gram" || chipId === "chana") return "Gram";
+        if (chipId === "tur" || chipId === "arhar") return "Tur";
+        if (chipId === "chilli" || chipId === "mirchi") return "Chilli";
+        if (chipId === "cabbage") return "Cabbage";
+        if (chipId === "cauliflower") return "Cauliflower";
+        if (chipId === "okra" || chipId === "bhindi") return "Okra";
+      }
+
       const hiddenInput = form.querySelector('input[name="crop"]');
       const val = (hiddenInput?.value || form.dataset?.crop || "").trim().toLowerCase();
       if (val) {
@@ -1622,20 +2123,36 @@
         if (val.includes("rice") || val.includes("paddy") || val.includes("चावल") || val.includes("धान") || val.includes("तांदूळ") || val.includes("भात")) return "Rice";
         if (val.includes("wheat") || val.includes("गेहूं") || val.includes("गहू")) return "Wheat";
         if (val.includes("sugarcane") || val.includes("गन्ना") || val.includes("ऊस")) return "Sugarcane";
+        if (val.includes("maize") || val.includes("corn") || val.includes("मक्का") || val.includes("मका")) return "Maize";
+        if (val.includes("groundnut") || val.includes("peanut") || val.includes("मूंगफली") || val.includes("भुईमूग")) return "Groundnut";
+        if (val.includes("gram") || val.includes("chana") || val.includes("चना") || val.includes("हरभरा")) return "Gram";
+        if (val.includes("tur") || val.includes("arhar") || val.includes("तूर") || val.includes("अरहर")) return "Tur";
+        if (val.includes("chilli") || val.includes("mirch") || val.includes("मिर्च") || val.includes("मिरची")) return "Chilli";
+        if (val.includes("cabbage") || val.includes("पत्तागोभी") || val.includes("कोबी")) return "Cabbage";
+        if (val.includes("cauliflower") || val.includes("फूलगोभी") || val.includes("फ्लॉवर")) return "Cauliflower";
+        if (val.includes("okra") || val.includes("bhindi") || val.includes("भिंडी") || val.includes("भेंडी")) return "Okra";
       }
     }
 
     // 2. Check URL search param ?crop=
     const urlCrop = (new URLSearchParams(window.location.search).get("crop") || "").trim().toLowerCase();
     if (urlCrop) {
-      if (urlCrop.includes("tomato")) return "Tomato";
-      if (urlCrop.includes("onion")) return "Onion";
-      if (urlCrop.includes("potato")) return "Potato";
-      if (urlCrop.includes("cotton")) return "Cotton";
-      if (urlCrop.includes("soybean")) return "Soybean";
-      if (urlCrop.includes("rice") || urlCrop.includes("paddy")) return "Rice";
-      if (urlCrop.includes("wheat")) return "Wheat";
-      if (urlCrop.includes("sugarcane")) return "Sugarcane";
+      if (urlCrop.includes("tomato") || urlCrop.includes("टमाटर") || urlCrop.includes("टोमॅटो")) return "Tomato";
+      if (urlCrop.includes("onion") || urlCrop.includes("प्याज") || urlCrop.includes("कांदा")) return "Onion";
+      if (urlCrop.includes("potato") || urlCrop.includes("आलू") || urlCrop.includes("बटाटा")) return "Potato";
+      if (urlCrop.includes("cotton") || urlCrop.includes("कपास") || urlCrop.includes("कापूस")) return "Cotton";
+      if (urlCrop.includes("soybean") || urlCrop.includes("सोयाबीन")) return "Soybean";
+      if (urlCrop.includes("rice") || urlCrop.includes("paddy") || urlCrop.includes("चावल") || urlCrop.includes("धान") || urlCrop.includes("तांदूळ") || urlCrop.includes("भात")) return "Rice";
+      if (urlCrop.includes("wheat") || urlCrop.includes("गेहूं") || urlCrop.includes("गहू")) return "Wheat";
+      if (urlCrop.includes("sugarcane") || urlCrop.includes("गन्ना") || urlCrop.includes("ऊस")) return "Sugarcane";
+      if (urlCrop.includes("maize") || urlCrop.includes("corn") || urlCrop.includes("मक्का") || urlCrop.includes("मका")) return "Maize";
+      if (urlCrop.includes("groundnut") || urlCrop.includes("peanut") || urlCrop.includes("मूंगफली") || urlCrop.includes("भुईमूग")) return "Groundnut";
+      if (urlCrop.includes("gram") || urlCrop.includes("chana") || urlCrop.includes("चना") || urlCrop.includes("हरभरा")) return "Gram";
+      if (urlCrop.includes("tur") || urlCrop.includes("arhar") || urlCrop.includes("तूर") || urlCrop.includes("अरहर")) return "Tur";
+      if (urlCrop.includes("chilli") || urlCrop.includes("mirch") || urlCrop.includes("मिर्च") || urlCrop.includes("मिरची")) return "Chilli";
+      if (urlCrop.includes("cabbage") || urlCrop.includes("पत्तागोभी") || urlCrop.includes("कोबी")) return "Cabbage";
+      if (urlCrop.includes("cauliflower") || urlCrop.includes("फूलगोभी") || urlCrop.includes("फ्लॉवर")) return "Cauliflower";
+      if (urlCrop.includes("okra") || urlCrop.includes("bhindi") || urlCrop.includes("भिंडी") || urlCrop.includes("भेंडी")) return "Okra";
     }
 
     // 3. Check page pathname
@@ -1648,20 +2165,36 @@
     if (path.includes("rice") || path.includes("paddy")) return "Rice";
     if (path.includes("wheat")) return "Wheat";
     if (path.includes("sugarcane")) return "Sugarcane";
+    if (path.includes("maize")) return "Maize";
+    if (path.includes("groundnut")) return "Groundnut";
+    if (path.includes("gram") || path.includes("chana")) return "Gram";
+    if (path.includes("tur") || path.includes("arhar")) return "Tur";
+    if (path.includes("chilli")) return "Chilli";
+    if (path.includes("cabbage")) return "Cabbage";
+    if (path.includes("cauliflower")) return "Cauliflower";
+    if (path.includes("okra") || path.includes("bhindi")) return "Okra";
 
     // 4. Check cropSelect dropdown
     if (cropSelect && cropSelect.selectedIndex >= 0) {
       const selectedOpt = cropSelect.options[cropSelect.selectedIndex];
       if (selectedOpt) {
-        const translateKey = selectedOpt.getAttribute("data-translate-key") || "";
-        if (translateKey.includes("Tomato")) return "Tomato";
-        if (translateKey.includes("Onion")) return "Onion";
-        if (translateKey.includes("Potato")) return "Potato";
-        if (translateKey.includes("Cotton")) return "Cotton";
-        if (translateKey.includes("Soybean")) return "Soybean";
-        if (translateKey.includes("Rice")) return "Rice";
-        if (translateKey.includes("Wheat")) return "Wheat";
-        if (translateKey.includes("Sugarcane")) return "Sugarcane";
+        const translateKey = (selectedOpt.getAttribute("data-translate-key") || "").toLowerCase();
+        if (translateKey.includes("tomato")) return "Tomato";
+        if (translateKey.includes("onion")) return "Onion";
+        if (translateKey.includes("potato")) return "Potato";
+        if (translateKey.includes("cotton")) return "Cotton";
+        if (translateKey.includes("soybean")) return "Soybean";
+        if (translateKey.includes("rice")) return "Rice";
+        if (translateKey.includes("wheat")) return "Wheat";
+        if (translateKey.includes("sugarcane")) return "Sugarcane";
+        if (translateKey.includes("maize")) return "Maize";
+        if (translateKey.includes("groundnut")) return "Groundnut";
+        if (translateKey.includes("gram")) return "Gram";
+        if (translateKey.includes("tur")) return "Tur";
+        if (translateKey.includes("chilli")) return "Chilli";
+        if (translateKey.includes("cabbage")) return "Cabbage";
+        if (translateKey.includes("cauliflower")) return "Cauliflower";
+        if (translateKey.includes("okra")) return "Okra";
 
         const text = (selectedOpt.textContent || "").trim().toLowerCase();
         if (text.includes("tomato") || text.includes("टमाटर") || text.includes("टोमॅटो")) return "Tomato";
@@ -1672,6 +2205,14 @@
         if (text.includes("rice") || text.includes("paddy") || text.includes("चावल") || text.includes("धान") || text.includes("तांदूळ") || text.includes("भात")) return "Rice";
         if (text.includes("wheat") || text.includes("गेहूं") || text.includes("गहू")) return "Wheat";
         if (text.includes("sugarcane") || text.includes("गन्ना") || text.includes("ऊस")) return "Sugarcane";
+        if (text.includes("maize") || text.includes("corn") || text.includes("मक्का") || text.includes("मका")) return "Maize";
+        if (text.includes("groundnut") || text.includes("मूंगफली") || text.includes("भुईमूग")) return "Groundnut";
+        if (text.includes("gram") || text.includes("chana") || text.includes("चना") || text.includes("हरभरा")) return "Gram";
+        if (text.includes("tur") || text.includes("arhar") || text.includes("तूर") || text.includes("अरहर")) return "Tur";
+        if (text.includes("chilli") || text.includes("मिर्च") || text.includes("मिरची")) return "Chilli";
+        if (text.includes("cabbage") || text.includes("पत्तागोभी") || text.includes("कोबी")) return "Cabbage";
+        if (text.includes("cauliflower") || text.includes("फूलगोभी") || text.includes("फ्लॉवर")) return "Cauliflower";
+        if (text.includes("okra") || text.includes("भिंडी") || text.includes("भेंडी")) return "Okra";
       }
     }
 
@@ -2113,6 +2654,284 @@
       }
     }, 280);
   }
+
+  
+  // --- Find Best Market Form UX Upgrade (Visual Crop Selector, Dates, Presets) ---
+  function setupFindBestMarketForms() {
+    const forms = document.querySelectorAll(".action-card__form");
+    if (!forms.length) return;
+
+    const todayDate = new Date();
+    const todayStr = todayDate.toISOString().split("T")[0];
+    const tomorrowDate = new Date();
+    tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+    const tomorrowStr = tomorrowDate.toISOString().split("T")[0];
+
+    forms.forEach((form) => {
+      // A. Setup Date Inputs & Quick Buttons
+      const dateInput = form.querySelector('input[type="date"]');
+      const dateButtons = form.querySelectorAll(".date-option-btn");
+      const customDateWrap = form.querySelector(".date-custom-container");
+
+      if (dateInput && !dateInput.value) {
+        dateInput.value = todayStr;
+      }
+
+      dateButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const type = btn.getAttribute("data-date-type");
+          dateButtons.forEach((b) => {
+            b.classList.remove("is-selected");
+            b.setAttribute("aria-checked", "false");
+          });
+          btn.classList.add("is-selected");
+          btn.setAttribute("aria-checked", "true");
+
+          if (type === "today") {
+            if (dateInput) dateInput.value = todayStr;
+            if (customDateWrap) customDateWrap.hidden = true;
+          } else if (type === "tomorrow") {
+            if (dateInput) dateInput.value = tomorrowStr;
+            if (customDateWrap) customDateWrap.hidden = true;
+          } else if (type === "custom") {
+            if (customDateWrap) {
+              customDateWrap.hidden = false;
+              if (dateInput) {
+                dateInput.focus();
+                try {
+                  if (typeof dateInput.showPicker === "function") {
+                    dateInput.showPicker();
+                  }
+                } catch (e) {}
+              }
+            }
+          }
+        });
+      });
+
+      if (dateInput) {
+        dateInput.addEventListener("change", () => {
+          const val = dateInput.value;
+          dateButtons.forEach((b) => {
+            b.classList.remove("is-selected");
+            b.setAttribute("aria-checked", "false");
+          });
+          if (val === todayStr) {
+            const todayBtn = form.querySelector('.date-option-btn[data-date-type="today"]');
+            if (todayBtn) {
+              todayBtn.classList.add("is-selected");
+              todayBtn.setAttribute("aria-checked", "true");
+            }
+            if (customDateWrap) customDateWrap.hidden = true;
+          } else if (val === tomorrowStr) {
+            const tomorrowBtn = form.querySelector('.date-option-btn[data-date-type="tomorrow"]');
+            if (tomorrowBtn) {
+              tomorrowBtn.classList.add("is-selected");
+              tomorrowBtn.setAttribute("aria-checked", "true");
+            }
+            if (customDateWrap) customDateWrap.hidden = true;
+          } else {
+            const customBtn = form.querySelector('.date-option-btn[data-date-type="custom"]');
+            if (customBtn) {
+              customBtn.classList.add("is-selected");
+              customBtn.setAttribute("aria-checked", "true");
+            }
+            if (customDateWrap) customDateWrap.hidden = false;
+          }
+        });
+      }
+
+      // B. Visual Crop Selection
+      const cropCards = form.querySelectorAll(".crop-card");
+      const hiddenCropInput = form.querySelector('input[name="crop"]');
+      const select = form.querySelector("select");
+
+      cropCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const cropId = card.getAttribute("data-crop-id");
+          cropCards.forEach((c) => {
+            c.classList.remove("is-selected");
+            c.setAttribute("aria-checked", "false");
+          });
+          card.classList.add("is-selected");
+          card.setAttribute("aria-checked", "true");
+
+          if (hiddenCropInput) {
+            hiddenCropInput.value = cropId;
+          }
+
+          if (select) {
+            for (let i = 0; i < select.options.length; i++) {
+              const opt = select.options[i];
+              const key = (opt.getAttribute("data-translate-key") || "").toLowerCase();
+              const txt = (opt.textContent || "").toLowerCase();
+              if (key.includes(cropId) || txt.includes(cropId)) {
+                select.selectedIndex = i;
+                break;
+              }
+            }
+          }
+        });
+      });
+
+      // C. View All Crops Toggle
+      const toggleCropsBtn = form.querySelector(".crop-toggle-btn, #toggle-all-crops-btn");
+      const extraCropsWrap = form.querySelector(".crop-extra-container, #extra-crops-wrapper");
+
+      if (toggleCropsBtn && extraCropsWrap) {
+        toggleCropsBtn.addEventListener("click", () => {
+          const isHidden = extraCropsWrap.hidden;
+          extraCropsWrap.hidden = !isHidden;
+          toggleCropsBtn.setAttribute("aria-expanded", String(isHidden));
+          const btnSpan = toggleCropsBtn.querySelector("span") || toggleCropsBtn;
+          if (isHidden) {
+            btnSpan.textContent = translations[currentLang]?.showFewerCropsBtn || "▴ Show Fewer Crops";
+          } else {
+            btnSpan.textContent = translations[currentLang]?.viewAllCropsBtn || "▾ View All Crops (8 more)";
+          }
+        });
+      }
+
+      // D. Quantity Presets
+      const qtyInput = form.querySelector('input[name="quantity"], input[type="number"]');
+      const presetChips = form.querySelectorAll(".preset-chip");
+
+      presetChips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          const qtyVal = chip.getAttribute("data-qty");
+          if (qtyInput && qtyVal) {
+            qtyInput.value = qtyVal;
+            presetChips.forEach((c) => c.classList.remove("is-active"));
+            chip.classList.add("is-active");
+          }
+        });
+      });
+
+      if (qtyInput) {
+        qtyInput.addEventListener("input", () => {
+          const val = qtyInput.value.trim();
+          presetChips.forEach((chip) => {
+            if (chip.getAttribute("data-qty") === val) {
+              chip.classList.add("is-active");
+            } else {
+              chip.classList.remove("is-active");
+            }
+          });
+        });
+      }
+
+      // E. Geolocation Button
+      const locBtn = form.querySelector(".location-button");
+      const locInput = form.querySelector('input[name="location"]');
+      if (locBtn) {
+        locBtn.addEventListener("click", () => {
+          const btnSpan = locBtn.querySelector("span");
+          if (!navigator.geolocation) {
+            if (btnSpan) btnSpan.textContent = translations[currentLang]?.geoNotSupported || "Geolocation is not supported by your browser";
+            return;
+          }
+          if (btnSpan) btnSpan.textContent = translations[currentLang]?.detectingLocation || "Detecting...";
+          locBtn.disabled = true;
+
+          navigator.geolocation.getCurrentPosition(
+            async (pos) => {
+              const { latitude, longitude } = pos.coords;
+              try {
+                const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`);
+                if (!res.ok) throw new Error("Network error");
+                const data = await res.json();
+                if (data && data.address) {
+                  const city = data.address.city || data.address.town || data.address.village || data.address.county || "Nearby";
+                  const state = data.address.state || "Maharashtra";
+                  const locStr = `${city}, ${state}`;
+                  if (btnSpan) btnSpan.textContent = `📍 ${locStr}`;
+                  if (locInput) locInput.value = locStr;
+                  locBtn.classList.remove("is-denied");
+                } else {
+                  throw new Error("Invalid address format");
+                }
+              } catch (err) {
+                if (btnSpan) btnSpan.textContent = translations[currentLang]?.unableToDetectLocation || "Unable to detect location";
+                locBtn.classList.add("is-denied");
+              } finally {
+                locBtn.disabled = false;
+              }
+            },
+            (err) => {
+              if (btnSpan) {
+                btnSpan.textContent = err.code === err.PERMISSION_DENIED
+                  ? (translations[currentLang]?.locationNotAllowed || "Location access was not allowed.")
+                  : (translations[currentLang]?.unableToDetectLocation || "Unable to detect location");
+              }
+              locBtn.classList.add("is-denied");
+              locBtn.disabled = false;
+            }
+          );
+        });
+      }
+    });
+
+    // F. Prepopulate from URL Search Params
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryCrop = (urlParams.get("crop") || "").trim().toLowerCase();
+    const queryQty = urlParams.get("quantity");
+    const queryLoc = urlParams.get("location");
+
+    if (queryCrop) {
+      forms.forEach((form) => {
+        const cards = form.querySelectorAll(".crop-card");
+        let matchedCard = null;
+        cards.forEach((card) => {
+          const cid = (card.getAttribute("data-crop-id") || "").toLowerCase();
+          if (cid === queryCrop || queryCrop.includes(cid) || cid.includes(queryCrop)) {
+            matchedCard = card;
+          }
+        });
+
+        if (matchedCard) {
+          cards.forEach((c) => {
+            c.classList.remove("is-selected");
+            c.setAttribute("aria-checked", "false");
+          });
+          matchedCard.classList.add("is-selected");
+          matchedCard.setAttribute("aria-checked", "true");
+          const hiddenInput = form.querySelector('input[name="crop"]');
+          if (hiddenInput) hiddenInput.value = matchedCard.getAttribute("data-crop-id");
+
+          // If matched card is inside extra crops container, expand it
+          const extraWrap = form.querySelector(".crop-extra-container, #extra-crops-wrapper");
+          if (extraWrap && extraWrap.contains(matchedCard)) {
+            extraWrap.hidden = false;
+            const toggleBtn = form.querySelector(".crop-toggle-btn, #toggle-all-crops-btn");
+            if (toggleBtn) {
+              toggleBtn.setAttribute("aria-expanded", "true");
+              const btnSpan = toggleBtn.querySelector("span") || toggleBtn;
+              btnSpan.textContent = translations[currentLang]?.showFewerCropsBtn || "▴ Show Fewer Crops";
+            }
+          }
+        }
+
+        if (queryQty) {
+          const qtyInput = form.querySelector('input[name="quantity"], input[type="number"]');
+          if (qtyInput) {
+            qtyInput.value = queryQty;
+            form.querySelectorAll(".preset-chip").forEach((chip) => {
+              if (chip.getAttribute("data-qty") === queryQty) chip.classList.add("is-active");
+              else chip.classList.remove("is-active");
+            });
+          }
+        }
+
+        if (queryLoc) {
+          const locInput = form.querySelector('input[name="location"]');
+          if (locInput) locInput.value = queryLoc;
+        }
+      });
+    }
+  }
+
+  // Initialize form interactions immediately
+  setupFindBestMarketForms();
 
   // Attach search handler to all action-card forms
   document.querySelectorAll(".action-card__form").forEach((form) => {

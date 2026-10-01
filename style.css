@@ -1863,43 +1863,358 @@ noscript [data-animate] {
   position: relative;
 }
 
-.action-card>.heading-3 {
-  margin-bottom: var(--space-5);
+/* --- Upgraded Find Best Market Visual Form --- */
+.action-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.action-card__header {
+  margin-bottom: var(--space-4);
+}
+
+.action-card__title {
+  margin-bottom: 0;
   color: var(--forest-950);
   text-align: left;
 }
 
-.action-card__form {
-  gap: 18px;
+.form-step {
+  margin-bottom: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
 }
 
-.action-card .field {
-  margin-bottom: 0;
-  /* Ensure no extra margin from default field styles */
-  gap: 0.55rem;
+.form-step__label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
-.action-card .field__label {
-  color: var(--forest-900);
-  font-size: 0.73rem;
+.form-step__icon {
+  font-size: 1.05rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.form-step__label {
+  color: var(--forest-950);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.location-picker-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.location-or-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.15rem 0;
+}
+
+.location-or-divider__line {
+  flex: 1;
+  height: 1px;
+  background: rgb(23 56 38 / 0.12);
+}
+
+.location-or-divider__text {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--muted-600);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-with-icon .input-icon {
+  position: absolute;
+  left: 14px;
+  width: 17px;
+  height: 17px;
+  color: var(--muted-500);
+  pointer-events: none;
+}
+
+.input-with-icon .input {
+  padding-left: 40px !important;
+  width: 100%;
+}
+
+/* Visual Crop Selection */
+.crop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+}
+
+@media (max-width: 580px) {
+  .crop-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+  }
+}
+
+.crop-card {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 9px;
+  min-height: 44px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1.5px solid rgb(23 56 38 / 0.12);
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out),
+              background-color var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+  text-align: left;
+  position: relative;
+  user-select: none;
+  box-shadow: 0 1px 3px rgba(23, 56, 38, 0.04);
+  width: 100%;
+  font-family: inherit;
+}
+
+.crop-card:hover {
+  border-color: rgb(45 122 79 / 0.45);
+  background-color: #f9fcf9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(23, 56, 38, 0.07);
+}
+
+.crop-card.is-selected {
+  border-color: #1b5e20;
+  background-color: #edf7ee;
+  box-shadow: 0 3px 10px rgba(27, 94, 32, 0.14), 0 0 0 1px #1b5e20;
+}
+
+.crop-card__icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crop-card__name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--forest-950);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.crop-card.is-selected .crop-card__name {
+  font-weight: 800;
+  color: #0e3a15;
+}
+
+.crop-card__check {
+  display: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #1b5e20;
+  color: #ffffff;
+  font-size: 9px;
   font-weight: 900;
-  letter-spacing: 0;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.crop-card.is-selected .crop-card__check {
+  display: flex;
+}
+
+.crop-extra-container {
+  margin-top: 7px;
+}
+
+.crop-extra-container[hidden] {
+  display: none;
+}
+
+.crop-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 7px;
+  padding: 6px 12px;
+  background: rgb(23 56 38 / 0.03);
+  border: 1px dashed rgb(23 56 38 / 0.22);
+  border-radius: 10px;
+  color: var(--forest-900);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+  font-family: inherit;
+}
+
+.crop-toggle-btn:hover {
+  background-color: rgb(23 56 38 / 0.07);
+  border-color: var(--forest-700);
+  color: var(--forest-950);
+}
+
+/* Quantity Field & Presets */
+.quantity-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.quantity-input-field {
+  width: 100%;
+  padding-right: 56px !important;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.quantity-unit-badge {
+  position: absolute;
+  right: 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--forest-900);
+  background: rgb(23 56 38 / 0.08);
+  padding: 4px 8px;
+  border-radius: 7px;
+  pointer-events: none;
+}
+
+.quantity-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.preset-chip {
+  flex: 1;
+  min-width: 68px;
+  padding: 5px 8px;
+  background: #ffffff;
+  border: 1px solid rgb(23 56 38 / 0.12);
+  border-radius: 8px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--charcoal-700);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+  font-family: inherit;
+}
+
+.preset-chip:hover {
+  background-color: #f4f8f5;
+  border-color: var(--forest-700);
+  color: var(--forest-950);
+}
+
+.preset-chip.is-active {
+  background-color: #edf7ee;
+  border-color: #1b5e20;
+  color: #0e3a15;
+  font-weight: 800;
+  box-shadow: 0 1px 4px rgba(27, 94, 32, 0.1);
+}
+
+/* Selling Date Quick Options */
+.date-quick-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.date-option-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 6px 10px;
+  border-radius: 11px;
+  background: #ffffff;
+  border: 1.5px solid rgb(23 56 38 / 0.12);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--charcoal-700);
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out),
+              background-color var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+  user-select: none;
+  font-family: inherit;
+}
+
+.date-option-btn:hover {
+  background-color: #f8faf8;
+  border-color: rgb(45 122 79 / 0.35);
+  transform: translateY(-1px);
+}
+
+.date-option-btn.is-selected {
+  background-color: #edf7ee;
+  border-color: #1b5e20;
+  color: #0e3a15;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(27, 94, 32, 0.1);
+}
+
+.date-custom-container {
+  margin-top: 7px;
+}
+
+.date-custom-container[hidden] {
+  display: none;
+}
+
+.date-picker-input {
+  width: 100%;
+  min-height: 44px;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .action-card .input,
 .action-card .select,
 .action-card .date-input,
-.action-card .location-button,
-.action-card .select-wrap .select {
-  /* Target select specifically for padding */
-  min-height: 54px;
-  padding: 0 16px;
-  border-color: rgb(23 56 38 / 0.1);
-  /* Refined border radius for inputs */
+.action-card .location-button {
+  min-height: 46px;
+  padding: 0 14px;
+  border-color: rgb(23 56 38 / 0.12);
   border-radius: 12px;
-  /* Theme: Use new surface color */
   background-color: var(--color-surface);
-  box-shadow: 0 1px 0 rgb(255 255 255 / 0.86) inset, 0 10px 24px rgb(27 48 34 / 0.055);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 0.86) inset, 0 4px 14px rgb(27 48 34 / 0.04);
   transition:
     transform var(--duration-fast) var(--ease-out),
     border-color var(--duration-fast) var(--ease-out),
@@ -1908,46 +2223,46 @@ noscript [data-animate] {
 }
 
 .action-card .input,
-.action-card .select,
 .action-card .date-input {
-  font-size: 16px;
+  font-size: 15px;
 }
 
-.action-card .select-wrap::after {
-  right: 1.1rem;
-  border-color: var(--forest-900);
-  opacity: 0.76;
+.action-card .location-button {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--forest-900);
+  background: #f4f9f5;
+  border-color: rgb(23 56 38 / 0.16);
 }
 
 .action-card .input:hover,
-.action-card .select:hover,
 .action-card .date-input:hover,
 .action-card .location-button:hover:not(:disabled) {
-  border-color: rgb(45 122 79 / 0.18);
+  border-color: rgb(45 122 79 / 0.35);
   background-color: var(--color-surface);
-  box-shadow: 0 10px 24px rgb(27 48 34 / 0.05), 0 1px 0 rgb(255 255 255 / 0.9) inset;
+  box-shadow: 0 6px 18px rgb(27 48 34 / 0.06), 0 1px 0 rgb(255 255 255 / 0.9) inset;
   transform: translateY(-1px);
 }
 
 .action-card .input:focus,
-.action-card .select:focus,
 .action-card .date-input:focus {
   outline: 2px solid var(--color-focus);
-  /* Use global focus style */
   outline-offset: 2px;
-  box-shadow: 0 12px 28px rgb(27 48 34 / 0.06), 0 1px 0 rgb(255 255 255 / 0.86) inset;
+  box-shadow: 0 8px 20px rgb(27 48 34 / 0.07), 0 1px 0 rgb(255 255 255 / 0.86) inset;
 }
 
+.action-card .form-submit-btn,
 .action-card .button[type="submit"] {
-  min-height: 56px;
+  min-height: 52px;
   margin-top: var(--space-2);
   border-radius: 14px;
-  /* Refined border radius for the button */
   box-shadow: 0 14px 30px rgb(23 56 38 / 0.2), 0 2px 0 rgb(255 255 255 / 0.18) inset;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 800;
 }
 
 .action-card .button--primary:hover:not(:disabled) {
-  /* Target primary button specifically */
   box-shadow: 0 18px 38px rgb(201 111 34 / 0.2), 0 16px 40px rgb(23 56 38 / 0.15);
 }
 
