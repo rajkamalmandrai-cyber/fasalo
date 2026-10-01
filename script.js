@@ -251,7 +251,16 @@
       footerHeadingResources: "Resources",
       footerLinkFeatures: "Features", // This will link to /how-it-works.html
       footerLinkMarketInsights: "Market Insights", // This will link to /mandi-prices.html
+      footerLinkCropPrices: "Crop Prices",
       footerLinkHowItWorks: "How It Works", // Already correct
+      imgAltTomato: "Tomato crop",
+      imgAltOnion: "Onion crop",
+      imgAltPotato: "Potato crop",
+      imgAltCotton: "Cotton crop",
+      imgAltSoybean: "Soybean crop",
+      imgAltRicePaddy: "Paddy rice crop",
+      imgAltWheat: "Wheat crop",
+      imgAltSugarcane: "Sugarcane crop",
       footerHeadingLegal: "Legal",
       footerLinkPrivacy: "Privacy Policy", // Already correct
       footerLinkTerms: "Terms of Service", // Already correct
@@ -518,7 +527,16 @@
       footerHeadingResources: "संसाधन",
       footerLinkFeatures: "विशेषताएँ",
       footerLinkMarketInsights: "बाजार अंतर्दृष्टि",
+      footerLinkCropPrices: "फसल के भाव",
       footerLinkHowItWorks: "यह कैसे काम करता है", // Already correct
+      imgAltTomato: "टमाटर की फसल",
+      imgAltOnion: "प्याज की फसल",
+      imgAltPotato: "आलू की फसल",
+      imgAltCotton: "कपास की फसल",
+      imgAltSoybean: "सोयाबीन की फसल",
+      imgAltRicePaddy: "धान (चावल) की फसल",
+      imgAltWheat: "गेहूं की फसल",
+      imgAltSugarcane: "गन्ने की फसल",
       footerHeadingLegal: "कानूनी",
       footerLinkPrivacy: "गोपनीयता नीति", // Already correct
       footerLinkTerms: "सेवा की शर्तें", // Already correct
@@ -785,7 +803,16 @@
       footerHeadingResources: "संसाधने",
       footerLinkFeatures: "वैशिष्ट्ये",
       footerLinkMarketInsights: "बाजार अंतर्दृष्टी",
+      footerLinkCropPrices: "पिकांचे बाजारभाव",
       footerLinkHowItWorks: "हे कसे कार्य करते", // Already correct
+      imgAltTomato: "टोमॅटोचे पीक",
+      imgAltOnion: "कांद्याचे पीक",
+      imgAltPotato: "बटाट्याचे पीक",
+      imgAltCotton: "कापसाचे पीक",
+      imgAltSoybean: "सोयाबीनचे पीक",
+      imgAltRicePaddy: "भात (तांदूळ) शेती",
+      imgAltWheat: "गव्हाचे पीक",
+      imgAltSugarcane: "उसाचे पीक",
       footerHeadingLegal: "कायदेशीर",
       footerLinkPrivacy: "गोपनीयता धोरण", // Already correct
       footerLinkTerms: "सेवा अटी", // Already correct
@@ -851,6 +878,8 @@
           el.setAttribute('placeholder', translations[lang][key]);
         } else if (el.tagName === 'OPTION') {
           el.textContent = translations[lang][key];
+        } else if (el.tagName === 'IMG') {
+          el.setAttribute('alt', translations[lang][key]);
         } else {
           el.innerHTML = translations[lang][key];
         }

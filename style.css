@@ -4583,3 +4583,29 @@ body.modal-open {
   }
 }
 
+/* --- Crop Page Hero Banner Images --- */
+.crop-hero-image-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-6);
+  border-radius: var(--radius-xl, 1.25rem);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgb(23 56 38 / 0.12), 0 2px 6px rgb(0 0 0 / 0.04);
+  border: 1px solid rgb(23 56 38 / 0.1);
+  background: var(--color-surface, #fffcf9);
+}
+
+.crop-hero-image {
+  width: 100%;
+  height: clamp(200px, 32vw, 380px);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.crop-hero-image-wrap:hover .crop-hero-image {
+  transform: scale(1.015);
+}
+
