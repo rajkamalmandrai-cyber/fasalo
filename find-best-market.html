@@ -145,6 +145,16 @@
               <h2 class="heading-3 action-card__title" data-translate-key="fbmActionCardTitle">Get Your Market Recommendation</h2>
             </div>
             <form class="action-card__form" method="GET" action="/find-best-market.html">
+              <!-- Voice Command Banner -->
+              <div class="voice-command-section">
+                <button type="button" class="voice-command-btn" id="voice-command-btn" aria-label="Speak your details">
+                  <span class="voice-command-btn__icon" aria-hidden="true">🎙️</span>
+                  <span class="voice-command-btn__text" data-translate-key="voiceCommandBtnText">Speak Your Details</span>
+                  <span class="voice-command-btn__badge">VOICE</span>
+                </button>
+                <p class="voice-command-hint" data-translate-key="voiceCommandHint">Tap and speak naturally (Location, Crop, Quantity, Date)</p>
+                <div class="voice-command-status" id="voice-command-status" aria-live="polite" hidden></div>
+              </div>
               <!-- 1. Location Step -->
               <div class="form-step form-step--location">
                 <div class="form-step__label-row">
@@ -164,7 +174,12 @@
                   <div class="input-with-icon">
                     <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                     <input class="input" type="text" name="location" placeholder="Enter city, village or area" data-translate-key="enterLocationPlaceholder" autocomplete="address-level2" />
+                    <button type="button" class="voice-location-btn" aria-label="Speak location" title="Speak location">
+                      <svg class="voice-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                      <span class="voice-btn-text" data-translate-key="speakLocationBtn">Speak</span>
+                    </button>
                   </div>
+                  <div class="voice-status-feedback" aria-live="polite" hidden></div>
                 </div>
               </div>
 
@@ -420,7 +435,7 @@
     </footer>
 
     <!-- Market Recommendations Result Modal Overlay -->
-    <div id="market-result-modal" class="market-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-results-title">
+    <div id="market-result-modal" class="market-modal-overlay" aria-hidden="true" inert role="dialog" aria-modal="true" aria-labelledby="modal-results-title">
       <div class="market-modal-backdrop" id="modal-backdrop"></div>
       <div class="market-modal-container">
         <div class="market-modal-dialog">

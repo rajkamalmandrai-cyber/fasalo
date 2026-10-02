@@ -98,8 +98,41 @@
       modalSubtitle: "Based on your crop, location and quantity",
       modalClose: "Close",
       modalSearchAgain: "Search Again",
+      speakLocationBtn: "Speak",
+      voiceListening: "Listening...",
+      voiceFallbackMsg: "Please enter your location manually.",
+      voiceNoSpeech: "No speech detected. Please try again.",
+      voiceCommandBtnText: "🎙️ Speak Your Details",
+      voiceCommandListening: "🎙️ Listening... Speak naturally",
+      voiceCommandHint: "Tap and speak naturally (Location, Crop, Quantity, Date)",
+      voiceUnderstoodSuccess: "I understood your details. Please check them once.",
+      voiceMissingLocation: "Please enter your location.",
+      voiceMissingCrop: "Please select or speak your crop.",
+      voiceMissingQty: "Please enter your crop quantity.",
+      voicePermissionDeniedMsg: "Voice input isn't available. You can enter the details manually.",
+      voiceNoSpeechMsg: "Could not hear clearly. Please try speaking again.",
+      modalBestForYou: "BEST MARKET FOR YOU",
+      modalForYour: "For your",
+      modalFor: "For",
+      modalLeftAfterTravelLead: "💰 You may have about",
+      modalLeftAfterTravelSublead: "left after travel",
+      modalTravelLossLead: "Travel may cost more than your crop value.",
+      modalTravelLossSublead: "estimated loss after travel",
+      modalGoodOption: "Good option",
+      modalNotGoodOption: "Not a good option",
+      modalBreakEven: "Break-even",
+      modalHowCalculated: "How is this calculated?",
+      modalTodayCropValue: "Today's crop value",
+      modalTravelCostLabel: "Travel cost",
+      modalYouHaveLeftLabel: "You may have left",
+      modalOtherMarkets: "Other Good Markets",
+      modalCropValueShort: "crop value",
+      modalTravelShort: "travel",
+      modalAboutLeftShort: "About left",
+      modalLossShort: "Loss",
+      modalSeeDetails: "See details",
       modalBestOptionBadge: "⭐ Best Option",
-      modalGoodOptionBadge: "🟢 Good Choice",
+      modalGoodOptionBadge: "🟢 Good Option",
       modalAlternativeBadge: "Alternative Option",
       modalBreakEvenBadge: "🟡 Break-Even",
       modalNotProfitableBadge: "🔴 Not Profitable",
@@ -111,8 +144,7 @@
       modalPerQtl: " / Quintal",
       modalPerKg: " / kg",
       modalAway: "away",
-      modalOtherMarkets: "Other Good Markets",
-      modalGoodChoiceTag: "🟢 Good choice for your harvest",
+      modalGoodChoiceTag: "🟢 Good option for your harvest",
       modalAlternativeTag: "🟢 Viable alternative market",
       modalBreakEvenTag: "🟡 Break-even / No gain after travel",
       modalNotProfitableTag: "🔴 Not profitable after travel",
@@ -374,6 +406,30 @@
       modalSubtitle: "आपकी फसल, स्थान और मात्रा के आधार पर",
       modalClose: "बंद करें",
       modalSearchAgain: "फिर से खोजें",
+      speakLocationBtn: "बोलें",
+      voiceListening: "सुन रहे हैं...",
+      voiceFallbackMsg: "अपनी लोकेशन खुद लिखें।",
+      voiceNoSpeech: "आवाज सुनाई नहीं दी। कृपया पुनः प्रयास करें।",
+      modalBestForYou: "आपके लिए सबसे अच्छा बाजार",
+      modalForYour: "आपके",
+      modalFor: "के लिए",
+      modalLeftAfterTravelLead: "💰 आने-जाने का खर्च निकालने के बाद लगभग",
+      modalLeftAfterTravelSublead: "बचेंगे",
+      modalTravelLossLead: "इस बाजार तक जाने में खर्च ज्यादा पड़ सकता है।",
+      modalTravelLossSublead: "आने-जाने के बाद अनुमानित घाटा",
+      modalGoodOption: "अच्छा विकल्प",
+      modalNotGoodOption: "यह अच्छा विकल्प नहीं है",
+      modalBreakEven: "लागत बराबर",
+      modalHowCalculated: "कैसे निकला?",
+      modalTodayCropValue: "आपकी फसल की कीमत",
+      modalTravelCostLabel: "आने-जाने का खर्च",
+      modalYouHaveLeftLabel: "आपके पास बचेंगे",
+      modalOtherMarkets: "अन्य अच्छे बाजार",
+      modalCropValueShort: "फसल मूल्य",
+      modalTravelShort: "खर्च",
+      modalAboutLeftShort: "लगभग बचेंगे",
+      modalLossShort: "अनुमानित घाटा",
+      modalSeeDetails: "विवरण देखें",
       modalBestOptionBadge: "⭐ सबसे अच्छा विकल्प",
       modalGoodOptionBadge: "🟢 अच्छा विकल्प",
       modalAlternativeBadge: "दूसरा विकल्प",
@@ -387,7 +443,6 @@
       modalPerQtl: " / क्विंटल",
       modalPerKg: " / किलो",
       modalAway: "दूर",
-      modalOtherMarkets: "अन्य अच्छे बाजार",
       modalGoodChoiceTag: "🟢 आपकी फसल के लिए अच्छा विकल्प",
       modalAlternativeTag: "🟢 बेचने के लिए दूसरा अच्छा बाजार",
       modalBreakEvenTag: "🟡 लागत बराबर / ले जाने के बाद कोई बचत नहीं",
@@ -650,6 +705,39 @@
       modalSubtitle: "तुमचे पीक, ठिकाण आणि प्रमाणानुसार",
       modalClose: "बंद करा",
       modalSearchAgain: "पुन्हा शोधा",
+      speakLocationBtn: "बोला",
+      voiceListening: "ऐकत आहे...",
+      voiceFallbackMsg: "तुमचे स्थान स्वतः लिहा.",
+      voiceNoSpeech: "आवाज आला नाही. कृपया पुन्हा प्रयत्न करा.",
+      voiceCommandBtnText: "🎙️ बोलून सांगा",
+      voiceCommandListening: "🎙️ ऐकत आहे... सहज बोला",
+      voiceCommandHint: "माइक दाबून बोला (ठिकाण, पीक, प्रमाण, तारीख)",
+      voiceUnderstoodSuccess: "तुमची माहिती भरली आहे. एकदा तपासा.",
+      voiceMissingLocation: "कृपया आपले स्थान सांगा.",
+      voiceMissingCrop: "कृपया आपले पीक निवडा किंवा बोलून सांगा.",
+      voiceMissingQty: "कृपया आपले पिकाचे प्रमाण सांगा.",
+      voicePermissionDeniedMsg: "व्हॉइस इनपुट उपलब्ध नाही. तुम्ही माहिती स्वतः भरू शकता.",
+      voiceNoSpeechMsg: "आवाज स्पष्ट ऐकू आला नाही. कृपया पुन्हा बोला.",
+      modalBestForYou: "तुमच्यासाठी सर्वोत्तम बाजार",
+      modalForYour: "तुमच्या",
+      modalFor: "साठी",
+      modalLeftAfterTravelLead: "💰 येण्याजाण्याचा खर्च वजा केल्यानंतर अंदाजे",
+      modalLeftAfterTravelSublead: "शिल्लक राहतील",
+      modalTravelLossLead: "या बाजारात जाण्याचा खर्च पिकाच्या किमतीपेक्षा जास्त पडू शकतो.",
+      modalTravelLossSublead: "वाहतुकीनंतर अंदाजे तोटा",
+      modalGoodOption: "चांगला पर्याय",
+      modalNotGoodOption: "हा चांगला पर्याय नाही",
+      modalBreakEven: "समतोल",
+      modalHowCalculated: "हे कसे मोजले?",
+      modalTodayCropValue: "पिकाची किंमत",
+      modalTravelCostLabel: "येण्याजाण्याचा खर्च",
+      modalYouHaveLeftLabel: "तुमच्याकडे शिल्लक राहतील",
+      modalOtherMarkets: "इतर चांगले बाजार",
+      modalCropValueShort: "पिकाचे मूल्य",
+      modalTravelShort: "खर्च",
+      modalAboutLeftShort: "अंदाजे शिल्लक",
+      modalLossShort: "अंदाजे तोटा",
+      modalSeeDetails: "तपशील पहा",
       modalBestOptionBadge: "⭐ सर्वोत्तम पर्याय",
       modalGoodOptionBadge: "🟢 चांगला पर्याय",
       modalAlternativeBadge: "दुसरा पर्याय",
@@ -663,7 +751,6 @@
       modalPerQtl: " / क्विंटल",
       modalPerKg: " / किलो",
       modalAway: "लांब",
-      modalOtherMarkets: "इतर चांगले बाजार",
       modalGoodChoiceTag: "🟢 तुमच्या पिकासाठी चांगला पर्याय",
       modalAlternativeTag: "🟢 विक्रीसाठी दुसरा पर्याय",
       modalBreakEvenTag: "🟡 समतोल / वाहतूक खर्चानंतर फायदा नाही",
@@ -1267,6 +1354,7 @@
     beed: { lat: 18.9891, lon: 75.7601 },
     nandurbar: { lat: 21.3704, lon: 74.2403 },
     panvel: { lat: 18.9894, lon: 73.1175 },
+    raigad: { lat: 18.5158, lon: 73.1822 },
     palghar: { lat: 19.6967, lon: 72.7699 },
     gadchiroli: { lat: 20.1849, lon: 79.9948 }
   };
@@ -2376,7 +2464,7 @@
 
     candidateMarkets.sort((a, b) => b.estNet - a.estNet);
 
-    const BATCH_SIZE = Math.min(5, candidateMarkets.length);
+    const BATCH_SIZE = Math.min(8, candidateMarkets.length);
     const shownIds = getSessionShownIds(crop);
     const unseen = candidateMarkets.filter((m) => !shownIds.includes(m.id));
 
@@ -2407,6 +2495,28 @@
     return uniqueResults;
   }
 
+  function getLocalizedCropName(cropStr, lang) {
+    const norm = (cropStr || "").toLowerCase();
+    const t = translations[lang] || translations.en;
+    if (norm.includes("tomato") || norm.includes("टमाटर") || norm.includes("टोमॅटो")) return t.cropOptionTomato || "Tomato";
+    if (norm.includes("onion") || norm.includes("प्याज") || norm.includes("कांदा")) return t.cropOptionOnion || "Onion";
+    if (norm.includes("potato") || norm.includes("आलू") || norm.includes("बटाटा")) return t.cropOptionPotato || "Potato";
+    if (norm.includes("cotton") || norm.includes("कपास") || norm.includes("कापूस")) return t.cropOptionCotton || "Cotton";
+    if (norm.includes("soybean") || norm.includes("सोयाबीन")) return t.cropOptionSoybean || "Soybean";
+    if (norm.includes("rice") || norm.includes("paddy") || norm.includes("चावल") || norm.includes("तांदूळ") || norm.includes("भात") || norm.includes("धान")) return t.cropOptionRice || "Rice";
+    if (norm.includes("wheat") || norm.includes("गेहूं") || norm.includes("गहू")) return t.cropOptionWheat || "Wheat";
+    if (norm.includes("sugarcane") || norm.includes("गन्ना") || norm.includes("ऊस")) return t.cropOptionSugarcane || "Sugarcane";
+    if (norm.includes("maize") || norm.includes("corn") || norm.includes("मक्का") || norm.includes("मका")) return t.cropOptionMaize || "Maize";
+    if (norm.includes("groundnut") || norm.includes("peanut") || norm.includes("मूंगफली") || norm.includes("भुईमूग")) return t.cropOptionGroundnut || "Groundnut";
+    if (norm.includes("gram") || norm.includes("chana") || norm.includes("चना") || norm.includes("हरभरा")) return t.cropOptionGram || "Gram";
+    if (norm.includes("tur") || norm.includes("arhar") || norm.includes("तूर") || norm.includes("अरहर")) return t.cropOptionTur || "Tur";
+    if (norm.includes("chilli") || norm.includes("mirch") || norm.includes("मिर्च") || norm.includes("मिरची")) return t.cropOptionChilli || "Chilli";
+    if (norm.includes("cabbage") || norm.includes("पत्तागोभी") || norm.includes("कोबी")) return t.cropOptionCabbage || "Cabbage";
+    if (norm.includes("cauliflower") || norm.includes("फूलगोभी") || norm.includes("फ्लॉवर")) return t.cropOptionCauliflower || "Cauliflower";
+    if (norm.includes("okra") || norm.includes("bhindi") || norm.includes("भिंडी") || norm.includes("भेंडी")) return t.cropOptionOkra || "Okra";
+    return cropStr;
+  }
+
   function renderFarmerFriendlyModalHtml(markets, lang) {
     const t = translations[lang] || translations.en;
     if (!markets || !markets.length) {
@@ -2426,68 +2536,108 @@
     const bestMarket = markets[0];
     const remainingMarkets = markets.slice(1);
     const locBest = getLocalizedMarket(bestMarket, lang);
+    const cropNameLocalized = getLocalizedCropName(bestMarket.crop, lang);
 
-    // Dynamic state styling and badges for positive / neutral / loss outcomes
-    let bestBadgeText = t.modalBestOptionBadge || "⭐ Best Option";
-    let bestBadgeClass = "farmer-best-badge";
-    let bestBoxClass = "farmer-metric-box--highlight";
-    let bestNetValClass = "farmer-metric-value--profit";
-    let bestTagText = t.modalGoodChoiceTag || "🟢 Good choice for your harvest";
-    let bestTagClass = "farmer-recommendation-tag";
+    const isLoss = bestMarket.estNet < 0;
+    const isBreakEven = bestMarket.estNet === 0;
 
-    if (bestMarket.estNet < 0) {
-      bestBadgeText = t.modalNotProfitableBadge || "🔴 Not Profitable";
-      bestBadgeClass = "farmer-best-badge farmer-best-badge--loss";
-      bestBoxClass = "farmer-metric-box--loss";
-      bestNetValClass = "farmer-metric-value--loss";
-      bestTagText = t.modalNotProfitableTag || "🔴 Not profitable after travel";
-      bestTagClass = "farmer-recommendation-tag farmer-recommendation-tag--loss";
-    } else if (bestMarket.estNet === 0) {
-      bestBadgeText = t.modalBreakEvenBadge || "🟡 Break-Even";
-      bestBadgeClass = "farmer-best-badge farmer-best-badge--neutral";
-      bestBoxClass = "";
-      bestNetValClass = "";
-      bestTagText = t.modalBreakEvenTag || "🟡 Break-even / No gain after travel";
-      bestTagClass = "farmer-recommendation-tag farmer-recommendation-tag--neutral";
+    // Recommendation badge text
+    let bestBadgeText = `🟢 ${t.modalGoodOption || "Good option"}`;
+    let bestBadgeClass = "farmer-best-pill farmer-best-pill--good";
+
+    if (isLoss) {
+      bestBadgeText = `🔴 ${t.modalNotGoodOption || "Not a good option"}`;
+      bestBadgeClass = "farmer-best-pill farmer-best-pill--loss";
+    } else if (isBreakEven) {
+      bestBadgeText = `🟡 ${t.modalBreakEven || "Break-even"}`;
+      bestBadgeClass = "farmer-best-pill farmer-best-pill--neutral";
+    }
+
+    // Main Amount display
+    let mainResultHtml = "";
+    if (isLoss) {
+      const lossAmt = formatRupees(bestMarket.estNet);
+      let warningText = t.modalTravelLossLead || "Travel may cost more than your crop value.";
+      mainResultHtml = `
+        <div class="farmer-main-result farmer-main-result--loss">
+          <p class="farmer-main-result__warning">⚠️ ${warningText}</p>
+          <div class="farmer-main-result__amount-row">
+            <span class="farmer-main-result__amount farmer-main-result__amount--loss">${lossAmt}</span>
+          </div>
+          <p class="farmer-main-result__subtext">${t.modalTravelLossSublead || "estimated loss after travel"}</p>
+        </div>
+      `;
+    } else {
+      const netAmt = `₹${bestMarket.estNet.toLocaleString('en-IN')}`;
+      const leadPhrase = t.modalLeftAfterTravelLead || "💰 You may have about";
+      const subPhrase = t.modalLeftAfterTravelSublead || "left after travel";
+      mainResultHtml = `
+        <div class="farmer-main-result">
+          <p class="farmer-main-result__lead">${leadPhrase}</p>
+          <div class="farmer-main-result__amount-row">
+            <span class="farmer-main-result__amount">${netAmt}</span>
+          </div>
+          <p class="farmer-main-result__sublead">${subPhrase}</p>
+        </div>
+      `;
+    }
+
+    // For your quantity line
+    let forYourCropText = "";
+    if (lang === "hi") {
+      forYourCropText = `आपके <strong>${bestMarket.quantityKg} kg ${cropNameLocalized}</strong> के लिए:`;
+    } else if (lang === "mr") {
+      forYourCropText = `तुमच्या <strong>${bestMarket.quantityKg} kg ${cropNameLocalized}</strong> साठी:`;
+    } else {
+      forYourCropText = `For your <strong>${bestMarket.quantityKg} kg ${cropNameLocalized}</strong>:`;
     }
 
     const bestOptionHtml = `
       <article class="farmer-best-card">
+        <div class="farmer-best-card__eyebrow">
+          <span>🌾 ${t.modalBestForYou || "BEST MARKET FOR YOU"}</span>
+        </div>
+
         <div class="farmer-best-card__header">
-          <div>
-            <span class="${bestBadgeClass}">${bestBadgeText}</span>
-            <h3 class="farmer-best-card__title">${locBest.name}</h3>
-            <p class="farmer-best-card__meta">
-              <span>📍 ${locBest.location}</span>
-              <span>&bull;</span>
-              <span>📏 ${bestMarket.distanceKm} km ${t.modalAway || "away"}</span>
-            </p>
-          </div>
+          <h3 class="farmer-best-card__title">${locBest.name}</h3>
+          <p class="farmer-best-card__meta">
+            <span>📍 ${bestMarket.distanceKm} km ${t.modalAway || "away"}</span>
+            <span>&bull;</span>
+            <span>${locBest.location}</span>
+          </p>
         </div>
 
-        <div class="farmer-metrics-grid">
-          <div class="farmer-metric-box">
-            <span class="farmer-metric-label">${t.modalTodaysPrice || "Today's Price"}</span>
-            <p class="farmer-metric-value">₹${bestMarket.pricePerQtl.toLocaleString('en-IN')}<span class="farmer-metric-subtext">${t.modalPerQtl || " / Quintal"}</span></p>
-            <span class="farmer-metric-subtext">(₹${bestMarket.pricePerKg.toFixed(2)}${t.modalPerKg || "/kg"})</span>
-          </div>
-
-          <div class="farmer-metric-box">
-            <span class="farmer-metric-label">${t.modalTravelCost || "Travel Cost"}</span>
-            <p class="farmer-metric-value">₹${bestMarket.estTransport.toLocaleString('en-IN')}</p>
-            <span class="farmer-metric-subtext">${bestMarket.distanceKm} km</span>
-          </div>
-
-          <div class="farmer-metric-box ${bestBoxClass}">
-            <span class="farmer-metric-label">${t.modalYouGet || "Estimated Net Amount"}</span>
-            <p class="farmer-metric-value ${bestNetValClass}">${formatRupees(bestMarket.estNet)}</p>
-            <span class="farmer-metric-subtext">${t.modalCropValue || "Crop Value"}: ₹${bestMarket.grossCropValue.toLocaleString('en-IN')} (${bestMarket.quantityKg} kg)</span>
-          </div>
+        <div class="farmer-crop-for-line">
+          ${forYourCropText}
         </div>
 
-        <div class="${bestTagClass}">
-          <span>${bestTagText}</span>
+        ${mainResultHtml}
+
+        <div class="farmer-recommendation-bar">
+          <span class="${bestBadgeClass}">${bestBadgeText}</span>
         </div>
+
+        <details class="farmer-calc-accordion">
+          <summary class="farmer-calc-toggle">
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>${t.modalHowCalculated || "How is this calculated?"}</span>
+          </summary>
+          <div class="farmer-calc-body">
+            <div class="farmer-calc-row">
+              <span class="farmer-calc-label">${t.modalTodayCropValue || "Today's crop value"}:</span>
+              <span class="farmer-calc-val">₹${bestMarket.grossCropValue.toLocaleString('en-IN')} <span class="farmer-calc-sub">(₹${bestMarket.pricePerKg.toFixed(2)}${t.modalPerKg || "/kg"})</span></span>
+            </div>
+            <div class="farmer-calc-row">
+              <span class="farmer-calc-label">${t.modalTravelCostLabel || "Travel cost"}:</span>
+              <span class="farmer-calc-val">₹${bestMarket.estTransport.toLocaleString('en-IN')} <span class="farmer-calc-sub">(${bestMarket.distanceKm} km)</span></span>
+            </div>
+            <div class="farmer-calc-divider"></div>
+            <div class="farmer-calc-row farmer-calc-row--net">
+              <span class="farmer-calc-label"><strong>${t.modalYouHaveLeftLabel || "You may have left"}:</strong></span>
+              <span class="farmer-calc-val ${isLoss ? 'farmer-calc-val--loss' : 'farmer-calc-profit'}"><strong>${formatRupees(bestMarket.estNet)}</strong></span>
+            </div>
+          </div>
+        </details>
       </article>
     `;
 
@@ -2497,20 +2647,20 @@
         <div class="other-markets-container">
           <h4 class="other-markets-heading">${t.modalOtherMarkets || "Other Good Markets"}</h4>
           <div class="other-markets-list">
-            ${remainingMarkets.map((m, idx) => {
+            ${remainingMarkets.map((m) => {
               const locM = getLocalizedMarket(m, lang);
-              let tagText = idx === 0 ? (t.modalGoodOptionBadge || "🟢 Good Choice") : (t.modalAlternativeBadge || "Alternative Option");
-              let tagClass = "farmer-compact-tag";
-              let netValClass = "farmer-compact-metric-val farmer-compact-metric-val--net";
+              const mIsLoss = m.estNet < 0;
+              const mIsBreakEven = m.estNet === 0;
 
-              if (m.estNet < 0) {
-                tagText = t.modalNotProfitableBadge || "🔴 Not Profitable";
-                tagClass = "farmer-compact-tag farmer-compact-tag--loss";
-                netValClass = "farmer-compact-metric-val farmer-compact-metric-val--loss";
-              } else if (m.estNet === 0) {
-                tagText = t.modalBreakEvenBadge || "🟡 Break-Even";
-                tagClass = "farmer-compact-tag farmer-compact-tag--neutral";
-                netValClass = "farmer-compact-metric-val";
+              let mBadgeText = `🟢 ${t.modalGoodOption || "Good option"}`;
+              let mBadgeClass = "farmer-compact-pill farmer-compact-pill--good";
+
+              if (mIsLoss) {
+                mBadgeText = `🔴 ${t.modalNotGoodOption || "Not a good option"}`;
+                mBadgeClass = "farmer-compact-pill farmer-compact-pill--loss";
+              } else if (mIsBreakEven) {
+                mBadgeText = `🟡 ${t.modalBreakEven || "Break-even"}`;
+                mBadgeClass = "farmer-compact-pill farmer-compact-pill--neutral";
               }
 
               return `
@@ -2518,24 +2668,46 @@
                 <div class="farmer-compact-card__header">
                   <div>
                     <h5 class="farmer-compact-card__title">${locM.name}</h5>
-                    <p class="farmer-compact-card__meta">📍 ${locM.location} &bull; 📏 ${m.distanceKm} km ${t.modalAway || "away"}</p>
+                    <p class="farmer-compact-card__meta">📍 ${m.distanceKm} km ${t.modalAway || "away"} &bull; ${locM.location}</p>
                   </div>
-                  <span class="${tagClass}">${tagText}</span>
+                  <span class="${mBadgeClass}">${mBadgeText}</span>
                 </div>
-                <div class="farmer-compact-metrics">
-                  <div class="farmer-compact-metric-item">
-                    <span class="farmer-compact-metric-label">${t.modalTodaysPrice || "Today's Price"}</span>
-                    <span class="farmer-compact-metric-val">₹${m.pricePerQtl.toLocaleString('en-IN')}${t.modalPerQtl || "/Qtl"}</span>
+
+                <div class="farmer-compact-summary-row">
+                  <div class="farmer-compact-chip">
+                    <span class="farmer-compact-chip__label">🌾 ${t.modalCropValueShort || "Crop value"}</span>
+                    <span class="farmer-compact-chip__val">₹${m.grossCropValue.toLocaleString('en-IN')}</span>
                   </div>
-                  <div class="farmer-compact-metric-item">
-                    <span class="farmer-compact-metric-label">${t.modalTravelCost || "Travel Cost"}</span>
-                    <span class="farmer-compact-metric-val">₹${m.estTransport.toLocaleString('en-IN')}</span>
+                  <div class="farmer-compact-chip">
+                    <span class="farmer-compact-chip__label">🚚 ${t.modalTravelShort || "Travel"}</span>
+                    <span class="farmer-compact-chip__val">₹${m.estTransport.toLocaleString('en-IN')}</span>
                   </div>
-                  <div class="farmer-compact-metric-item">
-                    <span class="farmer-compact-metric-label">${t.modalYouGet || "Estimated Net"}</span>
-                    <span class="${netValClass}">${formatRupees(m.estNet)}</span>
+                  <div class="farmer-compact-chip farmer-compact-chip--net ${mIsLoss ? 'farmer-compact-chip--loss' : ''}">
+                    <span class="farmer-compact-chip__label">${mIsLoss ? (t.modalLossShort || "Loss") : (t.modalAboutLeftShort || "About left")}</span>
+                    <span class="farmer-compact-chip__val ${mIsLoss ? 'farmer-metric-loss' : 'farmer-metric-profit'}">${formatRupees(m.estNet)}</span>
                   </div>
                 </div>
+
+                <details class="farmer-compact-calc">
+                  <summary class="farmer-compact-calc-toggle">
+                    <span>${t.modalSeeDetails || "See details"}</span>
+                  </summary>
+                  <div class="farmer-compact-calc-body">
+                    <div class="farmer-calc-row">
+                      <span>${t.modalTodayCropValue || "Today's crop value"}:</span>
+                      <span>₹${m.grossCropValue.toLocaleString('en-IN')} (₹${m.pricePerKg.toFixed(2)}${t.modalPerKg || "/kg"})</span>
+                    </div>
+                    <div class="farmer-calc-row">
+                      <span>${t.modalTravelCostLabel || "Travel cost"}:</span>
+                      <span>₹${m.estTransport.toLocaleString('en-IN')} (${m.distanceKm} km)</span>
+                    </div>
+                    <div class="farmer-calc-divider"></div>
+                    <div class="farmer-calc-row farmer-calc-row--net">
+                      <span><strong>${t.modalYouHaveLeftLabel || "You may have left"}:</strong></span>
+                      <strong class="${mIsLoss ? 'farmer-calc-val--loss' : 'farmer-calc-profit'}">${formatRupees(m.estNet)}</strong>
+                    </div>
+                  </div>
+                </details>
               </article>
             `;}).join("")}
           </div>
@@ -2549,24 +2721,40 @@
   var lastSearchResults = null;
   var lastSearchQuantity = 500;
   var lastSearchForm = null;
+  var lastFocusedElement = null;
 
   function openMarketModal(markets, quantityKg) {
     const modal = document.getElementById("market-result-modal");
     const modalBody = document.getElementById("market-modal-body");
     if (!modal || !modalBody) return;
 
+    lastFocusedElement = document.activeElement;
     modalBody.innerHTML = renderFarmerFriendlyModalHtml(markets, currentLang);
     modal.classList.add("is-active");
-    modal.setAttribute("aria-hidden", "false");
+    modal.removeAttribute("aria-hidden");
+    modal.inert = false;
     document.body.classList.add("modal-open");
+
+    requestAnimationFrame(() => {
+      const closeBtn = modal.querySelector(".modal-close-button");
+      if (closeBtn) closeBtn.focus();
+    });
   }
 
   function closeMarketModal() {
     const modal = document.getElementById("market-result-modal");
     if (!modal) return;
 
+    // Safely restore focus outside modal BEFORE changing aria-hidden/inert attributes
+    if (lastFocusedElement && typeof lastFocusedElement.focus === "function" && document.body.contains(lastFocusedElement)) {
+      try { lastFocusedElement.focus(); } catch (e) {}
+    } else if (document.activeElement && modal.contains(document.activeElement)) {
+      try { document.activeElement.blur(); } catch (e) {}
+    }
+
     modal.classList.remove("is-active");
     modal.setAttribute("aria-hidden", "true");
+    modal.inert = true;
     document.body.classList.remove("modal-open");
   }
 
@@ -2686,6 +2874,440 @@
 
   
   // --- Find Best Market Form UX Upgrade (Visual Crop Selector, Dates, Presets) ---
+  
+  // --- Full Voice Command & Natural Speech Parser ---
+  const KNOWN_VOICE_LOCATIONS = [
+    { key: "thane", names: ["thane", "ठाणे", "ठाण्यात", "ठाने", "ठाणे जिल्हा"] },
+    { key: "pune", names: ["pune", "पुणे", "पुण्यात", "पुण्यामध्ये", "पुना"] },
+    { key: "nashik", names: ["nashik", "नाशिक", "नाशिकमध्ये", "नासिक"] },
+    { key: "mumbai", names: ["mumbai", "मुंबई", "vashi", "वाशी", "नवी मुंबई", "navi mumbai", "बॉम्बे"] },
+    { key: "palghar", names: ["palghar", "पालघर", "पालघरमध्ये"] },
+    { key: "panvel", names: ["panvel", "पनवेल", "पनवेलमध्ये"] },
+    { key: "raigad", names: ["raigad", "रायगड", "रायगडमध्ये", "रायगढ"] },
+    { key: "nagpur", names: ["nagpur", "नागपूर", "नागपुर"] },
+    { key: "latur", names: ["latur", "लातूर", "लातुर"] },
+    { key: "nanded", names: ["nanded", "नांदेड"] },
+    { key: "akola", names: ["akola", "अकोला"] },
+    { key: "amravati", names: ["amravati", "अमरावती"] },
+    { key: "kolhapur", names: ["kolhapur", "कोल्हापूर", "कोल्हापुर"] },
+    { key: "sangli", names: ["sangli", "सांगली"] },
+    { key: "satara", names: ["satara", "सातारा"] },
+    { key: "solapur", names: ["solapur", "सोलापूर", "सोलापुर"] },
+    { key: "ahmednagar", names: ["ahmednagar", "अहमदनगर", "nagar", "नगर"] },
+    { key: "aurangabad", names: ["aurangabad", "औरंगाबाद", "sambhajinagar", "संभाजीनगर", "छत्रपती संभाजीनगर"] },
+    { key: "jalna", names: ["jalna", "जालना"] },
+    { key: "jalgaon", names: ["jalgaon", "जळगाव", "जलगांव"] },
+    { key: "dhule", names: ["dhule", "धुळे", "धुलिया"] },
+    { key: "yavatmal", names: ["yavatmal", "यवतमाळ", "यवतमाल"] },
+    { key: "wardha", names: ["wardha", "वर्धा"] },
+    { key: "chandrapur", names: ["chandrapur", "चंद्रपूर", "चंद्रपुर"] },
+    { key: "washim", names: ["washim", "वाशिम"] },
+    { key: "hingoli", names: ["hingoli", "हिंगोली"] },
+    { key: "parbhani", names: ["parbhani", "परभणी"] },
+    { key: "beed", names: ["beed", "बीड"] },
+    { key: "nandurbar", names: ["nandurbar", "नंदुरबार"] },
+    { key: "indore", names: ["indore", "इंदौर"] },
+    { key: "lasalgaon", names: ["lasalgaon", "लासलगाव"] },
+    { key: "baramati", names: ["baramati", "बारामती"] },
+    { key: "manchar", names: ["manchar", "मंचर"] },
+    { key: "khed", names: ["khed", "खेड"] },
+    { key: "junnar", names: ["junnar", "जुन्नर"] },
+    { key: "narayangaon", names: ["narayangaon", "नारायणगाव"] },
+    { key: "yeola", names: ["yeola", "येवला"] },
+    { key: "malegaon", names: ["malegaon", "मालेगाव"] },
+    { key: "karad", names: ["karad", "कराड"] }
+  ];
+
+  const VOICE_CROPS = [
+    { id: "tomato", names: ["tomato", "tomatoes", "टमाटर", "टोमॅटो", "टमाटो"] },
+    { id: "onion", names: ["onion", "onions", "प्याज", "कांदा", "कांदे", "कांद्याची"] },
+    { id: "potato", names: ["potato", "potatoes", "आलू", "बटाटा", "बटाटे", "बटाट्याची"] },
+    { id: "cotton", names: ["cotton", "कपास", "कापूस"] },
+    { id: "soybean", names: ["soybean", "soya", "सोयाबीन"] },
+    { id: "rice", names: ["rice", "paddy", "चावल", "धान", "तांदूळ", "भात"] },
+    { id: "wheat", names: ["wheat", "गेहूं", "गहू", "गेहू"] },
+    { id: "sugarcane", names: ["sugarcane", "sugar cane", "गन्ना", "ऊस"] },
+    { id: "maize", names: ["maize", "corn", "मक्का", "मका"] },
+    { id: "groundnut", names: ["groundnut", "peanut", "मूंगफली", "भुईमूग", "शेंगदाणे", "मुंगफली"] },
+    { id: "gram", names: ["gram", "chana", "चना", "हरभरा"] },
+    { id: "tur", names: ["tur", "arhar", "तूर", "अरहर", "तुरीची"] },
+    { id: "chilli", names: ["chilli", "chili", "chillies", "मिर्च", "मिरची", "मिरच्या", "लाल मिर्च", "हिरवी मिरची"] },
+    { id: "cabbage", names: ["cabbage", "पत्तागोभी", "कोबी", "पत्ता गोभी"] },
+    { id: "cauliflower", names: ["cauliflower", "फूलगोभी", "फ्लॉवर", "फुलगोभी"] },
+    { id: "okra", names: ["okra", "bhindi", "ladyfinger", "भिंडी", "भेंडी"] }
+  ];
+
+  const VOICE_NUMBER_WORDS = {
+    "सौ": 100, "sau": 100, "one hundred": 100, "शंभर": 100,
+    "दो सौ": 200, "two hundred": 200, "दोनशे": 200,
+    "तीन सौ": 300, "three hundred": 300, "तीनशे": 300,
+    "चार सौ": 400, "four hundred": 400, "चारशे": 400,
+    "पांच सौ": 500, "पाँच सौ": 500, "five hundred": 500, "पाचशे": 500,
+    "छह सौ": 600, "सहाशे": 600,
+    "सात सौ": 700, "सातशे": 700,
+    "आठ सौ": 800, "आठशे": 800,
+    "नौ सौ": 900, "नऊशे": 900,
+    "हजार": 1000, "एक हजार": 1000, "one thousand": 1000,
+    "दो हजार": 2000, "two thousand": 2000, "दोन हजार": 2000,
+    "डेढ़ सौ": 150, "दीडशे": 150,
+    "ढाई सौ": 250, "अडीचशे": 250,
+    "पचास": 50, "fifty": 50, "पन्नास": 50
+  };
+
+  function parseVoiceCommand(text) {
+    if (!text || typeof text !== "string") return null;
+    const lower = text.toLowerCase().trim();
+
+    let detectedLocation = null;
+    let detectedCrop = null;
+    let detectedQuantity = null;
+    let detectedDate = null;
+
+    // 1. Detect Location
+    for (const loc of KNOWN_VOICE_LOCATIONS) {
+      for (const name of loc.names) {
+        if (lower.includes(name)) {
+          detectedLocation = loc.key.charAt(0).toUpperCase() + loc.key.slice(1);
+          break;
+        }
+      }
+      if (detectedLocation) break;
+    }
+
+    if (!detectedLocation) {
+      const locPatterns = [
+        /(?:i am in|i live in|in)\s+([a-zA-Z]+)/i,
+        /(?:मैं|मै)\s+([^\s]+)\s+(?:में|मे)/u,
+        /(?:मी)\s+([^\s]+)\s+(?:मध्ये|त|तच)/u,
+        /(?:गाव|गांव)\s+([^\s]+)/u
+      ];
+      for (const pat of locPatterns) {
+        const match = lower.match(pat);
+        if (match && match[1]) {
+          const candidate = match[1].replace(/[.,!?;:]/g, '').trim();
+          if (candidate.length >= 3 && !['रहता', 'आहे', 'आहोत', 'हूँ', 'पास', 'माझ्याकडे'].includes(candidate)) {
+            detectedLocation = candidate.charAt(0).toUpperCase() + candidate.slice(1);
+            break;
+          }
+        }
+      }
+    }
+
+    // 2. Detect Crop
+    for (const c of VOICE_CROPS) {
+      for (const name of c.names) {
+        if (lower.includes(name)) {
+          detectedCrop = c.id;
+          break;
+        }
+      }
+      if (detectedCrop) break;
+    }
+
+    // 3. Detect Quantity
+    for (const [word, val] of Object.entries(VOICE_NUMBER_WORDS)) {
+      if (lower.includes(word)) {
+        detectedQuantity = val;
+        break;
+      }
+    }
+
+    if (!detectedQuantity) {
+      const digitMatch = lower.match(/(\d+(?:\.\d+)?)\s*(?:kilo|kilos|kg|kgs|किलो|किलोग्राम|क्विंटल|quintal|ton|टन)?/i);
+      if (digitMatch && digitMatch[1]) {
+        let num = parseFloat(digitMatch[1]);
+        if (lower.includes("quintal") || lower.includes("क्विंटल")) {
+          num = num * 100;
+        } else if (lower.includes("ton") || lower.includes("टन")) {
+          num = num * 1000;
+        }
+        if (num > 0 && isFinite(num)) {
+          detectedQuantity = Math.round(num);
+        }
+      }
+    }
+
+    // 4. Detect Date
+    if (lower.includes("today") || lower.includes("आज") || lower.includes("आजच") || lower.includes("आज ही")) {
+      detectedDate = "today";
+    } else if (lower.includes("tomorrow") || lower.includes("कल") || lower.includes("उद्या") || lower.includes("उद्याच")) {
+      detectedDate = "tomorrow";
+    } else if (lower.includes("परसों") || lower.includes("परवा") || lower.includes("day after tomorrow")) {
+      detectedDate = "custom";
+    }
+
+    return {
+      location: detectedLocation,
+      crop: detectedCrop,
+      quantity: detectedQuantity,
+      date: detectedDate
+    };
+  }
+
+  function setupVoiceLocation() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    document.querySelectorAll(".action-card, .action-card__form").forEach((card) => {
+      const form = card.matches("form") ? card : card.querySelector("form");
+      if (!form) return;
+
+      const mainVoiceBtn = card.querySelector(".voice-command-btn");
+      const mainStatusEl = card.querySelector(".voice-command-status");
+      const locVoiceBtn = form.querySelector(".voice-location-btn");
+      const locFeedbackEl = form.querySelector(".voice-status-feedback");
+      const locInput = form.querySelector('input[name="location"]');
+      const qtyInput = form.querySelector('input[type="number"], input[name="quantity"]');
+
+      // A. Setup Main Multi-Field Voice Command Button
+      if (mainVoiceBtn && !mainVoiceBtn._hasVoiceCommand) {
+        mainVoiceBtn._hasVoiceCommand = true;
+        const btnText = mainVoiceBtn.querySelector(".voice-command-btn__text") || mainVoiceBtn;
+
+        function resetMainBtn() {
+          mainVoiceBtn.classList.remove("is-listening");
+          mainVoiceBtn.disabled = false;
+          if (btnText) {
+            btnText.textContent = translations[currentLang]?.voiceCommandBtnText || "🎙️ Speak Your Details";
+          }
+        }
+
+        mainVoiceBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          if (!SpeechRecognition) {
+            if (mainStatusEl) {
+              mainStatusEl.innerHTML = `<span class="voice-command-status__missing">⚠️ ${translations[currentLang]?.voicePermissionDeniedMsg || "Voice input isn't available. You can enter the details manually."}</span>`;
+              mainStatusEl.classList.add("is-error");
+              mainStatusEl.hidden = false;
+            }
+            return;
+          }
+
+          if (mainVoiceBtn.classList.contains("is-listening") && mainVoiceBtn._recognition) {
+            try { mainVoiceBtn._recognition.stop(); } catch (err) {}
+            resetMainBtn();
+            return;
+          }
+
+          try {
+            const recognition = new SpeechRecognition();
+            mainVoiceBtn._recognition = recognition;
+
+            let recogLang = "en-IN";
+            if (currentLang === "hi") recogLang = "hi-IN";
+            else if (currentLang === "mr") recogLang = "mr-IN";
+
+            recognition.lang = recogLang;
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.onstart = () => {
+              mainVoiceBtn.classList.add("is-listening");
+              if (btnText) {
+                btnText.textContent = translations[currentLang]?.voiceCommandListening || "🎙️ Listening... Speak naturally";
+              }
+              if (mainStatusEl) {
+                mainStatusEl.innerHTML = `<span class="voice-command-status__msg">🎙️ ${translations[currentLang]?.voiceCommandListening || "Listening..."}</span>`;
+                mainStatusEl.classList.remove("is-error");
+                mainStatusEl.hidden = false;
+              }
+            };
+
+            recognition.onresult = (event) => {
+              if (event.results && event.results.length > 0) {
+                const transcript = event.results[0][0].transcript || "";
+                const parsed = parseVoiceCommand(transcript);
+
+                if (parsed) {
+                  // 1. Fill Location
+                  if (parsed.location && locInput) {
+                    locInput.value = parsed.location;
+                    locInput.dispatchEvent(new Event("input", { bubbles: true }));
+                    locInput.dispatchEvent(new Event("change", { bubbles: true }));
+                  }
+
+                  // 2. Select Crop
+                  if (parsed.crop) {
+                    const cropCard = form.querySelector(`.crop-card[data-crop-id="${parsed.crop}"]`);
+                    if (cropCard) {
+                      cropCard.click();
+                      const extraWrap = form.querySelector(".crop-extra-container, #extra-crops-wrapper");
+                      if (extraWrap && extraWrap.contains(cropCard)) {
+                        extraWrap.hidden = false;
+                      }
+                    }
+                  }
+
+                  // 3. Fill Quantity
+                  if (parsed.quantity && qtyInput) {
+                    qtyInput.value = parsed.quantity;
+                    qtyInput.dispatchEvent(new Event("input", { bubbles: true }));
+                    qtyInput.dispatchEvent(new Event("change", { bubbles: true }));
+                  }
+
+                  // 4. Select Date
+                  if (parsed.date) {
+                    const dateBtn = form.querySelector(`.date-option-btn[data-date-type="${parsed.date}"]`);
+                    if (dateBtn) dateBtn.click();
+                  }
+
+                  // 5. Show What Was Understood & Confirmation Note
+                  if (mainStatusEl) {
+                    const t = translations[currentLang] || translations.en;
+                    const cropName = parsed.crop ? getLocalizedCropName(parsed.crop, currentLang) : null;
+                    const dateLabel = parsed.date === "today" ? (t.dateToday || "Today") : (parsed.date === "tomorrow" ? (t.dateTomorrow || "Tomorrow") : null);
+
+                    let chipsHtml = '<div class="voice-command-status__chips">';
+                    if (parsed.location) chipsHtml += `<span class="voice-chip-tag">📍 ${parsed.location}</span>`;
+                    if (cropName) chipsHtml += `<span class="voice-chip-tag">🌱 ${cropName}</span>`;
+                    if (parsed.quantity) chipsHtml += `<span class="voice-chip-tag">⚖️ ${parsed.quantity} KG</span>`;
+                    if (dateLabel) chipsHtml += `<span class="voice-chip-tag">📅 ${dateLabel}</span>`;
+                    chipsHtml += '</div>';
+
+                    let missingNotes = [];
+                    if (!parsed.location) missingNotes.push(t.voiceMissingLocation || "Please enter your location.");
+                    if (!parsed.crop) missingNotes.push(t.voiceMissingCrop || "Please select your crop.");
+                    if (!parsed.quantity) missingNotes.push(t.voiceMissingQty || "Please enter quantity.");
+
+                    let missingHtml = missingNotes.length > 0
+                      ? `<p class="voice-command-status__missing">ℹ️ ${missingNotes.join(" ")}</p>`
+                      : "";
+
+                    mainStatusEl.innerHTML = `
+                      <span class="voice-command-status__msg">✅ ${t.voiceUnderstoodSuccess || "I understood your details. Please check them once."}</span>
+                      ${chipsHtml}
+                      ${missingHtml}
+                    `;
+                    mainStatusEl.classList.remove("is-error");
+                    mainStatusEl.hidden = false;
+                  }
+                }
+              }
+            };
+
+            recognition.onerror = (event) => {
+              resetMainBtn();
+              if (mainStatusEl) {
+                const t = translations[currentLang] || translations.en;
+                const errText = (event.error === "not-allowed" || event.error === "service-not-allowed")
+                  ? (t.voicePermissionDeniedMsg || "Voice input isn't available. You can enter the details manually.")
+                  : (t.voiceNoSpeechMsg || "Could not hear clearly. Please try speaking again.");
+                mainStatusEl.innerHTML = `<span class="voice-command-status__missing">⚠️ ${errText}</span>`;
+                mainStatusEl.classList.add("is-error");
+                mainStatusEl.hidden = false;
+              }
+            };
+
+            recognition.onend = () => {
+              resetMainBtn();
+              mainVoiceBtn._recognition = null;
+            };
+
+            recognition.start();
+          } catch (err) {
+            resetMainBtn();
+            if (mainStatusEl) {
+              mainStatusEl.innerHTML = `<span class="voice-command-status__missing">⚠️ ${translations[currentLang]?.voicePermissionDeniedMsg || "Voice input isn't available. You can enter the details manually."}</span>`;
+              mainStatusEl.classList.add("is-error");
+              mainStatusEl.hidden = false;
+            }
+          }
+        });
+      }
+
+      // B. Setup Location-Specific Mic Button
+      if (locVoiceBtn && !locVoiceBtn._hasVoiceHandler) {
+        locVoiceBtn._hasVoiceHandler = true;
+        const btnSpan = locVoiceBtn.querySelector(".voice-btn-text") || locVoiceBtn;
+
+        function showLocFeedback(msg, isError = false) {
+          if (!locFeedbackEl) return;
+          locFeedbackEl.textContent = msg;
+          locFeedbackEl.hidden = false;
+          if (isError) locFeedbackEl.classList.add("is-error");
+          else locFeedbackEl.classList.remove("is-error");
+          clearTimeout(locFeedbackEl._timer);
+          locFeedbackEl._timer = setTimeout(() => { locFeedbackEl.hidden = true; }, 4000);
+        }
+
+        function resetLocBtn() {
+          locVoiceBtn.classList.remove("is-listening");
+          locVoiceBtn.disabled = false;
+          if (btnSpan) btnSpan.textContent = translations[currentLang]?.speakLocationBtn || "Speak";
+        }
+
+        locVoiceBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (!SpeechRecognition) {
+            showLocFeedback(translations[currentLang]?.voiceFallbackMsg || "Please enter your location manually.", true);
+            if (locInput) locInput.focus();
+            return;
+          }
+
+          if (locVoiceBtn.classList.contains("is-listening") && locVoiceBtn._activeRecognition) {
+            try { locVoiceBtn._activeRecognition.stop(); } catch (err) {}
+            resetLocBtn();
+            return;
+          }
+
+          try {
+            const recognition = new SpeechRecognition();
+            locVoiceBtn._activeRecognition = recognition;
+
+            let recogLang = "en-IN";
+            if (currentLang === "hi") recogLang = "hi-IN";
+            else if (currentLang === "mr") recogLang = "mr-IN";
+
+            recognition.lang = recogLang;
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.onstart = () => {
+              locVoiceBtn.classList.add("is-listening");
+              if (btnSpan) btnSpan.textContent = translations[currentLang]?.voiceListening || "Listening...";
+              showLocFeedback(translations[currentLang]?.voiceListening || "Listening...", false);
+            };
+
+            recognition.onresult = (event) => {
+              if (event.results && event.results.length > 0) {
+                let spokenText = event.results[0][0].transcript || "";
+                const parsed = parseVoiceCommand(spokenText);
+                const resolvedLoc = (parsed && parsed.location) ? parsed.location : spokenText.trim().replace(/[.,!?;:]+$/, "");
+                if (resolvedLoc && locInput) {
+                  locInput.value = resolvedLoc;
+                  locInput.dispatchEvent(new Event("input", { bubbles: true }));
+                  locInput.dispatchEvent(new Event("change", { bubbles: true }));
+                  showLocFeedback(`📍 ${resolvedLoc}`, false);
+                }
+              }
+            };
+
+            recognition.onerror = (event) => {
+              resetLocBtn();
+              if (event.error === "not-allowed" || event.error === "service-not-allowed") {
+                showLocFeedback(translations[currentLang]?.voiceFallbackMsg || "Please enter your location manually.", true);
+              } else if (event.error === "no-speech") {
+                showLocFeedback(translations[currentLang]?.voiceNoSpeech || "No speech detected. Please try again.", true);
+              }
+            };
+
+            recognition.onend = () => {
+              resetLocBtn();
+              locVoiceBtn._activeRecognition = null;
+            };
+
+            recognition.start();
+          } catch (err) {
+            resetLocBtn();
+            showLocFeedback(translations[currentLang]?.voiceFallbackMsg || "Please enter your location manually.", true);
+          }
+        });
+      }
+    });
+  }
+
   function setupFindBestMarketForms() {
     const forms = document.querySelectorAll(".action-card__form");
     if (!forms.length) return;
@@ -2961,6 +3583,7 @@
 
   // Initialize form interactions immediately
   setupFindBestMarketForms();
+  setupVoiceLocation();
 
   // Attach search handler to all action-card forms
   document.querySelectorAll(".action-card__form").forEach((form) => {

@@ -1953,7 +1953,83 @@ noscript [data-animate] {
 
 .input-with-icon .input {
   padding-left: 40px !important;
+  padding-right: 96px !important;
   width: 100%;
+}
+
+/* Voice Location Button */
+.voice-location-btn {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  min-height: 34px;
+  background: var(--forest-50, #f0fdf4);
+  color: var(--forest-800, #166534);
+  border: 1px solid var(--forest-300, #86efac);
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  z-index: 2;
+  touch-action: manipulation;
+}
+
+.voice-location-btn:hover {
+  background: var(--forest-100, #dcfce7);
+  border-color: var(--forest-500, #22c55e);
+  color: var(--forest-950, #052e16);
+}
+
+.voice-location-btn:focus-visible {
+  outline: 2px solid var(--forest-600, #16a34a);
+  outline-offset: 2px;
+}
+
+.voice-location-btn.is-listening {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #dc2626;
+  animation: voicePulse 1.2s infinite ease-in-out;
+}
+
+@keyframes voicePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5);
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+    transform: translateY(-50%) scale(1.04);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.voice-status-feedback {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--forest-800, #166534);
+  margin-top: 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  transition: all 180ms ease;
+}
+
+.voice-status-feedback.is-error {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fecaca;
 }
 
 /* Visual Crop Selection */
@@ -4071,49 +4147,54 @@ body.modal-open {
   -webkit-overflow-scrolling: touch;
 }
 
-/* --- Farmer Friendly Primary Recommendation Card --- */
+/* --- Farmer Friendly Ultra-Simple Result Cards --- */
 .farmer-best-card {
-  background: linear-gradient(145deg, #f0fdf4 0%, #ffffff 100%);
+  background: linear-gradient(165deg, #f0fdf4 0%, #ffffff 100%);
   border: 2px solid #22c55e;
-  border-radius: 16px;
+  border-radius: 18px;
   padding: var(--space-5);
-  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.15);
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.12);
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
   position: relative;
 }
 
-.farmer-best-card__header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-2);
+.farmer-best-card__eyebrow {
+  display: inline-flex;
 }
 
-.farmer-best-badge {
+.farmer-best-card__eyebrow span {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   background: #15803d;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.8125rem;
-  padding: 4px 12px;
+  letter-spacing: 0.04em;
+  padding: 5px 14px;
   border-radius: 9999px;
   box-shadow: 0 2px 6px rgba(21, 128, 61, 0.25);
+  text-transform: uppercase;
+}
+
+.farmer-best-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .farmer-best-card__title {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.45rem;
+  font-weight: 800;
   color: #052e16;
-  margin: 4px 0 2px 0;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .farmer-best-card__meta {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: #4b5563;
   margin: 0;
   display: flex;
@@ -4122,70 +4203,201 @@ body.modal-open {
   font-weight: 500;
 }
 
-.farmer-metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-3);
-  margin-block: var(--space-1);
+.farmer-crop-for-line {
+  font-size: 1rem;
+  color: #374151;
+  padding-top: 2px;
 }
 
-.farmer-metric-box {
+.farmer-crop-for-line strong {
+  color: #052e16;
+  font-weight: 700;
+}
+
+/* Main Display Box */
+.farmer-main-result {
   background: #ffffff;
-  border: 1px solid rgba(22, 101, 52, 0.12);
-  border-radius: 12px;
-  padding: var(--space-3) var(--space-4);
+  border: 2px solid #86efac;
+  border-radius: 14px;
+  padding: var(--space-4) var(--space-5);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(22, 101, 52, 0.06);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2px;
 }
 
-.farmer-metric-box--highlight {
-  background: #ecfdf5;
-  border-color: #34d399;
+.farmer-main-result--loss {
+  background: #fff5f5;
+  border-color: #fca5a5;
 }
 
-.farmer-metric-label {
-  font-size: 0.75rem;
+.farmer-main-result__lead {
+  font-size: 1.05rem;
   font-weight: 600;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.farmer-metric-value {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #1f2937;
+  color: #166534;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
-.farmer-metric-value--profit {
-  font-size: 1.35rem;
+.farmer-main-result__warning {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #b91c1c;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.farmer-main-result__amount-row {
+  margin: 4px 0;
+}
+
+.farmer-main-result__amount {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #15803d;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.farmer-main-result__amount--loss {
+  color: #dc2626;
+}
+
+.farmer-main-result__sublead {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #166534;
+  margin: 0;
+}
+
+.farmer-main-result__subtext {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #991b1b;
+  margin: 0;
+}
+
+/* Recommendation Badges */
+.farmer-recommendation-bar {
+  display: flex;
+  align-items: center;
+}
+
+.farmer-best-pill,
+.farmer-compact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+.farmer-best-pill--good,
+.farmer-compact-pill--good {
+  background: #dcfce7;
+  color: #14532d;
+  border: 1px solid #86efac;
+}
+
+.farmer-best-pill--loss,
+.farmer-compact-pill--loss {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.farmer-best-pill--neutral,
+.farmer-compact-pill--neutral {
+  background: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #fde047;
+}
+
+/* Simple Accordion: "How is this calculated?" */
+.farmer-calc-accordion,
+.farmer-compact-calc {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 150ms ease;
+}
+
+.farmer-calc-accordion[open],
+.farmer-compact-calc[open] {
+  border-color: #cbd5e1;
+}
+
+.farmer-calc-toggle,
+.farmer-compact-calc-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4b5563;
+  cursor: pointer;
+  user-select: none;
+  background: #f9fafb;
+}
+
+.farmer-calc-toggle:hover,
+.farmer-compact-calc-toggle:hover {
+  color: #111827;
+  background: #f3f4f6;
+}
+
+.farmer-calc-body,
+.farmer-compact-calc-body {
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.875rem;
+  background: #ffffff;
+  border-top: 1px solid #f3f4f6;
+}
+
+.farmer-calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #374151;
+}
+
+.farmer-calc-sub {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-left: 4px;
+}
+
+.farmer-calc-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin-block: 2px;
+}
+
+.farmer-calc-row--net {
+  font-size: 0.9375rem;
+  color: #111827;
+}
+
+.farmer-calc-profit {
   color: #15803d;
   font-weight: 800;
 }
 
-.farmer-metric-subtext {
-  font-size: 0.75rem;
-  color: #6b7280;
-  margin: 0;
+.farmer-calc-loss {
+  color: #dc2626;
+  font-weight: 800;
 }
 
-.farmer-recommendation-tag {
-  background: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  color: #14532d;
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* --- Other Good Markets Section --- */
+/* --- Secondary Markets List --- */
 .other-markets-container {
   display: flex;
   flex-direction: column;
@@ -4194,9 +4406,9 @@ body.modal-open {
 }
 
 .other-markets-heading {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  color: #374151;
+  color: #1f2937;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -4213,7 +4425,7 @@ body.modal-open {
 .farmer-compact-card {
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: var(--space-4);
   display: flex;
   flex-direction: column;
@@ -4223,7 +4435,7 @@ body.modal-open {
 
 .farmer-compact-card:hover {
   border-color: #86efac;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
 }
 
 .farmer-compact-card__header {
@@ -4235,58 +4447,63 @@ body.modal-open {
 }
 
 .farmer-compact-card__title {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #111827;
   margin: 0 0 2px 0;
 }
 
 .farmer-compact-card__meta {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: #4b5563;
   margin: 0;
   font-weight: 500;
 }
 
-.farmer-compact-tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: 6px;
-  background: #f0fdf4;
-  color: #166534;
-  border: 1px solid #bbf7d0;
-}
-
-.farmer-compact-metrics {
+.farmer-compact-summary-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-2);
-  background: #f9fafb;
-  border-radius: 8px;
-  padding: 8px 12px;
 }
 
-.farmer-compact-metric-item {
+.farmer-compact-chip {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 10px;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
 }
 
-.farmer-compact-metric-label {
-  font-size: 0.7rem;
+.farmer-compact-chip--net {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+}
+
+.farmer-compact-chip--loss {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.farmer-compact-chip__label {
+  font-size: 0.725rem;
   color: #6b7280;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.farmer-compact-metric-val {
+.farmer-compact-chip__val {
   font-size: 0.95rem;
   font-weight: 700;
   color: #1f2937;
 }
 
-.farmer-compact-metric-val--net {
+.farmer-metric-profit {
   color: #15803d;
+}
+
+.farmer-metric-loss {
+  color: #dc2626;
 }
 
 .market-modal-footer {
@@ -4333,7 +4550,7 @@ body.modal-open {
   }
 
   .market-modal-header {
-    padding: var(--space-4);
+    padding: var(--space-3) var(--space-4);
   }
 
   .modal-title {
@@ -4341,18 +4558,25 @@ body.modal-open {
   }
 
   .market-modal-body {
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .farmer-best-card {
     padding: var(--space-4);
-    gap: var(--space-4);
   }
 
-  .farmer-metrics-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-2);
+  .farmer-best-card__title {
+    font-size: 1.25rem;
   }
 
-  .farmer-compact-metrics {
+  .farmer-main-result__amount {
+    font-size: 1.85rem;
+  }
+
+  .farmer-compact-summary-row {
     grid-template-columns: 1fr;
-    gap: var(--space-2);
+    gap: 6px;
   }
 
   .market-modal-footer {
@@ -4609,3 +4833,145 @@ body.modal-open {
   transform: scale(1.015);
 }
 
+
+/* --- Global Voice Command Feature --- */
+.voice-command-section {
+  margin-bottom: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 1.5px solid #86efac;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.08);
+}
+
+.voice-command-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  min-height: 44px;
+  background: #15803d;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 150ms ease, box-shadow 180ms ease;
+  box-shadow: 0 4px 12px rgba(21, 128, 61, 0.25);
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.voice-command-btn:hover {
+  background: #166534;
+  box-shadow: 0 6px 16px rgba(21, 128, 61, 0.35);
+  transform: translateY(-1px);
+}
+
+.voice-command-btn:focus-visible {
+  outline: 3px solid #86efac;
+  outline-offset: 2px;
+}
+
+.voice-command-btn__icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.voice-command-btn__badge {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  background: #dcfce7;
+  color: #14532d;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.voice-command-btn.is-listening {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  animation: voiceCommandPulse 1.2s infinite ease-in-out;
+  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
+}
+
+@keyframes voiceCommandPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+    transform: scale(1);
+  }
+}
+
+.voice-command-hint {
+  font-size: 0.8125rem;
+  color: #4b5563;
+  margin: 0;
+  text-align: center;
+}
+
+.voice-command-status {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1.5px solid #86efac;
+  font-size: 0.875rem;
+  color: #14532d;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: fadeIn 200ms ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.voice-command-status.is-error {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.voice-command-status__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.voice-chip-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #166534;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.voice-command-status__msg {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #15803d;
+}
+
+.voice-command-status__missing {
+  font-size: 0.8125rem;
+  color: #b45309;
+  font-weight: 600;
+}
