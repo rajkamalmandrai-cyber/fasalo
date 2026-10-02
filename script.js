@@ -1071,14 +1071,19 @@
   window.addEventListener('load', adjustMainPaddingForNavbar);
   window.addEventListener('resize', adjustMainPaddingForNavbar);
 
-  // Sticky navbar on scroll
+  // Sticky navbar on scroll (throttled with rAF for 60fps performance)
+  let navScrollTicking = false;
   const handleScroll = () => {
-    // The 'is-scrolled' class is only added if the menu is not open
-    // Use a threshold of 1px to ensure it applies immediately after scrolling starts.
-    if (window.scrollY > 1 && !document.body.classList.contains('is-menu-open')) {
-      navbar.classList.add("is-scrolled");
-    } else {
-      navbar.classList.remove("is-scrolled");
+    if (!navScrollTicking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY > 1 && !document.body.classList.contains('is-menu-open')) {
+          navbar.classList.add("is-scrolled");
+        } else {
+          navbar.classList.remove("is-scrolled");
+        }
+        navScrollTicking = false;
+      });
+      navScrollTicking = true;
     }
   };
 
